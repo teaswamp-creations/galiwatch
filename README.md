@@ -1,5 +1,5 @@
 # galiwatch
-Tracking pollinator behaviour + weather data collection on Galliano Island
+Tracking pollinator behaviour + weather data collection on Galiano Island
 
 ## enviroplus
 
