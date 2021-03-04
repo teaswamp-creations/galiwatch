@@ -1,4 +1,5 @@
-name: "Operation GaliWatch"          
+name: "Operation GaliWatch" 
+output_dir: "docs"
 navbar:
   title: "Operation GaliWatch"
   right:
@@ -9,5 +10,5 @@ output:
     theme: cosmo
     highlight: textmate
     include:
-      after_body: footer.html
+      after_body: static/footer.html
     css: static/extra.css
