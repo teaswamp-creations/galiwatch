@@ -16,7 +16,7 @@ library(kableExtra)
 <div class="galcolumn">
 <div class="imgbox">
 <a target="_top" href="#pollinator_detection">
-  <img src="static/bee4.png" alt="Avatar" class="image">   
+  <img src="static/bee4.png" alt="bee" class="image">   
   <div class="overlay"> </div>  
   <div class="imgtext">Pollinator Detection</div>
 </a>
@@ -27,7 +27,7 @@ library(kableExtra)
 <div class="galcolumn">
 <div class="imgbox">
 <a target="_top" href="#weather_monitoring">
-  <img src="static/weather_station.jpg" alt="Avatar" class="image">   
+  <img src="static/weather_station.jpg" alt="windsock" class="image">   
   <div class="overlay"> </div>  
   <div class="imgtext">Weather Monitoring</div>
 </a>
@@ -38,7 +38,7 @@ library(kableExtra)
 <div class="galcolumn">
 <div class="imgbox">
 <a target="_top" href="#the_site">
-  <img src="static/gali_thumbnail.jpg" alt="Avatar" class="image">   
+  <img src="static/gali_thumbnail.jpg" alt="mountain" class="image">   
   <div class="overlay"> </div>  
   <div class="imgtext">The Site</div>
 </a>
