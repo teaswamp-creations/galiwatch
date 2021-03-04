@@ -1,9 +1,7 @@
 name: "Operation GaliWatch"          
 navbar:
   title: "Operation GaliWatch"
-  left:
-    - text: "Home"
-      href: index.html
+  right:
     - text: "About"
       href: about.html
 output:
