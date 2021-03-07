@@ -53,7 +53,7 @@ library(kableExtra)
 # The Goal  
 ***
 
-It’s well known that bees are important wildflower pollinators; however, many non-bee insects including wasps, hover flies, other flies, beetles, and butterflies also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently. Local surveys of bee species that pollinate salal and dull Oregon grape report that bumble bees are the primary pollinators, with other bee species visiting less frequently (J.Wray & E. Elle, [SFU Pollination Ecology Lab](www.sfu.ca/people/eelle/bee_info.html)). 
+It’s well known that bees are important wildflower pollinators; however, many non-bee pollinators including wasps, hover flies, other flies, beetles, butterflies, and hummingbirds also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently. Local surveys of bee species that pollinate salal and dull Oregon grape report that bumble bees are the primary pollinators, with other bee species visiting less frequently (J.Wray & E. Elle, [SFU Pollination Ecology Lab](https://www.sfu.ca/people/eelle/bee_info.html)). 
 
 Our images and data analysis will help provide baseline data on:
 
