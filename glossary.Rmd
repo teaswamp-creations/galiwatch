@@ -1,0 +1,41 @@
+--- 
+title: Glossary
+---
+
+```{r message=F, warning=F, echo = F}
+library(bsplus)
+library(htmltools)
+library(googlesheets4)
+library(dplyr)
+gs4_deauth()
+use_bs_popover()
+
+# popovers
+pop_gloss <- function(id){
+  # a is a list of text, dest, details
+  row = subset(gloss, title == id)
+  a(row['title'], href = row['dest']) %>%
+    bs_embed_popover(title = row['title'], 
+                     content = paste0(substr(row['details'], 1, 100), '...'), 
+                     trigger="hover", placement = 'bottom-start')
+}
+
+make_anchor <- function(id){a(id = id, class = 'anchor')}
+
+# get glossary entries
+sheet_id <- readLines('.sheet_id')
+read_sheet(sheet_id, sheet = 'glossary') %>%
+  subset(complete.cases((.))) %>%
+  mutate(dest = paste0('glossary.html#', gsub(" ", "%20", title))) ->
+  gloss
+
+gloss %>%
+  mutate(dest = lapply(title, FUN = make_anchor),
+         title = lapply(title, FUN = h4), 
+         details = lapply(details, FUN = p)) %>%
+  relocate(dest, .before = title) %>%
+  apply(FUN=as.list , MARGIN = 1) %>%
+  tagList() 
+```
+
+

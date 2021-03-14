@@ -2,13 +2,20 @@ name: "Operation GaliWatch"
 output_dir: "docs"
 navbar:
   title: "Operation GaliWatch"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Learn More"
+      href: info.html
+    - text: "Glossary"
+      href: glossary.html
   right:
     - text: "About"
-      href: about.html
+      href: about.html 
 output:
   html_document:
     theme: cosmo
     highlight: textmate
     include:
       after_body: static/footer.html
-    css: static/extra.css
+    css: static/extra.css 

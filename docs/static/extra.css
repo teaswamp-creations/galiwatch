@@ -24,6 +24,18 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   padding-top: 0px;
 }
 
+/* ---------- colunms --------------- */
+
+.column-left{
+  float: left;
+  width: 33%;
+  text-align: left;
+}
+.column-center{
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
 
 /* ---------- Links ----------------- */
 a, a:hover {
@@ -49,7 +61,7 @@ a, a:hover {
 
   
 /* don't format anchors as links */
-.no-style, .no-style:hover, .no-style:visited, .no-style:focus, .no-style:active {
+.anchor, .anchor:hover, .anchor:visited, .anchor:focus, .anchor:active {
   text-decoration: none;
   color: inherit;
   outline: 0;
@@ -78,8 +90,9 @@ a, a:hover {
   background-color: #FFFFFF;
 }
 
+
 .imgbox:hover .overlay {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .imgtext {
@@ -92,6 +105,15 @@ a, a:hover {
   -ms-transform: translate(-50%, -50%);
 }
 
+.learntext {
+  color: #3C5F74;
+  font-size: 12px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
 
 /* image gallery  */
 

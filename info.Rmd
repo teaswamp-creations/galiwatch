@@ -1,0 +1,67 @@
+---
+title: 'Project Details'
+---
+
+```{r message=FALSE, warning=FALSE, echo = FALSE}
+library(dplyr)
+library(DT)
+library(kableExtra)
+```
+
+
+<a id="the_site" class="anchor"></a>
+
+# The Site
+***
+
+Galiano is the long narrow island of the Southern Gulf Island chain on the west coast of British Columbia. Located within the Coastal-Douglas Fir biogeoclimatic zone, it has a semi-arid ecosystem characterized by a mild climate with cool wet winters and warm dry summers, with annual drought conditions typically from mid-June to early October. Image adapted from [Galiano Story](galianostory.com/FLORAFAUNA.htm).
+
+<center>
+![](static/map2.png)
+</center>
+
+<a id="weather_monitoring" class="anchor"></a>
+
+# Weather Monitoring
+***
+
+Our weather station is an Acurite Atlas equipped to measure wind speed and direction, temperature and humidity, pressure, rainfall, and UV and light intensity. Readings are dumped every 30s to an SD card. Handling the weather and air quality data is straightforward as they can be easily analyzed and plotted in Microsoft Excel.  
+
+## Air quality monitoring
+
+We have mounted an additional Raspberry Pi fitted with Enviro + Air Quality combined with a particulate matter sensor (which we are still waiting for Canada Post!). This lets us measure temperature, pressure, humidity, light, and noise level (bzzz), AND pollutant gases and particulates.
+The major gases that our air quality sensor can detect are carbon monoxide (a reducing gas), nitrogen dioxide (an oxidizing gas), and ammonia. By establishing baseline levels, we can see how the air quality changes over the growing season. 
+The particulate matter sensor will be able to detect concentrations of particles of different sizes (PM1, PM2.5 and PM10) as well as numbers of particles of different sizes >0.3, >0.5, >1.0, >2.5, >5, and >10 microns.
+Wildfire smoke particles typically range from 0.4¬–0.7 microns; dust is around 2.5 microns and pollen is generally 15 microns or more. 
+
+
+<a id="pollinator_detection" class="anchor"></a>
+
+# Pollinator detection  
+***
+
+We have mounted two surveillance cameras comprising of a Raspberry Pi (powered off the mains) fitted with a Pi camera and an SD card, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about 25cm from the plants, we can film an area about the size of a laptop. The cameras are set to take a picture every 30s and the images are stored on the SD card.
+
+## Data Analysis
+
+We hope our cameras and weather station will collect millions of images. As it would take an overwhelming amount of time to look at all these individually to find the ones with insects, we are recruiting computers to do it for us. For this to work we first have to train the computer to recognize our pollinators and identify the images they are in, at which point we can then take a look. This requires training and running a neural network.
+
+
+## Bee species, non-bee species and other pollinators of Galiano Island
+
+The [Biodiversity Galiano](https://biogaliano.org/) project initiated in January 2016, is a community-based initiative to document the flora and fauna of Galiano. So far, 2,698 species have been reported. These include sightings of the following potential pollinators:
+
+<br>
+
+```{r, echo = F}
+read.csv('static/pollinators.csv', header = F) %>%
+  rename(Group = V1, Species = V2) %>%
+  mutate(Group = factor(Group)) %>%
+  mutate(Species = stringr::str_to_title(Species)) %>%
+  datatable(filter = 'top', options = list(pageLength = 10, autoWidth = TRUE))
+```
+
+
+
+
+
