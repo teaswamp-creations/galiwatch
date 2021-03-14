@@ -4,27 +4,12 @@ title: "Operation GaliWatch"
 
 
 <center>
-Monitoring pollinator populations on Galiano Island, Canada. 
+To monitor pollinator populations on Galiano Island, Canada, we're developing low-cost data collection and analysis systems for long-term pollinator surveillance and hyperlocal weather and climate monitoring
 </center>
-
-# The Goal  
-***
-
-It’s well known that bees are important wildflower pollinators; however, many non-bee pollinators including wasps, hover flies, other flies, beetles, butterflies, and hummingbirds also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently. Local surveys of bee species that pollinate salal and dull Oregon grape report that bumble bees are the primary pollinators, with other bee species visiting less frequently (J.Wray & E. Elle, [SFU Pollination Ecology Lab](https://www.sfu.ca/people/eelle/bee_info.html)). 
-
-Our images and data analysis will help provide baseline data on:
-
-1.	Initiation of flowering of salal and dull Oregon grape, and estimates of floral resources over the flowering season
-2.	Pollinator community composition attracted to salal and dull Oregon grape at our location (bees, hoverflies, butterflies, wasps, other flies, beetles) 
-3.	Time of emergence and seasonal abundance of different pollinators 
-4.	How much of a role, if any, non-bee visitors play in the pollination of these two flowering plants 
-5.	How hyperlocal weather and variations in air quality influence the activity of wild pollinators. 
-
-The images and weather data will add to what is already known about pollinators in Coastal Douglas fir ecosystems here on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom.
 
 <br>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 
 <div class="galrow">
 
@@ -64,9 +49,7 @@ The images and weather data will add to what is already known about pollinators 
 </div>
 </div>
 
-
 </div>
-
 
 
 

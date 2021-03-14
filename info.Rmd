@@ -1,5 +1,6 @@
 ---
 title: 'Project Details'
+toc: true
 ---
 
 ```{r message=FALSE, warning=FALSE, echo = FALSE}
@@ -20,6 +21,39 @@ Galiano is the long narrow island of the Southern Gulf Island chain on the west 
 ![](static/map2.png)
 </center>
 
+<a id="hardware" class="anchor"></a>
+
+# Hardware 
+***
+ 
+*	Raspberry Pis for computing power
+*	Raspberry Pis high quality cameras for time-lapse photography 
+*	Raspberry Pi Enviro + Air Quality for environmental monitoring (temperature, humidity, pressure, oxidising and reducing gases, ammonia, particulates – PM1.0, PM2.5; PM10) 
+*	YOLO on Raspberry Pi and Movidius NCS2 for deep learning insect detection and image screening
+*	Accurite Atlas weather station for temperature, humidity, wind speed and direction, total rainfall, pressure, UV, and light intensity monitoring
+
+ With systems up and running we hope to collect data from late March to early September including: 
+*	Images of salal and dull Oregon grape from bud burst to fruit maturation  
+*	Images of pollinators showing when and how often they came to visit, and enabling identification of different species
+*	Day-to-day weather data, including high and low temperatures, pressure, humidity (Raspberry pi and Accurite), wind speed and direction, total rainfall, UV and light intensity (Accurite only). This will enable comparison of the two systems, and establish reproducibility of the instruments
+*	Climate data including average and maximum, high and low temperatures, light intensity, pressure, wind, speed, and rainfall accumulation
+*	Estimates of reducing and oxidising gases, and ammonia representing trends of increasing or decreasing air quality, and estimates of particulates, such as dust, pollen, mould spores, smoke etc.  
+
+# Data Analysis
+
+Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month period from late March to the end of August. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a neural network. We are currently testing YOLO with a Movidius Neural Compute Stick for this task.
+
+In addition to piloting the technology, the images and weather data will provide baseline information about our test site including:
+
+1.	Date of bud burst and duration of flowering of Salal and Dull Oregon grape
+2.	Pollinator community composition visiting these plants during the flowering season (bees, hoverflies, butterflies, wasps, other flies, beetles, hummingbirds) 
+3.	Time of first appearance and seasonal dynamics of different pollinators 
+4.	How much of a role, if any, non-bee visitors play in the pollination of these two native plants 
+5.	How hyperlocal weather and variations in air quality influence pollinator activity. 
+
+The images and weather data will add to what is already known about pollinators in Coastal Douglas fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom.
+
+
 <a id="weather_monitoring" class="anchor"></a>
 
 # Weather Monitoring
@@ -35,23 +69,25 @@ The particulate matter sensor will be able to detect concentrations of particles
 Wildfire smoke particles typically range from 0.4¬–0.7 microns; dust is around 2.5 microns and pollen is generally 15 microns or more. 
 
 
+
 <a id="pollinator_detection" class="anchor"></a>
 
 # Pollinator detection  
 ***
 
-We have mounted two surveillance cameras comprising of a Raspberry Pi (powered off the mains) fitted with a Pi camera and an SD card, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about 25cm from the plants, we can film an area about the size of a laptop. The cameras are set to take a picture every 30s and the images are stored on the SD card.
+It’s well known that bees are important wildflower pollinators; however, many non-bee pollinators including wasps, hover flies, other flies, beetles, butterflies, and hummingbirds also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently. Local surveys of bee species that pollinate salal and dull Oregon grape report bumble bees to be the primary pollinators, with other bee species visiting less frequently (J.Wray & E. Elle, [SFU Pollination Ecology Lab](https://www.sfu.ca/people/eelle/bee_info.html)). 
 
-## Data Analysis
+We have mounted two surveillance cameras comprising of a Raspberry Pi (powered off the mains) fitted with a Pi camera and an SD card, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every 30s and the images are stored on the SD card.
 
-We hope our cameras and weather station will collect millions of images. As it would take an overwhelming amount of time to look at all these individually to find the ones with insects, we are recruiting computers to do it for us. For this to work we first have to train the computer to recognize our pollinators and identify the images they are in, at which point we can then take a look. This requires training and running a neural network.
+
 
 
 ## Bee species, non-bee species and other pollinators of Galiano Island
 
-The [Biodiversity Galiano](https://biogaliano.org/) project initiated in January 2016, is a community-based initiative to document the flora and fauna of Galiano. So far, 2,698 species have been reported. These include sightings of the following potential pollinators:
+The [Biodiversity Galiano](https://biogaliano.org/) project initiated in January 2016, is a community-based initiative to document the flora and fauna of Galiano. So far, 2,698 species have been reported. These include sightings of the following pollinators:
 
 <br>
+
 
 ```{r, echo = F}
 read.csv('static/pollinators.csv', header = F) %>%
