@@ -15,7 +15,7 @@ use_bs_popover()
 # The Site
 ***
 
-Galiano is the long narrow island of the Southern Gulf Island chain on the west coast of British Columbia. Located within the Coastal-Douglas Fir biogeoclimatic zone, it has a semi-arid ecosystem characterized by a mild climate with cool wet winters and warm dry summers, with annual drought conditions typically from mid-June to early October. Image adapted from [Galiano Story](galianostory.com/FLORAFAUNA.htm).
+Galiano is the narrow island of the Southern Gulf Island chain on the west coast of British Columbia. Located within the Coastal-Douglas Fir biogeoclimatic zone, it has a semi-arid ecosystem characterized by a mild climate with cool wet winters and warm dry summers, with annual drought conditions typically from mid-June to early October. Image adapted from [Galiano Story](galianostory.com/FLORAFAUNA.htm).
 
 <center>
 ![](static/map2.png)
