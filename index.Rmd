@@ -7,6 +7,7 @@ title: "Operation GaliWatch"
 To monitor pollinator populations on Galiano Island, Canada, we're developing low-cost data collection and analysis systems for long-term pollinator surveillance and hyperlocal weather and climate monitoring
 </center>
 
+
 <br>
 
 <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">

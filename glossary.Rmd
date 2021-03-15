@@ -17,7 +17,7 @@ pop_gloss <- function(id){
   a(row['title'], href = row['dest']) %>%
     bs_embed_popover(title = row['title'], 
                      content = paste0(substr(row['details'], 1, 100), '...'), 
-                     trigger="hover", placement = 'bottom-start')
+                     trigger="hover", placement = 'bottom')
 }
 
 make_anchor <- function(id){a(id = id, class = 'anchor')}
@@ -37,5 +37,4 @@ gloss %>%
   apply(FUN=as.list , MARGIN = 1) %>%
   tagList() 
 ```
-
 

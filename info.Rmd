@@ -1,12 +1,12 @@
 ---
 title: 'Project Details'
-toc: true
 ---
 
 ```{r message=FALSE, warning=FALSE, echo = FALSE}
 library(dplyr)
 library(DT)
 library(kableExtra)
+use_bs_popover()
 ```
 
 
@@ -21,7 +21,6 @@ Galiano is the long narrow island of the Southern Gulf Island chain on the west 
 ![](static/map2.png)
 </center>
 
-<a id="hardware" class="anchor"></a>
 
 # Hardware 
 ***
@@ -32,14 +31,16 @@ Galiano is the long narrow island of the Southern Gulf Island chain on the west 
 *	YOLO on Raspberry Pi and Movidius NCS2 for deep learning insect detection and image screening
 *	Accurite Atlas weather station for temperature, humidity, wind speed and direction, total rainfall, pressure, UV, and light intensity monitoring
 
- With systems up and running we hope to collect data from late March to early September including: 
-*	Images of salal and dull Oregon grape from bud burst to fruit maturation  
+With systems up and running we hope to collect data from late March to early September including: 
+
+*	Images of `r pop_gloss('Salal')` and `r pop_gloss('Dull Oregon grape')` from bud burst to fruit maturation  
 *	Images of pollinators showing when and how often they came to visit, and enabling identification of different species
 *	Day-to-day weather data, including high and low temperatures, pressure, humidity (Raspberry pi and Accurite), wind speed and direction, total rainfall, UV and light intensity (Accurite only). This will enable comparison of the two systems, and establish reproducibility of the instruments
 *	Climate data including average and maximum, high and low temperatures, light intensity, pressure, wind, speed, and rainfall accumulation
 *	Estimates of reducing and oxidising gases, and ammonia representing trends of increasing or decreasing air quality, and estimates of particulates, such as dust, pollen, mould spores, smoke etc.  
 
 # Data Analysis
+***
 
 Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month period from late March to the end of August. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a neural network. We are currently testing YOLO with a Movidius Neural Compute Stick for this task.
 
