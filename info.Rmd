@@ -12,47 +12,45 @@ use_bs_popover()
 
 <a id="the_site" class="anchor"></a>
 
-# The Site
+# Study Site
 ***
 
-Galiano is the narrow island of the Southern Gulf Island chain on the west coast of British Columbia. Located within the Coastal-Douglas Fir biogeoclimatic zone, it has a semi-arid ecosystem characterized by a mild climate with cool wet winters and warm dry summers, with annual drought conditions typically from mid-June to early October. Image adapted from [Galiano Story](galianostory.com/FLORAFAUNA.htm).
+Galiano is a long narrow island of the Southern Gulf Island chain situated on the western edge of the Salish Sea. Located within the Coastal-Douglas Fir biogeoclimatic zone, it has a semi-arid ecosystem characterized by a mild climate with cool wet winters and warm dry summers, with annual drought conditions typically from mid-June to early October. Image adapted from [Galiano Story](galianostory.com/FLORAFAUNA.htm).  
+
+
+ Native tree species include coast Douglas-fir, western red cedar, arbutus, western hemlock, grand fir, Garry oak, red alder, and big leaf maple. Native plants commonly found in the understorey include salal, Oregon grape, sword fern, vanilla leaf, and a variety of grasses, wildflowers, mosses, and lichens.
 
 <center>
 ![](static/map2.png)
 </center>
 
 
-# Hardware 
-***
- 
-*	Raspberry Pis for computing power
-*	Raspberry Pis high quality cameras for time-lapse photography 
-*	Raspberry Pi Enviro + Air Quality for environmental monitoring (temperature, humidity, pressure, oxidising and reducing gases, ammonia, particulates – PM1.0, PM2.5; PM10) 
-*	YOLO on Raspberry Pi and Movidius NCS2 for deep learning insect detection and image screening
-*	Accurite Atlas weather station for temperature, humidity, wind speed and direction, total rainfall, pressure, UV, and light intensity monitoring
+  The study site is situated mid island surrounded by the Mid Galiano Protected Areas Network, and within the Greig creek watershed. Cameras will be positioned to survey insect visitations to a salal patch and a dull Oregon grape patch in proximity to a seasonally occupied log cabin. Weather data (temperature, barometric pressure, humidity, and air quality and particulate matter data will be collected at the location using Raspberry pi Enviro sensors, as well as by an independent weather station positioned close by. There are a wide variety of native and introduced flowering plants in the immediate vicinity. 
+  
+  Native               |Introduced
+  ---------------------| ----------
+  Salal                |Daffodil
+  Oregon grape         |Helebore
+  Rock stonecrop       |Heather
+  Wild strawberry      |Wooly mint
+  Clover               |Sage
+  Vetch                |Oregano
+  Trailing blackberry  |Lavender
+  Western star flower  |Marjoram
+  Red-flowering currant|Cranesbill
+  Honeysuckle          |Rose campion  
+  Miners Lettuce       |Cutleaf blackberry
+  Creeping Thistle     |Periwinkle
+  Common Catsear       |Dandelion
+  Thimbleberry         |Daisy and oxeye daisy
+  -                    |Scotch broom  
+  -                    |Himalayan blackberry 
+                       |   
+         
+         
+ Proximate habitat within about a 1/2km radius includes bare bedrock, light well-draining sandy soil interspersed with clay deposits, and soil with high organic content from fallen trees and branches. Urbanisation includes several other nearby properties, some seasonal, others occupied year-round, which are serviced by paved roads, as well as about an acre of productive farmland (flowering crops include sunflowers, peas, beans, potatoes, basil, and artichokes). There are two man-made ponds as well as areas of wetland and rough pasture.  
 
-With systems up and running we hope to collect data from late March to early September including: 
 
-*	Images of `r pop_gloss('Salal')` and `r pop_gloss('Dull Oregon grape')` from bud burst to fruit maturation  
-*	Images of pollinators showing when and how often they came to visit, and enabling identification of different species
-*	Day-to-day weather data, including high and low temperatures, pressure, humidity (Raspberry pi and Accurite), wind speed and direction, total rainfall, UV and light intensity (Accurite only). This will enable comparison of the two systems, and establish reproducibility of the instruments
-*	Climate data including average and maximum, high and low temperatures, light intensity, pressure, wind, speed, and rainfall accumulation
-*	Estimates of reducing and oxidising gases, and ammonia representing trends of increasing or decreasing air quality, and estimates of particulates, such as dust, pollen, mould spores, smoke etc.  
-
-# Data Analysis
-***
-
-Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month period from late March to the end of August. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a neural network. We are currently testing YOLO with a Movidius Neural Compute Stick for this task.
-
-In addition to piloting the technology, the images and weather data will provide baseline information about our test site including:
-
-1.	Date of bud burst and duration of flowering of Salal and Dull Oregon grape
-2.	Pollinator community composition visiting these plants during the flowering season (bees, hoverflies, butterflies, wasps, other flies, beetles, hummingbirds) 
-3.	Time of first appearance and seasonal dynamics of different pollinators 
-4.	How much of a role, if any, non-bee visitors play in the pollination of these two native plants 
-5.	How hyperlocal weather and variations in air quality influence pollinator activity. 
-
-The images and weather data will add to what is already known about pollinators in Coastal Douglas fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom.
 
 
 <a id="weather_monitoring" class="anchor"></a>
@@ -60,14 +58,17 @@ The images and weather data will add to what is already known about pollinators 
 # Weather Monitoring
 ***
 
-Our weather station is an Acurite Atlas equipped to measure wind speed and direction, temperature and humidity, pressure, rainfall, and UV and light intensity. Readings are dumped every 30s to an SD card. Handling the weather and air quality data is straightforward as they can be easily analyzed and plotted in Microsoft Excel.  
+##	Equipment
+*	Raspberry Pi Enviro + Air Quality
+*	Accurite Atlas weather station 
+
+
+The weather sensors and weather station are equipped to measure temperature, humidity, wind speed and direction, total rainfall, pressure, UV, and light intensity. Readings are dumped every 30s to an SD card. 
+
 
 ## Air quality monitoring
 
-We have mounted an additional Raspberry Pi fitted with Enviro + Air Quality combined with a particulate matter sensor (which we are still waiting for Canada Post!). This lets us measure temperature, pressure, humidity, light, and noise level (bzzz), AND pollutant gases and particulates.
-The major gases that our air quality sensor can detect are carbon monoxide (a reducing gas), nitrogen dioxide (an oxidizing gas), and ammonia. By establishing baseline levels, we can see how the air quality changes over the growing season. 
-The particulate matter sensor will be able to detect concentrations of particles of different sizes (PM1, PM2.5 and PM10) as well as numbers of particles of different sizes >0.3, >0.5, >1.0, >2.5, >5, and >10 microns.
-Wildfire smoke particles typically range from 0.4¬–0.7 microns; dust is around 2.5 microns and pollen is generally 15 microns or more. 
+ The air quality monitoring sensors measure changes in concentrations of reducing (carbon monoxide) and oxidising gases (nitrogen dioxide), and ammonia. The particulate matter sensor detects concentrations of particles of different sizes (PM1, PM2.5 and PM10) as well as the number of particles of different sizes >0.3, >0.5, >1.0, >2.5, >5, and >10 microns. Wildfire smoke particles typically range from 0.4–0.7 microns, dust is around 2.5 microns, while pollen is generally 15 microns or more. Together, these sensors will show how air quality changes over time.  
 
 
 
@@ -76,16 +77,31 @@ Wildfire smoke particles typically range from 0.4¬–0.7 microns; dust is aroun
 # Pollinator detection  
 ***
 
-It’s well known that bees are important wildflower pollinators; however, many non-bee pollinators including wasps, hover flies, other flies, beetles, butterflies, and hummingbirds also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently. Local surveys of bee species that pollinate salal and dull Oregon grape report bumble bees to be the primary pollinators, with other bee species visiting less frequently (J.Wray & E. Elle, [SFU Pollination Ecology Lab](https://www.sfu.ca/people/eelle/bee_info.html)). 
+It’s well known that bees are important wildflower pollinators; however, many non-bee pollinators including wasps, hover flies, other flies, beetles, butterflies, moths, and hummingbirds also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently. Local surveys of bee species that pollinate salal and dull Oregon grape report bumble bees to be the primary pollinators, with other bee species visiting less frequently (J.Wray & E. Elle, [SFU Pollination Ecology Lab](https://www.sfu.ca/people/eelle/bee_info.html)). 
 
-We have mounted two surveillance cameras comprising of a Raspberry Pi (powered off the mains) fitted with a Pi camera and an SD card, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every 30s and the images are stored on the SD card.
+##	Equipment
++	Raspberry Pis for computing power
++	Raspberry Pis high quality cameras for time-lapse photography 
++	YOLO on Raspberry Pi and Movidius NCS2 for deep learning insect detection and image screening  
 
 
+ We have mounted two surveillance cameras comprising of a Raspberry Pi (powered off the mains) fitted with a Pi camera and an SD card, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every 30s and the images are stored on the SD card.
+
+# Data Analysis
+***
+
+ Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month period from late March to the end of August. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a neural network. We are currently testing YOLO with a Movidius Neural Compute Stick for this task.
 
 
 ## Bee species, non-bee species and other pollinators of Galiano Island
 
-The [Biodiversity Galiano](https://biogaliano.org/) project initiated in January 2016, is a community-based initiative to document the flora and fauna of Galiano. So far, 2,698 species have been reported. These include sightings of the following pollinators:
+
+ Although our two test plants salal and dull Oregon grape are particularly attractive to bumble bees, many other species of pollinators have been sited on Galiano and we are interested to see if any of these are captured in our images. Our reference resource for insect identification is the [Biodiversity Galiano](https://biogaliano.org/) project initiated in January 2016, a community-based initiative to document the flora and fauna of Galiano. So far, over 2,500 species have been reported of which more than 1,000 are arthropods. Among these are 82 species of bees and wasps including honey bees (*Apis mellifera*), bumblebees (*Bombus* spp.) mining bees (*Andrena* spp.), long-horned bees (*Eucera* spp.), mason bees (*Osmia* spp.), cuckoo bees (*Nomada* spp.), sweat bees (*Halictus* and *Lasioglossum* spp.), blood bees (*Sphecodes* spp.), and various wasps.  
+
+
+  We will use this database to help ID any pollinators we see in our time-lapse images.
+
+
 
 <br>
 
@@ -101,4 +117,23 @@ read.csv('static/pollinators.csv', header = F) %>%
 
 
 
+ With systems up and running we hope to collect data from late March to early September including: 
+
+*	Images of `r pop_gloss('Salal')` and `r pop_gloss('Dull Oregon grape')` from bud burst to fruit maturation  
+*	Images of pollinators showing when and how often they come to visit, and enabling identification of different species
+*	Day-to-day weather data, including high and low temperatures, pressure, humidity (Raspberry pi and Accurite), wind speed and direction, total rainfall, UV and light intensity (Accurite only). This will enable comparison of the two systems, and establish reproducibility of the instruments
+*	Climate data including average and maximum high and low temperatures; light intensity; pressure; wind speed; and, rainfall accumulation
+*	Estimates of reducing and oxidising gases, and ammonia representing trends of increasing or decreasing air quality, and estimates of particulates, such as dust, pollen, mould spores, smoke etc.  
+
+
+
+In addition to piloting the technology, the images and weather data will provide baseline information about our test site including:
+
+1.	Date of bud burst and duration of flowering of salal and dull Oregon grape
+2.	Pollinator community composition visiting these plants during the flowering season (bees, hoverflies, butterflies, moths, wasps, other flies, beetles, hummingbirds) 
+3.	Time of first appearance and seasonal dynamics of different pollinators 
+4.	How much of a role, if any, non-bee visitors play in the pollination of these two native plants 
+5.	How hyperlocal weather and variations in air quality influence pollinator activity. 
+
+The images and weather data will add to what is already known about pollinators in Coastal Douglas fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom.
 
