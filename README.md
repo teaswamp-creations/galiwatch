@@ -1,10 +1,7 @@
 # galiwatch
 Tracking pollinator behaviour + weather data collection on Galiano Island
 
-## enviroplus
+## website inspiration
 
-Weather data picked up every minute, recorded to a daily csv and google sheets
-
-## dashboard
-
-not available yet.
+* https://github.com/feddelegrand7/cronologia
+* http://ijlyttle.github.io/bsplus/
