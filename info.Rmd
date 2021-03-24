@@ -24,6 +24,8 @@ Galiano is a long narrow island of the Southern Gulf Island chain situated on th
 ![](static/map2.png)
 </center>
 
+<br>
+
 
   The study site is situated mid island surrounded by the Mid Galiano Protected Areas Network, and within the Greig creek watershed. Cameras will be positioned to survey insect visitations to a salal patch and a dull Oregon grape patch in proximity to a seasonally occupied log cabin. Weather data (temperature, barometric pressure, humidity, and air quality and particulate matter data will be collected at the location using Raspberry pi Enviro sensors, as well as by an independent weather station positioned close by. There are a wide variety of native and introduced flowering plants in the immediate vicinity. 
   

@@ -1,0 +1,175 @@
+/* text formatting */
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,500;1,500&family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: 'Cabin', sans-serif;
+}
+
+.level1 {
+  margin-top: 80px;
+}
+
+.level1 h1 {
+  color: #69b3a2;
+  margin-bottom: 0;
+}
+
+.title {
+  text-align: center;
+  padding-top: 0px;
+}
+
+/* ---------- colunms --------------- */
+
+.column-left{
+  float: left;
+  width: 33%;
+  text-align: left;
+}
+.column-center{
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+
+/* ---------- Links ----------------- */
+a, a:hover {
+  color: #69b3a2;
+}
+
+/* ---------- Button ----------------- */
+
+.btn {
+    border-width: 0 0px 0px 0px;
+    font-weight: normal;
+    text-transform: ;
+    color: #69b3a2;
+}
+
+.btn-default {
+    color: #69b3a2;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: #69b3a2;
+}
+
+  
+/* don't format anchors as links */
+.anchor, .anchor:hover, .anchor:visited, .anchor:focus, .anchor:active {
+  text-decoration: none;
+  color: inherit;
+  outline: 0;
+  cursor: auto;
+  padding-bottom: 30px;
+}
+
+/* fadey images */
+
+.imgbox {
+  position: relative;
+  text-align: center;
+  
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #FFFFFF;
+}
+
+
+.imgbox:hover .overlay {
+  opacity: 0.8;
+}
+
+.imgtext {
+  color: #282828;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.learntext {
+  color: #3C5F74;
+  font-size: 10px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/* image gallery  */
+
+.galrow {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  text-align: center;
+}
+
+/* Create four equal columns that sits next to each other */
+.galcolumn {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 6px;
+}
+
+.galcolumn imgbox {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns 
+@media screen and (max-width: 900px) {
+  .galcolumn {
+    flex: 50%;
+    max-width: 50%;
+  }
+  .imgtext{
+    font-size: 6vw;
+  }
+}
+*/
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 450px) {
+  .galcolumn {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .imgtext{
+    font-size: 6vw;
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+  .imgtext{
+    font-size: 28px;
+  }
+  .learntext {
+    font-size: 18px;
+  }
+}
+
+

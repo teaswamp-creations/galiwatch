@@ -286,70 +286,157 @@ $(document).ready(function () {
   $('[data-toggle="popover"]').popover();
 });</script>
 <p><a id="the_site" class="anchor"></a></p>
-<div id="the-site" class="section level1">
-<h1>The Site</h1>
+<div id="study-site" class="section level1">
+<h1>Study Site</h1>
 <hr />
-<p>Galiano is the narrow island of the Southern Gulf Island chain on the west coast of British Columbia. Located within the Coastal-Douglas Fir biogeoclimatic zone, it has a semi-arid ecosystem characterized by a mild climate with cool wet winters and warm dry summers, with annual drought conditions typically from mid-June to early October. Image adapted from <a href="galianostory.com/FLORAFAUNA.htm">Galiano Story</a>.</p>
+<p>Galiano is a long narrow island of the Southern Gulf Island chain situated on the western edge of the Salish Sea. Located within the Coastal-Douglas Fir biogeoclimatic zone, it has a semi-arid ecosystem characterized by a mild climate with cool wet winters and warm dry summers, with annual drought conditions typically from mid-June to early October. Image adapted from <a href="galianostory.com/FLORAFAUNA.htm">Galiano Story</a>.</p>
+<p>Native tree species include coast Douglas-fir, western red cedar, arbutus, western hemlock, grand fir, Garry oak, red alder, and big leaf maple. Native plants commonly found in the understorey include salal, Oregon grape, sword fern, vanilla leaf, and a variety of grasses, wildflowers, mosses, and lichens.</p>
 <center>
 <img src="static/map2.png" />
 </center>
-</div>
-<div id="hardware" class="section level1">
-<h1>Hardware</h1>
-<hr />
-<ul>
-<li>Raspberry Pis for computing power</li>
-<li>Raspberry Pis high quality cameras for time-lapse photography</li>
-<li>Raspberry Pi Enviro + Air Quality for environmental monitoring (temperature, humidity, pressure, oxidising and reducing gases, ammonia, particulates – PM1.0, PM2.5; PM10)</li>
-<li>YOLO on Raspberry Pi and Movidius NCS2 for deep learning insect detection and image screening</li>
-<li>Accurite Atlas weather station for temperature, humidity, wind speed and direction, total rainfall, pressure, UV, and light intensity monitoring</li>
-</ul>
-<p>With systems up and running we hope to collect data from late March to early September including:</p>
-<ul>
-<li>Images of <a href="glossary.html#Salal" title="Salal" data-toggle="popover" data-content="Gaultheria shallon (salal) is a prolific native evergreen shrub that spreads through the Douglas-fir..." data-placement="bottom" data-trigger="hover">Salal</a> and <a href="glossary.html#Dull%20Oregon%20grape" title="Dull Oregon grape" data-toggle="popover" data-content="Berberis nrevosa, also known as Mahonia nervosa, grows slowly to about two feet in the Douglas-fir f..." data-placement="bottom" data-trigger="hover">Dull Oregon grape</a> from bud burst to fruit maturation<br />
-</li>
-<li>Images of pollinators showing when and how often they came to visit, and enabling identification of different species</li>
-<li>Day-to-day weather data, including high and low temperatures, pressure, humidity (Raspberry pi and Accurite), wind speed and direction, total rainfall, UV and light intensity (Accurite only). This will enable comparison of the two systems, and establish reproducibility of the instruments</li>
-<li>Climate data including average and maximum, high and low temperatures, light intensity, pressure, wind, speed, and rainfall accumulation</li>
-<li>Estimates of reducing and oxidising gases, and ammonia representing trends of increasing or decreasing air quality, and estimates of particulates, such as dust, pollen, mould spores, smoke etc.</li>
-</ul>
-</div>
-<div id="data-analysis" class="section level1">
-<h1>Data Analysis</h1>
-<hr />
-<p>Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month period from late March to the end of August. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a neural network. We are currently testing YOLO with a Movidius Neural Compute Stick for this task.</p>
-<p>In addition to piloting the technology, the images and weather data will provide baseline information about our test site including:</p>
-<ol style="list-style-type: decimal">
-<li>Date of bud burst and duration of flowering of Salal and Dull Oregon grape</li>
-<li>Pollinator community composition visiting these plants during the flowering season (bees, hoverflies, butterflies, wasps, other flies, beetles, hummingbirds)</li>
-<li>Time of first appearance and seasonal dynamics of different pollinators</li>
-<li>How much of a role, if any, non-bee visitors play in the pollination of these two native plants</li>
-<li>How hyperlocal weather and variations in air quality influence pollinator activity.</li>
-</ol>
-<p>The images and weather data will add to what is already known about pollinators in Coastal Douglas fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom.</p>
+<p><br></p>
+<p>The study site is situated mid island surrounded by the Mid Galiano Protected Areas Network, and within the Greig creek watershed. Cameras will be positioned to survey insect visitations to a salal patch and a dull Oregon grape patch in proximity to a seasonally occupied log cabin. Weather data (temperature, barometric pressure, humidity, and air quality and particulate matter data will be collected at the location using Raspberry pi Enviro sensors, as well as by an independent weather station positioned close by. There are a wide variety of native and introduced flowering plants in the immediate vicinity.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Native</th>
+<th>Introduced</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Salal</td>
+<td>Daffodil</td>
+</tr>
+<tr class="even">
+<td>Oregon grape</td>
+<td>Helebore</td>
+</tr>
+<tr class="odd">
+<td>Rock stonecrop</td>
+<td>Heather</td>
+</tr>
+<tr class="even">
+<td>Wild strawberry</td>
+<td>Wooly mint</td>
+</tr>
+<tr class="odd">
+<td>Clover</td>
+<td>Sage</td>
+</tr>
+<tr class="even">
+<td>Vetch</td>
+<td>Oregano</td>
+</tr>
+<tr class="odd">
+<td>Trailing blackberry</td>
+<td>Lavender</td>
+</tr>
+<tr class="even">
+<td>Western star flower</td>
+<td>Marjoram</td>
+</tr>
+<tr class="odd">
+<td>Red-flowering currant</td>
+<td>Cranesbill</td>
+</tr>
+<tr class="even">
+<td>Honeysuckle</td>
+<td>Rose campion</td>
+</tr>
+<tr class="odd">
+<td>Miners Lettuce</td>
+<td>Cutleaf blackberry</td>
+</tr>
+<tr class="even">
+<td>Creeping Thistle</td>
+<td>Periwinkle</td>
+</tr>
+<tr class="odd">
+<td>Common Catsear</td>
+<td>Dandelion</td>
+</tr>
+<tr class="even">
+<td>Thimbleberry</td>
+<td>Daisy and oxeye daisy</td>
+</tr>
+<tr class="odd">
+<td>-</td>
+<td>Scotch broom</td>
+</tr>
+<tr class="even">
+<td>-</td>
+<td>Himalayan blackberry</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Proximate habitat within about a 1/2km radius includes bare bedrock, light well-draining sandy soil interspersed with clay deposits, and soil with high organic content from fallen trees and branches. Urbanisation includes several other nearby properties, some seasonal, others occupied year-round, which are serviced by paved roads, as well as about an acre of productive farmland (flowering crops include sunflowers, peas, beans, potatoes, basil, and artichokes). There are two man-made ponds as well as areas of wetland and rough pasture.</p>
 <p><a id="weather_monitoring" class="anchor"></a></p>
 </div>
 <div id="weather-monitoring" class="section level1">
 <h1>Weather Monitoring</h1>
 <hr />
-<p>Our weather station is an Acurite Atlas equipped to measure wind speed and direction, temperature and humidity, pressure, rainfall, and UV and light intensity. Readings are dumped every 30s to an SD card. Handling the weather and air quality data is straightforward as they can be easily analyzed and plotted in Microsoft Excel.</p>
+<div id="equipment" class="section level2">
+<h2>Equipment</h2>
+<ul>
+<li>Raspberry Pi Enviro + Air Quality</li>
+<li>Accurite Atlas weather station</li>
+</ul>
+<p>The weather sensors and weather station are equipped to measure temperature, humidity, wind speed and direction, total rainfall, pressure, UV, and light intensity. Readings are dumped every 30s to an SD card.</p>
+</div>
 <div id="air-quality-monitoring" class="section level2">
 <h2>Air quality monitoring</h2>
-<p>We have mounted an additional Raspberry Pi fitted with Enviro + Air Quality combined with a particulate matter sensor (which we are still waiting for Canada Post!). This lets us measure temperature, pressure, humidity, light, and noise level (bzzz), AND pollutant gases and particulates. The major gases that our air quality sensor can detect are carbon monoxide (a reducing gas), nitrogen dioxide (an oxidizing gas), and ammonia. By establishing baseline levels, we can see how the air quality changes over the growing season. The particulate matter sensor will be able to detect concentrations of particles of different sizes (PM1, PM2.5 and PM10) as well as numbers of particles of different sizes &gt;0.3, &gt;0.5, &gt;1.0, &gt;2.5, &gt;5, and &gt;10 microns. Wildfire smoke particles typically range from 0.4¬–0.7 microns; dust is around 2.5 microns and pollen is generally 15 microns or more.</p>
+<p>The air quality monitoring sensors measure changes in concentrations of reducing (carbon monoxide) and oxidising gases (nitrogen dioxide), and ammonia. The particulate matter sensor detects concentrations of particles of different sizes (PM1, PM2.5 and PM10) as well as the number of particles of different sizes &gt;0.3, &gt;0.5, &gt;1.0, &gt;2.5, &gt;5, and &gt;10 microns. Wildfire smoke particles typically range from 0.4–0.7 microns, dust is around 2.5 microns, while pollen is generally 15 microns or more. Together, these sensors will show how air quality changes over time.</p>
 <p><a id="pollinator_detection" class="anchor"></a></p>
 </div>
 </div>
 <div id="pollinator-detection" class="section level1">
 <h1>Pollinator detection</h1>
 <hr />
-<p>It’s well known that bees are important wildflower pollinators; however, many non-bee pollinators including wasps, hover flies, other flies, beetles, butterflies, and hummingbirds also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently. Local surveys of bee species that pollinate salal and dull Oregon grape report bumble bees to be the primary pollinators, with other bee species visiting less frequently (J.Wray &amp; E. Elle, <a href="https://www.sfu.ca/people/eelle/bee_info.html">SFU Pollination Ecology Lab</a>).</p>
+<p>It’s well known that bees are important wildflower pollinators; however, many non-bee pollinators including wasps, hover flies, other flies, beetles, butterflies, moths, and hummingbirds also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently. Local surveys of bee species that pollinate salal and dull Oregon grape report bumble bees to be the primary pollinators, with other bee species visiting less frequently (J.Wray &amp; E. Elle, <a href="https://www.sfu.ca/people/eelle/bee_info.html">SFU Pollination Ecology Lab</a>).</p>
+<div id="equipment-1" class="section level2">
+<h2>Equipment</h2>
+<ul>
+<li>Raspberry Pis for computing power</li>
+<li>Raspberry Pis high quality cameras for time-lapse photography</li>
+<li>YOLO on Raspberry Pi and Movidius NCS2 for deep learning insect detection and image screening</li>
+</ul>
 <p>We have mounted two surveillance cameras comprising of a Raspberry Pi (powered off the mains) fitted with a Pi camera and an SD card, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every 30s and the images are stored on the SD card.</p>
+</div>
+</div>
+<div id="data-analysis" class="section level1">
+<h1>Data Analysis</h1>
+<hr />
+<p>Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month period from late March to the end of August. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a neural network. We are currently testing YOLO with a Movidius Neural Compute Stick for this task.</p>
 <div id="bee-species-non-bee-species-and-other-pollinators-of-galiano-island" class="section level2">
 <h2>Bee species, non-bee species and other pollinators of Galiano Island</h2>
-<p>The <a href="https://biogaliano.org/">Biodiversity Galiano</a> project initiated in January 2016, is a community-based initiative to document the flora and fauna of Galiano. So far, 2,698 species have been reported. These include sightings of the following pollinators:</p>
+<p>Although our two test plants salal and dull Oregon grape are particularly attractive to bumble bees, many other species of pollinators have been sited on Galiano and we are interested to see if any of these are captured in our images. Our reference resource for insect identification is the <a href="https://biogaliano.org/">Biodiversity Galiano</a> project initiated in January 2016, a community-based initiative to document the flora and fauna of Galiano. So far, over 2,500 species have been reported of which more than 1,000 are arthropods. Among these are 82 species of bees and wasps including honey bees (<em>Apis mellifera</em>), bumblebees (<em>Bombus</em> spp.) mining bees (<em>Andrena</em> spp.), long-horned bees (<em>Eucera</em> spp.), mason bees (<em>Osmia</em> spp.), cuckoo bees (<em>Nomada</em> spp.), sweat bees (<em>Halictus</em> and <em>Lasioglossum</em> spp.), blood bees (<em>Sphecodes</em> spp.), and various wasps.</p>
+<p>We will use this database to help ID any pollinators we see in our time-lapse images.</p>
 <p><br></p>
-<div id="htmlwidget-9b9c058fc803c99dd135" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9b9c058fc803c99dd135">{"x":{"filter":"top","filterHTML":"<tr>\n  <td><\/td>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;Beetles&quot;,&quot;Bumble bees (Bombus)&quot;,&quot;Butterflies (Papilionoidea)&quot;,&quot;Honeybees&quot;,&quot;Hover flies (Syrphidae)&quot;,&quot;Other bees &quot;,&quot;Other flies&quot;,&quot;Wasps (Apoidea and Vespoidea)&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92"],["Honeybees","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Wasps (Apoidea and Vespoidea)","Wasps (Apoidea and Vespoidea)","Wasps (Apoidea and Vespoidea)","Other flies","Other flies","Other flies","Other flies","Other flies","Beetles","Beetles","Beetles"],["Apis Mellifera (Western Honeybee)","Vancouver Bumble Bee (B. Vancouverensis)","Yellow-Fronted Bumble Bee (B. Flavirons)","Orange-Rumped Bumble Bee (B. Melanopygus)","Sitka Bumble Bee (B. Sitkenskii)","Yellow-Faced Bumble Bee (B. Vosnesenskii)","Fuzzyhorned Bumble Bee (B. Mixtus)","Hunt’s Bumble Bee (B. Huntii)","Western Leafcutter","Nomad Bees","Blue Orchard Bees","Metallic Sweat Bees","Confusing Furrow Bee","European Wool Carder","Texas-Striped Sweat Bee","Tripartite Sweat Bee","Synhalonia","Prunus Miner","Black-And-Grey Leaf Cutter Bee","Ursine Digger Bee","Dianthidicum Pudicum","Spined Little Carpenter Bee","Small Long-Horned Bee","Blood Bees","Trypoxylon","Orange-Legged Furrow Bee","Perplexed Miner Bee","Frigid Mining Bee","Black-Banded Mining Bee","Tansy-Mustard Sweat Bee","Rival Long-Horned Bee","Meridional Mason Bee","Horn-Faced Leafcutter Bee","Tiny Small Carpenter Bee","Pacific Sweat Bee","Ashy Digger Bee","Prionyx Canadensis","Red-Footed Sharptail","Stigmus Americanus","Complex Dasysyrphus Intrudens","Western Pond Fly","Variable Duskyface Fly","Orange-Spotted Drone Fly","Bumble-Bee Catkin Fly","Yellow-Faced Swiftwing","Common Drone Fly","Western Calligrapher","Western Aphideater","Dusky Drone Fly","Common Hover Fly","Thick-Legged Hover Fly","Narrow Headed Marsh Fly","Sedgesitters","Margined Calligrapher","Large-Tailed Aphid Eater","American Thintail Fly","Patton’s Yellowjacket Fly","Coquillett’s Bumble Fly","Yellow-Legged Wood Fly","American Dainty","White-Bowed Smoothwing","Pale Swallowtail","Woodland Skipper","Juniper Hairstreak","Propertius Duskywing","Echo Azure","Western Tiger Swallowtail","Painted Lady","Julia Orangetip","Cabbage White","Red Admiral","Satyr Comma","Mylitta Crescent","Lorquin’s Admiral","Brown Elfin","Grey Hairstreak","California Tortoiseshell","Anise Swallowtail","Mourning Cloak","Common Roadside Skipper","Pine White","Yellow-Legged Mud-Dauber","Thread-Waisted Sand Wasp","Digger Wasp","Greater Bee Fly (Bombylius Major)","Gymnosoma","Machimus","Myopa Rubida","Leaf Miner Fly","Soldier Beetles","Leaf Beetles","Lady Bugs"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Group<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"autoWidth":true,"order":[],"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1b569931047f9142b597" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1b569931047f9142b597">{"x":{"filter":"top","filterHTML":"<tr>\n  <td><\/td>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;Beetles&quot;,&quot;Bumble bees (Bombus)&quot;,&quot;Butterflies (Papilionoidea)&quot;,&quot;Honeybees&quot;,&quot;Hover flies (Syrphidae)&quot;,&quot;Other bees &quot;,&quot;Other flies&quot;,&quot;Wasps (Apoidea and Vespoidea)&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92"],["Honeybees","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Other bees ","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Wasps (Apoidea and Vespoidea)","Wasps (Apoidea and Vespoidea)","Wasps (Apoidea and Vespoidea)","Other flies","Other flies","Other flies","Other flies","Other flies","Beetles","Beetles","Beetles"],["Apis Mellifera (Western Honeybee)","Vancouver Bumble Bee (B. Vancouverensis)","Yellow-Fronted Bumble Bee (B. Flavirons)","Orange-Rumped Bumble Bee (B. Melanopygus)","Sitka Bumble Bee (B. Sitkenskii)","Yellow-Faced Bumble Bee (B. Vosnesenskii)","Fuzzyhorned Bumble Bee (B. Mixtus)","Hunt’s Bumble Bee (B. Huntii)","Western Leafcutter","Nomad Bees","Blue Orchard Bees","Metallic Sweat Bees","Confusing Furrow Bee","European Wool Carder","Texas-Striped Sweat Bee","Tripartite Sweat Bee","Synhalonia","Prunus Miner","Black-And-Grey Leaf Cutter Bee","Ursine Digger Bee","Dianthidicum Pudicum","Spined Little Carpenter Bee","Small Long-Horned Bee","Blood Bees","Trypoxylon","Orange-Legged Furrow Bee","Perplexed Miner Bee","Frigid Mining Bee","Black-Banded Mining Bee","Tansy-Mustard Sweat Bee","Rival Long-Horned Bee","Meridional Mason Bee","Horn-Faced Leafcutter Bee","Tiny Small Carpenter Bee","Pacific Sweat Bee","Ashy Digger Bee","Prionyx Canadensis","Red-Footed Sharptail","Stigmus Americanus","Complex Dasysyrphus Intrudens","Western Pond Fly","Variable Duskyface Fly","Orange-Spotted Drone Fly","Bumble-Bee Catkin Fly","Yellow-Faced Swiftwing","Common Drone Fly","Western Calligrapher","Western Aphideater","Dusky Drone Fly","Common Hover Fly","Thick-Legged Hover Fly","Narrow Headed Marsh Fly","Sedgesitters","Margined Calligrapher","Large-Tailed Aphid Eater","American Thintail Fly","Patton’s Yellowjacket Fly","Coquillett’s Bumble Fly","Yellow-Legged Wood Fly","American Dainty","White-Bowed Smoothwing","Pale Swallowtail","Woodland Skipper","Juniper Hairstreak","Propertius Duskywing","Echo Azure","Western Tiger Swallowtail","Painted Lady","Julia Orangetip","Cabbage White","Red Admiral","Satyr Comma","Mylitta Crescent","Lorquin’s Admiral","Brown Elfin","Grey Hairstreak","California Tortoiseshell","Anise Swallowtail","Mourning Cloak","Common Roadside Skipper","Pine White","Yellow-Legged Mud-Dauber","Thread-Waisted Sand Wasp","Digger Wasp","Greater Bee Fly (Bombylius Major)","Gymnosoma","Machimus","Myopa Rubida","Leaf Miner Fly","Soldier Beetles","Leaf Beetles","Lady Bugs"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Group<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"autoWidth":true,"order":[],"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+<p>With systems up and running we hope to collect data from late March to early September including:</p>
+<ul>
+<li>Images of <a href="glossary.html#Salal" data-toggle="popover" data-content="&lt;strong&gt;Salal&lt;/strong&gt; &lt;strong&gt;: &lt;/strong&gt; Gaultheria shallon (salal) is a prolific native evergreen shrub that spreads through the Douglas-fir ..." data-placement="bottom" data-trigger="hover" data-html="true">Salal</a> and <a href="glossary.html#Dull%20Oregon%20grape" data-toggle="popover" data-content="&lt;strong&gt;Dull Oregon grape&lt;/strong&gt; &lt;strong&gt;: &lt;/strong&gt; Berberis nrevosa, also known as Mahonia nervosa, grows slowly to about two feet in the Douglas-fir f ..." data-placement="bottom" data-trigger="hover" data-html="true">Dull Oregon grape</a> from bud burst to fruit maturation<br />
+</li>
+<li>Images of pollinators showing when and how often they come to visit, and enabling identification of different species</li>
+<li>Day-to-day weather data, including high and low temperatures, pressure, humidity (Raspberry pi and Accurite), wind speed and direction, total rainfall, UV and light intensity (Accurite only). This will enable comparison of the two systems, and establish reproducibility of the instruments</li>
+<li>Climate data including average and maximum high and low temperatures; light intensity; pressure; wind speed; and, rainfall accumulation</li>
+<li>Estimates of reducing and oxidising gases, and ammonia representing trends of increasing or decreasing air quality, and estimates of particulates, such as dust, pollen, mould spores, smoke etc.</li>
+</ul>
+<p>In addition to piloting the technology, the images and weather data will provide baseline information about our test site including:</p>
+<ol style="list-style-type: decimal">
+<li>Date of bud burst and duration of flowering of salal and dull Oregon grape</li>
+<li>Pollinator community composition visiting these plants during the flowering season (bees, hoverflies, butterflies, moths, wasps, other flies, beetles, hummingbirds)</li>
+<li>Time of first appearance and seasonal dynamics of different pollinators</li>
+<li>How much of a role, if any, non-bee visitors play in the pollination of these two native plants</li>
+<li>How hyperlocal weather and variations in air quality influence pollinator activity.</li>
+</ol>
+<p>The images and weather data will add to what is already known about pollinators in Coastal Douglas fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom.</p>
 </div>
 </div>
 
