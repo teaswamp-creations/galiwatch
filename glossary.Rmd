@@ -15,9 +15,8 @@ pop_gloss <- function(id){
   # a is a list of text, dest, details
   row = subset(gloss, title == id)
   a(row['title'], href = row['dest']) %>%
-    bs_embed_popover(title = row['title'], 
-                     content = paste0(substr(row['details'], 1, 100), '...'), 
-                     trigger="hover", placement = 'bottom')
+    bs_embed_popover(content = paste(strong(row['title']), strong(": "), substr(row['details'], 1, 100), '...'), 
+                     trigger="hover", placement = 'bottom', html = T)
 }
 
 make_anchor <- function(id){a(id = id, class = 'anchor')}
@@ -32,9 +31,8 @@ read_sheet(sheet_id, sheet = 'glossary') %>%
 gloss %>%
   mutate(dest = lapply(title, FUN = make_anchor),
          title = lapply(title, FUN = h4), 
-         details = lapply(details, FUN = p)) %>%
+         details = lapply(details, FUN = HTML)) %>%
   relocate(dest, .before = title) %>%
   apply(FUN=as.list , MARGIN = 1) %>%
   tagList() 
 ```
-
