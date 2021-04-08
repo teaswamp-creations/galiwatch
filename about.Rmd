@@ -28,7 +28,7 @@ title: "About"
 
 ## Bumble bee species in flux in British Columbia
 
- Decline of bumble bees has been reported in North America and Europe and is of significant global concern (Soroye, 2020). Although there are over 500 known bee species in British Columbia, there is not a lot of historical information about pollinator populations to use as a baseline. However, we do know that at least one bee species, the western bumble bee, *Bombus occidentalis*, has significantly declined (Wray, accessed 28 Mar, 2021). The authors discuss how this bee used to be very common in the lower mainland in the 1980s, representing 25-30% of bumble bee species collected on local berry farms, but by 2003/2004 had dwindled to less than 1% of the bees collected. Since then, *Bombus occidentalis* was sighted just a handful of times on Vancouver Island in 2012, and once in the lower mainland at Boundary Bay in 2013. According to a local newspaper report, it was last spotted on Galiano in 1990. In contrast however, it seems the yellow-faced bumble bee, *B. vosnesenskii*, may be gaining ground in the region (Fraser, 2012). 
+ Decline of bumble bees has been reported in North America and Europe and is of significant global concern (Soroye, 2020). Although there are over 500 known bee species in British Columbia, there is not a lot of historical information about pollinator populations to use as a baseline. However, we do know that at least one bee species, the western bumble bee, *Bombus occidentalis*, has significantly declined (Wray, accessed 28 Mar, 2021). The authors discuss how this bee used to be very common in the lower mainland in the 1980s, representing 25-30% of bumble bee species collected on local berry farms, but by 2003/2004 had dwindled to less than 1% of the bees collected. Since then, *Bombus occidentalis* was sighted just a handful of times on Vancouver Island in 2012, and once in the lower mainland at Boundary Bay in 2013. According to a local newspaper report, it was last spotted on Galiano in 1990. In contrast however, it seems the yellow-faced bumble bee, *B. vosnesenskii*, may be gaining ground in the region [^1](Fraser, 2012). 
  
  
  Galiano's bumble bees have recently been under scrutiny in a study to better understand their reliance on habitat diversity in this semi-arid
@@ -46,7 +46,7 @@ Photos by [Simon A](https://inaturalist.ca/people/37277), licensed under [CC BY-
 ### References
  
  
- Fraser DF, Copley CR, Elle E, Cannings RA. Changes in the status and distribution of the yellow-faced bumble Bee. Journal of the Entomological Society of British Columbia. 2012;109:31-7.
+[^1]: Fraser DF, Copley CR, Elle E, Cannings RA. Changes in the status and distribution of the yellow-faced bumble Bee. Journal of the Entomological Society of British Columbia. 2012;109:31-7.
  
  Kremen C, Williams NM, Thorp RW. Crop pollination from native bees at risk from agricultural intensification. Proceedings of the National Academy of Sciences. 2002;99(26):16812-6.
  

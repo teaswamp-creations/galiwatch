@@ -91,16 +91,16 @@ It’s well known that bees are important wildflower pollinators; however, many 
 ##	Equipment
 +	`r pop_gloss('Raspberry Pi')` for computing power
 +	Raspberry Pi's high quality cameras for time-lapse photography 
-+	`r pop_gloss('YOLO')` on Raspberry Pi and `r pop_gloss('Movidius NCS2')` for `r pop_gloss('Deep learning')` insect detection and image screening  
++	`r pop_gloss('Convoultional neural network')` and `r pop_gloss('Movidius NCS2')` for applying `r pop_gloss('Deep learning')` for insect detection and image screening  
 
 
- We have mounted two surveillance cameras comprising of a Raspberry Pi (powered off the mains) fitted with a Pi camera and an `r pop_gloss('SD card')`, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every 30s and the images are stored on the SD card.
+ We have mounted two surveillance cameras comprising of a Raspberry Pi (powered over ethernet) fitted with a Pi camera and a 1 terabyte `r pop_gloss('SSD drive')`, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every minute and the images are stored on the SSD drive.
 
 
 # Data Analysis
 ***
 
- Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month study period. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a neural network. We are currently testing YOLO with a Movidius Neural Compute Stick for this task.
+ Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month study period. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a convolutional neural network. We are currently testing a Movidius Neural Compute Stick for this task.
 
 
 ## Bee species, non-bee species and other pollinators of Galiano Island
