@@ -5,16 +5,12 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Learn More"
-      menu: 
-      - text: "Background"
-        href: background.html
-      - text: "Project Details"
-        href: info.html
-      - text: "Timeline"
-        href: timeline.html
-    - text: "Glossary"
-      href: glossary.html
+    - text: "Background"
+      href: background.html
+    - text: "Project Details"
+      href: info.html
+    - text: "Timeline"
+      href: timeline.html
   right:
     - text: "About"
       href: about.html 
