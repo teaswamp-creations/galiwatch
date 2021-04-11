@@ -6,7 +6,13 @@ navbar:
     - text: "Home"
       href: index.html
     - text: "Learn More"
-      href: info.html
+      menu: 
+      - text: "Background"
+        href: background.html
+      - text: "Project Details"
+        href: info.html
+      - text: "Timeline"
+        href: timeline.html
     - text: "Glossary"
       href: glossary.html
   right:
@@ -15,7 +21,7 @@ navbar:
 output:
   html_document:
     theme: cosmo
-    highlight: textmate
     include:
       after_body: static/footer.html
-    css: static/extra.css 
+    css: static/extra.css
+

@@ -1,5 +1,6 @@
 ---
 title: "Operation GaliWatch"
+
 ---
 
 
@@ -51,6 +52,8 @@ Monitoring pollinator populations on Galiano Island, Canada. We're developing lo
 </div>
 
 </div>
+
+
 
 
 
