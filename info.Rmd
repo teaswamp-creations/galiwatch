@@ -156,8 +156,7 @@ The images and weather data will add to what is already known about pollinators 
 
 
 
-
-### References
+## References
 
 
 [^1]: Clarke D, Robert D. Predictive modelling of honey bee foraging activity using local weather conditions. Apidologie. 2018;49(3):386-96.  

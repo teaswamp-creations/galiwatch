@@ -1,0 +1,21 @@
+
+```{r, preamble}
+library(bsplus)
+library(htmltools)
+library(googlesheets4)
+library(dplyr)
+gs4_deauth()
+use_bs_popover()
+
+# popovers
+pop_gloss <- function(id){
+  # a is a list of text, dest, details
+  row = subset(gloss, title == id)
+  a(row['title'], href = row['dest']) %>%
+    bs_embed_popover(content = paste(strong(row['title']), strong(": "), row['details']),
+                     trigger="hover", placement = 'bottom', html = T)
+}
+
+make_anchor <- function(id){a(id = id, class = 'anchor')}
+
+```

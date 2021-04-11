@@ -11,7 +11,7 @@ Monitoring pollinator populations on Galiano Island, Canada. We're developing lo
 
 <br>
 
-<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.13/css/all.css">
 
 <div class="galrow">
 

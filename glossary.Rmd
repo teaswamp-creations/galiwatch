@@ -3,24 +3,6 @@ title: Glossary
 ---
 
 ```{r message=F, warning=F, echo = F}
-library(bsplus)
-library(htmltools)
-library(googlesheets4)
-library(dplyr)
-gs4_deauth()
-use_bs_popover()
-
-# popovers
-pop_gloss <- function(id){
-  # a is a list of text, dest, details
-  row = subset(gloss, title == id)
-  a(row['title'], href = row['dest']) %>%
-    bs_embed_popover(content = paste(strong(row['title']), strong(": "), substr(row['details'], 1, 100), '...'), 
-                     trigger="hover", placement = 'bottom', html = T)
-}
-
-make_anchor <- function(id){a(id = id, class = 'anchor')}
-
 # get glossary entries
 sheet_id <- readLines('.sheet_id')
 read_sheet(sheet_id, sheet = 'glossary') %>%
