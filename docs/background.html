@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Background</title>
+
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="static/extra.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Operation GaliWatch</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="background.html">Background</a>
+</li>
+<li>
+  <a href="info.html">Project Details</a>
+</li>
+<li>
+  <a href="timeline.html">Timeline</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Background</h1>
+
+</div>
+
+
+<p>Wild pollinators are an integral part of native plant communities and are highly effective at pollinating flowers in natural ecosystems. Plant pollination is essential for plant reproduction, which in turn provides fruits and seeds for wildlife. Abundance and diversity of pollinators ensure a stable, highly productive ecosystem.</p>
+<p>Changing environmental conditions caused by weather, climate change, or human interventions, may disrupt pollinator activity for some species but enhance it for others. Within natural ecosystems, biodiversity and abundance of wild bee populations and other non-bee pollinators provides redundancy that ensures ongoing pollination and plant productivity despite a changing environment.</p>
+<p>Managed pollinators, most commonly honey bees, are super-generalist pollinators that are essential for, or enhance, the pollination and production of many agricultural crops. We rely heavily on honey bees for certain types of food production - for example they are considered essential to sustaining the global supply of almonds - and support billions of dollars worth of food production worldwide. So, it is very worrying that beekeepers report honeybee populations are dwindling, and that their colonies are becoming increasingly vulnerable to environmental stressors.</p>
+<p><br></p>
+<center>
+<img src="static/Bee%20losses.png" style="width:70.0%" />
+</center>
+<p>Adapted from <a href="https://beeinformed.org/citizen-science/loss-and-management-survey/" class="uri">https://beeinformed.org/citizen-science/loss-and-management-survey/</a><br />
+<br></p>
+<p>Alongside honey bees, wild pollinators including bumble bees, other types of bees, wasps, and other non-bee species, also make important contributions to crop production. Interestingly, on organic farms near natural habitat, wild bees can provide full pollinator services and, as long as diversity is maintained, there is sustained success <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>(Kremen, 2002).</p>
+<p>It seems possible then that by making adjustments that favour abundance and diversity of wild pollinators we could build capacity and resilience within natural and agricultural ecosystems that offset shortfalls in managed pollinator services resulting from the ongoing, perplexing losses of managed colonies.</p>
+<div id="meet-the-bees-of-galiano" class="section level1">
+<h1>Meet the bees of Galiano</h1>
+<p><br></p>
+<div class="galrow">
+<div class="galcolumn">
+<img class="bee-profile" src="static/Vancouver%20bumble.jpeg">
+<p>
+Vancouver bumble bee<br>(<em>B. vancouverensis</em>)
+</p>
+</div>
+<div class="galcolumn">
+<img class="bee-profile" src="static/Sitka%20bumble.jpeg">
+<p>
+Sitka bumble bee<br>(<em>B. sitkensis</em>))
+</p>
+</div>
+<div class="galcolumn">
+<img class="bee-profile" src="static/Fuzzy-horned%20bumble.jpeg">
+<p>
+Fuzzy-horned bumble bee<br>(<em>B. mixtus</em>)
+</p>
+</div>
+</div>
+<div class="galrow">
+<div class="galcolumn">
+<img class="bee-profile" src="static/Yellow-fronted%20bumble.jpeg">
+<p>
+Yellow-fronted bumble bee<br>(<em>B. flavifrons</em>)
+</p>
+</div>
+<div class="galcolumn">
+<img class="bee-profile" src="static/Orange-rumped%20bumble.jpeg">
+<p>
+Orange-rumped bumble bee<br>(<em>B. melanopygus</em>)
+</p>
+</div>
+<div class="galcolumn">
+<img class="bee-profile" src="static/Yellow-faced%20bumble.jpeg">
+<p>
+Yellow-faced bumbe bee<br>(<em>B. vosnesenskii</em>)
+</p>
+</div>
+</div>
+<br>
+<center>
+<em>Photos by <a href="https://inaturalist.ca/people/37277">Simon A</a> licensed under <a href="www.https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></em>
+</center>
+</div>
+<div id="bumble-bee-species-in-flux-in-british-columbia" class="section level1">
+<h1>Bumble bee species in flux in British Columbia</h1>
+<p>Decline of bumble bees has been reported in North America and Europe and is of significant global concern <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>(Soroye, 2020). Although there are over 500 known bee species in British Columbia, there is not a lot of historical information about pollinator populations to use as a baseline. However, we do know that at least one bee species, the western bumble bee, <em>Bombus occidentalis</em>, has significantly declined <a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>(Wray, accessed 28 Mar, 2021). The authors discuss how this bee used to be very common in the lower mainland in the 1980s, representing 25-30% of bumble bee species collected on local berry farms, but by 2003/2004 had dwindled to less than 1% of the bees collected. Since then, <em>Bombus occidentalis</em> was sighted just a handful of times on Vancouver Island in 2012, and once in the lower mainland at Boundary Bay in 2013. According to a local newspaper report, it was last spotted on Galiano in 1990. In contrast however, it seems the yellow-faced bumble bee, <em>B. vosnesenskii</em>, may be gaining ground in the region <a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>(Fraser, 2012).</p>
+<p>Galiano’s bumble bees have recently been under scrutiny in a study to better understand their reliance on habitat diversity in this semi-arid ecosystem <a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>(Simon, 2020). The author identified six species of bumble bees that frequented flowering shrubs in various habitats through spring and summer, and saw fluctuations of bumble bee abundance in different habitats (wet, dry, modified, natural) as the summer progressed. Overall, the Vancouver bumble bee <em>B. vancouverensis</em> was the most abundant species, followed by the Sitka bumble bee <em>B. sitkensis</em>, while the yellow-faced bumble bee was least abundant. Bumble bee activity and blooming peaked in June in habitat similar to our study site, but even as flowering slowed, high numbers of bumble bees were found to persist through July.</p>
+<div id="references" class="section level2">
+<h2>References</h2>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Kremen C, Williams NM, Thorp RW. Crop pollination from native bees at risk from agricultural intensification. Proceedings of the National Academy of Sciences. 2002;99(26):16812-6.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Soroye P, Newbold T, Kerr J. Climate change contributes to widespread declines among bumble bees across continents. Science. 2020;367(6478):685-8.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Wray J &amp; Elle E. Simon Fraser University. Wild and managed pollinators: current status and strategies to increase diversity. <a href="https://www.sfu.ca/content/dam/sfu/people/eelle/elle_bee_info/Metro_Vancouver_report.pdf" class="uri">https://www.sfu.ca/content/dam/sfu/people/eelle/elle_bee_info/Metro_Vancouver_report.pdf</a> Accessed 28 March, 2021.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Fraser DF, Copley CR, Elle E, Cannings RA. Changes in the status and distribution of the yellow-faced bumble Bee. Journal of the Entomological Society of British Columbia. 2012;109:31-7.<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Simon A. Water into nectar: The effects of seasonal drought on bumble bee and flowering plant communities. MSc Thesis, University of Victoria, 2020. Available at <a href="https://dspace.library.uvic.ca/handle/1828/11837" class="uri">https://dspace.library.uvic.ca/handle/1828/11837</a><a href="#fnref5" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+&nbsp;
+<hr />
+<p style="text-align: center;"><em> a Tea Swamp project</em></p>
+<p style="text-align: center;"><img src="static/teaSwamp.svg" alt="teaswamp logo", width="60px", class="image"></p>
+&nbsp;
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
