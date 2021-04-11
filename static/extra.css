@@ -1,4 +1,4 @@
-/* text formatting */
+/* general text formatting */
 
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,500;1,500&family=Roboto&display=swap');
 
@@ -217,40 +217,9 @@ a, a:hover {
 }
 
 
-/* ---------- Button ----------------- */
-.btn {
-    border-width: 0 0px 0px 0px;
-    font-weight: normal;
-    text-transform: ;
-    color: #69b3a2;
-}
-.btn-default {
-    color: #69b3a2;
-    background-color: #ffffff;
-    border-color: #ffffff;
-}
+/* --------- bee gallery---------- */
 
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-    background-color: #69b3a2;
-}
-
-
-/* --------- Timeline ---------- */
-
-.timetext{
-  
-}
-
-.timetext.active {
-    color: #69b3a2;
-    background-color: white;
-    border-left: solid;
-    border-color: #69b3a2;
-}
-.timetext:hover {
-    color: #69b3a2;
-    background-color: white;
-    border-left: solid;
-    border-color: #69b3a2;
+.bee-profile{
+  border-radius: 50%;
 }
 
