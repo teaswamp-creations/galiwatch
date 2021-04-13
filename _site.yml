@@ -4,16 +4,24 @@ navbar:
   title: "Operation GaliWatch"
   left:
     - text: "Home"
+      icon: "fas fa-home"      
       href: index.html
     - text: "Background"
+      icon: "fas fa-bug"
       href: background.html
     - text: "Project Details"
+      icon: "far fa-lightbulb"
       href: info.html
     - text: "Timeline"
+      icon: "fas fa-angle-double-right"
       href: timeline.html
   right:
     - text: "About"
+      icon: "fas fa-info-circle"
       href: about.html 
+    - text: "Contact"
+      icon: "fas fa-address-book"
+      href: contact.html
 output:
   html_document:
     theme: cosmo

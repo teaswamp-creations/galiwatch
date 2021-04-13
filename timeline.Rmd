@@ -29,7 +29,7 @@ output:
   <i class="icon fa fa-users"></i>
   <div class="content">
   <h2>Making Friends</h2>
-  <p>We get in touch with [Biodiversity Galiano](https://biogaliano.org/), and become members of [IMERSS](https://imerss.org/)</p>
+  <p>We get in touch with [Biodiversity Galiano](https://biogaliano.org/), and connect with [IMERSS](https://imerss.org/)</p>
   </div>
 </div>
 <div class="timecontainer right">

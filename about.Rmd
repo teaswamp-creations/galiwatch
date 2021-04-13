@@ -12,19 +12,6 @@ We have also set up a weather station, weather sensors and a particulate matter 
 As well as piloting the technology, these observations will be a window to the day-to-day ins and outs of Galiano pollinators that will help us better understand how wildflowers and pollinators are affected by local weather events.  
 <br>
 
-<center>
 
-![](static/Salal.jpg){width=40%}   
-
-
-Salal (*Gaultheria shallon*) is a leathery-leaved evergreen shrub in the heather family that is native to the Pacific Northwest. It produces delicate, white or pink drooping bell-shaped flowers typically from May to June, which turn into dark blue/black berries at the end of summer.  
-
-<br>
-
-![](static/oregon grape.jpg){width=40%}
-
-Dull Oregon grape (*Mahonia nervosa*) is a small evergreen shrub with serrated spiny edged leaves that produces yellow flowers and blue berries. It is one of the most common understory plants in Pacific Northwest forests.  
-
-</center>
 
 

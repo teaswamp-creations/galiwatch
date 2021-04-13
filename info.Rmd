@@ -21,10 +21,10 @@ use_bs_popover()
 # Study Site
 ***
 
-Galiano is a long narrow island of the Southern Gulf Island chain situated on the western edge of the Salish Sea. Located within the coastal Douglas-fir `r pop_gloss("Biogeoclimatic zone")`, it has a semi-arid ecosystem characterized by a mild climate with cool wet winters and warm dry summers, with annual drought conditions typically from mid-June to early October. Image adapted from [Galiano Story](https://galianostory.com/FLORAFAUNA.htm).  
+Galiano is a long narrow island of the Southern Gulf Island chain situated on the western edge of the Salish Sea. Located within the coastal Douglas-fir `r pop_gloss("Biogeoclimatic zone")`, it has a semi-arid ecosystem characterized by a mild climate with cool wet winters and warm dry summers, and with annual drought conditions typically from mid-June to early October. Image adapted from [Galiano Story](https://galianostory.com/FLORAFAUNA.htm).  
 
 
- Native tree species include coast Douglas-fir, western red cedar, arbutus, western hemlock, grand fir, Garry oak, red alder, and big leaf maple. Native plants commonly found in the understory include salal, Oregon grape, sword fern, vanilla leaf, and a variety of grasses, wildflowers, mosses, and lichens. This rural island  remains relatively intact ecologically.  
+Native tree species include coast Douglas-fir, western red cedar, arbutus, western hemlock, grand fir, Garry oak, red alder, and big leaf maple. Native plants commonly found in the understory include salal, Oregon grape, sword fern, vanilla leaf, and a variety of grasses, wildflowers, mosses, and lichens. This rural island  remains relatively intact ecologically.  
 
 <center>
 ![](static/map2.png)
@@ -33,7 +33,7 @@ Galiano is a long narrow island of the Southern Gulf Island chain situated on th
 <br>
 
 
-  The study site is situated mid island surrounded by the Mid Galiano Protected Areas Network, and within the Greig creek watershed. Cameras will be positioned to survey insect visitations to a salal patch and a dull Oregon grape patch in proximity to a seasonally occupied log cabin. Weather data (temperature, barometric pressure, humidity, air quality, and particulate matter data will be collected at the location using Raspberry pi Enviro sensors, as well as by an independent weather station positioned close by. There are a wide variety of native and introduced flowering plants in the immediate vicinity.  
+The study site is situated mid island surrounded by the Mid Galiano Protected Areas Network, and within the Greig creek watershed. Cameras will be positioned to survey insect visitations to patches of salal and dull Oregon grape in proximity to a seasonally occupied log cabin. Weather data (temperature, barometric pressure, and humidity), as well as air quality and particulate matter data will be collected at the location using Raspberry Pi Enviro sensors, as well as by an independent weather station positioned close by. There are a wide variety of native and introduced flowering plants in the immediate vicinity.  
   
   Native               |Introduced
   ---------------------| ----------
@@ -56,9 +56,7 @@ Galiano is a long narrow island of the Southern Gulf Island chain situated on th
                        |   
          
          
-Proximate habitat within about a 1/2 km radius includes bare bedrock, light well-draining sandy soil interspersed with clay deposits, and soil with high organic content from fallen trees and branches. Urbanisation includes several other nearby properties, some seasonal, others occupied year-round, which are serviced by paved roads, as well as about an acre of productive farmland (flowering crops include sunflowers, peas, beans, potatoes, basil, and artichokes, etc). There are two man-made ponds as well as areas of wetland and rough pasture.    
-
-
+Proximate habitat within about a 1/2 km radius includes bare bedrock, light well-draining sandy soil interspersed with clay deposits, and soil with high organic content from fallen trees and branches. Urbanisation includes several other nearby properties, some seasonal, others occupied year-round, which are serviced by paved roads, as well as about an acre of productive farmland (flowering crops include sunflowers, peas, beans, potatoes, basil, and artichokes, etc). There are two man-made ponds as well as areas of wetland and rough pasture.      
 
 
 <a id="weather_monitoring" class="anchor"></a>
@@ -66,9 +64,10 @@ Proximate habitat within about a 1/2 km radius includes bare bedrock, light well
 # Weather Monitoring
 ***
 
-Researchers have discovered that honey bees are able to detect changes in weather and alter their behaviour accordingly. Honey bees for example can be seen to respond minute-to-minute to the local weather conditions outside their hive, with the temperature and amount of sunlight being the most important factors signalling them to fly [^1](Clark, 2018). In other studies, honey bees were seen to increase their foraging activity the day before a rainy day, but continued on a steady course when the weather was set fair [^2](He, 2016). And, it also seems that different species of bees have adapted different levels of resilience to weather conditions and will forage at different temperatures and light intensities, with some species continuing to forage even in strong winds or light rain [^3](Vicens, 2000). Like honey bees, bumble bees feed on nectar and pollen and bring these resources back to the nest to feed their young. Perhaps not surprisingly, local weather conditions are found to influence their foraging activity too, but in this case it seems to be the humidity that is most important - the more humid it gets the more foraging there is, and bumble bees will forage whatever the temperature, wind speed, or cloud cover [^4](Peat, 2005). These authors also found that the weather influenced whether bumble bees collected nectar or pollen, with more pollen being collected when the humidity was low and it was warm and windy, than on damper days. Their guess is that these conditions likely make pollen easier for the bees to handle.  
+Researchers have discovered that honey bees are able to detect changes in weather and alter their behaviour accordingly. Honey bees for example can be seen to respond minute-to-minute to the local weather conditions outside their hive, with the temperature and amount of sunlight being the most important factors signalling them to fly.[^1] In other studies, honey bees were seen to increase their foraging activity the day before a rainy day, but continued on a steady course when the weather was set fair.[^2] And, it also seems that different species of bees have adapted different levels of resilience to weather conditions and will forage at different temperatures and light intensities, with some species continuing to forage even in strong winds or light rain.[^3]  
 
- 
+Like honey bees, bumble bees feed on nectar and pollen and bring these resources back to the nest to feed their young. Perhaps not surprisingly, local weather conditions are found to influence their foraging activity too, but in this case it seems to be humidity that is most important - the more humid it gets the more foraging there is, and bumble bees will forage whatever the temperature, wind speed, or cloud cover.[^4] The weather was also found to influence whether bumble bees collected nectar or pollen, with more pollen being collected when it was warm and windy and the humidity was low, than on damper days; perhaps because in these conditions the pollen is easier for the bees to handle.[^4]  
+
  
 ##	Equipment
 *	Raspberry Pi Enviro + Air Quality
@@ -80,10 +79,15 @@ We will be investigating the connection between hyperlocal weather conditions an
 
 ## Air quality monitoring
 
- The air quality monitoring sensors will give us an idea of how air quality changes over time. They measure changes in concentrations of reducing (e.g., carbon monoxide) and oxidising gases (e.g., nitrogen dioxide), and ammonia. The sensors measure electrical resistance according to the concentration of gases in the air. The reducing gases and ammonia resistance readings will drop with increasing concentrations of these gases, while resistance readings produced by the presence of oxidising gases will increase.  
+The air quality monitoring sensors will give us an idea of how air quality changes over time. They measure changes in concentrations of reducing (e.g., carbon monoxide) and oxidising gases (e.g., nitrogen dioxide), and ammonia. The sensors measure electrical resistance according to the concentration of gases in the air. The reducing gases and ammonia resistance readings will drop with increasing concentrations of these gases, while resistance readings produced by the presence of oxidising gases will increase.   
 
 
 The particulate matter sensor detects concentrations of particles of different sizes (PM1, PM2.5 and PM10) as well as the number of particles of different sizes (>0.3, >0.5, >1.0, >2.5, >5, and >10 microns). Wildfire smoke particles typically range from 0.4–0.7 microns, dust is around 2.5 microns, while pollen is generally 15 microns or more. 
+
+<centre>
+![](static 1040px-Airborne-particulate-size-chart.svg) {width 60%}
+</centre>  
+
 
 
 <a id="pollinator_detection" class="anchor"></a>
@@ -91,7 +95,7 @@ The particulate matter sensor detects concentrations of particles of different s
 # Pollinator detection  
 ***
 
-It’s well known that bees are important wildflower pollinators; however, many non-bee pollinators including wasps, hover flies, other flies, beetles, butterflies, moths, and hummingbirds also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently [^5](Rader, 2016). Local surveys of bee species that pollinate salal and dull Oregon grape report bumble bees to be the primary pollinators, with other bee species visiting less frequently (Wray & Elle, [SFU Pollination Ecology Lab](https://www.sfu.ca/people/eelle/bee_info.html). 
+It’s well known that bees are important wildflower pollinators; however, many non-bee pollinators including wasps, hover flies, other flies, beetles, butterflies, moths, and hummingbirds also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently [^5]. Local surveys of bee species that pollinate salal and dull Oregon grape report bumble bees to be the primary pollinators, with other bee species visiting less frequently (Wray & Elle, [SFU Pollination Ecology Lab](https://www.sfu.ca/people/eelle/bee_info.html). 
 
 
 
