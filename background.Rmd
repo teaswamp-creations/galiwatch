@@ -21,7 +21,7 @@ Adapted from: 2019-2020 Honey Bee Colony Losses in the United States: Preliminar
 
  <br>
  
-Alongside honey bees, wild pollinators including bumble bees, other types of bees, wasps, and other non-bee species also make important contributions to crop production. Interestingly, on organic farms near natural habitat, wild bees can provide full pollinator services and, as long as diversity is maintained, there is sustained success.[^1]   
+Alongside honey bees, wild pollinators including bumble bees (genus Bombus), other types of bees, wasps, and other non-bee species also make important contributions to crop production. Interestingly, on organic farms near natural habitat, wild bees can provide full pollinator services and, as long as diversity is maintained, there is sustained success.[^1]   
 
 It seems possible then that by making adjustments that favour abundance and diversity of wild pollinators we could build capacity and resilience within natural and agricultural ecosystems that offset shortfalls in managed pollinator services resulting from the ongoing, perplexing losses of managed colonies. 
 
@@ -68,7 +68,7 @@ It seems possible then that by making adjustments that favour abundance and dive
 # Bumble bee species in flux in British Columbia
 
 <br>
-Decline of bumble bees has been reported in North America and Europe and is of significant global concern.[^2] Although there are over 500 known bee species in British Columbia, there is not a lot of historical information about pollinator populations to use as a baseline. However, we do know that at least one bee species, the western bumble bee, *Bombus occidentalis*, has significantly declined.[^3] The authors discuss how this bee used to be very common in the lower mainland in the 1980s, representing 25-30% of bumble bee species collected on local berry farms, but by 2003/2004 had dwindled to less than 1% of the bees collected. Since then, *Bombus occidentalis* was sighted just a handful of times on Vancouver Island in 2012, and once in the lower mainland at Boundary Bay in 2013. According to a local newspaper report, it was last spotted on Galiano in 1990. In contrast however, it seems the yellow-faced bumble bee, *B. vosnesenskii*, may be gaining ground in the region.[^4] 
+Decline of bumble bees has been reported in North America and Europe and is of significant global concern.[^2] Although there are over 500 known bee species in British Columbia, there is not a lot of historical information about pollinator populations to use as a baseline. However, we do know that at least one bee species, the western bumble bee, *B. occidentalis*, has significantly declined.[^3] The authors discuss how this bee used to be very common in the lower mainland in the 1980s, representing 25-30% of bumble bee species collected on local berry farms, but by 2003/2004 had dwindled to less than 1% of the bees collected. Since then, *B. occidentalis* was sighted just a handful of times on Vancouver Island in 2012, and once in the lower mainland at Boundary Bay in 2013. According to a local newspaper report, it was last spotted on Galiano in 1990. In contrast however, it seems the yellow-faced bumble bee, *B. vosnesenskii*, may be gaining ground in the region.[^4] 
  
  
 Galiano's bumble bees have recently been under scrutiny in a study to better understand their reliance on habitat diversity in this semi-arid

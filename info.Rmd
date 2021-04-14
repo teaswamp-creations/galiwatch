@@ -64,10 +64,11 @@ Proximate habitat within about a 1/2 km radius includes bare bedrock, light well
 # Weather Monitoring
 ***
 
-Researchers have discovered that honey bees are able to detect changes in weather and alter their behaviour accordingly. Honey bees for example can be seen to respond minute-to-minute to the local weather conditions outside their hive, with the temperature and amount of sunlight being the most important factors signalling them to fly.[^1] In other studies, honey bees were seen to increase their foraging activity the day before a rainy day, but continued on a steady course when the weather was set fair.[^2] And, it also seems that different species of bees have adapted different levels of resilience to weather conditions and will forage at different temperatures and light intensities, with some species continuing to forage even in strong winds or light rain.[^3]  
+Researchers have discovered that honey bees are able to detect changes in weather and alter their behaviour accordingly. Honey bees for example can be seen to respond minute-to-minute to the local weather conditions outside their hive, with the temperature and amount of sunlight being the most important factors signalling them to fly.[^1] In other studies, honey bees were seen to increase their foraging activity the day before a rainy day, but continued on a steady course when the weather was set fair.[^2]  
 
-Like honey bees, bumble bees feed on nectar and pollen and bring these resources back to the nest to feed their young. Perhaps not surprisingly, local weather conditions are found to influence their foraging activity too, but in this case it seems to be humidity that is most important - the more humid it gets the more foraging there is, and bumble bees will forage whatever the temperature, wind speed, or cloud cover.[^4] The weather was also found to influence whether bumble bees collected nectar or pollen, with more pollen being collected when it was warm and windy and the humidity was low, than on damper days; perhaps because in these conditions the pollen is easier for the bees to handle.[^4]  
+Like honey bees, bumble bees feed on nectar and pollen and bring these resources back to the nest to feed their young. Perhaps not surprisingly, local weather conditions are found to influence their foraging activity too, but in this case it seems to be humidity that is most important - the more humid it gets the more foraging there is, and bumble bees will forage whatever the temperature, wind speed, or cloud cover.[^3] The researchers found that weather also influenced whether bumble bees collected nectar or pollen, with more pollen being collected when it was warm, windy, and low humidity, than on damper days; perhaps because in these conditions the pollen is easier for the bees to handle.  
 
+Interestingly, different bee species have adapted different levels of resilience to weather conditions and will forage at different temperatures and light intensities, with some species continuing to forage even in strong winds or light rain.[^4] 
  
 ##	Equipment
 *	Raspberry Pi Enviro + Air Quality
@@ -79,14 +80,15 @@ We will be investigating the connection between hyperlocal weather conditions an
 
 ## Air quality monitoring
 
-The air quality monitoring sensors will give us an idea of how air quality changes over time. They measure changes in concentrations of reducing (e.g., carbon monoxide) and oxidising gases (e.g., nitrogen dioxide), and ammonia. The sensors measure electrical resistance according to the concentration of gases in the air. The reducing gases and ammonia resistance readings will drop with increasing concentrations of these gases, while resistance readings produced by the presence of oxidising gases will increase.   
+The air quality monitoring sensors will give us an idea of how air quality changes over time. They measure changes in concentrations of reducing (e.g., carbon monoxide) and oxidising (e.g., nitrogen dioxide) gases, and ammonia. The sensors measure electrical resistance according to the concentration of gases in the air. The resistance readings for reducing gases and ammonia drop with increasing concentrations of these gases, and increase when oxidising gases increase.   
 
 
 The particulate matter sensor detects concentrations of particles of different sizes (PM1, PM2.5 and PM10) as well as the number of particles of different sizes (>0.3, >0.5, >1.0, >2.5, >5, and >10 microns). Wildfire smoke particles typically range from 0.4–0.7 microns, dust is around 2.5 microns, while pollen is generally 15 microns or more. 
 
 <centre>
-![](static 1040px-Airborne-particulate-size-chart.svg) {width 60%}
+![](static 1040px-Airborne-particulate-size-chart.svg.png) {width 60%}
 </centre>  
+Adapted from Jisaac9, Mieszko the first, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons
 
 
 
@@ -95,7 +97,7 @@ The particulate matter sensor detects concentrations of particles of different s
 # Pollinator detection  
 ***
 
-It’s well known that bees are important wildflower pollinators; however, many non-bee pollinators including wasps, hover flies, other flies, beetles, butterflies, moths, and hummingbirds also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently [^5]. Local surveys of bee species that pollinate salal and dull Oregon grape report bumble bees to be the primary pollinators, with other bee species visiting less frequently (Wray & Elle, [SFU Pollination Ecology Lab](https://www.sfu.ca/people/eelle/bee_info.html). 
+It’s well known that bees are important wildflower pollinators; however, many non-bee pollinators including wasps, hover flies, other flies, beetles, butterflies, moths, and hummingbirds also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently.[^5] Local surveys of bee species that pollinate salal and dull Oregon grape found bumble bees to be the primary pollinators, with other bee species visiting less frequently (Wray & Elle, [SFU Pollination Ecology Lab](https://www.sfu.ca/people/eelle/bee_info.html)). 
 
 
 
@@ -156,9 +158,9 @@ In addition to piloting the technology, the images and weather data will provide
 4.	How much of a role, if any, non-bee visitors play in the pollination of these two native plants. 
 5.	How hyperlocal weather and variations in air quality influence pollinator activity.  
 
-The images and weather data will add to what is already known about pollinators in coastal Douglas-fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom.   
+The images and weather data will add to what is already known about pollinators in coastal Douglas-fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom.     
 
-
+<br>
 
 ## References
 
@@ -167,11 +169,12 @@ The images and weather data will add to what is already known about pollinators 
 
 [^2]: He XJ, Tian LQ, Wu XB, Zeng ZJ. RFID monitoring indicates honeybees work harder before a rainy day. Insect science. 2016;23(1):157-9.  
 
-[^3]: Vicens N, Bosch J. Weather-dependent pollinator activity in an apple orchard, with special reference to Osmia cornuta and Apis mellifera (Hymenoptera: Megachilidae and Apidae). Environmental Entomology. 2000;29(3):413-20.  
+[^3]: Peat J, Goulson D. Effects of experience and weather on foraging rate and pollen versus nectar collection in the bumblebee, Bombus terrestris. Behavioral Ecology and Sociobiology. 2005;58(2):152-6.  
 
-[^4]: Peat J, Goulson D. Effects of experience and weather on foraging rate and pollen versus nectar collection in the bumblebee, Bombus terrestris. Behavioral Ecology and Sociobiology. 2005;58(2):152-6.  
- 
+[^4]: Vicens N, Bosch J. Weather-dependent pollinator activity in an apple orchard, with special reference to Osmia cornuta and Apis mellifera (Hymenoptera: Megachilidae and Apidae). Environmental Entomology. 2000;29(3):413-20. 
+
 [^5]: Rader R, Bartomeus I, Garibaldi LA, et al. Non-bee insects are important contributors to global crop pollination. Proceedings of the National Academy of Sciences. 2016;113(1):146-51.  
+ 
  
  
  
