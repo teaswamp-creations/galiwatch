@@ -21,7 +21,7 @@ use_bs_popover()
 # Study Site
 ***
 
-Galiano is a long narrow island of the Southern Gulf Island chain situated on the western edge of the Salish Sea. Located within the coastal Douglas-fir `r pop_gloss("Biogeoclimatic zone")`, it has a semi-arid ecosystem characterized by a mild climate with cool wet winters and warm dry summers, and with annual drought conditions typically from mid-June to early October. Image adapted from [Galiano Story](https://galianostory.com/FLORAFAUNA.htm).  
+Galiano is a long narrow island of the Southern Gulf Island chain situated on the western edge of the Salish Sea. Located within the coastal Douglas-fir `r pop_gloss("Biogeoclimatic zone", nocaps=T)`, it has a semi-arid ecosystem characterized by a mild climate with cool wet winters and warm dry summers, and with annual drought conditions typically from mid-June to early October. Image adapted from [Galiano Story](https://galianostory.com/FLORAFAUNA.HTM).  
 
 
 Native tree species include coast Douglas-fir, western red cedar, arbutus, western hemlock, grand fir, Garry oak, red alder, and big leaf maple. Native plants commonly found in the understory include salal, Oregon grape, sword fern, vanilla leaf, and a variety of grasses, wildflowers, mosses, and lichens. This rural island  remains relatively intact ecologically.  
@@ -85,9 +85,9 @@ The air quality monitoring sensors will give us an idea of how air quality chang
 
 The particulate matter sensor detects concentrations of particles of different sizes (PM1, PM2.5 and PM10) as well as the number of particles of different sizes (>0.3, >0.5, >1.0, >2.5, >5, and >10 microns). Wildfire smoke particles typically range from 0.4–0.7 microns, dust is around 2.5 microns, while pollen is generally 15 microns or more. 
 
-<centre>
-![](static 1040px-Airborne-particulate-size-chart.svg.png) {width 60%}
-</centre>  
+<center>
+![](static/1040px-Airborne-particulate-size-chart.svg.png){width=60%}
+</center>  
 Adapted from Jisaac9, Mieszko the first, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons
 
 
@@ -104,7 +104,7 @@ It’s well known that bees are important wildflower pollinators; however, many 
 ##	Equipment
 +	`r pop_gloss('Raspberry Pi')` for computing power
 +	Raspberry Pi's high quality cameras for time-lapse photography 
-+	`r pop_gloss('Convolutional neural network')` and `r pop_gloss('Movidius NCS2')` for applying `r pop_gloss('Deep learning')` for insect detection and image screening  
++	`r pop_gloss('Convolutional neural network')` and `r pop_gloss('Movidius NCS2')` for applying `r pop_gloss('Deep learning', nocaps=T)` for insect detection and image screening  
 
 
 We have mounted two surveillance cameras comprising of a Raspberry Pi (powered over ethernet) fitted with a Pi camera and a 1 terabyte `r pop_gloss('SSD')`, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every minute and the images are stored on the SSD.  
@@ -119,7 +119,7 @@ Our cameras should capture approximately 0.5 million images (2 terrabytes of dat
 ## Bee species, non-bee species and other pollinators of Galiano Island
 
 
- Although our two test plants salal and dull Oregon grape are particularly attractive to bumble bees, many other species of pollinators have been sighted on Galiano and we are interested to see if any of these are captured in our images. Our reference resource for insect identification is the [Biodiversity Galiano](https://biogaliano.org/) project, a community-based initiative to document the flora and fauna of Galiano Island, initiated in January 2016. So far, over 2,500 species have been reported of which more than 1,000 are `r pop_gloss('Arthropods')`. Among these are 82 species of bees and wasps including honey bees (*Apis mellifera*), bumblebees (*Bombus* spp.) mining bees (*Andrena* spp.), long-horned bees (*Eucera* spp.), mason bees (*Osmia* spp.), cuckoo bees (*Nomada* spp.), sweat bees (*Halictus* and *Lasioglossum* spp.), blood bees (*Sphecodes* spp.), and various wasps.  
+Although our two test plants salal and dull Oregon grape are particularly attractive to bumble bees, many other species of pollinators have been sighted on Galiano and we are interested to see if any of these are captured in our images. Our reference resource for insect identification is the [Biodiversity Galiano](https://biogaliano.org/) project, a community-based initiative to document the flora and fauna of Galiano Island, initiated in January 2016. So far, over 2,500 species have been reported of which more than 1,000 are `r pop_gloss('Arthropods', nocaps=T)`. Among these are 82 species of bees and wasps including honey bees (*Apis mellifera*), bumblebees (*Bombus* spp.) mining bees (*Andrena* spp.), long-horned bees (*Eucera* spp.), mason bees (*Osmia* spp.), cuckoo bees (*Nomada* spp.), sweat bees (*Halictus* and *Lasioglossum* spp.), blood bees (*Sphecodes* spp.), and various wasps.  
 
 
 We will use this database to help ID any pollinators we see in our time-lapse images.
@@ -162,7 +162,7 @@ The images and weather data will add to what is already known about pollinators 
 
 <br>
 
-## References
+# References
 
 
 [^1]: Clarke D, Robert D. Predictive modelling of honey bee foraging activity using local weather conditions. Apidologie. 2018;49(3):386-96.  
