@@ -170,7 +170,7 @@
   .timecontainer.left .date,
   .timecontainer.right .date {
     right: auto;
-    left: 25px;
+    left: 0px;
   }
 
   .timecontainer.left .icon,
