@@ -116,7 +116,7 @@ We have mounted two surveillance cameras comprising of a Raspberry Pi (powered o
 Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month study period. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a convolutional neural network. We are currently testing a Movidius Neural Compute Stick for this task.
 
 
-## Bee species, non-bee species and other pollinators of Galiano Island
+## Bees and other pollinators of Galiano Island
 
 
 Although our two test plants salal and dull Oregon grape are particularly attractive to bumble bees, many other species of pollinators have been sighted on Galiano and we are interested to see if any of these are captured in our images. Our reference resource for insect identification is the [Biodiversity Galiano](https://biogaliano.org/) project, a community-based initiative to document the flora and fauna of Galiano Island, initiated in January 2016. So far, over 2,500 species have been reported of which more than 1,000 are `r pop_gloss('Arthropods', nocaps=T)`. Among these are 82 species of bees and wasps including honey bees (*Apis mellifera*), bumblebees (*Bombus* spp.) mining bees (*Andrena* spp.), long-horned bees (*Eucera* spp.), mason bees (*Osmia* spp.), cuckoo bees (*Nomada* spp.), sweat bees (*Halictus* and *Lasioglossum* spp.), blood bees (*Sphecodes* spp.), and various wasps.  
