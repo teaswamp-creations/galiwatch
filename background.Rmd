@@ -1,5 +1,10 @@
 ---
 title: Background
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
 ---
 
 
@@ -75,7 +80,7 @@ ecosystem [^5]. The author identified six species of bumble bees that frequented
 
 <br>
 
-## References
+# References
  
  
 [^1]: Kremen C, Williams NM, Thorp RW. Crop pollination from native bees at risk from agricultural intensification. Proceedings of the National Academy of Sciences. 2002;99(26):16812-6. https://doi.org/10.1073/pnas.262413599  
