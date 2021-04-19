@@ -301,33 +301,11 @@ $(document).ready(function () {
 </div>
 
 
-<pre class="r"><code>library(bsplus)
-library(htmltools)
-library(googlesheets4)
-library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>gs4_deauth()
-use_bs_popover()</code></pre>
 <script>$(function () {
   $('[data-toggle="popover"]').popover();
 });</script>
-<pre class="r"><code># popovers
-pop_gloss &lt;- function(id){
-  # a is a list of text, dest, details
-  row = subset(gloss, title == id)
-  a(row[&#39;title&#39;], href = row[&#39;dest&#39;]) %&gt;%
-    bs_embed_popover(content = paste(strong(row[&#39;title&#39;]), strong(&quot;: &quot;), row[&#39;details&#39;]),
-                     trigger=&quot;hover&quot;, placement = &#39;bottom&#39;, html = T)
-}
-
-make_anchor &lt;- function(id){a(id = id, class = &#39;anchor&#39;)}</code></pre>
+<p>I love a good <button class="btn-gloss" data-toggle="popover" data-content="&lt;strong&gt;Biogeoclimatic zone&lt;/strong&gt;&lt;strong&gt;: &lt;/strong&gt;A geographical area or ecosystem with a relatively uniform macroclimate, characterized by collections of  soils, flora and fauna reflecting that climate." data-placement="bottom" data-trigger="hover" data-html="true">Biogeoclimatic zone</button>!<br />
+Hello <a href="">I am a link</a></p>
 
 &nbsp;
 <hr />
