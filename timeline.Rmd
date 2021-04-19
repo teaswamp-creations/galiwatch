@@ -13,7 +13,7 @@ output:
   <i class="icon fa fa-lightbulb"></i>
   <div class="content">
   <h2>Hello World</h2>
-  <p>Inspired by Toke Høye’s PollinatorWatch, Operation GaliWatch is born. We order weather monitoring hardware and start putting together the Raspberry Pi setup.</p>
+  <p>Inspired by Toke Høye’s [PollinatorWatch](https://www.zooniverse.org/projects/tokehoye/pollinatorwatch), Operation GaliWatch is born. We order weather monitoring hardware and start putting together the Raspberry Pi setup.</p>
   </div>
 </div>
 <div class="timecontainer right">
@@ -21,7 +21,7 @@ output:
   <i class="icon fa fa-walking"></i>
   <div class="content">
   <h2>First Steps</h2>
-  <p>The setup is ready, cameras positioned, air quality and weather sensors fine-tuned and working well, and we collect our first datapoints!  
+  <p>The setup is ready cameras positioned, air quality and weather sensors fine-tuned and working well, and we collect our first datapoints!  
    First bee of the year spotted on Mar 8th - a Sitka bumble bee. </p>
   </div>
 </div>
@@ -54,7 +54,7 @@ output:
   <i class="icon fa fa-wrench"></i>
   <div class="content">
   <h2>DIY Kit</h2>
-  <p>Development starts on sharing our setup with the world.</p>
+  <p>Spreading the word on how to make your own pollinator monitoring setup.</p>
   </div>
 </div>
 </div> 

@@ -3,7 +3,7 @@ title: "About"
 ---
 
 
-Inspired by Toke Høye’s PollinatorWatch (hosted by [Zooniverse](https://www.zooniverse.org/), we are setting up time-lapse cameras to gather hundreds or maybe thousands of images of pollinators visiting two common native flowering plants, salal and dull Oregon grape, at a mid-island location on Galiano Island, in the Pacific Northwest.   
+Inspired by Toke Høye’s [PollinatorWatch](https://www.zooniverse.org/projects/tokehoye/pollinatorwatch)  hosted by Zooniverse, we are setting up time-lapse cameras to gather hundreds or maybe thousands of images of pollinators visiting two common native flowering plants, salal and dull Oregon grape, at a mid-island location on Galiano Island, in the Pacific Northwest.   
 
 We plan to automate the analysis of the images to document the number and type of pollinator visitors we get over the flowering season.   
 
