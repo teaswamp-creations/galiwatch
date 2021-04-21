@@ -1,0 +1,36 @@
+---
+output:
+  html_document:
+    css: ['static/extra.css','static/gallery.css']
+---
+
+<div class="photorow">
+<div class="photocolumn">
+  <img src="gallery/a.jpg">
+  <img src="gallery/b.jpg">
+  <img src="gallery/c.jpg">
+  <img src="gallery/n.jpg">
+  <img src="gallery/s.jpg">
+  <img src="gallery/t.jpg">
+</div>
+<div class="photocolumn">
+  <img src="gallery/d.jpg">
+  <img src="gallery/e.jpg">
+  <img src="gallery/f.jpg">
+  <img src="gallery/g.jpg">
+  <img src="gallery/p.jpg">
+</div>
+<div class="photocolumn">
+  <img src="gallery/h.jpg">
+  <img src="gallery/i.jpg">
+  <img src="gallery/j.jpg">
+  <img src="gallery/o.jpg">
+  <img src="gallery/r.jpg">
+</div>
+<div class="photocolumn">
+  <img src="gallery/k.jpg">
+  <img src="gallery/l.jpg">
+  <img src="gallery/m.jpg">
+  <img src="gallery/q.jpg">
+</div>
+</div>
