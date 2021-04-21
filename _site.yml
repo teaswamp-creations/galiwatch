@@ -15,6 +15,9 @@ navbar:
     - text: "Timeline"
       icon: "fas fa-angle-double-right"
       href: timeline.html
+    - text: "Gallery"
+      icon: "fas fa-camera-retro"
+      href: gallery.html
   right:
     - text: "About"
       icon: "fas fa-info-circle"
