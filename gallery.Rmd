@@ -10,7 +10,7 @@ output:
   <img src="gallery/b.jpg">
   <img src="gallery/c.jpg">
   <img src="gallery/n.jpg">
-  <img src="gallery/s.jpg">
+  <img src="gallery/Hoverfly.gif">
   <img src="gallery/t.jpg">
 </div>
 <div class="photocolumn">
