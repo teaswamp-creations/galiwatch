@@ -8,13 +8,16 @@ output:
 <div class="photocolumn">
   <img src="gallery/a.jpg">
   <img src="gallery/b.jpg">
+  <p>March 2021</p>
   <img src="gallery/c.jpg">
   <img src="gallery/n.jpg">
   <img src="gallery/Hoverfly.gif">
+  <p> This is a nice hoverfly!</p>
   <img src="gallery/t.jpg">
 </div>
 <div class="photocolumn">
-  <img src="gallery/d.jpg">
+  <img src="gallery/NNdemo.gif">
+  <p>Bee identification in action</p>
   <img src="gallery/e.jpg">
   <img src="gallery/f.jpg">
   <img src="gallery/g.jpg">
