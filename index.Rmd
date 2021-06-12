@@ -1,6 +1,6 @@
 ---
+pagetitle: "GaliWatch"
 title: "Operation GaliWatch"
-
 ---
 
 
