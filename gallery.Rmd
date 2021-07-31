@@ -6,11 +6,14 @@ output:
 
 <div class="photorow">
 <div class="photocolumn">
-  <img src="gallery/a.jpg">
-  <img src="gallery/b.jpg">
   <p>March 2021</p>
+  <img src="gallery/a.jpg">
+  <p> Rufous Hummingbird</p>
+  <img src="gallery/b.jpg">
   <img src="gallery/c.jpg">
+  <p> Dull Oregon Grape</p>
   <img src="gallery/n.jpg">
+  <p>April 2021</p>
   <img src="gallery/Hoverfly.gif">
   <p> This is a nice hoverfly!</p>
   <img src="gallery/t.jpg">
@@ -22,6 +25,8 @@ output:
   <img src="gallery/f.jpg">
   <img src="gallery/g.jpg">
   <img src="gallery/p.jpg">
+  <img src="gallery/u.jpg">
+  <p> Western Pond Fly</p>
 </div>
 <div class="photocolumn">
   <img src="gallery/h.jpg">
@@ -29,10 +34,14 @@ output:
   <img src="gallery/j.jpg">
   <img src="gallery/o.jpg">
   <img src="gallery/r.jpg">
+  <p> Pale Swallowtail</p>
+  <img src="gallery/v.jpg">
+  <p> Osmia</p>
 </div>
 <div class="photocolumn">
   <img src="gallery/k.jpg">
   <img src="gallery/l.jpg">
+  <p> Salal</p>
   <img src="gallery/m.jpg">
   <img src="gallery/q.jpg">
 </div>
