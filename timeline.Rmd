@@ -1,5 +1,5 @@
 ---
-title: 'Timeline'
+pagetitle: "GaliWatch"
 output:
   html_document:
     css: ['static/extra.css','static/timeline.css']

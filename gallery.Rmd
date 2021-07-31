@@ -1,4 +1,5 @@
 ---
+pagetitle: "GaliWatch"
 output:
   html_document:
     css: ['static/extra.css','static/gallery.css']
@@ -15,12 +16,10 @@ output:
   <img src="gallery/n.jpg">
   <p>April 2021</p>
   <img src="gallery/Hoverfly.gif">
-  <p> This is a nice hoverfly!</p>
   <img src="gallery/t.jpg">
 </div>
 <div class="photocolumn">
   <img src="gallery/NNdemo.gif">
-  <p>Bee identification in action</p>
   <img src="gallery/e.jpg">
   <img src="gallery/f.jpg">
   <img src="gallery/g.jpg">

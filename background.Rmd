@@ -1,4 +1,5 @@
 ---
+pagetitle: "GaliWatch"
 title: Background
 output:
   html_document:
@@ -41,7 +42,7 @@ It seems possible then that by making adjustments that favour abundance and dive
 </div>
 <div class="galcolumn">
   <img class="bee-profile" src="static/Sitka bumble.jpeg"> 
-  <p>Sitka bumble bee<br>(*B. sitkensis*))</p>
+  <p>Sitka bumble bee<br>(*B. sitkensis*)</p>
 </div>
 <div class="galcolumn">
   <img class="bee-profile" src="static/Fuzzy-horned bumble.jpeg"> 

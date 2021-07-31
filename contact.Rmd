@@ -1,4 +1,5 @@
 ---
+pagetitle: "GaliWatch"
 title: "Drop us a note!"
 ---
 

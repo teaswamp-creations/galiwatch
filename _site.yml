@@ -29,6 +29,7 @@ output:
   html_document:
     theme: cosmo
     include:
+      in_header: static/favicon.html
       after_body: static/footer.html
     css: static/extra.css
 
