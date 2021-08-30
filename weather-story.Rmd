@@ -34,7 +34,8 @@ ep <- read_sheet(ep_id) %>%
          `Temperature C` = temperature, 
          `Temperature F` = c2f(temperature)) %>%
   filter(Date >= '2021-03-01', Date <= '2021-05-31') %>%
-  group_by(Date)
+  group_by(Date) %>%
+  arrange(Date, Time)
 
 ws <- read_sheet(ws_id) %>%
   mutate(Date = ymd(Date),
@@ -43,7 +44,8 @@ ws <- read_sheet(ws_id) %>%
          `Outdoor Temperature C` = f2c(`Outdoor Temperature F`)
         ) %>%
   filter(Date >= '2021-03-01', Date <= '2021-05-31') %>%
-  group_by(Date) 
+  group_by(Date) %>% 
+  arrange(Date, Time)
 
 subtitle <- function(text){
   # circumvent plotly's lack of subplot titles

@@ -16,6 +16,7 @@ output:
   <p>Inspired by Toke Høye’s [PollinatorWatch](https://www.zooniverse.org/projects/tokehoye/pollinatorwatch), Operation GaliWatch is born. We order weather monitoring hardware and start putting together the Raspberry Pi setup.</p>
   </div>
 </div>
+
 <div class="timecontainer right">
   <div class="date">MAR 2021</div>
   <i class="icon fa fa-walking"></i>
@@ -25,6 +26,7 @@ output:
    First bee of the year spotted on Mar 8th - a Sitka bumble bee. </p>
   </div>
 </div>
+
 <div class="timecontainer left">
   <div class="date">APR 2021</div>
   <i class="icon fa fa-users"></i>
@@ -33,6 +35,7 @@ output:
   <p>We get in touch with [Biodiversity Galiano](https://biogaliano.org/), and connect with [IMERSS](https://imerss.org/)</p>
   </div>
 </div>
+
 <div class="timecontainer right">
   <div class="date">MAY 2021</div>
   <i class="icon fab fa-pagelines"></i>
@@ -41,14 +44,34 @@ output:
   <p>We measure pollinator activity and environmental data at our pilot site. </p>
   </div>
 </div>
+
 <div class="timecontainer left">
   <div class="date">AUG 2021</div>
+  <i class="icon fas fa-comments"></i>
+  <div class="content">
+  <h2>First Data Stories</h2>
+  <p>We share our pilot data and preliminary results</p>
+  </div>
+</div>
+
+<div class="timecontainer right">
+  <div class="date">NOV 2021</div>
+  <i class="icon fas fa-cloud"></i>
+  <div class="content">
+  <h2>Live monitoring</h2>
+  <p>We join [PurpleAir](https://www.purpleair.com/map?opt=1/mAQI/a10/cC0&select=108166#11.51/49.2241/-123.088) and our sensor goes live!</p>
+  </div>
+</div>
+
+<div class="timecontainer left">
+  <div class="date">FEB 2022</div>
   <i class="icon far fa-chart-bar"></i>
   <div class="content">
   <h2>Data Dashboard</h2>
   <p>We share our data live on the GaliWatch data dashboard</p>
   </div>
 </div>
+
 <div class="timecontainer right">
   <div class="date">NOV 2021</div>
   <i class="icon fa fa-wrench"></i>
@@ -57,4 +80,5 @@ output:
   <p>Spreading the word on how to make your own pollinator monitoring setup.</p>
   </div>
 </div>
+
 </div> 

@@ -60,7 +60,7 @@ Monitoring pollinator populations on Galiano Island, Canada. We're developing lo
 ## Browse our stories
 
 <a href="weather-story.html">The Weather Story</a>  
-<a href="weather-story.html">The Oregon Grape Story</a>  
+<a href="orgrape-story.html">The Oregon Grape Story</a>  
 
 </center>
 </div>
