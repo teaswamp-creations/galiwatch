@@ -143,9 +143,9 @@ subplot(p1,p2, nrows=2, shareX = T, titleY = T) %>%
 
 ***
 
-Wind, rain, humidity and other weather parameters can all influence how air pollutants travel; meaning air quality changes with the weather. 
+Air quality changes with the weather. Wind, rain, humidity and other weather parameters can all influence how air pollutants move around.
 
-Air pollutants include gases that may be emitted into the atmosphere at concentrations that are harmful to the environment or to human health; e.g., nitrous oxides, carbon monoxide, ammonia, sulphur dioxide, methane, carbon dioxide. Our enviro air quality sensors detect groups of gases, oxidising and reducing, rather than individual gases, and reveal trends of increasing or decreasing air quality.   
+Nitrous oxides, carbon monoxide, ammonia, sulphur dioxide, methane, and carbon dioxide are polluting gases that may be emitted into the atmosphere in harmful amounts. Our enviro air quality sensors detect oxidising (e.g., NO<sub>2</sub>) and reducing gases (e.g., CO and ammonia) rather than individual gases, and can reveal trends of increasing or decreasing air quality.   
 
 In our setting, we are most likely to detect gaseous pollutants as a result of smoke from wood burning stoves (common in our setting) or wildfires (drifting smoke), as well as from vehicle exhaust due to proximity to roads. 
 

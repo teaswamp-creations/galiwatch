@@ -19,7 +19,7 @@ library(dplyr)
 library(lubridate)
 library(googlesheets4)
 library(gt)
-gs4_deauth()
+gs4_auth()
 
 zoneCols <- c('#4a968f','#2a797c','#69b3a2','#284b63','#2f5b69','#366a6e','#448878')
 catCols <- c("#69b3a2", "#153243", "#284b63", "#75485e", "#cb904d", '#F5C936')
@@ -267,7 +267,7 @@ tibble(Time = c('10:05 - 12:00',
 ```
 ***
 
-Video footage was collected from April 21st - May 4th. Our cameras were det to collect 4 min of footage every 5 min. Video counts provide an estimate of the proportion of pollinators seen in time lapse pictures. 
+Video footage was collected from April 21st - May 4th. Our cameras were set to collect 4 min of footage every 5 min. Video counts provide an estimate of the proportion of pollinators seen in time lapse pictures. 
 
 
 **Details**
@@ -279,7 +279,7 @@ Video footage was collected from April 21st - May 4th. Our cameras were det to c
 
 **Weather conditions**
 
-+ full sun, light wind
++ Full sun, light wind
 + AM 13-15C ; PM 15-16C
 
 **Total number of pollinators over 8 hrs of observation**
