@@ -24,7 +24,7 @@ make_anchor <- function(id){a(id = id, class = 'anchor')}
 
 ```{r gloss, message=F, warning=F, echo = F}
 # get glossary entries
-sheet_id <- readLines('.sheet_id')
+sheet_id <- '1BQKq4l-20kNaq9usmjDZCTo-S8vwVKqhtLrIi3MBxPY'
 read_sheet(sheet_id, sheet = 'glossary') %>%
   subset(complete.cases((.))) %>%
   mutate(dest = paste0('glossary.html#', gsub(" ", "%20", title))) ->
