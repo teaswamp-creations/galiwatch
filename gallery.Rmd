@@ -44,4 +44,6 @@ output:
   <img src="gallery/m.jpg">
   <img src="gallery/q.jpg">
 </div>
+<div class="photocolumn">
+  <img src="gallery/FroggyIR.gif">
 </div>
