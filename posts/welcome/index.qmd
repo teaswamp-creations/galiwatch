@@ -1,12 +1,29 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
-date: "2022-07-19"
-categories: [news]
+title: Template
+author: Kath Quayle
+date: 2022-07-19
+draft: true
+image: thumbnail.jpg
+categories:
+  - news
+  - code
+  - analysis
 ---
 
-This is the first post in a Quarto blog. Welcome!
+# Template
 
-![](thumbnail.jpg)
+This is a template post for the galiwatch blog!
 
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+To make a new post: 
+
+1.  copy template folder
+2.  edit title and date in `index.qmd` of the new directory, and set `draft: false`
+3.  rename the folder
+4.  click 'render' (or ctrl + shift + k)
+
+Have fun :))
+
+<center>
+![](blue_bee.jpg){width='20%'}
+</center>
+

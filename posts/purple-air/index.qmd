@@ -1,0 +1,24 @@
+---
+title: Purple Air
+author: Cait Harrigan
+date: 2022-07-19
+categories: 
+- news
+page-footer:
+    center: |
+      *a Tea Swamp project* 
+      <br>
+      <img src="../../images/teaswamp_transparent.png" alt="tea swamp logo" class="image" style="width: 2.5em;">
+ 
+---
+
+The first line will be the subtitle
+
+![](thumbnail.jpg)
+
+# Air quality right now
+
+<center>
+<div id='PurpleAirWidget_126303_module_AQI_conversion_C0_average_10_layer_standard'>Loading PurpleAir Widget...</div>
+<script src='https://www.purpleair.com/pa.widget.js?key=KNGLX17KY01CJU2J&module=AQI&conversion=C0&average=10&layer=standard&container=PurpleAirWidget_126303_module_AQI_conversion_C0_average_10_layer_standard'></script>
+</center>

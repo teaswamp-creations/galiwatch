@@ -1,5 +1,7 @@
 project:
   type: website
+  output-dir: docs
+  resources: images
 
 website:
   title: "Operation Galiwatch"
@@ -16,6 +18,8 @@ website:
       - research.qmd
     right:
       - about.qmd
+      - text: Contact
+        href: contact.qmd
       - icon: github
         href: https://github.com/teaswamp-creations
   search: 

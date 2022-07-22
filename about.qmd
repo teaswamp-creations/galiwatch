@@ -1,9 +1,10 @@
 ---
-title: "About"
 image: images/teaswamp_transparent.png
 about:
   template: jolla
 ---
+
+# About
 
 Tea Swamp is a group of citizen scientists located in British Columbia, Canada. 
 

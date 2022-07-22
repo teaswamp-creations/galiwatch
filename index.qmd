@@ -1,10 +1,10 @@
 ---
-pagetitle: "GaliWatch"
-title: "Operation Galiwatch"
 css: styles.css
 ---
 
 <center>
+# Operation Galiwatch
+
 Monitoring pollinator populations on Galiano Island, Canada. We're developing low-cost data collection and analysis systems for long-term pollinator surveillance and hyperlocal weather and climate monitoring.
 </center>
 
