@@ -1,0 +1,32 @@
+project:
+  type: website
+
+website:
+  title: "Operation Galiwatch"
+  favicon: "images/teaswamp_transparent.png"
+  page-footer:
+    center: |
+      *a Tea Swamp project* 
+      <br>
+      <img src="images/teaswamp_transparent.png" alt="tea swamp logo" class="image" style="width: 2.5em;">
+  google-analytics: "G-YZBNVRR4EQ"
+  navbar:
+    left: 
+      - pollinators.qmd
+      - research.qmd
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/teaswamp-creations
+  search: 
+    location: navbar
+    type: overlay
+  
+format:
+  html:
+    theme: [yeti, custom.scss]
+    include-in_header: favicon.html
+    include-after_body: footer.html
+
+
+

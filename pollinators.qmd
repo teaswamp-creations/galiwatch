@@ -1,0 +1,53 @@
+---
+pagetitle: "Pollinators"
+---
+
+<div id='PurpleAirWidget_126303_module_AQI_conversion_C0_average_10_layer_standard'>Loading PurpleAir Widget...</div>
+<script src='https://www.purpleair.com/pa.widget.js?key=KNGLX17KY01CJU2J&module=AQI&conversion=C0&average=10&layer=standard&container=PurpleAirWidget_126303_module_AQI_conversion_C0_average_10_layer_standard'></script>
+
+# Meet the bees of Galiano
+
+```{css, echo=FALSE}
+.pixgallery-image-grid {
+  border-radius: 50%;
+  width:  200px;
+}
+```
+
+<br>
+
+
+```{r, echo = F}
+library(pixture)
+
+paths <- c("images/Vancouver bumble.jpeg",
+           "images/Sitka bumble.jpeg",
+           "images/Fuzzy-horned bumble.jpeg",
+           "images/Yellow-fronted bumble.jpeg",
+           "images/Orange-rumped bumble.jpeg",
+           "images/Yellow-faced bumble.jpeg"
+          )
+           
+
+captions <- c('Vancouver bumble bee\n(B. vancouverensis)',
+              'Sitka bumble bee\n(B. sitkensis)',
+              'Fuzzy-horned bumble bee\n(B. mixtus)',
+              'Yellow-fronted bumble bee\n(B. flavifrons)',
+              'Orange-rumped bumble bee\n(B. melanopygus)',
+              'Yellow-faced bumbe bee\n(B. vosnesenskii)'
+              
+              )
+
+pixgallery(paths, caption = captions, gap = '20px')
+
+```
+
+
+
+
+<br>
+<br>
+
+<center>
+*Photos by [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)*
+</center>
