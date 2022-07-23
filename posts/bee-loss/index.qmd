@@ -11,7 +11,7 @@ categories:
   - deep-dive
 ---
 
-Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
+Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
 <img src="thumbnail.jpg" alt="bee" class="image" style="width: 30%; float:right; margin-top:0.2em; margin-left:6px;">  
 

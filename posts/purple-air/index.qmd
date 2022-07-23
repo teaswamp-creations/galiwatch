@@ -1,27 +1,39 @@
 ---
-draft: true
+draft: false
 
-title: Template
-date: 2022-07-19
+title: Purple Air sensor
+date: 2021-12-19
 author: Cait Harrigan
 
 image: thumbnail.jpg
 categories:
   - news
-  - code
-  - analysis
+  - climate
 ---
 
 # Template
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
+<div class="row" style="display: flex;">
+  <div class="column" style="flex: 45%;">
+  
+  We added a new device to our collection: a [Purple Air](https://www2.purpleair.com/) air quality sensor. The Purple Air sensor measures PM2.5 particle pollution.
 
-![](thumbnail.jpg)
+  There's a large community of people participating in this air quality monitoring, all over North America[^1]. See the Galiwatch measurments update real-time!
+  
+  ![](thumbnail.jpg)
 
-# Air quality right now
+  </div>
+  <div class="column" style="flex: 45%;">
+  <div id='PurpleAirWidget_126303_module_AQI_conversion_C0_average_10_layer_standard'>Loading PurpleAir Widget...</div>
+  <script src='https://www.purpleair.com/pa.widget.js?key=KNGLX17KY01CJU2J&module=AQI&conversion=C0&average=10&layer=standard&container=PurpleAirWidget_126303_module_AQI_conversion_C0_average_10_layer_standard'></script>
+  </div>
+</div> 
 
-<center>
-<div id='PurpleAirWidget_126303_module_AQI_conversion_C0_average_10_layer_standard'>Loading PurpleAir Widget...</div>
-<script src='https://www.purpleair.com/pa.widget.js?key=KNGLX17KY01CJU2J&module=AQI&conversion=C0&average=10&layer=standard&container=PurpleAirWidget_126303_module_AQI_conversion_C0_average_10_layer_standard'></script>
-</center>
+
+[^1]: Similar projects also exist in Europe, such as \[sensor.community\](https://sensor.community/en/)
+
+
+
+

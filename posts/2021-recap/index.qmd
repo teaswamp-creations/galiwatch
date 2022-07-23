@@ -1,5 +1,5 @@
 ---
-draft: False
+draft: false
 
 title: "2021  recap"
 date: 2022-05-01
@@ -12,7 +12,7 @@ categories:
 css: '../../css/timeline.css'
 ---
 
-Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
+Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
 We got a lot done this year! Lets take a look at the milestones we achieved. 
 
