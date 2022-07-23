@@ -31,7 +31,7 @@ h1, .h1{
 
 .imgtext {
   color: #282828;
-  font-size: 28px;
+  font-size: 22px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -73,22 +73,25 @@ h1, .h1{
 
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .galcolumn {
     flex: 100%;
     max-width: 100%;
   }
   .imgtext{
-    font-size: 200px;
+    font-size: 35px;
+  }
+  .learntext {
+    font-size: 20px;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 800px) {
   .imgtext{
-    font-size: 15px;
+    font-size: 24px;
   }
   .learntext {
-    font-size: 8px;
+    font-size: 15px;
   }
 }
 

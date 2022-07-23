@@ -1,7 +1,7 @@
 {
-  "hash": "81f17d2a5ec7e7013d7ba438671d8719",
+  "hash": "9587127d364d2cca0732171021463e7f",
   "result": {
-    "markdown": "---\ndraft: true\n\ntitle: Template\ndate: 2022-07-19\nauthor: Kath Quayle\n\nimage: thumbnail.jpg\ncategories:\n  - news\n  - code\n  - analysis\n\ndescription: |\n  Reading time: <1 minute\n\n---\n\n\n# Template\nfile.size(\"Your_File_Name.Rmd\")\n\nThis is a template post for the galiwatch blog!\n\nTo make a new post: \n\n1.  copy & rename the template folder\n2.  edit title and date in `index.qmd` of the new directory\n3.  when you're ready to publish, set `draft: false`\n4.  click 'render' (or ctrl + shift + k)\n\nHave fun :))\n\n<center>\n![](thumbnail.jpg){width='20%'}\n</center>\n\n",
+    "markdown": "---\ndraft: true\n\ntitle: Template\ndate: 2022-07-19\nauthor: Kath Quayle\n\nimage: thumbnail.jpg\ncategories:\n  - news\n  - code\n  - analysis\n---\n\n\n# Template\n\nReading time: <1 minute\n\nThis is a template post for the galiwatch blog!\n\nTo make a new post: \n\n1.  copy & rename the template folder\n2.  edit title and date in `index.qmd` of the new directory\n3.  when you're ready to publish, set `draft: false`\n4.  click 'render' (or ctrl + shift + k)\n\nHave fun :))\n\n<center>\n![](thumbnail.jpg){width='20%'}\n</center>\n\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
