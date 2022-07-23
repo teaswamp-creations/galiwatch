@@ -1,11 +1,13 @@
 ---
-css: styles.css
+css: css/style.css
 ---
 
 <center>
 # Operation Galiwatch
 
-Monitoring pollinator populations on Galiano Island, Canada. We're developing low-cost data collection and analysis systems for long-term pollinator surveillance and hyperlocal weather and climate monitoring.
+Monitoring pollinator populations on Galiano Island, Canada. 
+
+We're developing low-cost data collection and analysis systems for long-term pollinator surveillance and hyperlocal weather and climate monitoring.
 </center>
 
 
@@ -17,7 +19,7 @@ Monitoring pollinator populations on Galiano Island, Canada. We're developing lo
 
 <div class="galcolumn">
 <div class="imgbox">
-<a target="_top" href="info.html#the_site">
+<a target="_top" href="project.html#study-site">
   <img src="images/gali_thumbnail.jpg" alt="mountain" class="image" style="width: 100%;">   
   <div class="overlay">   
   <div class="imgtext">The Site</div>
@@ -29,7 +31,7 @@ Monitoring pollinator populations on Galiano Island, Canada. We're developing lo
 
 <div class="galcolumn">
 <div class="imgbox">
-<a target="_top" href="info.html#weather_monitoring">
+<a target="_top" href="project.html#weather-monitoring">
   <img src="images/weather_station.jpg" alt="windsock" class="image"style="width: 100%;">   
   <div class="overlay">   
   <div class="imgtext">Weather Monitoring</div>
@@ -41,7 +43,7 @@ Monitoring pollinator populations on Galiano Island, Canada. We're developing lo
 
 <div class="galcolumn">
 <div class="imgbox">
-<a target="_top" href="info.html#pollinator_detection">
+<a target="_top" href="project.html#pollinator-detection">
   <img src="images/bee4.png" alt="bee" class="image"style="width: 100%;">   
   <div class="overlay"> 
   <div class="imgtext">Pollinator Detection</div>

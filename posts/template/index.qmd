@@ -1,0 +1,33 @@
+---
+draft: true
+
+title: Template
+date: 2022-07-19
+author: Kath Quayle
+
+image: thumbnail.jpg
+categories:
+  - news
+  - code
+  - analysis
+---
+
+# Template
+
+Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
+
+This is a template post for the galiwatch blog!
+
+To make a new post: 
+
+1.  copy & rename the template folder
+2.  edit title and date in `index.qmd` of the new directory
+3.  when you're ready to publish, set `draft: false`
+4.  click 'render' (or ctrl + shift + k)
+
+Have fun :))
+
+<center>
+![](thumbnail.jpg){width='20%'}
+</center>
+

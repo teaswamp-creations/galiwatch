@@ -37,11 +37,10 @@ pixgallery(paths, caption = captions, gap = '20px')
 ```
 
 
-
-
 <br>
 <br>
 
 <center>
 *Photos by [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)*
 </center>
+
