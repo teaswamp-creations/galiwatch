@@ -1,9 +1,9 @@
 [
   {
-    "listing": "/research.html",
+    "listing": "/blog.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/purple-air/index.html"
+      "/posts/bee-loss/index.html",
+      "/posts/timeline/index.html"
     ]
   }
 ]

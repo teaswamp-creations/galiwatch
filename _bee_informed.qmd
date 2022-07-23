@@ -1,0 +1,40 @@
+---
+title: "Untitled"
+editor: visual
+---
+
+https://benalexkeen.com/creating-a-timeline-graphic-using-r-and-ggplot2/
+
+https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/#listing-listing-page=2
+
+https://analytics.google.com/analytics/web/?authuser=4#/a235353683p324324114/admin/streams/table/3854785199
+
+Retrieved this data from the Bee Informed Partnership \[loss map\](https://research.beeinformed.org/loss-map/). I only show average losses in each state, not totals. Rhe state with the highest total loss is not always the state which has the highest average loss.
+
+```{r, message=F, warning=F}
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+library(googlesheets4)
+gs4_auth('galiwatch.info@gmail.com')
+
+'1_gFr-ZaXBP_78aqeZMH6kspSb44OExzTs7g2Upa1kQE' %>%
+  read_sheet(col_types = 'ccncnnnn') %>%
+  separate(`95% Confidence Interval`, sep = '% - ', into = c('conf_lower', 'conf_upper')) %>%
+  separate(conf_upper, sep = '%', into = 'conf_upper') %>%
+  mutate(conf_lower = as.numeric(conf_lower),
+         conf_upper = as.numeric(conf_upper)) -> losses
+
+
+```
+
+```{r}
+
+losses %>%
+  drop_na(`Average Annual All Loss`) %>%
+  ggplot() + 
+  aes(x = Year, y = `Average Annual All Loss`, fill = Year) + 
+  geom_boxplot() +
+  scale_fill_manual(values=c('#4a968f','#2a797c','#69b3a2','#284b63','#2f5b69','#366a6e','#448878', '#284b63','#2f5b69','#366a6e','#448878', '#284b63','#2f5b69','#366a6e','#448878'))
+  #paletteer::scale_fill_paletteer_d("rtist::vangogh")
+```

@@ -1,0 +1,174 @@
+---
+title: 'Project Details'
+toc: true
+toc-location: left 
+freeze: true
+---
+
+
+```{r message=FALSE, warning=FALSE, echo = FALSE}
+library(dplyr)
+library(DT)
+library(kableExtra)
+library(googlesheets4)
+gs4_auth('galiwatch.info@gmail.com')
+```
+
+
+# Study Site
+***
+
+Galiano is a long narrow island of the Southern Gulf Island chain situated on the western edge of the Salish Sea. Located within the coastal Douglas-fir [biogeoclimatic zone](https://en.wikipedia.org/wiki/Biogeoclimatic_zones_of_British_Columbia), it has a semi-arid ecosystem characterized by a mild climate with cool wet winters and warm dry summers, and with annual drought conditions typically from mid-June to early October. Image adapted from [Galiano Story](https://galianostory.com/FLORAFAUNA.HTM).  
+
+
+Native tree species include coast Douglas-fir, western red cedar, arbutus, western hemlock, grand fir, Garry oak, red alder, and big leaf maple. Native plants commonly found in the understory include salal, Oregon grape, sword fern, vanilla leaf, and a variety of grasses, wildflowers, mosses, and lichens. This rural island  remains relatively intact ecologically.  
+
+<center>
+![](images/map.png){width=90%}
+</center>  
+
+<br>
+
+
+The study site is situated mid island surrounded by the Mid Galiano Protected Areas Network, and within the Greig creek watershed. Cameras will be positioned to survey insect visitations to patches of salal and dull Oregon grape in proximity to a seasonally occupied log cabin. Weather data (temperature, barometric pressure, and humidity), as well as air quality and particulate matter data will be collected at the location using Raspberry Pi Enviro sensors, as well as by an independent weather station positioned close by. There are a wide variety of native and introduced flowering plants in the immediate vicinity.  
+  
+  Native               |Introduced
+  ---------------------| ----------
+  Salal                |Daffodil
+  Oregon grape         |Helebore
+  Rock stonecrop       |Heather
+  Wild strawberry      |Wooly mint
+  Clover               |Sage
+  Vetch                |Oregano
+  Trailing blackberry  |Lavender
+  Western star flower  |Marjoram
+  Red-flowering currant|Cranesbill
+  Honeysuckle          |Rose campion  
+  Miners Lettuce       |Cutleaf blackberry
+  Creeping Thistle     |Periwinkle
+  Common Catsear       |Dandelion
+  Thimbleberry         |Daisy and oxeye daisy
+  -                    |Scotch broom  
+  -                    |Himalayan blackberry 
+                       |   
+         
+         
+Proximate habitat within about a 1/2 km radius includes bare bedrock, light well-draining sandy soil interspersed with clay deposits, and soil with high organic content from fallen trees and branches. Urbanisation includes several other nearby properties, some seasonal, others occupied year-round, which are serviced by paved roads, as well as about an acre of productive farmland (flowering crops include sunflowers, peas, beans, potatoes, basil, and artichokes, etc). There are two man-made ponds as well as areas of wetland and rough pasture.      
+
+
+# Weather Monitoring
+
+***
+
+Researchers have discovered that honey bees are able to detect changes in weather and alter their behaviour accordingly. Honey bees for example can be seen to respond minute-to-minute to the local weather conditions outside their hive, with the temperature and amount of sunlight being the most important factors signalling them to fly.[^1] In other studies, honey bees were seen to increase their foraging activity the day before a rainy day, but continued on a steady course when the weather was set fair.[^2]  
+
+Like honey bees, bumble bees feed on nectar and pollen and bring these resources back to the nest to feed their young. Perhaps not surprisingly, local weather conditions are found to influence their foraging activity too, but in this case it seems to be humidity that is most important - the more humid it gets the more foraging there is, and bumble bees will forage whatever the temperature, wind speed, or cloud cover.[^3] The researchers found that weather also influenced whether bumble bees collected nectar or pollen, with more pollen being collected when it was warm, windy, and low humidity, than on damper days; perhaps because in these conditions the pollen is easier for the bees to handle.  
+
+Interestingly, different bee species have adapted different levels of resilience to weather conditions and will forage at different temperatures and light intensities, with some species continuing to forage even in strong winds or light rain.[^4] 
+ 
+##	Equipment
+*	Raspberry Pi [Enviro + Air Quality](https://shop.pimoroni.com/products/enviro?variant=31155658457171) 
+*	[Acurite Atlas](https://www.acurite.com/) weather station   
+
+
+We will be investigating the connection between hyperlocal weather conditions and pollinator activity at our test site. The weather sensors and weather station are equipped to measure temperature, humidity, wind speed and direction, total rainfall, pressure, UV, and light intensity. Readings are dumped every 30s to an SD card.       
+
+
+## Air quality monitoring
+
+The air quality monitoring sensors will give us an idea of how air quality changes over time. They measure changes in concentrations of reducing (e.g., carbon monoxide) and oxidising (e.g., nitrogen dioxide) gases, and ammonia. The sensors measure electrical resistance according to the concentration of gases in the air. The resistance readings for reducing gases and ammonia drop with increasing concentrations of these gases, and increase when oxidising gases increase.   
+
+
+The particulate matter sensor detects concentrations of particles of different sizes (PM1, PM2.5 and PM10) as well as the number of particles of different sizes (>0.3, >0.5, >1.0, >2.5, >5, and >10 microns). Wildfire smoke particles typically range from 0.4–0.7 microns, dust is around 2.5 microns, while pollen is generally 15 microns or more. 
+
+<center>
+![Adapted from Jisaac9, Mieszko the first, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0), via Wikimedia Commons](images/1040px-Airborne-particulate-size-chart.svg.png){width=60%}
+ 
+</center> 
+
+
+# Pollinator detection  
+***
+
+It’s well known that bees are important wildflower pollinators; however, many non-bee pollinators including wasps, hover flies, other flies, beetles, butterflies, moths, and hummingbirds also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently.[^5] Local surveys of bee species that pollinate salal and dull Oregon grape found bumble bees to be the primary pollinators, with other bee species visiting less frequently (Wray & Elle, [SFU Pollination Ecology Lab](https://www.sfu.ca/people/eelle/bee_info.html)). 
+
+
+
+##	Equipment
++	Raspberry Pi for remote sensing 
++	Raspberry Pi's high quality cameras for time-lapse photography 
++	Pre-trained convolutional neural network via [Movidius NCS2](https://www.intel.com/content/www/us/en/developer/tools/neural-compute-stick/overview.html) for insect detection and image screening  
+
+
+We have mounted two surveillance cameras comprising of a Raspberry Pi (powered over ethernet) fitted with a Pi camera and a 1 terabyte soild state drive, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every minute and the images are stored on the SSD.  
+
+
+# Data Analysis
+***
+
+Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month study period. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a convolutional neural network. We are currently testing a Movidius Neural Compute Stick for this task.
+
+
+## Bees and other pollinators of Galiano Island
+
+Although our two test plants salal and dull Oregon grape are particularly attractive to bumble bees, many other species of pollinators have been sighted on Galiano and we are interested to see if any of these are captured in our images. Our reference resource for insect identification is the [Biodiversity Galiano](https://biogaliano.org/) project, a community-based initiative to document the flora and fauna of Galiano Island, initiated in January 2016. So far, over 2,500 species have been reported of which more than 1,000 are [arthropods](https://en.wikipedia.org/wiki/Arthropod). Among these are 82 species of bees and wasps including honey bees (*Apis mellifera*), bumblebees (*Bombus* spp.) mining bees (*Andrena* spp.), long-horned bees (*Eucera* spp.), mason bees (*Osmia* spp.), cuckoo bees (*Nomada* spp.), sweat bees (*Halictus* and *Lasioglossum* spp.), blood bees (*Sphecodes* spp.), and various wasps. 
+
+
+We will use this database to help ID any pollinators we see in our time-lapse images.
+
+
+
+<br>
+
+
+```{r, echo = F, message=F}
+
+'1viGZGvirMYKkMWLM2i1ubdrbHsg9A_302Ohhg8nP_nI' %>%
+read_sheet(col_types = "c") %>%
+  mutate(Group = factor(Group)) %>%
+  mutate(Species = stringr::str_to_title(Species)) %>%
+  datatable(filter = 'top', options = list(pageLength = 10, autoWidth = TRUE))
+```
+
+
+<br>
+
+With systems up and running we hope to collect data from late March to early September including: 
+
+*	Images of [Salal](https://bcinvasives.ca/play-your-part/plantwise/grow-me-instead/salal/) and [Dull Oregon grape](https://bcinvasives.ca/play-your-part/plantwise/grow-me-instead/oregon-grape/) from bud burst to fruit maturation.  
+*	Images of pollinators showing when and how often they come to visit, and enabling identification of different species.
+*	Day-to-day weather data, including high and low temperatures, pressure, humidity (Raspberry pi and Acurite), wind speed and direction, total rainfall, UV and light intensity (Acurite only). This will enable comparison of the two systems, and establish reproducibility of the instruments.
+*	Climate data including average, maximum and minimum temperatures; light intensity; pressure; wind speed, and total rainfall accumulation.
+*	Estimates of reducing and oxidising gases, and ammonia representing trends of increasing or decreasing air quality, and estimates of particulates, such as dust, pollen, mould spores, smoke etc.  
+
+
+
+In addition to piloting the technology, the images and weather data will provide baseline information about our test site including:
+
+1.	Date of bud burst and duration of flowering of salal and dull Oregon grape.
+2.	Pollinator community composition visiting these plants during the flowering season (bees, hoverflies, butterflies, moths, wasps, other flies, beetles, hummingbirds). 
+3.	Time of first appearance and seasonal dynamics of different pollinators. 
+4.	How much of a role, if any, non-bee visitors play in the pollination of these two native plants. 
+5.	How hyperlocal weather and variations in air quality influence pollinator activity.  
+
+The images and weather data will add to what is already known about pollinators in coastal Douglas-fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom.     
+
+<br>
+
+# References
+
+
+[^1]: Clarke D, Robert D. Predictive modelling of honey bee foraging activity using local weather conditions. Apidologie. 2018;49(3):386-96. https://doi.org/10.1007/s13592-018-0565-3  
+
+[^2]: He XJ, Tian LQ, Wu XB, Zeng ZJ. RFID monitoring indicates honeybees work harder before a rainy day. Insect science. 2016;23(1):157-9.  https://doi.org/10.1111/1744-7917.12298 
+
+[^3]: Peat J, Goulson D. Effects of experience and weather on foraging rate and pollen versus nectar collection in the bumblebee, Bombus terrestris. Behavioral Ecology and Sociobiology. 2005;58(2):152-6. https://doi.org/10.1007/s00265-005-0916-8 
+
+[^4]: Vicens N, Bosch J. Weather-dependent pollinator activity in an apple orchard, with special reference to Osmia cornuta and Apis mellifera (Hymenoptera: Megachilidae and Apidae). Environmental Entomology. 2000;29(3):413-20.  https://doi.org/10.1603/0046-225X-29.3.413
+
+[^5]: Rader R, Bartomeus I, Garibaldi LA, et al. Non-bee insects are important contributors to global crop pollination. Proceedings of the National Academy of Sciences. 2016;113(1):146-51.  https://doi.org/10.1073/pnas.1517092112  
+ 
+ 
+ 
+ 
+

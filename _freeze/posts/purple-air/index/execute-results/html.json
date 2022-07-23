@@ -1,0 +1,14 @@
+{
+  "hash": "ed7898781a61cfb68ad09c1b4ace9c5b",
+  "result": {
+    "markdown": "---\ndraft: true\n\ntitle: Template\ndate: 2022-07-19\nauthor: Cait Harrigan\n\nimage: thumbnail.jpg\ncategories:\n  - news\n  - code\n  - analysis\n\ndescription: |\n  Reading time: <1 minute\n---\n\n\n\nThe first line will be the subtitle\n\n![](thumbnail.jpg)\n\n# Air quality right now\n\n<center>\n<div id='PurpleAirWidget_126303_module_AQI_conversion_C0_average_10_layer_standard'>Loading PurpleAir Widget...</div>\n<script src='https://www.purpleair.com/pa.widget.js?key=KNGLX17KY01CJU2J&module=AQI&conversion=C0&average=10&layer=standard&container=PurpleAirWidget_126303_module_AQI_conversion_C0_average_10_layer_standard'></script>\n</center>",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
