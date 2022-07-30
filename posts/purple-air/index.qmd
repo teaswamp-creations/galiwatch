@@ -11,8 +11,6 @@ categories:
   - climate
 ---
 
-# Template
-
 Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
 <div class="row" style="display: flex;">
@@ -26,7 +24,7 @@ Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(rou
 
   </div>
   <div class="column" style="flex: 45%;">
-  <div id='PurpleAirWidget_126303_module_AQI_conversion_C0_average_10_layer_standard'>Loading PurpleAir Widget...</div>
+  <div id='PurpleAirWidget_126303_module_AQI_conversion_C0_average_10_layer_standard' style="float: right;">Loading PurpleAir Widget...</div>
   <script src='https://www.purpleair.com/pa.widget.js?key=KNGLX17KY01CJU2J&module=AQI&conversion=C0&average=10&layer=standard&container=PurpleAirWidget_126303_module_AQI_conversion_C0_average_10_layer_standard'></script>
   </div>
 </div> 
