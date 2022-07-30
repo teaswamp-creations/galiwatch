@@ -11,7 +11,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "bees\n\n\nconservation\n\n\ndeep-dive\n\n\n\n\n\n\n\n\n\n\n\nJul 19, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMay 1, 2022\n\n\nCait Harrigan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\nclimate\n\n\n\n\n\n\n\n\n\n\n\nDec 19, 2021\n\n\nCait Harrigan\n\n\n\n\n\n\nNo matching items"
+    "text": "bees\n\n\nconservation\n\n\ndeep-dive\n\n\n\n\n\n\n\n\n\n\n\nJul 19, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJul 19, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMay 1, 2022\n\n\nCait Harrigan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\nclimate\n\n\n\n\n\n\n\n\n\n\n\nDec 19, 2021\n\n\nCait Harrigan\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -75,5 +75,12 @@
     "title": "Project Details",
     "section": "Bees and other pollinators of Galiano Island",
     "text": "Bees and other pollinators of Galiano Island\nAlthough our two test plants salal and dull Oregon grape are particularly attractive to bumble bees, many other species of pollinators have been sighted on Galiano and we are interested to see if any of these are captured in our images. Our reference resource for insect identification is the Biodiversity Galiano project, a community-based initiative to document the flora and fauna of Galiano Island, initiated in January 2016. So far, over 2,500 species have been reported of which more than 1,000 are arthropods. Among these are 82 species of bees and wasps including honey bees (Apis mellifera), bumblebees (Bombus spp.) mining bees (Andrena spp.), long-horned bees (Eucera spp.), mason bees (Osmia spp.), cuckoo bees (Nomada spp.), sweat bees (Halictus and Lasioglossum spp.), blood bees (Sphecodes spp.), and various wasps.\nWe will use this database to help ID any pollinators we see in our time-lapse images.\n\n\n\n\n\n\n\n\n\nWith systems up and running we hope to collect data from late March to early September including:\n\nImages of Salal and Dull Oregon grape from bud burst to fruit maturation.\n\nImages of pollinators showing when and how often they come to visit, and enabling identification of different species.\nDay-to-day weather data, including high and low temperatures, pressure, humidity (Raspberry pi and Acurite), wind speed and direction, total rainfall, UV and light intensity (Acurite only). This will enable comparison of the two systems, and establish reproducibility of the instruments.\nClimate data including average, maximum and minimum temperatures; light intensity; pressure; wind speed, and total rainfall accumulation.\nEstimates of reducing and oxidising gases, and ammonia representing trends of increasing or decreasing air quality, and estimates of particulates, such as dust, pollen, mould spores, smoke etc.\n\nIn addition to piloting the technology, the images and weather data will provide baseline information about our test site including:\n\nDate of bud burst and duration of flowering of salal and dull Oregon grape.\nPollinator community composition visiting these plants during the flowering season (bees, hoverflies, butterflies, moths, wasps, other flies, beetles, hummingbirds).\nTime of first appearance and seasonal dynamics of different pollinators.\nHow much of a role, if any, non-bee visitors play in the pollination of these two native plants.\nHow hyperlocal weather and variations in air quality influence pollinator activity.\n\nThe images and weather data will add to what is already known about pollinators in coastal Douglas-fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom."
+  },
+  {
+    "objectID": "posts/my-new-post/index.html",
+    "href": "posts/my-new-post/index.html",
+    "title": "Template",
+    "section": "",
+    "text": "<i class=“fa-solid fa-mug-saucer”></i>\nReading time: <1 minute\nThis is a template post for the galiwatch blog!\nTo make a new post:\n\ncopy & rename the template folder\nedit title and date in index.qmd of the new directory\nwhen you’re ready to publish, set draft: false\nclick ‘render’ (or ctrl + shift + k)\n\nHave fun :))"
   }
 ]
