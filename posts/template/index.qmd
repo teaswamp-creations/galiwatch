@@ -1,6 +1,7 @@
 ---
 draft: true
 
+editor: visual
 title: Template
 date: 2022-07-19
 author: Kath Quayle
@@ -18,16 +19,16 @@ Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(
 
 This is a template post for the galiwatch blog!
 
-To make a new post: 
+To make a new post:
 
 1.  copy & rename the template folder
 2.  edit title and date in `index.qmd` of the new directory
 3.  when you're ready to publish, set `draft: false`
 4.  click 'render' (or ctrl + shift + k)
+5.  go to git -\> add all -\> commit -\> pull -\> push
+
+To add an image: type `/image` . The first image inserted will be the thumbnail!
 
 Have fun :))
 
-<center>
-![](thumbnail.jpg){width='20%'}
-</center>
-
+<center>![](thumbnail.jpg){width="20%"}</center>
