@@ -1,0 +1,256 @@
+---
+draft: false
+
+title: Air quality measurement
+date: 2021-06-16
+author: Kath Quayle
+
+image: thumbnail.jpg
+toc: true
+categories:
+  - climate
+  - pilot project
+  - data analysis
+---
+
+Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
+
+```{r,include=F, echo=F}
+knitr::opts_chunk$set(echo = F, message=F, warning = F)
+```
+
+```{r setup, include=F, echo=F}
+library(leaflet)
+library(plotly)
+library(dplyr)
+library(lubridate)
+library(bcmaps)
+library(googlesheets4)
+
+gs4_auth('galiwatch.info@gmail.com')
+
+c2f <- function(temp){(temp * (9/5) + 32)}
+f2c <- function(temp){(temp-32) * (5/9)}
+
+df <- '1ahRbUxfrm5Tstqk_4BvfRzW1kTJFe_lifuIWLTY4KNA' %>%
+  read_sheet() %>%
+  mutate_at(c(), as.numeric) %>%
+  mutate(Date = ymd(paste(Ep_Year, Ep_Month, Ep_Day)),
+         Time = hms::as_hms(paste0(EP_Time, ':00')),
+         `Indoor Temperature C` = f2c(`Indoor Temperature F`),
+         `Outdoor Temperature C` = f2c(`Outdoor Temperature F`)
+        ) %>%
+  mutate_if(is.character, as.numeric) %>%
+  filter(Date >= '2021-03-01', Date <= '2021-05-31') %>%
+  group_by(Date)
+
+subtitle <- function(text){
+  # circumvent plotly's lack of subplot titles
+  return(list(text = text,
+              font = list(size = 14),
+              xref = "paper",
+              yref = "paper",
+              yanchor = "bottom",
+              xanchor = "center",
+              align = "center",
+              x = 0.5,
+              y = 1,
+              showarrow = FALSE
+          ))
+}
+
+```
+
+### Air quality management in British Columbia 
+
+```{r bcmap}
+zoneCols <- c('#4a968f','#2a797c','#69b3a2','#284b63','#2f5b69','#366a6e','#448878')
+
+frogIcon <- makeIcon(iconUrl = "teaSwamp.svg",
+                     iconWidth = 40, iconHeight = 40,
+                     iconAnchorX = 0, iconAnchorY = 90)
+
+airzones(ask = F) %>%
+  leaflet() %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  addPolygons(color = "#444444", weight = 1, smoothFactor = 0.5,
+              opacity = 1.0, fillOpacity = 0.7, label=~paste0(Airzone, ' airzone'),
+              fillColor = ~colorFactor(zoneCols, Airzone)(Airzone),
+              highlightOptions = highlightOptions(color = "white", 
+                                                  weight = 1.5,
+                                                  bringToFront = TRUE)) %>%
+  addMarkers(lat=48.9236, lng=-123.4415, label='Galiano Island', icon=frogIcon,
+             labelOptions = labelOptions(noHide = T, direction = "bottom", offset = c(0,20)))
+
+
+```
+<br>
+
+BC actively monitors air quality and is part of the national Air Quality Management System (AQMS). The AQMS divides provinces into air zones that exhibit similar air quality characteristics - BC has seven air zones. Galiano is in the Georgia Straight Air Zone, which includes Victoria, Nanaimo, Comox, Campbell River, Whistler, Squamish, and Powell River.  
+
+
+### Weather Data & Air Pollution 
+
+```{r}
+df %>% 
+  summarize(Humidity = round(mean(`Outdoor Humidity %`), 2),
+         Pressure = round(mean(`Calibrated barometric Pressure`), 2)) %>%
+  plot_ly() %>%
+  add_lines(x = ~Date,y = ~Humidity, name = 'Humidity (%)', 
+            line = list(color=zoneCols[2]), mode = "lines",
+            type = "scatter",  
+            hovertemplate = '%{y}') %>%
+  add_lines(x = ~Date,y = ~Pressure, name = 'Pressure (kPa)',
+            line = list(color=zoneCols[4]), yaxis = "y2") %>%
+  layout(hovermode= 'x unified',
+         annotations = subtitle('Weather April 2021'),
+         yaxis = list(title ='Percent'), 
+         yaxis2 = list(tickfont = list(color = zoneCols[4]),
+                       overlaying = "y",
+                       side = "right",
+                       title = "kPa",
+                       showgrid=F
+                       )
+         ) -> p1
+
+
+df %>% 
+  summarize(hi = max(`Outdoor Temperature C`),
+            lo = min(`Outdoor Temperature C`)) %>%
+  mutate(across(c(hi, lo), round, digits = 2)) %>%
+  plot_ly() %>%
+  add_lines(x = ~Date, y = ~hi, name = 'Daily max temp',
+            line = list(color='#75485E'), mode = "lines",
+            type = "scatter",  
+            hovertemplate = '%{y}') %>%
+  add_lines(x = ~Date, y = ~lo, name = 'Daily min temp',
+            line = list(color='#CB904D')) %>%
+  layout(hovermode= 'x unified',
+         yaxis = list(title ='Degrees C')
+         ) -> p2
+
+
+subplot(p1,p2, nrows=2, shareX = T, titleY = T) %>% 
+  layout(legend = list(y = 0)) 
+
+```
+
+
+
+Air quality changes with the weather. Wind, rain, humidity and other weather parameters can all influence how air pollutants move around.
+
+Nitrous oxides, carbon monoxide, ammonia, sulphur dioxide, methane, and carbon dioxide are polluting gases that may be emitted into the atmosphere in harmful amounts. Our enviro air quality sensors detect oxidising (e.g., NO<sub>2</sub>) and reducing gases (e.g., CO and ammonia) rather than individual gases, and can reveal trends of increasing or decreasing air quality.   
+
+In our setting, we are most likely to detect gaseous pollutants as a result of smoke from wood burning stoves (common in our setting) or wildfires (drifting smoke), as well as from vehicle exhaust due to proximity to roads. 
+
+### Air pollution – particulate matter (PM)
+
+
+```{r}
+df %>% 
+  summarize(mean = mean(`PM_25`), lo = min(`PM_25`), hi = max(`PM_25`)) %>%
+  mutate(across(c(mean, lo, hi), round, digits=2)) %>%
+  plot_ly(x = ~Date, y = ~mean, name = '24h mean', type = "scatter",
+          mode = "lines", showlegend = FALSE, hovertemplate = '%{y}'
+          ) %>%
+  add_ribbons(x = ~Date, text = summarize(df, lo=min(`PM_25`))$lo,
+              ymax = ~hi, ymin = ~lo, name = '24h low/high',
+              line = list(color = paste0(zoneCols[3], '33')),
+              fillcolor = paste0(zoneCols[3], '66'),
+              hovertemplate = '(%{text}, %{y})'
+             ) %>%
+  layout(hovermode="x unified", 
+         annotations = subtitle('PM <2.5 April 2021'),
+         yaxis = list(title = 'µg/m<sup>3</sup>')
+        )  -> pm25
+
+```
+
+
+```{r}
+df %>% 
+  summarize(mean = mean(`PM_10`), lo = min(`PM_10`), hi = max(`PM_10`)) %>%
+  mutate(across(c(mean, lo, hi), round, digits=2)) %>%
+  plot_ly(x = ~Date, y = ~mean, name = '24h mean', type = "scatter",
+          mode = "lines", showlegend = FALSE, hovertemplate = '%{y}'
+          ) %>%
+  add_ribbons(x = ~Date, text = summarize(df, lo=min(`PM_10`))$lo,
+              ymax = ~hi, ymin = ~lo, name = '24h low/high',
+              line = list(color = paste0(zoneCols[6], '33')),
+              fillcolor = paste0(zoneCols[6], '66'),
+              hovertemplate = '(%{text}, %{y})'
+             ) %>%
+  layout(hovermode="x unified",
+         annotations = subtitle('PM <10 April 2021'),
+         yaxis = list(title = 'µg/m<sup>3</sup>')
+        )  -> pm10
+
+```
+
+
+```{r}
+subplot(pm25,pm10, nrows=2, shareX = T, titleY = T) 
+```
+
+
+
+PM 2.5 refers to fine airborne particles with a diameter of 2.5 microns or less. They are produced by many human activities and natural sources including vehicle exhausts, forestry operations, wood stoves, wildfires, and wind. Fine particulate matter may be harmful to health.   
+
+PM 10 refers to all solid and liquid airborne particles with a diameter of 10 microns or less. These particles come from lots of different sources and are highly variable as a result. Many are formed by chemical or physical processes in the atmosphere. Inhaling PM 10s may also be bad for your health.  
+
+BC’s air quality objectives reflect the maximum acceptable level of pollutants according to national air quality targets. The 24 hour average air quality objectives for PM 2.5 (24hr) and PM 10 (24hr) are 25 µg/m3 and 50 µg/m3, respectively.
+
+
+### NO<sub>2</sub>
+
+
+
+```{r}
+df %>% ungroup() %>%
+  mutate(Date = ymd_hms(paste(Date, Time)), y = round(`Oxid`, digits=2)) %>%
+  plot_ly(x = ~Date, y = ~y, name = '1h mean', 
+          line = list(color='#69b3a2'), mode = "lines",
+          type = "scatter", showlegend = FALSE, 
+          hovertemplate = '%{y}') %>%
+  layout(hovermode= 'x unified',
+         annotations = subtitle('Oxidising gases April 2021'),
+         yaxis = list(title = 'Resistance (ohms)')
+        ) 
+
+```
+
+
+
+BC’s air quality objective for NO<sub>2</sub> (primary oxidising gas detected by our sensors) is 100 parts per billion (ppb) averaged over a 1-hour period. For the two-week period from Apr 4–17, NO<sub>2</sub> (1hr) levels measured in Victoria ([Colwood City Hall](https://www.env.gov.bc.ca/epd/bcairquality/readings/find-stations-map-NO2.html)) ranged from approximately 3-12 ppb, while our resistance readings ranged from approximately 10-1550 ohms. If we assume the air quality variation across the Georgia Straight air zone is representative for our site, a change in resistance of 170 ohms is equivalent to a change in NO<sub>2</sub> of around 1 ppb. 
+
+### CO and NH<sub>3</sub> 
+
+
+
+```{r}
+df %>% ungroup() %>%
+  mutate(Date = ymd_hms(paste(Date, Time)), 
+         NO2 = round(`Oxid`, 2),
+         CO = round(`Reducing`, 2), 
+         NH3 = round(`Ammonia`, 2)) %>%
+  plot_ly(x = ~Date, y = ~NO2, name = 'NO<sub>2</sub>', 
+          line = list(color=zoneCols[2]), mode = "lines",
+          type = "scatter", showlegend = FALSE, 
+          hovertemplate = '%{y}') %>%
+  add_lines(x=~Date, y = ~CO, name = 'CO',
+            line = list(color=zoneCols[4])) %>%
+  add_lines(x=~Date, y = ~NH3, name = 'NH<sub>3</sub>',
+            line = list(color=zoneCols[3])) %>%
+  layout(hovermode= 'x unified',
+         annotations = subtitle('Oxidising Gasses, Resucing Gasses, and Ammonia April 2021'),
+         yaxis = list(title = 'Resistance (ohms)')
+        ) 
+
+```
+
+
+
+Carbon monoxide (CO) and ammonia are reducing gases. Our enviro sensors provide a qualitative estimate of their concentration in the atmosphere with decreasing resistance measurements corresponding to decreasing air quality. Resistance readings for reducing gases and ammonia through April ranged from 90-260 Ω (around a 3-fold change), and from 90-1500 Ω (around a 16-fold change), respectively. At this time of year, wood stoves and local traffic are likely major contributors to fluctuations in air quality. 
+
+
+
