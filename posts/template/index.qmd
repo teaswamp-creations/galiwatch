@@ -1,7 +1,6 @@
 ---
 draft: true
 
-editor: visual
 title: Template
 date: 2022-07-19
 author: Kath Quayle

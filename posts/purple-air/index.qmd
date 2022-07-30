@@ -30,7 +30,7 @@ Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(rou
 </div> 
 
 
-[^1]: Similar projects also exist in Europe, such as \[sensor.community\](https://sensor.community/en/)
+[^1]: Similar projects also exist in Europe, such as [sensor.community](https://sensor.community/en/).
 
 
 
