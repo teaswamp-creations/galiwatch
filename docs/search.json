@@ -11,7 +11,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "bees\n\n\nconservation\n\n\ndeep-dive\n\n\n\n\n\n\n\n\n\n\n\nJul 19, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMay 1, 2022\n\n\nCait Harrigan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\nclimate\n\n\n\n\n\n\n\n\n\n\n\nDec 19, 2021\n\n\nCait Harrigan\n\n\n\n\n\n\nNo matching items"
+    "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJul 30, 2022\n\n\nCait Harrigan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nbees\n\n\nconservation\n\n\ndeep-dive\n\n\n\n\n\n\n\n\n\n\n\nJul 19, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMay 1, 2022\n\n\nCait Harrigan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\nclimate\n\n\n\n\n\n\n\n\n\n\n\nDec 19, 2021\n\n\nCait Harrigan\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -82,5 +82,12 @@
     "title": "Template",
     "section": "",
     "text": "<i class=“fa-solid fa-mug-saucer”></i>\nReading time: <1 minute\nThis is a template post for the galiwatch blog!\nTo make a new post:\n\ncopy & rename the template folder\nedit title and date in index.qmd of the new directory\nwhen you’re ready to publish, set draft: false\nclick ‘render’ (or ctrl + shift + k)\n\nHave fun :))"
+  },
+  {
+    "objectID": "posts/new-post/index.html",
+    "href": "posts/new-post/index.html",
+    "title": "new post!!!",
+    "section": "",
+    "text": "Reading time: <1 minute\ncontent!!!\n\n\n\nBird house\n\n\nwhat a cool birdhouse!\nThis is a template post for the galiwatch blog!\nTo make a new post:\n\ncopy & rename the template folder\nedit title and date in index.qmd of the new directory\nwhen you’re ready to publish, set draft: false\nclick ‘render’ (or ctrl + shift + k)\ngo to git -> add all -> commit -> pull -> push\n\nTo add an image: type /image . The first image inserted will be the thumbnail!\nHave fun :))"
   }
 ]
