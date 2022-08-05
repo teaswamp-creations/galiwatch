@@ -1,0 +1,14 @@
+{
+  "hash": "886afd0949e70f4ecb756e82be4560eb",
+  "result": {
+    "markdown": "---\ntitle: 2022 August Update\ndate: 2022-08-04\nauthor: Kath Quayle\ncategories:\n  - news\n  - code\n  - analysis\n---\n\n\nReading time: <1 minute\n\n# Surveillance - Oregon grape\n\nTime lapse photography\n\n![](images/20200131_124922.jpg)\n\nWe used time lapse photography to capture one pic per minute from dawn to dusk from the start to the end of the flowering season (March 12th to May 3rd) The first bee caught on camera flew by before any flowers had opened on the evening of Apr 13th, and we saw open flowers at sunrise on Apr 14th. The first pollinator was a bumble bee caught on camera that afternoon. We collected approximately 850 pics per day (16,000+ pics collected during the observation period) and found only 123 pics with bees in them ¬-- less than 1%!!\n\nDaily pollinator tally during the flowering period\n\nIn addition to bumble bees we observed a few butterflies and bee flies, as well as other small flies\n\nThis is a template post for the galiwatch blog!\n\nTo make a new post:\n\n1.  copy & rename the template folder\n2.  edit title and date in `index.qmd` of the new directory\n3.  when you're ready to publish, set `draft: false`\n4.  click 'render' (or ctrl + shift + k)\n\nHave fun :))\n\n<center>![](thumbnail.jpg){width=\"20%\"}</center>\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
