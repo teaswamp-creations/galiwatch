@@ -35,6 +35,13 @@
     "text": "We got a lot done this year! Lets take a look at the milestones we achieved.\n\n\n\n\n\nJAN 2021\n\n\n\n\nHello World\n\n\nInspired by Toke Høye’s PollinatorWatch, Operation GaliWatch is born. We order weather monitoring hardware and start putting together the Raspberry Pi setup.\n\n\n\n\n\nMAR 2021\n\n\n\n\nFirst Steps\n\n\nThe setup is ready cameras positioned, air quality and weather sensors fine-tuned and working well, and we collect our first datapoints!\nFirst bee of the year spotted on Mar 8th - a Sitka bumble bee.\n\n\n\n\n\nAPR 2021\n\n\n\n\nMaking Friends\n\n\nWe get in touch with Biodiversity Galiano, and connect with IMERSS\n\n\n\n\n\nMAY 2021\n\n\n\n\nPilot Project\n\n\nWe measure pollinator activity and environmental data at our pilot site.\n\n\n\n\n\nAUG 2021\n\n\n\n\nFirst Data Stories\n\n\nWe share our pilot data and preliminary results\n\n\n\n\n\nNOV 2021\n\n\n\n\nLive monitoring\n\n\nWe join PurpleAir and our sensor goes live!\n\n\n\n\n\nDEC 2022\n\n\n\n\nWhat’s next?\n\n\nWe captured more pollinators on our environmental cams than we anticipated: hummingbirds and bats! We’ll see where Galiwatch takes us next!"
   },
   {
+    "objectID": "posts/2022-August update/index.html",
+    "href": "posts/2022-August update/index.html",
+    "title": "2022 August Update",
+    "section": "",
+    "text": "Surveillance - Oregon grape\nTime lapse photography\n\nWe used time lapse photography to capture one pic per minute from dawn to dusk from the start to the end of the flowering season (March 12th to May 3rd) The first bee caught on camera flew by before any flowers had opened on the evening of Apr 13th, and we saw open flowers at sunrise on Apr 14th. The first pollinator was a bumble bee caught on camera that afternoon. We collected approximately 850 pics per day (16,000+ pics collected during the observation period) and found only 123 pics with bees in them ¬– less than 1%!!\nDaily pollinator tally during the flowering period\nIn addition to bumble bees we observed a few butterflies and bee flies, as well as other small flies\nThis is a template post for the galiwatch blog!\nTo make a new post:\n\ncopy & rename the template folder\nedit title and date in index.qmd of the new directory\nwhen you’re ready to publish, set draft: false\nclick ‘render’ (or ctrl + shift + k)\n\nHave fun :))"
+  },
+  {
     "objectID": "posts/bee-loss/index.html",
     "href": "posts/bee-loss/index.html",
     "title": "Bee loss in North America",
@@ -54,6 +61,13 @@
     "title": "Purple Air sensor",
     "section": "",
     "text": "We added a new device to our collection: a Purple Air air quality sensor. The Purple Air sensor measures PM2.5 particle pollution.\nThere’s a large community of people participating in this air quality monitoring, all over North America1. See the Galiwatch measurments update real-time!\n\n\n\n\nLoading PurpleAir Widget…\n\n\n\n\n\n\n\n\nFootnotes\n\n\nSimilar projects also exist in Europe, such as sensor.community↩︎"
+  },
+  {
+    "objectID": "posts/template/index.html",
+    "href": "posts/template/index.html",
+    "title": "Template",
+    "section": "",
+    "text": "This is a template post for the galiwatch blog!\nTo make a new post:\n\nPULL!\ncopy & rename the template folder\nedit title and date in index.qmd of the new directory\nclick ‘render’ (or ctrl + shift + k)\ngit -> add all -> commit -> push\n\nTo add an image: type /image . The first image inserted will be the thumbnail!\nHave fun :))"
   },
   {
     "objectID": "posts/weather-story/index.html",
@@ -89,19 +103,5 @@
     "title": "Project Details",
     "section": "Bees and other pollinators of Galiano Island",
     "text": "Bees and other pollinators of Galiano Island\nAlthough our two test plants salal and dull Oregon grape are particularly attractive to bumble bees, many other species of pollinators have been sighted on Galiano and we are interested to see if any of these are captured in our images. Our reference resource for insect identification is the Biodiversity Galiano project, a community-based initiative to document the flora and fauna of Galiano Island, initiated in January 2016. So far, over 2,500 species have been reported of which more than 1,000 are arthropods. Among these are 82 species of bees and wasps including honey bees (Apis mellifera), bumblebees (Bombus spp.) mining bees (Andrena spp.), long-horned bees (Eucera spp.), mason bees (Osmia spp.), cuckoo bees (Nomada spp.), sweat bees (Halictus and Lasioglossum spp.), blood bees (Sphecodes spp.), and various wasps.\nWe will use this database to help ID any pollinators we see in our time-lapse images.\n\n\n\n\n\n\n\n\n\nWith systems up and running we hope to collect data from late March to early September including:\n\nImages of Salal and Dull Oregon grape from bud burst to fruit maturation.\n\nImages of pollinators showing when and how often they come to visit, and enabling identification of different species.\nDay-to-day weather data, including high and low temperatures, pressure, humidity (Raspberry pi and Acurite), wind speed and direction, total rainfall, UV and light intensity (Acurite only). This will enable comparison of the two systems, and establish reproducibility of the instruments.\nClimate data including average, maximum and minimum temperatures; light intensity; pressure; wind speed, and total rainfall accumulation.\nEstimates of reducing and oxidising gases, and ammonia representing trends of increasing or decreasing air quality, and estimates of particulates, such as dust, pollen, mould spores, smoke etc.\n\nIn addition to piloting the technology, the images and weather data will provide baseline information about our test site including:\n\nDate of bud burst and duration of flowering of salal and dull Oregon grape.\nPollinator community composition visiting these plants during the flowering season (bees, hoverflies, butterflies, moths, wasps, other flies, beetles, hummingbirds).\nTime of first appearance and seasonal dynamics of different pollinators.\nHow much of a role, if any, non-bee visitors play in the pollination of these two native plants.\nHow hyperlocal weather and variations in air quality influence pollinator activity.\n\nThe images and weather data will add to what is already known about pollinators in coastal Douglas-fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom."
-  },
-  {
-    "objectID": "posts/2022-August update/index.html",
-    "href": "posts/2022-August update/index.html",
-    "title": "2022 August Update",
-    "section": "",
-    "text": "Surveillance - Oregon grape\nTime lapse photography\n\nWe used time lapse photography to capture one pic per minute from dawn to dusk from the start to the end of the flowering season (March 12th to May 3rd) The first bee caught on camera flew by before any flowers had opened on the evening of Apr 13th, and we saw open flowers at sunrise on Apr 14th. The first pollinator was a bumble bee caught on camera that afternoon. We collected approximately 850 pics per day (16,000+ pics collected during the observation period) and found only 123 pics with bees in them ¬– less than 1%!!\nDaily pollinator tally during the flowering period\nIn addition to bumble bees we observed a few butterflies and bee flies, as well as other small flies\nThis is a template post for the galiwatch blog!\nTo make a new post:\n\ncopy & rename the template folder\nedit title and date in index.qmd of the new directory\nwhen you’re ready to publish, set draft: false\nclick ‘render’ (or ctrl + shift + k)\n\nHave fun :))"
-  },
-  {
-    "objectID": "posts/template/index.html",
-    "href": "posts/template/index.html",
-    "title": "Template",
-    "section": "",
-    "text": "This is a template post for the galiwatch blog!\nTo make a new post:\n\ncopy & rename the template folder\nedit title and date in index.qmd of the new directory\nwhen you’re ready to publish, set draft: false\nclick ‘render’ (or ctrl + shift + k)\ngo to git -> add all -> commit -> pull -> push\n\nTo add an image: type /image . The first image inserted will be the thumbnail!\nHave fun :))"
   }
 ]
