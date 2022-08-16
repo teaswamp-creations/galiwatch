@@ -102,6 +102,6 @@
     "href": "posts/template/index.html",
     "title": "Template",
     "section": "",
-    "text": "This is a template post for the galiwatch blog!\nTo make a new post:\n\ncopy & rename the template folder\nedit title and date in index.qmd of the new directory\nwhen you’re ready to publish, set draft: false\nclick ‘render’ (or ctrl + shift + k)\ngo to git -> add all -> commit -> pull -> push\n\nTo add an image: type /image . The first image inserted will be the thumbnail!\nHave fun :))"
+    "text": "This is a template post for the galiwatch blog!\nTo make a new post:\n\nPULL!\ncopy & rename the template folder\nedit title and date in index.qmd of the new directory\nclick ‘render’ (or ctrl + shift + k)\ngit -> add all -> commit -> push\n\nTo add an image: type /image . The first image inserted will be the thumbnail!\nHave fun :))"
   }
 ]
