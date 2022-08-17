@@ -2,6 +2,7 @@
 title: 2022 August Update
 date: 2022-08-04
 author: Kath Quayle
+image: 'images/Raspberrypi%20camera%202.jpg'
 categories:
   - news
   - code
@@ -14,9 +15,10 @@ Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(
 
 ## Time lapse photography
 
-![](images/Raspberrypi%20camera%202.jpg){width="256"}
+<img src="images/Raspberrypi%20camera%202.jpg" alt="raspberry pi" class="image" style="width: 50%; float:right; margin-top:0.2em; margin-left:6px;">  
 
-We used time lapse photography to capture one pic per minute from dawn to dusk from the start to the end of the flowering season (March 12th to May 3rd) The first bee caught on camera flew by before any flowers had opened on the evening of Apr 13th, and we saw open flowers at sunrise on Apr 14th. The first pollinator was a bumble bee caught on camera that afternoon. We collected approximately 850 pics per day (16,000+ pics collected during the observation period) and found only 123 pics with bees in them less than 1%!!
+
+We used time lapse photography to capture one pic per minute from dawn to dusk from the start to the end of the flowering season (March 12th to May 3rd) The first bee caught on camera flew by before any flowers had opened on the evening of Apr 13th, and we saw open flowers at sunrise on Apr 14th. The first pollinator was a bumble bee caught on camera that afternoon. We collected approximately 850 pics per day (16,000+ pics collected during the observation period) and found only 123 pics with bees in them. That's less than 1%!!
 
 ![](images/Pollinator_tally-02.png)
 
@@ -24,9 +26,10 @@ In addition to bumble bees we observed a few butterflies and bee flies, as well 
 
 ## Video footage
 
-![](images/OG_bee1.gif){width="323"}
+<img src="images/OG_bee1.gif" alt="bee visiting flower" class="image" style="width: 30%; float:left; margin-top:0.2em; margin-right:6px;">  
 
-We collected 4 mins of footage every 5 mins from dawn to dusk from April 21st to May 4th(full bloom to berry set).
+
+We collected 4 mins of footage every 5 mins from dawn to dusk from April 21st to May 4th (full bloom to berry set).
 
 This gave us approx. 175 videos per day for a total of 2,450+ videos collected during the observation period. Around 250 videos (around 10%) had bees in them.
 
@@ -38,14 +41,4 @@ We were able to identify two bumble bee species - Vancouver bumble bees (Bombus 
 
 We also observed carpenter bees, hover flies (including American thintail), various common-looking flies, small white butterflies (echo azure?), slugs, pill bugs, and beetles.
 
-This is a template post for the galiwatch blog!
 
-To make a new post:
-
-1.  PULL!
-2.  copy & rename the template folder
-3.  edit title and date in `index.qmd` of the new directory
-4.  click 'render' (or ctrl + shift + k)
-5.  git -\> add all -\> commit -\> push
-
-Have fun :))
