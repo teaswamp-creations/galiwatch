@@ -6,6 +6,7 @@ categories:
   - news
   - code
   - analysis
+  - bees
 ---
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
@@ -36,16 +37,4 @@ Most bees observed in any one day was 32 on April 22nd.
 
 We were able to identify two bumble bee species - Vancouver bumble bees (Bombus vancouverensis) and yellow-fronted bumble bees (Bombus flavifrons).
 
-We also observed carpenter bees, hover flies (including American thintail), various common-looking flies, small white butterflies (echo azure?), slugs, pill bugs, and beetles.
-
-This is a template post for the galiwatch blog!
-
-To make a new post:
-
-1.  PULL!
-2.  copy & rename the template folder
-3.  edit title and date in `index.qmd` of the new directory
-4.  click 'render' (or ctrl + shift + k)
-5.  git -\> add all -\> commit -\> push
-
-Have fun :))
+We also observed carpenter bees, hover flies (including American thintail), various common-looking flies, small white butterflies (echo azure), slugs, pill bugs, and beetles.
