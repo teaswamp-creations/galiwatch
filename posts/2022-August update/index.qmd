@@ -6,7 +6,7 @@ image: 'images/Raspberrypi%20camera%202.jpg'
 categories:
   - news
   - code
-  - analysis
+  - data analysis
   - bees
 ---
 
