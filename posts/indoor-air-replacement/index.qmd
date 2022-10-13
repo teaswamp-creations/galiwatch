@@ -83,11 +83,11 @@ As another "reality check" we can also make the same simple exponential model of
 
 ::: {#fig-model layout-ncol=3}
 
-![](Picture3.png)
+![](Picture6.png)
 
-![](Picture4.png)
+![](Picture7.png)
 
-![](Picture5.png)
+![](Picture8.png)
 
 
 Models of temperature change with different half-lifes. Note: Blue lines are actual outdoor temperature, orange lines are actual indoor temperature.
