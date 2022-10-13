@@ -96,7 +96,7 @@ Models of temperature change with different half-lifes. Note: Blue lines are act
 
 # Conclusions
 
-Using an estimated air exchange of 10 hours gives reasonable approximations of indoor PM2.5 and temperature, suggesting that air exchange is driving both, which makes sense.  Probably have discovered the value of insulation, and possibly 
+Using an estimated air exchange of 10 hours gives reasonable approximations of indoor PM2.5 and temperature, suggesting that air exchange is driving both, which makes sense.  Probably we have discovered the value of insulation.
 
 
 
