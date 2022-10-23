@@ -2,11 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
-<<<<<<< HEAD
-      "/posts/Galiano frogs/index.html",
-=======
+      "/posts/galiano-frogs/index.html",
       "/posts/indoor-air-replacement/index.html",
->>>>>>> 06282965e58c84e82f8123a87a70b0a16c08a308
       "/posts/2022-August update/index.html",
       "/posts/bee-loss/index.html",
       "/posts/2021-recap/index.html",
