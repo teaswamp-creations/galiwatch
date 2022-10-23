@@ -1,0 +1,102 @@
+---
+title: Indoor air replacement
+date: 2022-10-12
+author: Richard Harrigan
+
+image: Picture3.png
+categories:
+  - climate
+  - data analysis
+---
+
+Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
+
+# Smokey air exchange
+
+The air INSIDE our building changes more slowly than the air OUTSIDE. Last night there was a lot of smoke in the air until the afternoon, when it became very windy and the smoke was replaced with clean air from the north, such that the PM2.5s  outside went from above 20 down to 1-2 in about 10 minutes.  Let’s call this “almost instantly” (see @fig-purple-air, blue line).
+
+
+```{r echo=F, message=F, error=F, warning=F}
+#| label: fig-purple-air 
+#| fig-cap: Indoor/outdoor air exchange
+
+library(tidyverse)
+indoor_a <- readr::read_csv('Galiwatch (inside) (48.938916 -123.492569) Primary Real Time 10_09_2022 10_12_2022.csv') %>%
+  mutate(Sensor='Galiwatch Indoor A')
+indoor_b <- readr::read_csv('Galiwatch B (undefined) (48.938916 -123.492569) Primary Real Time 10_09_2022 10_12_2022.csv') %>%
+  mutate(Sensor='Galiwatch Indoor B')
+outdoor_a <- readr::read_csv('Outside Galiwatch (outside) (48.938848 -123.492938) Primary Real Time 10_09_2022 10_12_2022.csv') %>%
+  mutate(Sensor='Galiwatch Outdoor A')
+outdoor_b <- readr::read_csv('Outside Galiwatch B (undefined) (48.938848 -123.492938) Primary Real Time 10_09_2022 10_12_2022.csv') %>%
+  mutate(Sensor='Galiwatch Outdoor B')
+
+rbind(indoor_a[c("created_at", "PM2.5_CF1_ug/m3", "Sensor")],
+      indoor_b[c("created_at", "PM2.5_CF1_ug/m3", "Sensor")],
+      outdoor_a[c("created_at", "PM2.5_CF1_ug/m3", "Sensor")],
+      outdoor_b[c("created_at", "PM2.5_CF1_ug/m3", "Sensor")]) %>%
+  mutate(timestamp = lubridate::ymd_hms(created_at)) %>%
+  filter(timestamp > '2022-10-09 12:30:00') %>%
+  filter(timestamp < '2022-10-11 9:00:00') %>%
+  ggplot(aes(x=timestamp, y =`PM2.5_CF1_ug/m3`, colour=Sensor)) +
+    geom_line() +
+    scale_color_manual(values=c("#36ff47", "#E69F00", "#56B4E9", '#000000')) + 
+    ylab('') + xlab('Date') + 
+    ggtitle(bquote('Raw PM2.5'~ug/m^2)) +
+    theme_bw()
+```
+
+
+The PM2.5s inside the building then dropped in a nicely exponential fashion (gold line in @fig-purple-air above, or the blue line plotted on a log scale to the right), allowing us to estimate the half-time for replacement of the indoor air (@fig-dotplot). The slope is -.0012, so the half-time for the replacement of the air inside the building was 577 minutes, or around 9.5 hours.
+
+::: {#fig-dotplot}
+
+![](Picture2.png)
+
+Indoor air replacement half-life estimation
+:::
+
+
+This seemed surprisingly FAST(!) since all the doors and windows were closed and there was no one at the building and no ventilation.  However, the [EPA standards](https://www.epa.gov/indoor-air-quality-iaq/how-much-ventilation-do-i-need-my-home-improve-indoor-air-quality) for building ventilation recommend 0.35 air changes per hour for residential buildings, or turnover every three hours.   However, that is for places with active air exchange, rather than just leaky doors, windows and walls.
+This air turnover rate of ~9.5 hours is for when it is VERY WINDY, and probably the actual turnover on normal days is quite a bit less.
+
+Assuming air exchange with a half-life around 10 hours also lets us create a model (red line in figure @fig-model) of both the actual indoor PM2.5 and the temperatures as a function of the outdoor values.  Actual indoor values are shown in orange and outdoor in blue. Over a larger timeframe of three days (4500 minutes), the fit of the PM2.5 is not *great* (see @fig-model, middle panel), suggesting that the wind-assisted value we calculated might have been a bit too fast for when it is not windy (which started around at the 3000 minute mark).
+
+
+::: {#fig-model layout-ncol=3}
+
+![](Picture3.png)
+
+![](Picture4.png)
+
+![](Picture5.png)
+
+
+Models of air exchange with different half-lifes. Note: Blue lines are actual outdoor PM2.5, orange lines are actual indoor PM2.5
+:::
+
+
+However, this is much better than an indoor PM2.5 model assuming exchange of 1 hour (the indoors would look like the outdoors) or 100 hours (indoor would be almost independent of outdoor), so we are in the right order of magnitude.
+
+# Temperature
+
+As another "reality check" we can also make the same simple exponential model of indoor temperature as function of outdoor temperature.  Once again, assuming a half-life of around 10 hours gives us a reasonable reflection of the outdoor value, whereas the 1 hour and 100 hour half-lives are plainly unreasonable. 
+
+::: {#fig-model layout-ncol=3}
+
+![](Picture6.png)
+
+![](Picture7.png)
+
+![](Picture8.png)
+
+
+Models of temperature change with different half-lifes. Note: Blue lines are actual outdoor temperature, orange lines are actual indoor temperature.
+:::
+   
+
+# Conclusions
+
+Using an estimated air exchange of 10 hours gives reasonable approximations of indoor PM2.5 and temperature, suggesting that air exchange is driving both, which makes sense.  Probably we have discovered the value of insulation.
+
+
+
