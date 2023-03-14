@@ -1,6 +1,4 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-
-/.quarto/
+.gitignore
+docs/
+.quarto/
+.Rproj.user/
