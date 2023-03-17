@@ -36,6 +36,7 @@ format:
       dark: [yeti, css/dark-theme.scss]
     include-in_header: favicon.html
     include-after_body: footer.html
+    css: ["https://use.fontawesome.com/releases/v6.0.0/css/all.css"]
 
 
 
