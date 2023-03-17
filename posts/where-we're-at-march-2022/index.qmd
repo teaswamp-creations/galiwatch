@@ -1,8 +1,6 @@
 ---
-draft: true
-
 editor: visual
-title: Where we're at Mar 2022
+title: Where we're at March 2022
 date: 2023-03-17
 author: Kath Quayle
 
@@ -13,8 +11,6 @@ categories:
 image: images/It's spring.jpg
 ---
 
-\-\--
-
 Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
 ![](images/paste-7D27BC1E.png){width="28"}Happy St Patrick's Day - and here's the craic!!
@@ -23,9 +19,7 @@ So the weather is finally warming up here on Galiano after a chilly and stormy w
 
 Richard is playing with the humming bird images and has some great pics. Here's one of a male and female Anna's and a male and female rufous all at the feeder at the same time - the pictures are taken at one minute intervals, so quite the shot as they usually don't like to share!
 
-From left to right: rufous male; Anna's female; rufous female; Anna's male.
-
-![](images/one_of_each.jpg){fig-align="center" width="333"}
+![From left to right: rufous male; Anna's female; rufous female; Anna's male.](images/one_of_each.jpg){fig-align="center" width="333"}
 
 While messing around in the sunshine this afternoon a big queen bumble bee flew by. First to be spotted this year! She collected nectar from the periwinkle, which seems to be invading our space but is also one of the few floral resources available right now.
 
