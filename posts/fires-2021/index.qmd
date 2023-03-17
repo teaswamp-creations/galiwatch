@@ -1,5 +1,5 @@
 ---
-title: Purple Air sensor
+title: Fires in summer 2021
 date: 2023-02-22
 author: 
   - Cait Harrigan
@@ -7,7 +7,8 @@ author:
 image: thumbnail.jpg
 toc: true
 categories:
-  - birds
+  - climate
+  - code
   - data analysis
 format:
   html:
