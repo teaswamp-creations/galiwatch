@@ -29,6 +29,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -66,6 +67,7 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 </script>
 
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -86,7 +88,7 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
     <a class="nav-link" href="./project.html">Project Details</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pollinators.html">Meet the bees of Galiano</a>
+    <a class="nav-link" href="./pollinators.html">Meet the Bees of Galiano</a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -119,10 +121,10 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="images/teaswamp_transparent.png" class="about-image
-  round " style="height: 15em; width: 15em;">
- <main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+
+
 <section id="about" class="level1">
 <h1>About</h1>
 <p>Tea Swamp is a group of citizen scientists located in British Columbia, Canada.</p>
@@ -137,9 +139,8 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 
 
 </section>
-</main>  
-</div>
- <!-- /main -->
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -263,6 +264,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (hasAlternateSentinel()) {
     toggleColorMode(true);
   } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const clipboard = new window.ClipboardJS('.code-copy-button', {
     target: function(trigger) {
       return trigger.previousElementSibling;
