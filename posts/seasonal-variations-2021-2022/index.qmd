@@ -11,7 +11,7 @@ categories:
   - phenology
   - data analysis
 
-image: images/OG seasonal.jpg
+image: thumbnail.jpg
 ---
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
@@ -22,9 +22,7 @@ Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(
 
 [^1]: This introduction was generated using ChatGPT
 
-
-In this post, we summarize some of the key weather differences in summer 2021 versus 2022, and how this impacted the phenology of the Oregon Grape plans at our study site. 
-
+In this post, we summarize some of the key weather differences in summer 2021 versus 2022, and how this impacted the phenology of the Oregon Grape plans at our study site.
 
 ### Data collection
 
@@ -32,32 +30,26 @@ In this post, we summarize some of the key weather differences in summer 2021 ve
 
 <i class="fa-solid fa-camera"></i> Time lapse photography
 
+-   2021: pictures taken every minute from sunrise to sunset
 
-* 2021: pictures taken every minute from sunrise to sunset
-  
-  * Camera 1 - April 20th to October 16th
+    -   Camera 1 - April 20th to October 16th
 
-* 2022: pictures taken every 15s from sunrise to sunset
+-   2022: pictures taken every 15s from sunrise to sunset
 
-  * Camera 1 - April 3rd to May 4th
-  * Camera 2 - April 12th to April 26th
+    -   Camera 1 - April 3rd to May 4th
+    -   Camera 2 - April 12th to April 26th
 
-<i class="fa-solid fa-video"></i> Video 
+<i class="fa-solid fa-video"></i> Video
 
-* 2021 only: video capture of 4 minutes out of every 5 from peak blooming to end of flowering
+-   2021 only: video capture of 4 minutes out of every 5 from peak blooming to end of flowering
 
 ## Phenology
-
 
 ![](images/paste-6511194E.png)
 
 ## Temperature trends
 
-<center>
-
-![](images/paste-D29DE0F2.png){width="439"}
-
-</center>
+<center>![](images/paste-D29DE0F2.png){width="439"}</center>
 
 ## Rainfall
 
@@ -69,8 +61,4 @@ Best estimates of bee visits to the Oregon grape patch were derived from the tim
 
 ## Summary
 
-<center>
-
-![](images/paste-A837B944.png){width="456"}
-
-</center>
+<center>![](images/paste-A837B944.png){width="456"}</center>

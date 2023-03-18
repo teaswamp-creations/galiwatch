@@ -8,7 +8,7 @@ categories:
   - news
   - chit chat
 
-image: images/It's spring.jpg
+image: thumbnail.jpg
 ---
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
@@ -36,5 +36,3 @@ Just a few more weeks before the Galiwatch pollinator monitoring starts, and lot
 Bye for now
 
 Kath :)
-
-</center>
