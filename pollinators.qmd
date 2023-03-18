@@ -1,5 +1,8 @@
+---
+title: 'Meet the Bees of Galiano'
+freeze: true
+---
 
-# Meet the bees of Galiano
 
 ```{css, echo=FALSE}
 .pixgallery-image-grid {
@@ -10,6 +13,7 @@
 
 <br>
 
+Can you guess their names? Click to reveal...
 
 ```{r, echo = F}
 library(pixture)
