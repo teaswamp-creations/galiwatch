@@ -8,7 +8,7 @@ author: Kath Quayle
 
 categories:
   - news
-  - stuff
+  - chit chat
 
 image: images/It's spring.jpg
 ---
