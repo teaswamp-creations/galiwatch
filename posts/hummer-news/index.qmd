@@ -1,0 +1,28 @@
+---
+editor: visual
+title: Where's rufous?
+date: 2023-03-20
+author: Kath Quayle
+
+image: thumbnail.jpg
+categories:
+  - news
+  - chit chat
+  - humming birds
+---
+
+Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
+
+Our humming bird camera is up and running, catching lots of great pics of male and female Anna's humming birds, but we are still waiting for the return of the rufous. The males are usually first to arrive followed by females a few days or weeks later.
+
+![](images/paste-F2E14578.png){width="224"}
+
+Last year we first caught a male and a female on camera on the same day - March 13^th^ the first day our camera was on.
+
+![](images/paste-D8CAF36B.png)
+
+We were probably a little late getting going as according to iNaturalist one was spotted on March 9th, 2022 in Ladysmith...
+
+This year, they had made it to Vashon Island, between Tacoma and Seattle, Washington on March 13th, and yesterday (March 19th) one was seen at a feeder in Richmond Nature Park, BC.
+
+![Fingers crossed they will be here soon!](images/paste-03A8F50B.png){width="235"}
