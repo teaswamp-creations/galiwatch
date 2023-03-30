@@ -8,7 +8,7 @@ image: thumbnail.jpg
 categories:
   - news
   - chit chat
-  - humming birds
+  - hummingbirds
 ---
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
