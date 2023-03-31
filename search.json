@@ -1,9 +1,240 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Operation Galiwatch",
+    "section": "",
+    "text": "Project Origins\nInspired by Toke Høye’s PollinatorWatch hosted on Zooniverse, we are setting up time-lapse cameras to gather hundreds or maybe thousands of images of pollinators visiting two common native flowering plants, salal and dull Oregon grape, at a mid-island location on Galiano Island, in the Pacific Northwest.\nWe plan to automate the analysis of the images to document the number and type of pollinator visitors we get over the flowering season.\nWe have also set up a weather station, weather sensors and a particulate matter sensor to gather hyperlocal weather and air quality data in the immediate vicinity of our cameras. In addition to monitoring trends in air quality, the particulate matter sensor should give us an estimate of pollen count and detect smoke from wildfire drift.\nAs well as piloting the technology, these observations will be a window to the day-to-day ins and outs of Galiano pollinators that will help us better understand how wildflowers and pollinators are affected by local weather events."
+  },
+  {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "news\n\n\nchit chat\n\n\n\n\n\n\n\n\n\n\n\nMar 17, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nbees\n\n\nclimate\n\n\nphenology\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nMar 13, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nclimate\n\n\ncode\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nFeb 22, 2023\n\n\nCait Harrigan, Richard Harrigan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\nfrogs\n\n\n\n\n\n\n\n\n\n\n\nOct 22, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nclimate\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2022\n\n\nRichard Harrigan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\ndata analysis\n\n\nbees\n\n\n\n\n\n\n\n\n\n\n\nAug 4, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nbees\n\n\nconservation\n\n\ndeep-dive\n\n\n\n\n\n\n\n\n\n\n\nJul 19, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMay 1, 2022\n\n\nCait Harrigan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\nclimate\n\n\n\n\n\n\n\n\n\n\n\nDec 19, 2021\n\n\nCait Harrigan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nclimate\n\n\npilot project\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nJun 16, 2021\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nconservation\n\n\npilot project\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nMay 31, 2021\n\n\nKath Quayle\n\n\n\n\n\n\nNo matching items"
+    "text": "news\n\n\nchit chat\n\n\nhummingbirds\n\n\n\n\n\n\n\n\n\n\n\nMar 30, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\nchit chat\n\n\nhummingbirds\n\n\n\n\n\n\n\n\n\n\n\nMar 20, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\nchit chat\n\n\n\n\n\n\n\n\n\n\n\nMar 17, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\nhardware\n\n\n\n\n\n\n\n\n\n\n\nMar 13, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nbees\n\n\nclimate\n\n\nphenology\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nMar 13, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nclimate\n\n\ncode\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nFeb 22, 2023\n\n\nCait Harrigan, Richard Harrigan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\nfrogs\n\n\n\n\n\n\n\n\n\n\n\nOct 22, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nclimate\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2022\n\n\nRichard Harrigan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\ndata analysis\n\n\nbees\n\n\n\n\n\n\n\n\n\n\n\nAug 4, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nbees\n\n\nconservation\n\n\ndeep-dive\n\n\n\n\n\n\n\n\n\n\n\nJul 19, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMay 1, 2022\n\n\nCait Harrigan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\nclimate\n\n\n\n\n\n\n\n\n\n\n\nDec 19, 2021\n\n\nCait Harrigan\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nclimate\n\n\npilot project\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nJun 16, 2021\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nconservation\n\n\npilot project\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nMay 31, 2021\n\n\nKath Quayle\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Operation Galiwatch",
+    "section": "",
+    "text": "The Site\n\n\nLearn more \n\n\n\n\n\n\n\n \n\n\n\nWeather Monitoring\n\n\nLearn more \n\n\n\n\n\n\n\n \n\n\n\nPollinator Detection\n\n\nLearn more"
+  },
+  {
+    "objectID": "pollinators.html",
+    "href": "pollinators.html",
+    "title": "Meet the Bees of Galiano",
+    "section": "",
+    "text": "Can you guess their names? Click to reveal…\n\n\n\n\n\n\n \n\nPhotos by Simon A licensed under CC BY-NC 4.0"
+  },
+  {
+    "objectID": "posts/august-update-2022/index.html",
+    "href": "posts/august-update-2022/index.html",
+    "title": "2021 Bee count",
+    "section": "",
+    "text": "Reading time: <1 minute"
+  },
+  {
+    "objectID": "posts/august-update-2022/index.html#time-lapse-photography",
+    "href": "posts/august-update-2022/index.html#time-lapse-photography",
+    "title": "2021 Bee count",
+    "section": "Time lapse photography",
+    "text": "Time lapse photography\n\nWe used time lapse photography to capture one pic per minute from dawn to dusk from the start to the end of the flowering season (March 12th to May 3rd) The first bee caught on camera flew by before any flowers had opened on the evening of Apr 13th, and we saw open flowers at sunrise on Apr 14th. The first pollinator was a bumble bee caught on camera that afternoon. We collected approximately 850 pics per day (16,000+ pics collected during the observation period) and found only 123 pics with bees in them. That’s less than 1%!!\n\nIn addition to bumble bees we observed a few butterflies and bee flies, as well as other small flies."
+  },
+  {
+    "objectID": "posts/august-update-2022/index.html#video-footage",
+    "href": "posts/august-update-2022/index.html#video-footage",
+    "title": "2021 Bee count",
+    "section": "Video footage",
+    "text": "Video footage\n\nWe collected 4 mins of footage every 5 mins from dawn to dusk from April 21st to May 4th (full bloom to berry set).\nThis gave us approx. 175 videos per day for a total of 2,450+ videos collected during the observation period. Around 250 videos (around 10%) had bees in them.\nMost bees observed in any one day was 32 on April 22nd.\n\nBumble bee ID\nWe were able to identify two bumble bee species - Vancouver bumble bees (Bombus vancouverensis) and yellow-fronted bumble bees (Bombus flavifrons).\nWe also observed carpenter bees, hover flies (including American thintail), various common-looking flies, small white butterflies (echo azure), slugs, pill bugs, and beetles."
+  },
+  {
+    "objectID": "posts/bee-loss/index.html",
+    "href": "posts/bee-loss/index.html",
+    "title": "Bee loss in North America",
+    "section": "",
+    "text": "Wild pollinators are an integral part of native plant communities and are highly effective at pollinating flowers in natural ecosystems. Plant pollination is essential for plant reproduction, which in turn provides fruits and seeds for wildlife. Abundance and diversity of pollinators ensure a stable, highly productive ecosystem.\nChanging environmental conditions caused by weather, climate change, or human interventions, may disrupt pollinator activity for some species but enhance it for others. Within natural ecosystems, biodiversity and abundance of wild bee populations and other non-bee pollinators provides redundancy that ensures ongoing pollination and plant productivity despite a changing environment.\nManaged pollinators, most commonly honey bees, are super-generalist pollinators that are essential for, or enhance, the pollination and production of many agricultural crops. We rely heavily on honey bees for certain types of food production - for example they are considered essential to sustaining the global supply of almonds - and support billions of dollars worth of food production worldwide. So, it is very worrying that beekeepers report honeybee populations are dwindling, and that their colonies are becoming increasingly vulnerable to environmental stressors.\n\n\n\nAdapted from: 2019-2020 Honey Bee Colony Losses in the United States: Preliminary Results. Accessed April 12, 2021\n\n\nAlongside honey bees, wild pollinators including bumble bees (genus Bombus), other types of bees, wasps, and other non-bee species also make important contributions to crop production. Interestingly, on organic farms near natural habitat, wild bees can provide full pollinator services and, as long as diversity is maintained, there is sustained success.1\nIt seems possible then that by making adjustments that favour abundance and diversity of wild pollinators we could build capacity and resilience within natural and agricultural ecosystems that offset shortfalls in managed pollinator services resulting from the ongoing, perplexing losses of managed colonies.\n\nBumble bee species in flux in British Columbia\n Decline of bumble bees has been reported in North America and Europe and is of significant global concern.2 Although there are over 500 known bee species in British Columbia, there is not a lot of historical information about pollinator populations to use as a baseline. However, we do know that at least one bee species, the western bumble bee, B. occidentalis, has significantly declined.3 The authors discuss how this bee used to be very common in the lower mainland in the 1980s, representing 25-30% of bumble bee species collected on local berry farms, but by 2003/2004 had dwindled to less than 1% of the bees collected. Since then, B. occidentalis was sighted just a handful of times on Vancouver Island in 2012, and once in the lower mainland at Boundary Bay in 2013. According to a local newspaper report, it was last spotted on Galiano in 1990. In contrast however, it seems the yellow-faced bumble bee, B. vosnesenskii, may be gaining ground in the region.4\nGaliano’s bumble bees have recently been under scrutiny in a study to better understand their reliance on habitat diversity in this semi-arid ecosystem 5. The author identified six species of bumble bees that frequented flowering shrubs in various habitats through spring and summer, and saw fluctuations of bumble bee abundance in different habitats (wet, dry, modified, natural) as the summer progressed. Overall, the Vancouver bumble bee B. vancouverensis was the most abundant species, followed by the Sitka bumble bee B. sitkensis, while the yellow-faced bumble bee B. vosnesenskii was least abundant, perhaps reflecting it has only recently made it to the island. Bumble bee activity and blooming peaked in June in habitat similar to our study site, but even as flowering slowed high numbers of bumble bees were found to persist through July.\n\n\n\nReferences\n\n\n\n\n\nFootnotes\n\n\nKremen C, Williams NM, Thorp RW. Crop pollination from native bees at risk from agricultural intensification. Proceedings of the National Academy of Sciences. 2002;99(26):16812-6. https://doi.org/10.1073/pnas.262413599↩︎\nSoroye P, Newbold T, Kerr J. Climate change contributes to widespread declines among bumble bees across continents. Science. 2020;367(6478):685-8. http://doi.org/10.1126/science.aax8591↩︎\nWray J & Elle E. Simon Fraser University. Wild and managed pollinators: current status and strategies to increase diversity. https://www.sfu.ca/content/dam/sfu/people/eelle/elle_bee_info/Metro_Vancouver_report.pdf Accessed 28 March, 2021.↩︎\nFRASER, David Frank et al. Changes in the Status and Distribution of the Yellow-faced Bumble Bee. Journal of the Entomological Society of British Columbia, [S.l.], v. 109, p. 31-37, may 2013. ISSN 1929-7890. Available at: https://journal.entsocbc.ca/index.php/journal/article/view/261. Accessed 13 Apr 2021.↩︎\nSimon A. Water into nectar: The effects of seasonal drought on bumble bee and flowering plant communities. MSc Thesis, University of Victoria, 2020. Available at https://dspace.library.uvic.ca/handle/1828/11837↩︎"
+  },
+  {
+    "objectID": "posts/fires-2021/index.html",
+    "href": "posts/fires-2021/index.html",
+    "title": "Fires in summer 2021",
+    "section": "",
+    "text": "Summer 2021 was a hot one for BC: record temperatures from the Western Heatdome, and record forest fires. We picked up evidence of the fires from our monitoring site - here’s a brief summary of what we saw.\nWe’ll read in our data: air quality measures from our Purple Air sensor\n\n\nCode\nlibrary(tidyverse)\nlibrary(lubridate)\nlibrary(patchwork)\nlibrary(ggpubr)\n\n# read in air quality data, and prepare variable names\nair <- read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/fires-2021/2021_temp_and_PM.csv') %>%\n  mutate(`Row Labels` = as_date(ymd_hms(`Row Labels`))) %>%\n  rename(Date = `Row Labels`,\n         PM1.0 = `Average of PM1.0_CF1_ug/m3`,\n         PM2.5 = `Average of PM2.5_CF1_ug/m3`,\n         PM10.0 = `Average of PM10.0_CF1_ug/m3`,\n        `Temp C` = `Average of Temperature_F`)\n\n\nLooking at the air quality data, we notice a few things. Firstly, all the PM values have peaks in the same places, and they don’t seem too well-correlated with the outdoor temperature.\n\n\nCode\nair %>%\n  pivot_longer(c(PM1.0, PM2.5, PM10.0, `Temp C`)) %>%\n  mutate(name = ordered(name, levels = c('PM1.0', 'PM2.5', 'PM10.0', 'Temp C'))) %>%\n  group_by(name) %>%\n  mutate(rollmean = zoo::rollmean(value, 10, align = 'right', fill=NA)) %>%\n  ggline(x = 'Date', y = 'rollmean', color='name', plot_type='l', size=1, alpha = 0.8) + \n  labs(title = 'Air Quality Measures in Summer 2021',\n       subtitle = 'Rolling 10-day average', \n       y='Value', color = 'Measure') + \n  scale_colour_manual(values = c('lightblue', 'orange', 'salmon', 'grey')) + \n  theme(legend.position = 'right')\n\n\n\n\n\nThis isn’t all that surprising, and we can see the correlation is very close to 1 for the different PM sizes.\n\n\n\n\n\nPicking just PM2.5, we can remake the first plot, this time showing the daily average, without the 10-day smoothing we used before. This gives us a more granular view of air quality events.\n\n\nCode\nair %>%\n  pivot_longer(c(PM2.5, `Temp C`)) %>%\n  group_by(name) %>%\n  ggline(x = 'Date', y = 'value', color='name', plot_type='l', size=1, alpha = 0.8) + \n  labs(title = 'Forest Fires cause Temperature and PM2.5 to spike',\n       y='Value', color = 'Measure') + \n  scale_colour_manual(values = c('orange', 'grey')) + \n  theme(legend.position = 'right') + \n  scale_x_date(date_labels = \"%b\", date_breaks = \"1 month\") + \n  \n  geom_label(aes(x = ymd('2021-05-15'), y = 30, label = \"June heatdome\"), \n               hjust = 0.5, vjust = 0.5, label.size = NA, size=3.5, family='xkcd') +\n  geom_curve(aes(x = ymd('2021-05-15'), y = 32, xend = ymd('2021-06-20'), yend = 40), \n             colour = \"#555555\", curvature = -0.3, size=0.8)+  \n  geom_label(aes(x = ymd('2021-06-15'), y = 55, label = \"Air quality advisory\\nissued for metro Vancouver\"), \n             hjust = 0.5, vjust = 0.5, label.size = NA, size=3.5, family='xkcd')+ \n  geom_curve(aes(x = ymd('2021-06-15'), y = 51, xend = ymd('2021-08-10'), yend = 45), \n             colour = \"#555555\", curvature = 0.25, size=0.8)+ \n  geom_label(aes(x = ymd('2021-11-05'), y = 45, label = \"Likely woodsmoke from\\nlocal fireplaces\"), \n             hjust = 0.5, vjust = 0.5, label.size = NA, size=3.5, family='xkcd')+\n  geom_bracket(xmin = ymd('2021-09-15'), xmax = ymd('2021-12-30'), y.position = 40, label='', size=0.8, tip.length = 0.02)\n\n\n\n\n\nWe can clearly see the peak in temperature when BC got hit by the heatdome. We hypothesize that winter spikes in PM2.5 happen when nearby houses burn wood in their fireplace for heating, as they seem to be associated with relative dips in temperature."
+  },
+  {
+    "objectID": "posts/galiano-frogs/index.html",
+    "href": "posts/galiano-frogs/index.html",
+    "title": "Galiano frogs",
+    "section": "",
+    "text": "Reading time: <1 minute"
+  },
+  {
+    "objectID": "posts/galiano-frogs/index.html#northern-pacific-tree-frogs-pseudacris-regilla",
+    "href": "posts/galiano-frogs/index.html#northern-pacific-tree-frogs-pseudacris-regilla",
+    "title": "Galiano frogs",
+    "section": "Northern Pacific tree frogs (Pseudacris regilla)",
+    "text": "Northern Pacific tree frogs (Pseudacris regilla)\nThese frogs are often bright green, but also come in grey, tan, and brown. They can change colour during the season to better match their environment. The colour change is triggered in response to brightness.\n\n\n\n\n\n\nLike most frogs, tree frogs are most active at night, typically resting up in shady, damp spots during the day. At our study site we often find them in or near the plant pots that we water through the dry summer months.\nOur infra red time lapse camera caught this one hopping through the salal bushes in the middle of the night.\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp \n\n\n\nTree frogs are also known as Pacific chorus frogs. If you have ever been to Galiano in the spring or early summer - mating season - you will likely know why!!"
+  },
+  {
+    "objectID": "posts/galiano-frogs/index.html#northern-red-legged-frogs-rana-aurora",
+    "href": "posts/galiano-frogs/index.html#northern-red-legged-frogs-rana-aurora",
+    "title": "Galiano frogs",
+    "section": "Northern red-legged frogs (Rana aurora)",
+    "text": "Northern red-legged frogs (Rana aurora)\nLike tree frogs, the Northern red-legged frogs come in a variety of colours, with their colour depending on age, time of year, and location. These frogs are shyer than the chirpy tree frog, and much less common. They are considered a threatened species on the Provincial blue-list."
+  },
+  {
+    "objectID": "posts/hummer-news/index.html",
+    "href": "posts/hummer-news/index.html",
+    "title": "Where’s rufous?",
+    "section": "",
+    "text": "Our humming bird camera is up and running, catching lots of great pics of male and female Anna’s humming birds, but we are still waiting for the return of the rufous. The males are usually first to arrive followed by females a few days or weeks later.\nLast year we first caught a male and a female on camera on the same day - March 13th the first day our camera was on.\n\nWe were probably a little late getting going as according to iNaturalist one was spotted on March 9th, 2022 in Ladysmith…\nThis year, they had made it to Vashon Island, between Tacoma and Seattle, Washington on March 13th, and yesterday (March 19th) one was seen at a feeder in Richmond Nature Park, BC.\nFingers crossed they will be here soon!"
+  },
+  {
+    "objectID": "posts/hummer-news-2/index.html",
+    "href": "posts/hummer-news-2/index.html",
+    "title": "They’re here!!",
+    "section": "",
+    "text": "The rufous hummingbirds have made it back to our feeder!!\nA rufous male was caught on camera on March 22nd at 7.23pm, with the first female appearing 6 days later at 2.42pm on March 26th.\n\nDetected by the neural network with 100% confidence!!"
+  },
+  {
+    "objectID": "posts/indoor-air-replacement/index.html",
+    "href": "posts/indoor-air-replacement/index.html",
+    "title": "Indoor air replacement",
+    "section": "",
+    "text": "Smokey air exchange\nThe air INSIDE our building changes more slowly than the air OUTSIDE. Last night there was a lot of smoke in the air until the afternoon, when it became very windy and the smoke was replaced with clean air from the north, such that the PM2.5s outside went from above 20 down to 1-2 in about 10 minutes. Let’s call this “almost instantly” (see Figure 1, blue line).\n\n\n\n\n\nFigure 1: Indoor/outdoor air exchange\n\n\n\n\nThe PM2.5s inside the building then dropped in a nicely exponential fashion (gold line in Figure 1 above, or the blue line plotted on a log scale to the right), allowing us to estimate the half-time for replacement of the indoor air (Figure 2). The slope is -.0012, so the half-time for the replacement of the air inside the building was 577 minutes, or around 9.5 hours.\n\n\n\nFigure 2: Indoor air replacement half-life estimation\n\n\nThis seemed surprisingly FAST(!) since all the doors and windows were closed and there was no one at the building and no ventilation. However, the EPA standards for building ventilation recommend 0.35 air changes per hour for residential buildings, or turnover every three hours. However, that is for places with active air exchange, rather than just leaky doors, windows and walls. This air turnover rate of ~9.5 hours is for when it is VERY WINDY, and probably the actual turnover on normal days is quite a bit less.\nAssuming air exchange with a half-life around 10 hours also lets us create a model (red line in figure Figure 4) of both the actual indoor PM2.5 and the temperatures as a function of the outdoor values. Actual indoor values are shown in orange and outdoor in blue. Over a larger timeframe of three days (4500 minutes), the fit of the PM2.5 is not great (see Figure 4, middle panel), suggesting that the wind-assisted value we calculated might have been a bit too fast for when it is not windy (which started around at the 3000 minute mark).\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Models of air exchange with different half-lifes. Note: Blue lines are actual outdoor PM2.5, orange lines are actual indoor PM2.5\n\n\nHowever, this is much better than an indoor PM2.5 model assuming exchange of 1 hour (the indoors would look like the outdoors) or 100 hours (indoor would be almost independent of outdoor), so we are in the right order of magnitude.\n\n\nTemperature\nAs another “reality check” we can also make the same simple exponential model of indoor temperature as function of outdoor temperature. Once again, assuming a half-life of around 10 hours gives us a reasonable reflection of the outdoor value, whereas the 1 hour and 100 hour half-lives are plainly unreasonable.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Models of temperature change with different half-lifes. Note: Blue lines are actual outdoor temperature, orange lines are actual indoor temperature.\n\n\n\n\nConclusions\nUsing an estimated air exchange of 10 hours gives reasonable approximations of indoor PM2.5 and temperature, suggesting that air exchange is driving both, which makes sense. Probably we have discovered the value of insulation."
+  },
+  {
+    "objectID": "posts/operations-update-2023/index.html",
+    "href": "posts/operations-update-2023/index.html",
+    "title": "Operations Update 2023",
+    "section": "",
+    "text": "Reading time: 2 minutes\nThe Galiwatch project was initiated in February 2021 to monitor pollinators and weather patterns at a mid-Island site on Galiano Island.\nThe initial goal was to monitor pollinator activity on Oregon grape (Mahonia nervosa) and salal (Gaultheria shallon), two native flowering plants that grow abundantly in the forest understory.\nOur approach was to collect timelapse pictures and video, and to collect weather and air quality data using raspberry-pi technology and an Accurite weather station system, as described on the website.\nA neural network that identified bees in our images was investigated to analyse the data."
+  },
+  {
+    "objectID": "posts/operations-update-2023/index.html#year-1-2021",
+    "href": "posts/operations-update-2023/index.html#year-1-2021",
+    "title": "Operations Update 2023",
+    "section": "Year 1: 2021",
+    "text": "Year 1: 2021\n\nData collection\n\nOregon grape - we successfully collected pictures at 1 min intervals throughout the Oregon grape blooming period (mid April to early May), as well as video footage (4 of 5 mins) during the peak blooming period.\nSalal - data collection for salal was less successful due to a camera failure.\nWeather - data collection with enviro-pi and Accurite weather station was successful.\n\n\n\nLessons learned\nThe volume of data generated in monitoring two different plant systems is unmanageable at this point.\n\nDecision taken to focus on Oregon grape as the single focus for long-term monitoring of pollinator activity at the study site.\n\nVideo footage showed most bees spend between 10s and 35s on a flower before moving on.1 min time-lapse photographs captured approximately 20-25% of bees seen in the videos. One minute time-lapse photography is insufficient to capture changes in pollinator numbers due to the low number of positive hits. Videoing continually on the other hand is unmanageable in terms of data handling capacity.\n\nDecision taken to take 15s time-lapse pictures for 2022 season with two cameras.\n\nOccasional gaps in weather and air quality data collection with the enviro-pi occurred during weather-related internet drops.\n\nDecision taken to continue as is"
+  },
+  {
+    "objectID": "posts/operations-update-2023/index.html#year-2-2022",
+    "href": "posts/operations-update-2023/index.html#year-2-2022",
+    "title": "Operations Update 2023",
+    "section": "Year 2: 2022",
+    "text": "Year 2: 2022\n\nData collection\n\nWe successfully collected data at 15 sec intervals throughout the Oregon grape blooming period with two cameras in operation, each focused on a cluster of flower spikes.\nThe enviro-pi weather data collection system was not reliable and started failing in late spring with only patchy PM2.5 data collection attainable. This was replaced by a Purple Air monitor in August 2022. We filled the data gap by accessing data from a neighbouring system on Salt Spring Island approximately 3 km away.\n\n\n\nLessons learned\n15s time-lapse photography produces a manageable data set, but we need some video coverage to determine proportion of bee visits captured by 15s time-lapse pics and inform estimates of total visits.\n\nDecision taken to proceed with 15s time-lapse (two cameras) and video 4 of 5 mins for 5 days mid-way through blooming in 2023.\n\nThe weather station and Purple Air system for monitoring air quality are very reliable.\n\nWeather data collection to continue as is.\n\nTraining of a neural network for identifying bees is challenging!\n\nA new strategy for training the neural work to identify bees in time-lapse pics is underway"
+  },
+  {
+    "objectID": "posts/oregon-grape-story/index.html",
+    "href": "posts/oregon-grape-story/index.html",
+    "title": "Oregon grape",
+    "section": "",
+    "text": "Life Cycle\n\nBerberis nervosa, and its cousin, Mahonia nervosa are species of Oregon Grape. They grow slowly to about two feet in the Douglas-fir forests of the Pacific Northwest.\nPollinators love its yellow flowers, which typically emerge in late March/early April, flowering through April and May depending on the amount of shade.\nThe resulting berries are a dusty-blue, and are what earn this plant the name “grape”. Don’t be fooled! These berries are edible, but quite tart - making them better suited for jams than wine.\n\n\nPhenology – biological events that depend on climate\n\nWe collected data from March to May 2021: spanning growth of inflorescence (a cluster of flowers), emergence of racemes (flower stalks), blossoming, and fruit sets.\nThis data is multimodal, and comprised of:\n\nWeather conditions\nFIT counts (flower-insect timed counts)\nVideo footage\nTime lapse images\nPollinator counts\nPollinator ID\n\n\n\nWeather\n\n\n\n\n\n\nThe growth of the Oregon Grape is influenced by environmental variables: shade, rain, air quality, etc. We’re using video footage and environment measures to learn about how these factors interact, and what this means for the plants and visiting pollinators!\n\n\nAir Quality\n\n\n\n\n\n\nYou can read more on different ways that we measure the air in our Air Quality Story\n\n\nFlower-insect timed (FIT) counts\n\n\n\n\n\n\n  \n    \n      FIT Counts for April 20th-21st 2021\n    \n    \n  \n  \n    \n      \n      Bumble bees\n      Honey bees\n      Other bees\n      Hover flies\n      Bee flies\n      Other\n      Total\n    \n  \n  \n    \n      April 20 2021\n    \n    09:00\n1\n0\n0\n0\n0\n0\n1\n    11:00\n4\n0\n0\n0\n0\n0\n4\n    13:00\n5\n0\n0\n0\n1\n0\n6\n    15:40\n4\n0\n0\n1\n1\n0\n6\n    \n      Day Total\n      \n      \n      \n      \n      \n      \n      17\n    \n    \n      April 21 2021\n    \n    09:00\n1\n0\n0\n0\n0\n0\n1\n    11:00\n2\n0\n0\n0\n0\n0\n2\n    13:00\n3\n0\n2\n0\n0\n3\n8\n    15:40\n5\n0\n2\n0\n0\n0\n7\n    \n      Day Total\n      \n      \n      \n      \n      \n      \n      18\n    \n  \n  \n  \n\n\n\n\nFIT counts provide an estimate of the proportion of pollinators seen in time lapse pictures\nDetails\n\n10 min counts of pollinators visiting at four time points during the day\nObservation area includes 48 inflorescences\n\nWeather conditions\n\nfull sun, light wind\nAM 12-13C ; PM 16-18C\n\nTotal number of pollinators over 40min of observation\n\nApr 20th n=17\nAPR 21st n=18\n\nMore pollinators in afternoon than morning\n\nApr 20th AM N=5; PM N=12\nAPR 21st AM N=3; pm n=15\n\n\n\nPollenator counts from video footage\n\n\n\n\n\n\n  \n    \n      Counts from Video Footage April 22nd 2021\n    \n    \n  \n  \n    \n      Time\n      Number of Pollinators\n    \n  \n  \n    10:05 - 12:00\n4\n    12:00 - 16:00\n12\n    16:00 - 20:20\n18\n    Total\n34\n  \n  \n  \n\n\n\n\nVideo footage was collected from April 21st - May 4th. Our cameras were set to collect 4 min of footage every 5 min. Video counts provide an estimate of the proportion of pollinators seen in time lapse pictures.\nDetails\n\nApril 22nd 10.05am – 8.20pm\n10 hrs of data collection giving 8hrs of footage\nObservation area includes 7 inflorescences\nPollinator ID – mostly bumblebees, with occasional mason bees, and bee flies\n\nWeather conditions\n\nFull sun, light wind\nAM 13-15C ; PM 15-16C\n\nTotal number of pollinators over 8 hrs of observation\n\nn=24\n\nMore pollinators in afternoon than morning\n\nAM N=4; PM N=20\n\n\n\nPollinator visits during peak blooming\n\n\n\n\n\n\n  \n    \n      FIT Counts and Video Footage counts give similar results\n    \n    \n  \n  \n    \n      \n      Flower-Insect Timed Counts\n      Video Footage Counts\n    \n  \n  \n    Dates\nApril 20th-21st\nApril 22nd\n    Number of hours observed\n14\n10\n    Number of inflorescences observed\n48\n7\n    Average number of pollinator visits per hour\n26\n4.25\n    Number of pollinators per hour per inflorence\n0.54\n0.61\n  \n  \n  \n\n\n\n\nHaving good estimates is important for when we want to make use of time-lapse images. Collection of these time-lapse images started in March, and is ongoing.\nWith these images, we’re collecting training data for a neural network that in the future we can use to automatically determine number of pollinators visiting the Oregon Grape.\nThanks to the Young Entomologists at Biodiversity Galiano, who are helping us identify pollinator species, we will be able to train the neural network to detect and count the visitation habits of different pollinator species to the Oregon Grape during bloooming"
+  },
+  {
+    "objectID": "posts/purple-air/index.html",
+    "href": "posts/purple-air/index.html",
+    "title": "Purple Air sensor",
+    "section": "",
+    "text": "We added a new device to our collection: a Purple Air air quality sensor. The Purple Air sensor measures PM2.5 particle pollution.\nThere’s a large community of people participating in this air quality monitoring, all over North America1. See the Galiwatch measurments update real-time!\n\n\n\n\nLoading PurpleAir Widget…\n\n\n\n\n\n\n\nFootnotes\n\n\nSimilar projects also exist in Europe, such as [sensor.community](https://sensor.community/en/)↩︎"
+  },
+  {
+    "objectID": "posts/recap-2021/index.html",
+    "href": "posts/recap-2021/index.html",
+    "title": "2021 recap",
+    "section": "",
+    "text": "We got a lot done this year! Lets take a look at the milestones we achieved.\n\n\n\n\n\nJAN 2021\n\n\n\n\nHello World\n\n\nInspired by Toke Høye’s PollinatorWatch, Operation GaliWatch is born. We order weather monitoring hardware and start putting together the Raspberry Pi setup.\n\n\n\n\n\nMAR 2021\n\n\n\n\nFirst Steps\n\n\nThe setup is ready cameras positioned, air quality and weather sensors fine-tuned and working well, and we collect our first datapoints!\nFirst bee of the year spotted on Mar 8th - a Sitka bumble bee.\n\n\n\n\n\nAPR 2021\n\n\n\n\nMaking Friends\n\n\nWe get in touch with Biodiversity Galiano, and connect with IMERSS\n\n\n\n\n\nMAY 2021\n\n\n\n\nPilot Project\n\n\nWe measure pollinator activity and environmental data at our pilot site.\n\n\n\n\n\nAUG 2021\n\n\n\n\nFirst Data Stories\n\n\nWe share our pilot data and preliminary results\n\n\n\n\n\nNOV 2021\n\n\n\n\nLive monitoring\n\n\nWe join PurpleAir and our sensor goes live!\n\n\n\n\n\nDEC 2022\n\n\n\n\nWhat’s next?\n\n\nWe captured more pollinators on our environmental cams than we anticipated: hummingbirds and bats! We’ll see where Galiwatch takes us next!"
+  },
+  {
+    "objectID": "posts/seasonal-variations-2021-2022/index.html",
+    "href": "posts/seasonal-variations-2021-2022/index.html",
+    "title": "Oregon grape - seasonal variations",
+    "section": "",
+    "text": "Reading time: <1 minute"
+  },
+  {
+    "objectID": "posts/seasonal-variations-2021-2022/index.html#seasonal-variations-2021-versus-2022",
+    "href": "posts/seasonal-variations-2021-2022/index.html#seasonal-variations-2021-versus-2022",
+    "title": "Oregon grape - seasonal variations",
+    "section": "Seasonal Variations: 2021 versus 2022",
+    "text": "Seasonal Variations: 2021 versus 2022\nPhenology is the study of how the timing of events in a plant’s life cycle, such as bud burst, flowering, and fruiting, is affected by seasonal and environmental changes. It is an important field of study for understanding how plants respond to changes in their environment, and can provide insights into how ecosystems may be affected by climate change. 1\nIn this post, we summarize some of the key weather differences in summer 2021 versus 2022, and how this impacted the phenology of the Oregon Grape plans at our study site.\n\nData collection\n Weather data collected continuously with Acurite Atlas weather station\n Time lapse photography\n\n2021: pictures taken every minute from sunrise to sunset\n\nCamera 1 - April 20th to October 16th\n\n2022: pictures taken every 15s from sunrise to sunset\n\nCamera 1 - April 3rd to May 4th\nCamera 2 - April 12th to April 26th\n\n\n Video\n\n2021 only: video capture of 4 minutes out of every 5 from peak blooming to end of flowering"
+  },
+  {
+    "objectID": "posts/seasonal-variations-2021-2022/index.html#phenology",
+    "href": "posts/seasonal-variations-2021-2022/index.html#phenology",
+    "title": "Oregon grape - seasonal variations",
+    "section": "Phenology",
+    "text": "Phenology"
+  },
+  {
+    "objectID": "posts/seasonal-variations-2021-2022/index.html#temperature-trends",
+    "href": "posts/seasonal-variations-2021-2022/index.html#temperature-trends",
+    "title": "Oregon grape - seasonal variations",
+    "section": "Temperature trends",
+    "text": "Temperature trends"
+  },
+  {
+    "objectID": "posts/seasonal-variations-2021-2022/index.html#rainfall",
+    "href": "posts/seasonal-variations-2021-2022/index.html#rainfall",
+    "title": "Oregon grape - seasonal variations",
+    "section": "Rainfall",
+    "text": "Rainfall"
+  },
+  {
+    "objectID": "posts/seasonal-variations-2021-2022/index.html#bee-counts",
+    "href": "posts/seasonal-variations-2021-2022/index.html#bee-counts",
+    "title": "Oregon grape - seasonal variations",
+    "section": "Bee counts",
+    "text": "Bee counts\nBest estimates of bee visits to the Oregon grape patch were derived from the time-lapse and video data. Overall similar numbers of bees came to feed both years despite quite varying weather patterns."
+  },
+  {
+    "objectID": "posts/seasonal-variations-2021-2022/index.html#summary",
+    "href": "posts/seasonal-variations-2021-2022/index.html#summary",
+    "title": "Oregon grape - seasonal variations",
+    "section": "Summary",
+    "text": "Summary"
+  },
+  {
+    "objectID": "posts/weather-story/index.html",
+    "href": "posts/weather-story/index.html",
+    "title": "Air quality measurement",
+    "section": "",
+    "text": "Air quality management in British Columbia\n\n\n\n\n\n\n\nBC actively monitors air quality and is part of the national Air Quality Management System (AQMS). The AQMS divides provinces into air zones that exhibit similar air quality characteristics - BC has seven air zones. Galiano is in the Georgia Straight Air Zone, which includes Victoria, Nanaimo, Comox, Campbell River, Whistler, Squamish, and Powell River.\n\n\nWeather Data & Air Pollution\n\n\n\n\n\n\nAir quality changes with the weather. Wind, rain, humidity and other weather parameters can all influence how air pollutants move around.\nNitrous oxides, carbon monoxide, ammonia, sulphur dioxide, methane, and carbon dioxide are polluting gases that may be emitted into the atmosphere in harmful amounts. Our enviro air quality sensors detect oxidising (e.g., NO2) and reducing gases (e.g., CO and ammonia) rather than individual gases, and can reveal trends of increasing or decreasing air quality.\nIn our setting, we are most likely to detect gaseous pollutants as a result of smoke from wood burning stoves (common in our setting) or wildfires (drifting smoke), as well as from vehicle exhaust due to proximity to roads.\n\n\nAir pollution – particulate matter (PM)\n\n\n\n\n\n\n\n\n\n\n\n\nPM 2.5 refers to fine airborne particles with a diameter of 2.5 microns or less. They are produced by many human activities and natural sources including vehicle exhausts, forestry operations, wood stoves, wildfires, and wind. Fine particulate matter may be harmful to health.\nPM 10 refers to all solid and liquid airborne particles with a diameter of 10 microns or less. These particles come from lots of different sources and are highly variable as a result. Many are formed by chemical or physical processes in the atmosphere. Inhaling PM 10s may also be bad for your health.\nBC’s air quality objectives reflect the maximum acceptable level of pollutants according to national air quality targets. The 24 hour average air quality objectives for PM 2.5 (24hr) and PM 10 (24hr) are 25 µg/m3 and 50 µg/m3, respectively.\n\n\nNO2\n\n\n\n\n\n\nBC’s air quality objective for NO2 (primary oxidising gas detected by our sensors) is 100 parts per billion (ppb) averaged over a 1-hour period. For the two-week period from Apr 4–17, NO2 (1hr) levels measured in Victoria (Colwood City Hall) ranged from approximately 3-12 ppb, while our resistance readings ranged from approximately 10-1550 ohms. If we assume the air quality variation across the Georgia Straight air zone is representative for our site, a change in resistance of 170 ohms is equivalent to a change in NO2 of around 1 ppb.\n\n\nCO and NH3\n\n\n\n\n\n\nCarbon monoxide (CO) and ammonia are reducing gases. Our enviro sensors provide a qualitative estimate of their concentration in the atmosphere with decreasing resistance measurements corresponding to decreasing air quality. Resistance readings for reducing gases and ammonia through April ranged from 90-260 Ω (around a 3-fold change), and from 90-1500 Ω (around a 16-fold change), respectively. At this time of year, wood stoves and local traffic are likely major contributors to fluctuations in air quality."
+  },
+  {
+    "objectID": "posts/where-we're-at-march-2022/index.html",
+    "href": "posts/where-we're-at-march-2022/index.html",
+    "title": "Where we’re at March 2022",
+    "section": "",
+    "text": "Happy St Patrick’s Day - and here’s the craic!!\nSo the weather is finally warming up here on Galiano after a chilly and stormy winter, with lots of power cuts. There was another short one this morning!!\nRichard is playing with the humming bird images and has some great pics. Here’s one of a male and female Anna’s and a male and female rufous all at the feeder at the same time - the pictures are taken at one minute intervals, so quite the shot as they usually don’t like to share!\n\n\n\nFrom left to right: rufous male; Anna’s female; rufous female; Anna’s male.\n\n\nWhile messing around in the sunshine this afternoon a big queen bumble bee flew by. First to be spotted this year! She collected nectar from the periwinkle, which seems to be invading our space but is also one of the few floral resources available right now.\nAnd here she is\n\n\n\n\n\nOther highlights this past month included peering down the microscope at a sample of a jelly fungus that appeared on the trail to Laughlin Lake, and a giant bird spotted near Pebble beach. Too far away to get a good shot, but I think maybe a Golden Eagle??\n\nJust a few more weeks before the Galiwatch pollinator monitoring starts, and lots to do before that, as I signed up for a Master melittologist program offered by Oregon State University in collaboration with the Native Bee Society of BC!! Should keep me busy as there’s a big text book that goes with it…\nBye for now\nKath :)"
+  },
+  {
+    "objectID": "project.html#equipment",
+    "href": "project.html#equipment",
+    "title": "Project Details",
+    "section": "Equipment",
+    "text": "Equipment\n\nRaspberry Pi Enviro + Air Quality\nAcurite Atlas weather station\n\nWe will be investigating the connection between hyperlocal weather conditions and pollinator activity at our test site. The weather sensors and weather station are equipped to measure temperature, humidity, wind speed and direction, total rainfall, pressure, UV, and light intensity. Readings are dumped every 30s to an SD card."
+  },
+  {
+    "objectID": "project.html#air-quality-monitoring",
+    "href": "project.html#air-quality-monitoring",
+    "title": "Project Details",
+    "section": "Air quality monitoring",
+    "text": "Air quality monitoring\nThe air quality monitoring sensors will give us an idea of how air quality changes over time. They measure changes in concentrations of reducing (e.g., carbon monoxide) and oxidising (e.g., nitrogen dioxide) gases, and ammonia. The sensors measure electrical resistance according to the concentration of gases in the air. The resistance readings for reducing gases and ammonia drop with increasing concentrations of these gases, and increase when oxidising gases increase.\nThe particulate matter sensor detects concentrations of particles of different sizes (PM1, PM2.5 and PM10) as well as the number of particles of different sizes (>0.3, >0.5, >1.0, >2.5, >5, and >10 microns). Wildfire smoke particles typically range from 0.4–0.7 microns, dust is around 2.5 microns, while pollen is generally 15 microns or more.\n\n\n\n\nAdapted from Jisaac9, Mieszko the first, CC BY-SA 3.0, via Wikimedia Commons"
+  },
+  {
+    "objectID": "project.html#equipment-1",
+    "href": "project.html#equipment-1",
+    "title": "Project Details",
+    "section": "Equipment",
+    "text": "Equipment\n\nRaspberry Pi for remote sensing\nRaspberry Pi’s high quality cameras for time-lapse photography\nPre-trained convolutional neural network via Movidius NCS2 for insect detection and image screening\n\nWe have mounted two surveillance cameras comprising of a Raspberry Pi (powered over ethernet) fitted with a Pi camera and a 1 terabyte soild state drive, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every minute and the images are stored on the SSD."
+  },
+  {
+    "objectID": "project.html#bees-and-other-pollinators-of-galiano-island",
+    "href": "project.html#bees-and-other-pollinators-of-galiano-island",
+    "title": "Project Details",
+    "section": "Bees and other pollinators of Galiano Island",
+    "text": "Bees and other pollinators of Galiano Island\nAlthough our two test plants salal and dull Oregon grape are particularly attractive to bumble bees, many other species of pollinators have been sighted on Galiano and we are interested to see if any of these are captured in our images. Our reference resource for insect identification is the Biodiversity Galiano project, a community-based initiative to document the flora and fauna of Galiano Island, initiated in January 2016. So far, over 2,500 species have been reported of which more than 1,000 are arthropods. Among these are 82 species of bees and wasps including honey bees (Apis mellifera), bumblebees (Bombus spp.) mining bees (Andrena spp.), long-horned bees (Eucera spp.), mason bees (Osmia spp.), cuckoo bees (Nomada spp.), sweat bees (Halictus and Lasioglossum spp.), blood bees (Sphecodes spp.), and various wasps.\nWe will use this database to help ID any pollinators we see in our time-lapse images.\n\n\n\n\n\n\n\n\n\nWith systems up and running we hope to collect data from late March to early September including:\n\nImages of Salal and Dull Oregon grape from bud burst to fruit maturation.\n\nImages of pollinators showing when and how often they come to visit, and enabling identification of different species.\nDay-to-day weather data, including high and low temperatures, pressure, humidity (Raspberry pi and Acurite), wind speed and direction, total rainfall, UV and light intensity (Acurite only). This will enable comparison of the two systems, and establish reproducibility of the instruments.\nClimate data including average, maximum and minimum temperatures; light intensity; pressure; wind speed, and total rainfall accumulation.\nEstimates of reducing and oxidising gases, and ammonia representing trends of increasing or decreasing air quality, and estimates of particulates, such as dust, pollen, mould spores, smoke etc.\n\nIn addition to piloting the technology, the images and weather data will provide baseline information about our test site including:\n\nDate of bud burst and duration of flowering of salal and dull Oregon grape.\nPollinator community composition visiting these plants during the flowering season (bees, hoverflies, butterflies, moths, wasps, other flies, beetles, hummingbirds).\nTime of first appearance and seasonal dynamics of different pollinators.\nHow much of a role, if any, non-bee visitors play in the pollination of these two native plants.\nHow hyperlocal weather and variations in air quality influence pollinator activity.\n\nThe images and weather data will add to what is already known about pollinators in coastal Douglas-fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom."
   }
 ]
