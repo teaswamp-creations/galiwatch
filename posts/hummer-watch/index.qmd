@@ -1,6 +1,6 @@
 ---
-draft: true
 title: Tracking hummingbirds at the feeder
+draft: true
 date: 2023-03-17
 author: Cait Harrigan
 image: thumbnail.jpg
@@ -9,6 +9,8 @@ categories:
   - birds
   - code
   - data analysis
+  - deep-dive
+    
 format:
   html:
       code-fold: true
@@ -68,31 +70,49 @@ library(lubridate)
 library(patchwork)
 library(ggpubr)
 
-weather <- read_csv('https://github.com/teaswamp-creations/galiwatch.ca/raw/quarto-website/posts/hummer-watch/WS_hours.csv') %>%
+#weather <- read_csv('https://github.com/teaswamp-creations/galiwatch.ca/raw/quarto-website/posts/hummer-watch/WS_hours.csv') %>%
+weather <- read_csv('WS_hours.csv') %>%
+  # retain only non-duplicates
   distinct() %>%
+  # Clean up timestamps, convert to celsius
   mutate(Date = ymd(Date), 
          MergeTime = ymd_hms(paste(Date, Time)),
          `Temp C` = (`Outdoor Temperature F`-32) * (5/9)
          )
 
- 
-classes = c('Rufous_Male','Annas_Male','Person', 'Annas_Female', 'Rufous_Female')
+# classifier labels
+classes = c('Rufous_Male', 'Annas_Male', 'Person', 'Annas_Female', 'Rufous_Female')
 
 # read in bird detection data, and do some basic data cleaning
-bird <- read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/hummer-watch/2021_reprocessed_hummers_combo_2023.csv') %>% 
+#bird <- read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/hummer-watch/2021_reprocessed_hummers_combo_2023.csv') %>% 
+bird <- read_csv('2021_reprocessed_hummers_combo_2023.csv') %>%
+  # lookup labels
   mutate(class = classes[label + 1]) %>%
+  # put columns into tidy format
   separate(class, into=c('Species', 'Sex'), sep='_') %>%
-  separate(image, into=c('Date', 'image'), sep="_") %>%
+  separate(image, into=c('Date', 'image'), sep="_", remove = F) %>%
   separate(image, into=c('hhmm'), sep=".jpg", extra = 'drop') %>%
+  # clean up timestamps
   mutate(Timestamp = ymd_hm(paste(Date, hhmm))) %>%
+  # remove people
   filter(label != 2) %>%
-  drop_na() %>%
+  # change column types, correct for variable image size
   mutate(Date=ymd(Date),
+         Month=factor(month(Date, label = T)),
+         Hour=hour(Timestamp),
          Species = ordered(Species),
          Sex = factor(Sex),
-         ymax = max(ymax) - ymax,
-         ymin = max(ymax) - ymin,
+         ymin2 = ymin,
+         ymin = (y_size - ymax),
+         ymax = (y_size - ymin2),
          MergeTime = floor_date(Timestamp, 'hour')
+  ) %>%
+  # correct for variable image size
+  mutate(
+    ymin = ifelse(y_size == 420, ymin * (616/420), ymin),
+    ymax = ifelse(y_size == 420, ymax * (616/420), ymax),
+    xmin = ifelse(y_size == 420, xmin * (616/420), xmin),
+    xmax = ifelse(y_size == 420, xmax * (616/420), xmax),
   ) 
 ```
 
@@ -107,9 +127,12 @@ The bird detector gives us the the bounding box of each bird in an image, and th
 ```{r, echo = T}
 knitr::kable(head(bird))
 ```
+
 # Preliminaries
 
 ## Number of birds by species
+
+Our bird detector ID'd lots of visitors! Each ID represents a bird captured in an image, and not necessarily an individual. The images are captured once every minute, so if for example a single bird sat at the feeder for two minutes in a row, it would get counted twice. There may be multiple birds in a single image. 
 
 ```{r}
 bird %>%
@@ -121,6 +144,9 @@ bird %>%
 
 
 ## Classifier confidence
+
+Each bird ID is made by picking the the most likely label, based on the prediction probability. Sometimes, the classifier isn't as confident as others. For example, it may be harder to identify a bird that is facing away from the camera. We can plot the confidences, and see which birds are the hardest to label.
+
 
 ```{r, warning=F}
 bird %>%
@@ -134,16 +160,81 @@ bird %>%
   scale_colour_manual(values=c('chartreuse3', 'chocolate2'))
 ```
 
-## Number of birds after filtering on prediction confidence
+It looks like for both species, Male birds are slightly harder to identify with high confidence than Female. This might be explained by the fact that there are many more Female examples than Male in our data. 
 
-We actually know from looking at the images that almost all the Rufouses after September 1st are false positives, so we'll remove these observations. Also, since we have very few IDs of the Annas in October, we will drop these from our data. Then, we'll filter to only retain the high-confidence (> 0.7 prediction probability) bird IDs 
+There is almost certainly some mistakes in our classifier, including false positives (non-birds labeled as birds) and false negatives (birds mistakenly labeled) 
+
+To help make sure we're only considering high-quality calls, we'll pike a confidence threshold and only analyse the IDs above that level. 
+
+## Number of birds after filtering
+
+We manually looked at the images, and found that that almost all the Rufouses after September 1st are false positives, so we'll remove these observations. Also, since we have very few IDs in October, we will drop this month from our data. Then, we'll filter to only retain the high-confidence (> 0.7 prediction probability) bird IDs 
 
 ```{r}
 bird <- bird %>%
   filter(!(Timestamp >= ymd('2021-09-01') & Species =='Rufous')) %>%
   filter(Timestamp < ymd('2021-10-01')) %>%
   filter(confidence > 0.7)
+```
 
+Lastly, we'll sanity check the bounding boxes for their size.
+
+```{r}
+bird <- bird %>%
+  mutate(
+    Height = ymax-ymin, 
+    Width = xmax-xmin, 
+    Area = Height * Width
+    
+  )
+
+bird %>% 
+  gghistogram(x="Area", bins = 100) + 
+  labs(title = 'There are some very small and some very large bounding boxes.',
+       subtitle = "Note also relative raity of areas at 25,000 and 50,000 pixels", y = 'Count')
+```
+
+This distribution more or less makes sense, we see some very small bounding boxes which may be mis-calls or birds who are only half in the image. There are also some cases where a bird is partially obscured because it's sitting behind the feeder. There are some very large bounding boxes also. I'm not sure exactly whether these are real, giant humming birds, or some kind of artifact. We'll drop the smallest and largest 1% of bounding boxes just in case. 
+
+```{r}
+bird <- bird %>% 
+  filter(Area > quantile(bird$Area, 0.01) & Area < quantile(bird$Area, 0.99)) 
+```
+
+Note that because of the camera perspective, bounding box area will be affected by not only the bird size, but also its closeness to the camera. 
+
+The dips we see around 25,000 and 50,000 bounding box size are surprizing, this means that there are certain height/width combinations that are not being picked up very much. This could be indicating that there are certain positions on the feeder at which we can't effectively identify birds. 
+
+We see this even more clearly by plotting bird height against width. 
+
+```{r}
+bird %>%
+  ggscatter(x = "Width", y = "Height", add = "reg.line", alpha = 0.2, 
+            add.params = list(color = "black", fill = "lightgray")) +
+  stat_cor(label.x = 25, label.y = 400) +
+  stat_regline_equation(label.x = 25, label.y = 380) + 
+  labs(title = 'Some height/width combinations are missing')
+```
+
+There's some height/widths with no birds observed at them! To check whether this may be related to out classifier's ability to call these birds, we can colour this plot by the confidence level (recall: we already filtered the data such that all ID's have confidence > 0.7). 
+
+```{r}
+bird %>%
+  mutate(confidence_lvl = cut(confidence, c(0.6, 0.7, 0.8, 0.9, 1), ordered_result=T)) %>%
+  ggscatter(x = "Width", y = "Height", add = "reg.line", alpha = 0.4, color= 'confidence_lvl',
+            add.params = list(color = "black", fill = "lightgray", linetype='dashed')) +
+  stat_cor(label.x = 25, label.y = 400) +
+  stat_regline_equation(label.x = 25, label.y = 380) + 
+  labs(title = 'Missing height/widths may be caused to hard-to call birds',
+       colour = 'Confidence Level') 
+```
+
+We can see that at least some of these "holes" seem to be associated with lower-confidence IDs, which is consistent with the hypothesis that they're indicative of missing IDs from hard-to-call birds. 
+
+
+Here's how many IDs we're left with after that data cleaning: 
+
+```{r}
 bird %>%
   group_by(Species, Sex) %>%
   summarise('Number of IDs' = n(), .groups = 'keep') %>%
@@ -152,14 +243,16 @@ bird %>%
 ```
 
 
-
-
 # Migration patterns differ for Rufous and Anna
+
+The Anna and Rufous hummingbirds have two quite distinct migration patterns: Annas are year-round visitors to our feeder in BC, while the Rufouses tend to leave for Mexico about half way through the summer.
 
 ::: {layout-ncol=2}
 ![](anna_range.png)
 
 ![](rufous_range.png)
+
+Adapted from Wikipedia
 :::
 
 ## Visit patterns over the summer
@@ -187,45 +280,48 @@ p2 <- bird %>%
 (p1 / p2) 
 
 ```
+The Male Rufous leave earlier than the Female: they're almost all gone by July. The latest dates we have for *manually confirmed* Rufous visits are: 
+ 
+* Female : July 31st 2021
+* Male: July 5th 2021
 
 ```{r}
 p1 <- bird %>% 
   filter(Species == 'Rufous') %>%
-  group_by(month(Timestamp), Sex) %>% 
+  group_by(Month, Sex) %>% 
   filter(n() > 5) %>%
   ggplot() + 
-  aes(x = Date, fill = Sex, y=after_stat(count)) + 
-  geom_density(position='fill', colour =NA)  + 
+  aes(x = Month, fill = Sex, y=after_stat(count)) + 
+  geom_bar(position='fill', colour =NA)  + 
   labs(y='Proportion of IDs') + 
   scale_fill_manual(values=c('chocolate1', 'chocolate4'))+ 
   theme_pubr() + labs(title='Rufous')
 
 p2 <- bird %>% 
   filter(Species == 'Annas') %>%
-  group_by(month(Timestamp), Sex) %>% 
+  group_by(Month, Sex) %>% 
   filter(n() > 5) %>%
   ggplot() + 
-  aes(x = Date, fill = Sex, y=after_stat(count)) + 
-  geom_density(position='fill', colour =NA) + 
+  aes(x = Month, fill = Sex, y=after_stat(count)) + 
+  geom_bar(position='fill', colour =NA) + 
   labs(y='Proportion of IDs') + 
   scale_fill_manual(values=c('chartreuse1', 'chartreuse4'))+ 
   theme_pubr() + labs(title='Anna')
 
 (p1) + (p2)
 ```
-
+The Annas on the other hand, seem to hover around 1:3 Male to Female ID ratio. Except for in April, which may have to do with nesting? We're not certain. 
 
 ## Visiting Hours
 
 ```{r}
 bird %>%
-  mutate (Month = factor(month(Timestamp, label=T)), Hour= hour(Timestamp))%>%
   filter(Species == 'Rufous') %>%
   filter(Date < ymd('2021-08-01')) %>% 
   ggplot(aes(x=Hour, fill = Sex)) + 
   geom_bar(position = 'stack') + facet_wrap("~Month", scales='free') +
   scale_fill_manual(values=c('chocolate1', 'chocolate4')) + 
-  labs(title='Rufous visit times vary by month', y = 'proportion') + 
+  labs(title='Rufous visit times vary by month', y = 'Number of IDs') + 
   theme_pubr()
 
 ```
@@ -233,12 +329,11 @@ bird %>%
 ```{r}
 
 bird %>%
-  mutate (Month = factor(month(Timestamp, label=T)), Hour= hour(Timestamp))%>%
   filter(Species == 'Annas') %>%
   ggplot(aes(x=Hour, fill = Sex)) + 
   geom_bar(position='stack') + facet_wrap("~Month", scales='free') + 
   scale_fill_manual(values=c('chartreuse1', 'chartreuse4')) + 
-  labs(title='Annas visit times vary by month', y = 'proportion') + 
+  labs(title='Annas visit times vary by month', y = 'Number of IDs') + 
   theme_pubr()
 
 ```
@@ -246,17 +341,42 @@ Since we see a big dip in visits in the middle of the day in both species in Jun
 
 ## Temperature preferences
 
-```{r }
-merge(bird, weather, all.x=T) %>%
-  mutate (Month = factor(month(Date, label=T)), Hour= factor(hour(Timestamp)))%>%
-  group_by(Month, Hour, Species, Sex) %>%
-  summarise(n=n(), mean_temp = mean(`Temp C`, na.rm=T), .groups='drop') %>%
-  ggballoonplot(x = 'Hour', y = 'Month', size = 'n', fill='mean_temp', facet.by = '~Species+Sex')
+Based on the visiting hours plots, it seems like there may be a temperature effect in play, especially in June. To look into this, we can 
 
+```{r }
+p <- merge(bird, weather, all.x=T) %>%
+  mutate(cat = paste(Species, Sex)) %>%
+  group_by(Month, Hour, cat) %>%
+  summarise(n=n(), `Average Temp C` = mean(`Temp C`, na.rm=T), .groups='drop') %>%
+  ggballoonplot(x = 'Hour', y = 'Month', size = 'n', size.range = c(0,8),
+                color='Average Temp C', fill='Average Temp C', facet.by = '~cat') +
+  theme_pubr() + theme(legend.position = 'right') + 
+  labs(size='Number of IDs', title = 'Females avoid the midday heat in summer?')
+
+g <- ggplot_gtable(ggplot_build(p))
+
+strips <- which(grepl('strip-', g$layout$name))
+
+b_pal <- c('chocolate1', 'chocolate4', 'chartreuse1', 'chartreuse4')
+t_pal <- c('black', 'white', 'black', 'white')
+
+
+for (i in seq_along(strips)) {
+  k <- which(grepl('rect', g$grobs[[strips[i]]]$grobs[[1]]$childrenOrder))
+  l <- which(grepl('titleGrob', g$grobs[[strips[i]]]$grobs[[1]]$childrenOrder))
+  g$grobs[[strips[i]]]$grobs[[1]]$children[[k]]$gp$fill <- b_pal[i]
+  g$grobs[[strips[i]]]$grobs[[1]]$children[[l]]$children[[1]]$gp$col <- t_pal[i]
+}
+
+plot(g)
+```
+
+
+```{r}
 
 p1 <- merge(bird, weather, all.x=T) %>%
   filter(Species=='Rufous') %>%
-  mutate (Month = factor(month(Date, label=T)), Hour= hour(Timestamp))%>%
+  filter(Date < ymd('2021-08-01')) %>% 
   group_by(Month, Hour, Species) %>%
   summarise(n=n(), temp = median(`Temp C`, na.rm=T), .groups='keep') %>%
   ggplot(aes(x=temp, y = n))+ 
@@ -266,7 +386,6 @@ p1 <- merge(bird, weather, all.x=T) %>%
 
 p2 <- merge(bird, weather, all.x=T) %>%
   filter(Species=='Annas') %>%
-  mutate (Month = factor(month(Date, label=T)), Hour= hour(Timestamp))%>%
   group_by(Month, Hour, Species) %>%
   summarise(n=n(), temp = median(`Temp C`, na.rm=T), .groups='keep') %>%
   ggplot(aes(x=temp, y = n))+ 
@@ -275,6 +394,56 @@ p2 <- merge(bird, weather, all.x=T) %>%
   facet_wrap("Month", scales = "free")
 
 (p1) + (p2)
+
+```
+
+
+```{r}
+
+build_bg_df <- function(row, bg_df){
+  bg_df %>%
+    filter(Month == row[['Month']]) %>%
+    slice_sample(n = as.integer(row[['n']]), replace = T) %>%
+    mutate(Species = row[['Species']], Sex = row[['Sex']])
+}
+
+weather_bg <- weather %>% 
+  filter(Date > ymd('2021-04-01')) %>%
+  filter(Date < ymd('2021-10-01')) %>%
+  filter(hour(MergeTime) >= 6 & hour(MergeTime) <=21) %>%
+  mutate(Month=factor(month(Date, label = T))) %>%
+  select(Month, `Temp C`)
+
+weather_bg <- bird %>%
+  group_by(Month, Species, Sex) %>%
+  summarise(n=n()) %>%
+  apply(MARGIN=1, FUN=build_bg_df, bg_df = weather_bg) %>%
+  bind_rows() 
+
+merge(bird, weather, all.x=T) %>%
+  ggplot(aes(x=`Temp C`, fill=factor(label))) + 
+  geom_histogram(data = weather_bg, fill = "grey") +
+  geom_histogram(show.legend = F, alpha = .3, aes(color = factor(label))) + 
+  facet_grid(Species + Sex~ Month, scales="free_y") + 
+  scale_fill_manual(values=c('chocolate4', 'chartreuse4', 'chartreuse1', 'chocolate1')) +
+  scale_colour_manual(values=c('chocolate4', 'chartreuse4', 'chartreuse1', 'chocolate1')) +
+  theme_pubr() + labs(title='Number of bird IDs doesn\t appear to be particularly\nover- or under- represented at any temperature', y='Number of IDs',
+                      subtitle = 'Background distribtion of temperatures for each month shown in grey,\nresampled for comparison in each row')
+
+
+
+bird %>%
+  ggplot(aes(x=`Temp C`, fill=factor(label))) + 
+  geom_histogram(show.legend = F, alpha = .3, aes(color = factor(label))) + 
+  facet_grid(Species + Sex~ Month, scales="free_y") + 
+  scale_fill_manual(values=c('chocolate4', 'chartreuse4', 'chartreuse1', 'chocolate1')) +
+  scale_colour_manual(values=c('chocolate4', 'chartreuse4', 'chartreuse1', 'chocolate1')) +
+  theme_pubr() + labs(title='Number of bird IDs doesn\t appear to be particularly\nover- or under- represented at any temperature', y='Number of IDs',
+                      subtitle = 'Background distribtion of temperatures for each month shown in grey,\nresampled for comparison in each row') +
+  xlim(0,20)
+
+
+
 ```
 
 ```{r eval=F}

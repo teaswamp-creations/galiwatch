@@ -1,17 +1,13 @@
 ---
-editor: visual
 title: They're here!!
 date: 2023-03-30
 author: Kath Quayle
-
-image: hummingbird icon.jpg
+image: thumbnail.jpg
+categories: 
+  - news 
+  - chit chat 
+  - hummingbirds 
 ---
-
-categories:
- - news
- - chit chat
- - hummingbirds
-\-\--
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
