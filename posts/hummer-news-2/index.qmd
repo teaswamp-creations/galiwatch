@@ -11,9 +11,9 @@ categories:
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
-The rufous hummingbirds have made it back to our feeder!!
+Our surveillance camera is up and running collecting a pic a minute from dawn to dusk. The first rufous hummingbird caught on camera at our feeder in 2023 was a male on Mar 22nd at 7:23pm. The first female was seen 6 days later on Mar 28th at 2:42pm.
 
-A rufous male was caught on camera on March 22nd at 7.23pm, with the first female appearing 6 days later at 2.42pm on March 26th.
+This is a few days later than last year when a male and a female were first detected on the same day, the 18th of March, at 1:13pm and 6:20pm respectively.
 
 ![](images/paste-B769CFB3.png)
 

@@ -1,0 +1,81 @@
+---
+editor: visual
+title: Bird Song
+date: 2023-04-22
+author: Kath Quayle
+
+image: thumbnail.jpg
+categories:
+  - news
+  - audio moth
+  - analysis
+  - bird song
+---
+
+Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
+
+\##
+
+## <center>Exciting news!!</center>
+
+![](images/Birdsong-01.png){width="36"}We have initiated a new wildlife monitoring system - audio moths collecting bird song!!
+
+The audio moth - aka a small microphone - is controlled by a Raspberry pi, which can be powered by USB and connected to a computer via ethernet. This little device is now set to collect bird song at our site 24/7.
+
+The sound files are processed locally on the pi when a sound is detected using BirdNET-pi, which automatically extracts songs and chirps from the recordings, creates spectrograms of each recorded bird sound, stores the data in a database and enables data analysis and visualization.
+
+Here's a summary of the bird songs captured on Apr 21st
+
+![](images/paste-F8901428.png)
+
+And some examples of the birds and their calls
+
+![Cooper's hawk\
+*(Photo: [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/))*](images/paste-A506767C.png)
+
+```{r, echo=F}
+embedr::embed_audio("images/Coopers_Hawk.mp3")
+
+
+
+```
+
+![American robin\
+(*Photo: [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/))*](images/paste-78A70BD3.png)
+
+```{r, echo=F}
+embedr::embed_audio("images/American_Robin.mp3")
+
+
+
+```
+
+![Red-breasted nuthatch\
+*(Photo: [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/))*](images/paste-18A0AE59.png)
+
+```{r, echo=F}
+embedr::embed_audio("images/Red-breasted_Nuthatch.mp3")
+
+
+
+```
+
+![Northern Flicker\
+*(Photo: [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/))*](images/paste-14C17AB5.png)
+
+```{r, echo=F}
+embedr::embed_audio("images/Northern_Flicker.mp3")
+
+
+
+```
+
+![Bewick's wren\
+*(Photo: lornasdr licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/))*](images/paste-C6B829BB.png)
+
+```{r, echo=F}
+embedr::embed_audio("images/Bewicks_Wren.mp3")
+
+
+
+```
