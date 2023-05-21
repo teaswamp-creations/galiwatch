@@ -14,15 +14,13 @@ categories:
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
-\##
-
-## <center>Exciting news!!</center>
+# Exciting news!!
 
 ![](images/Birdsong-01.png){width="36"}We have initiated a new wildlife monitoring system - audio moths collecting bird song!!
 
-The audio moth - aka a small microphone - is controlled by a Raspberry pi, which can be powered by USB and connected to a computer via ethernet. This little device is now set to collect bird song at our site 24/7.
+The [audio moth](https://www.openacousticdevices.info/audiomoth) microphone is controlled by a Raspberry pi, which can be powered by USB and connected to a computer via ethernet. This little device is now set to collect bird song at our site 24/7.
 
-The sound files are processed locally on the pi when a sound is detected using BirdNET-pi, which automatically extracts songs and chirps from the recordings, creates spectrograms of each recorded bird sound, stores the data in a database and enables data analysis and visualization.
+The sound files are processed locally on the pi when a sound is detected using [BirdNET-Pi](https://github.com/mcguirepr89/BirdNET-Pi) which automatically extracts songs and chirps from the recordings, creates spectrograms of each recorded bird sound, stores the data in a database and enables data analysis and visualization.
 
 Here's a summary of the bird songs captured on Apr 21st
 
@@ -30,52 +28,62 @@ Here's a summary of the bird songs captured on Apr 21st
 
 And some examples of the birds and their calls
 
-![Cooper's hawk\
-*(Photo: [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/))*](images/paste-A506767C.png)
+## Cooper's hawk
+
+![*Photo: [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)*](images/paste-A506767C.png)
+
+<center>
 
 ```{r, echo=F}
 embedr::embed_audio("images/Coopers_Hawk.mp3")
-
-
-
 ```
 
-![American robin\
-(*Photo: [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/))*](images/paste-78A70BD3.png)
+</center>
 
+## American robin
+
+![*Photo: [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)*](images/paste-78A70BD3.png)
+
+<center>
 ```{r, echo=F}
 embedr::embed_audio("images/American_Robin.mp3")
 
-
-
 ```
+</center>
 
-![Red-breasted nuthatch\
-*(Photo: [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/))*](images/paste-18A0AE59.png)
+## Red-breasted nuthatch
+
+![*Photo: [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)*](images/paste-18A0AE59.png)
+
+<center>
 
 ```{r, echo=F}
 embedr::embed_audio("images/Red-breasted_Nuthatch.mp3")
 
-
-
 ```
 
-![Northern Flicker\
-*(Photo: [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/))*](images/paste-14C17AB5.png)
+</center>
+
+## Northern Flicker
+
+![*Photo: [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)*](images/paste-14C17AB5.png)
+
+<center>
 
 ```{r, echo=F}
 embedr::embed_audio("images/Northern_Flicker.mp3")
 
-
-
 ```
+</center>
 
-![Bewick's wren\
-*(Photo: lornasdr licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/))*](images/paste-C6B829BB.png)
+## Bewick's wren
 
+![*Photo: lornasdr licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)*](images/paste-C6B829BB.png)
+
+<center>
 ```{r, echo=F}
 embedr::embed_audio("images/Bewicks_Wren.mp3")
 
-
-
 ```
+</center>
+
