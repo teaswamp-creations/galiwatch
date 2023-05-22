@@ -1,6 +1,4 @@
 ---
-draft: false
-
 title: Oregon grape
 date: 2021-05-31
 author: Kath Quayle

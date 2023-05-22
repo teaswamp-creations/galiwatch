@@ -45,10 +45,12 @@ embedr::embed_audio("images/Coopers_Hawk.mp3")
 ![*Photo: [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)*](images/paste-78A70BD3.png)
 
 <center>
+
 ```{r, echo=F}
 embedr::embed_audio("images/American_Robin.mp3")
 
 ```
+
 </center>
 
 ## Red-breasted nuthatch
@@ -74,6 +76,7 @@ embedr::embed_audio("images/Red-breasted_Nuthatch.mp3")
 embedr::embed_audio("images/Northern_Flicker.mp3")
 
 ```
+
 </center>
 
 ## Bewick's wren
@@ -81,9 +84,10 @@ embedr::embed_audio("images/Northern_Flicker.mp3")
 ![*Photo: lornasdr licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)*](images/paste-C6B829BB.png)
 
 <center>
+
 ```{r, echo=F}
 embedr::embed_audio("images/Bewicks_Wren.mp3")
 
 ```
-</center>
 
+</center>
