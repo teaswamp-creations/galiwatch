@@ -4,7 +4,7 @@ title: Bird Song
 date: 2023-04-22
 author: Kath Quayle
 
-image: thumbnail.jpg
+image: thumbnail.jpeg
 categories:
   - news
   - audio moth

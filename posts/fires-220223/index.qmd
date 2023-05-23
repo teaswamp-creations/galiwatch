@@ -28,7 +28,7 @@ library(patchwork)
 library(ggpubr)
 
 # read in air quality data, and prepare variable names
-air <- read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/fires-2021/2021_temp_and_PM.csv') %>%
+air <- read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/fires-220223/2021_temp_and_PM.csv') %>%
   mutate(`Row Labels` = as_date(ymd_hms(`Row Labels`))) %>%
   rename(Date = `Row Labels`,
          PM1.0 = `Average of PM1.0_CF1_ug/m3`,
