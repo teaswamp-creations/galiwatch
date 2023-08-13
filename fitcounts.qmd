@@ -27,7 +27,7 @@ Native: camas, sea blush, spring gold, ocean spray, blackberry, Nootka rose, Ore
 Introduced: dandelion, buttercup, clover, blackberry, lavender, heather, thistle
 
 
-FIT counters are eligible to receive the galiwatch ["every bee counts" sticker](www.galiwatch.ca/images/every_bee_counts_flat.png)
+FIT counters are eligible to receive the galiwatch ["every bee counts" sticker](images/every_bee_counts.png)
 
 Thank you for being part of our pollinatorwatch!!
 
