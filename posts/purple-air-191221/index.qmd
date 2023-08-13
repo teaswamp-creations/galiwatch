@@ -2,7 +2,7 @@
 title: Purple Air sensor
 date: 2021-12-19
 author: Cait Harrigan
-
+engine: knitr
 image: thumbnail.jpg
 categories:
   - news

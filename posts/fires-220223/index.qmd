@@ -6,6 +6,7 @@ author:
   - Richard Harrigan
 image: thumbnail.jpg
 toc: true
+engine: knitr
 categories:
   - climate
   - code

@@ -3,7 +3,7 @@ editor: visual
 title: Where's rufous?
 date: 2023-03-20
 author: Kath Quayle
-
+engine: knitr
 image: thumbnail.png
 categories:
   - news
@@ -13,9 +13,7 @@ categories:
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1.5, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
-
-<img src="images/paste-F2E14578.png" alt="bee" class="image" style="width: 30%; float:right; margin-top:0.2em; margin-left:6px;">  
-
+<img src="images/paste-F2E14578.png" alt="bee" class="image" style="width: 30%; float:right; margin-top:0.2em; margin-left:6px;"/>
 
 Our humming bird camera is up and running, catching lots of great pics of male and female Anna's humming birds, but we are still waiting for the return of the rufous. The males are usually first to arrive followed by females a few days or weeks later.
 
@@ -29,8 +27,4 @@ This year, they had made it to Vashon Island, between Tacoma and Seattle, Washin
 
 Fingers crossed they will be here soon!
 
-<center>
-
-![](images/paste-03A8F50B.png){width="235"}
-
-</center>
+<center>![](images/paste-03A8F50B.png){width="235"}</center>

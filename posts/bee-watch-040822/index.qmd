@@ -2,6 +2,7 @@
 title: 2021 Bee count
 date: 2022-08-04
 author: Kath Quayle
+engine: knitr
 image: 'images/Raspberrypi%20camera%202.jpg'
 categories:
   - news

@@ -1,0 +1,34 @@
+# How many bees do you see?
+
+We're launching a Flower-Insect Timed (FIT) counts survey for the Gulf Islands! 
+
+***
+
+FIT counts[^1] are a way to monitor pollinator populations using a quadrat (50 x 50cm square frame) and a simple survey (FIT survey).
+
+[^1]: As described by the [UK Pollinator Monitoring Scheme](ukpoms.org.uk)
+
+It takes about 15 minutes of your time (a 10-minute count) and can be done wherever insects are visiting flowers when the weather is warm and dry, ideally above 13°C.
+
+The more data we collect, the better we can track changes in pollinator populations over time.
+
+## Here’s how to participate: 
+
+1. Take our [printable worksheet](images/fit_worksheet.pdf) with you to a nice flower patch
+3. Record the date, location, habitat, and weather conditions on the FIT survey form
+2.	Position your quadrat and record the flower patch details
+3.	FIT count: record the count start time and start your timer (set for 10 minutes). Count every insect that sits or lands on a flower, but please don’t count the same insect twice.  
+If you can, please take pictures of the flowers and pollinators you see in the quadrat
+4. Fill out the [FIT counts](https://forms.gle/axpBKHT1yPVeaKWQ7) form to report your counts
+
+## Suggested target flowers:
+
+Native: camas, sea blush, spring gold, ocean spray, blackberry, Nootka rose, Oregon grape, salal, gum weed, any native willow, Douglas’ aster, thistle  
+Introduced: dandelion, buttercup, clover, blackberry, lavender, heather, thistle
+
+
+FIT counters are eligible to receive the galiwatch ["every bee counts" sticker](www.galiwatch.ca/images/every_bee_counts_flat.png)
+
+Thank you for being part of our pollinatorwatch!!
+
+![](images/quadrats.jpg)

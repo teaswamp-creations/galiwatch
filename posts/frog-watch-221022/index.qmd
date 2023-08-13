@@ -2,6 +2,7 @@
 title: Galiano frogs
 date: 2022-10-22
 author: Kath Quayle
+engine: knitr
 image: 'thumbnail.jpg'
 categories: 
   - news

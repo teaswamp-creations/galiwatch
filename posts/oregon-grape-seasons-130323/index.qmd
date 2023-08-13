@@ -4,7 +4,7 @@ title: Oregon grape - seasonal variations
 date: 2023-03-13
 author: 
   - Kath Quayle
-
+engine: knitr
 categories:
   - bees
   - climate
