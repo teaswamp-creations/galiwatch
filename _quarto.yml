@@ -16,7 +16,8 @@ website:
     left: 
       - text: Project Details
         href: project.qmd
-      - pollinators.qmd
+      - text: FIT counts
+        href: fitcounts.qmd
     right:
       - text: Research blog
         href: blog.qmd

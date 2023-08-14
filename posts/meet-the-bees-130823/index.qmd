@@ -1,7 +1,14 @@
 ---
-title: 'Meet the Bees of Galiano'
-freeze: true
+title: Meet the bees of Galiano
+date: 2023-08-13
+author: Cait Harrigan
+engine: knitr
+image: thumbnail.png
+categories:
+  - bees
 ---
+
+Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
 
 ```{css, echo=FALSE}
@@ -42,9 +49,10 @@ pixgallery(paths, caption = captions, gap = '20px')
 
 
 <br>
-<br>
 
 <center>
 *Photos by [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)*
 </center>
+
+
 

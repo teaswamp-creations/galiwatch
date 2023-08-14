@@ -1,6 +1,6 @@
 # How many bees do you see?
 
-We're launching a Flower-Insect Timed (FIT) counts survey for the Gulf Islands! 
+We're launching a Flower-Insect Timed (FIT) counts survey for the Gulf  and Vancouver Island! 
 
 ***
 
@@ -18,17 +18,37 @@ The more data we collect, the better we can track changes in pollinator populati
 3. Record the date, location, habitat, and weather conditions on the FIT survey form
 2.	Position your quadrat and record the flower patch details
 3.	FIT count: record the count start time and start your timer (set for 10 minutes). Count every insect that sits or lands on a flower, but please don’t count the same insect twice.  
-If you can, please take pictures of the flowers and pollinators you see in the quadrat
-4. Fill out the [FIT counts](https://forms.gle/axpBKHT1yPVeaKWQ7) form to report your counts
+If you can, please take pictures of the flowers and pollinators you see in the quadrat.
+4. Fill out the [FIT counts](https://forms.gle/axpBKHT1yPVeaKWQ7) form to report your counts and upload photos
+
+## How to make your quadrat
+
+You can make a 50cm x 50 cm quadrat from stiff cardboard or light wire, paper clips or hair pins, and masking tape.
+1.	Cut four strips of cardboard 2 x 50cm and 2 x 54cm and 2cm wide
+2.	Assemble into a square and pin the corners with paper clips or hair pins
+3.	Secure corners with masking tape
+4.	Cover all four sides with masking tape for added strength
+
+![](images/quadrat.png)
+
+If you have light weight wire on hand, you can simply cut a 203cm length, bend it into a square and affix the corner by twisting the two ends together. You can cover the wire with masking tape for better visibility.
+
+The quadrat works as a simple guide when performing FIT counts.
+
+![](images/quadrats.jpg)
 
 ## Suggested target flowers:
 
-Native: camas, sea blush, spring gold, ocean spray, blackberry, Nootka rose, Oregon grape, salal, gum weed, any native willow, Douglas’ aster, thistle  
+Native: camas, sea blush, spring gold, ocean spray, blackberry, Nootka rose, Oregon grape, salal, gum weed, any native willow, Douglas’ aster, thistle
+
 Introduced: dandelion, buttercup, clover, blackberry, lavender, heather, thistle
 
+## Not just bees! 
+
+There are lots of interesting non-bee pollinators to discover. To help us identify insects you come across, please upload photos of all pollinators you see in the quadrat during the FIT count, not just bees!
+
+
+## Thank you for being part of our pollinatorwatch
 
 FIT counters are eligible to receive the galiwatch ["every bee counts" sticker](images/every_bee_counts.png)
 
-Thank you for being part of our pollinatorwatch!!
-
-![](images/quadrats.jpg)

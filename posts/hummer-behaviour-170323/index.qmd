@@ -2,7 +2,7 @@
 title: Tracking hummingbirds at the feeder 
 date: 2023-03-17
 author: Cait Harrigan
-image: thumbnail.jpg
+image: thumbnail.png
 toc: true
 categories:
   - birds
@@ -19,7 +19,7 @@ Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(rou
 
 ## Background
 
-There are two species of hummingbirds found near Galiano: the green [Anna's Hummingbird](https://en.wikipedia.org/wiki/Anna%27s_hummingbird) and the orange [Rufous Hummingbird](https://en.wikipedia.org/wiki/Rufous_hummingbird). ID images from (All About Birds)\[https://www.allaboutbirds.org/\].
+There are two species of hummingbirds found near Galiano: the green [Anna's Hummingbird](https://en.wikipedia.org/wiki/Anna%27s_hummingbird) and the orange [Rufous Hummingbird](https://en.wikipedia.org/wiki/Rufous_hummingbird). ID images from (allaboutbirds.org)[https://www.allaboutbirds.org/].
 
 ::: {layout-ncol="2"}
 ![](anna_id.png)
@@ -61,8 +61,7 @@ library(lubridate)
 library(patchwork)
 library(ggpubr)
 
-#weather <- read_csv('https://github.com/teaswamp-creations/galiwatch.ca/raw/quarto-website/posts/hummer-watch/WS_hours.csv') %>%
-weather <- read_csv('WS_hours.csv') %>%
+weather <- readr::read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/hummer-behaviour-170323/WS_hours.csv') %>%
   # retain only non-duplicates
   distinct() %>%
   # Clean up timestamps, convert to celsius
@@ -75,8 +74,7 @@ weather <- read_csv('WS_hours.csv') %>%
 classes = c('Rufous_Male', 'Annas_Male', 'Person', 'Annas_Female', 'Rufous_Female')
 
 # read in bird detection data, and do some basic data cleaning
-#bird <- read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/hummer-watch/2021_reprocessed_hummers_combo_2023.csv') %>% 
-bird <- read_csv('2021_reprocessed_hummers_combo_2023.csv') %>%
+bird <- read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/hummer-behaviour-170323/2021_reprocessed_hummers_combo_2023.csv') %>% 
   # lookup labels
   mutate(class = classes[label + 1]) %>%
   # put columns into tidy format
