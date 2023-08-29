@@ -19,7 +19,7 @@ Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(rou
 
 ## Background
 
-There are two species of hummingbirds found near Galiano: the green [Anna's Hummingbird](https://en.wikipedia.org/wiki/Anna%27s_hummingbird) and the orange [Rufous Hummingbird](https://en.wikipedia.org/wiki/Rufous_hummingbird). ID images from (allaboutbirds.org)[https://www.allaboutbirds.org/].
+There are two species of hummingbirds found near Galiano: the green [Anna's Hummingbird](https://en.wikipedia.org/wiki/Anna%27s_hummingbird) and the orange [Rufous Hummingbird](https://en.wikipedia.org/wiki/Rufous_hummingbird). ID images from [allaboutbirds.org](https://www.allaboutbirds.org/).
 
 ::: {layout-ncol="2"}
 ![](anna_id.png)
