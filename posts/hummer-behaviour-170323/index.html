@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -94,7 +94,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YZBNVRR4EQ"></script>
@@ -234,7 +235,7 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <p>Reading time: 7 minutes</p>
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>There are two species of hummingbirds found near Galiano: the green <a href="https://en.wikipedia.org/wiki/Anna%27s_hummingbird">Anna’s Hummingbird</a> and the orange <a href="https://en.wikipedia.org/wiki/Rufous_hummingbird">Rufous Hummingbird</a>. ID images from (allaboutbirds.org)[https://www.allaboutbirds.org/].</p>
+<p>There are two species of hummingbirds found near Galiano: the green <a href="https://en.wikipedia.org/wiki/Anna%27s_hummingbird">Anna’s Hummingbird</a> and the orange <a href="https://en.wikipedia.org/wiki/Rufous_hummingbird">Rufous Hummingbird</a>. ID images from <a href="https://www.allaboutbirds.org/">allaboutbirds.org</a>.</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -285,7 +286,7 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>weather <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/hummer-behaviour-170323/WS_hours.csv'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>weather <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'WS_hours.csv'</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># retain only non-duplicates</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Clean up timestamps, convert to celsius</span></span>
@@ -298,35 +299,36 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>classes <span class="ot">=</span> <span class="fu">c</span>(<span class="st">'Rufous_Male'</span>, <span class="st">'Annas_Male'</span>, <span class="st">'Person'</span>, <span class="st">'Annas_Female'</span>, <span class="st">'Rufous_Female'</span>)</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># read in bird detection data, and do some basic data cleaning</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>bird <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/hummer-behaviour-170323/2021_reprocessed_hummers_combo_2023.csv'</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># lookup labels</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">class =</span> classes[label <span class="sc">+</span> <span class="dv">1</span>]) <span class="sc">%&gt;%</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="co"># put columns into tidy format</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(class, <span class="at">into=</span><span class="fu">c</span>(<span class="st">'Species'</span>, <span class="st">'Sex'</span>), <span class="at">sep=</span><span class="st">'_'</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(image, <span class="at">into=</span><span class="fu">c</span>(<span class="st">'Date'</span>, <span class="st">'image'</span>), <span class="at">sep=</span><span class="st">"_"</span>, <span class="at">remove =</span> F) <span class="sc">%&gt;%</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(image, <span class="at">into=</span><span class="fu">c</span>(<span class="st">'hhmm'</span>), <span class="at">sep=</span><span class="st">".jpg"</span>, <span class="at">extra =</span> <span class="st">'drop'</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="co"># clean up timestamps</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Timestamp =</span> <span class="fu">ymd_hm</span>(<span class="fu">paste</span>(Date, hhmm))) <span class="sc">%&gt;%</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="co"># remove people</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(label <span class="sc">!=</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="co"># change column types, correct for variable image size</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Date=</span><span class="fu">ymd</span>(Date),</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>         <span class="at">Month=</span><span class="fu">factor</span>(<span class="fu">month</span>(Date, <span class="at">label =</span> T)),</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>         <span class="at">Hour=</span><span class="fu">hour</span>(Timestamp),</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>         <span class="at">Species =</span> <span class="fu">ordered</span>(Species),</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>         <span class="at">Sex =</span> <span class="fu">factor</span>(Sex),</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>         <span class="at">ymin2 =</span> ymin,</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>         <span class="at">ymin =</span> (y_size <span class="sc">-</span> ymax),</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>         <span class="at">ymax =</span> (y_size <span class="sc">-</span> ymin2),</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>         <span class="at">MergeTime =</span> <span class="fu">floor_date</span>(Timestamp, <span class="st">'hour'</span>)</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="co"># correct for variable image size</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymin =</span> <span class="fu">ifelse</span>(y_size <span class="sc">==</span> <span class="dv">420</span>, ymin <span class="sc">*</span> (<span class="dv">616</span><span class="sc">/</span><span class="dv">420</span>), ymin),</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">ymax =</span> <span class="fu">ifelse</span>(y_size <span class="sc">==</span> <span class="dv">420</span>, ymax <span class="sc">*</span> (<span class="dv">616</span><span class="sc">/</span><span class="dv">420</span>), ymax),</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmin =</span> <span class="fu">ifelse</span>(y_size <span class="sc">==</span> <span class="dv">420</span>, xmin <span class="sc">*</span> (<span class="dv">616</span><span class="sc">/</span><span class="dv">420</span>), xmin),</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">xmax =</span> <span class="fu">ifelse</span>(y_size <span class="sc">==</span> <span class="dv">420</span>, xmax <span class="sc">*</span> (<span class="dv">616</span><span class="sc">/</span><span class="dv">420</span>), xmax),</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#bird &lt;- read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/hummer-behaviour-170323/2021_reprocessed_hummers_combo_2023.csv') %&gt;% </span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>bird <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'2021_reprocessed_hummers_combo_2023.csv'</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="co"># lookup labels</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">class =</span> classes[label <span class="sc">+</span> <span class="dv">1</span>]) <span class="sc">%&gt;%</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="co"># put columns into tidy format</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(class, <span class="at">into=</span><span class="fu">c</span>(<span class="st">'Species'</span>, <span class="st">'Sex'</span>), <span class="at">sep=</span><span class="st">'_'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(image, <span class="at">into=</span><span class="fu">c</span>(<span class="st">'Date'</span>, <span class="st">'image'</span>), <span class="at">sep=</span><span class="st">"_"</span>, <span class="at">remove =</span> F) <span class="sc">%&gt;%</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(image, <span class="at">into=</span><span class="fu">c</span>(<span class="st">'hhmm'</span>), <span class="at">sep=</span><span class="st">".jpg"</span>, <span class="at">extra =</span> <span class="st">'drop'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="co"># clean up timestamps</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Timestamp =</span> <span class="fu">ymd_hm</span>(<span class="fu">paste</span>(Date, hhmm))) <span class="sc">%&gt;%</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="co"># remove people</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(label <span class="sc">!=</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="co"># change column types, correct for variable image size</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Date=</span><span class="fu">ymd</span>(Date),</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>         <span class="at">Month=</span><span class="fu">factor</span>(<span class="fu">month</span>(Date, <span class="at">label =</span> T)),</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>         <span class="at">Hour=</span><span class="fu">hour</span>(Timestamp),</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>         <span class="at">Species =</span> <span class="fu">ordered</span>(Species),</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>         <span class="at">Sex =</span> <span class="fu">factor</span>(Sex),</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>         <span class="co">#ymin2 = ymin,</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>         <span class="co">#ymin = (y_size - ymax),</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>         <span class="co">#ymax = (y_size - ymin2),</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>         <span class="at">MergeTime =</span> <span class="fu">floor_date</span>(Timestamp, <span class="st">'hour'</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  ) <span class="co">#%&gt;%</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="co"># correct for variable image size</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="co">#mutate(</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="co">#  ymin = ifelse(y_size == 420, ymin * (616/420), ymin),</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="co">#  ymax = ifelse(y_size == 420, ymax * (616/420), ymax),</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="co"># xmin = ifelse(y_size == 420, xmin * (616/420), xmin),</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  <span class="co">#  xmax = ifelse(y_size == 420, xmax * (616/420), xmax),</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="co">#) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Lets take a peek at the data. The air quality measures show the concentration of particulates at three different size thresholds (in micrometers), as well as the outdoor air temperature recorded from April - December 2021.</p>
@@ -601,25 +603,24 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <colgroup>
-<col style="width: 7%">
+<col style="width: 8%">
 <col style="width: 3%">
 <col style="width: 3%">
 <col style="width: 3%">
 <col style="width: 3%">
 <col style="width: 3%">
 <col style="width: 4%">
-<col style="width: 7%">
-<col style="width: 4%">
-<col style="width: 4%">
+<col style="width: 8%">
+<col style="width: 5%">
+<col style="width: 5%">
 <col style="width: 2%">
 <col style="width: 2%">
 <col style="width: 5%">
 <col style="width: 3%">
-<col style="width: 13%">
+<col style="width: 14%">
 <col style="width: 4%">
 <col style="width: 3%">
-<col style="width: 4%">
-<col style="width: 13%">
+<col style="width: 14%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -640,7 +641,6 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <th style="text-align: left;">Timestamp</th>
 <th style="text-align: left;">Month</th>
 <th style="text-align: right;">Hour</th>
-<th style="text-align: right;">ymin2</th>
 <th style="text-align: left;">MergeTime</th>
 </tr>
 </thead>
@@ -649,9 +649,9 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <td style="text-align: left;">2021-04-20</td>
 <td style="text-align: left;">1651</td>
 <td style="text-align: right;">154</td>
-<td style="text-align: right;">102</td>
+<td style="text-align: right;">365</td>
 <td style="text-align: right;">331</td>
-<td style="text-align: right;">251</td>
+<td style="text-align: right;">514</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0.8494033</td>
 <td style="text-align: right;">820</td>
@@ -663,16 +663,15 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <td style="text-align: left;">2021-04-20 16:51:00</td>
 <td style="text-align: left;">Apr</td>
 <td style="text-align: right;">16</td>
-<td style="text-align: right;">365</td>
 <td style="text-align: left;">2021-04-20 16:00:00</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2021-04-20</td>
 <td style="text-align: left;">1706</td>
 <td style="text-align: right;">200</td>
-<td style="text-align: right;">138</td>
+<td style="text-align: right;">382</td>
 <td style="text-align: right;">406</td>
-<td style="text-align: right;">234</td>
+<td style="text-align: right;">478</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0.8925107</td>
 <td style="text-align: right;">820</td>
@@ -684,16 +683,15 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <td style="text-align: left;">2021-04-20 17:06:00</td>
 <td style="text-align: left;">Apr</td>
 <td style="text-align: right;">17</td>
-<td style="text-align: right;">382</td>
 <td style="text-align: left;">2021-04-20 17:00:00</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">2021-04-20</td>
 <td style="text-align: left;">1718</td>
 <td style="text-align: right;">634</td>
-<td style="text-align: right;">64</td>
+<td style="text-align: right;">401</td>
 <td style="text-align: right;">814</td>
-<td style="text-align: right;">215</td>
+<td style="text-align: right;">552</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0.9755894</td>
 <td style="text-align: right;">820</td>
@@ -705,16 +703,15 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <td style="text-align: left;">2021-04-20 17:18:00</td>
 <td style="text-align: left;">Apr</td>
 <td style="text-align: right;">17</td>
-<td style="text-align: right;">401</td>
 <td style="text-align: left;">2021-04-20 17:00:00</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2021-04-20</td>
 <td style="text-align: left;">1914</td>
 <td style="text-align: right;">164</td>
-<td style="text-align: right;">109</td>
+<td style="text-align: right;">389</td>
 <td style="text-align: right;">368</td>
-<td style="text-align: right;">227</td>
+<td style="text-align: right;">507</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0.6146710</td>
 <td style="text-align: right;">820</td>
@@ -726,16 +723,15 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <td style="text-align: left;">2021-04-20 19:14:00</td>
 <td style="text-align: left;">Apr</td>
 <td style="text-align: right;">19</td>
-<td style="text-align: right;">389</td>
 <td style="text-align: left;">2021-04-20 19:00:00</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">2021-04-20</td>
 <td style="text-align: left;">1925</td>
 <td style="text-align: right;">196</td>
-<td style="text-align: right;">144</td>
+<td style="text-align: right;">389</td>
 <td style="text-align: right;">408</td>
-<td style="text-align: right;">227</td>
+<td style="text-align: right;">472</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0.9455948</td>
 <td style="text-align: right;">820</td>
@@ -747,16 +743,15 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <td style="text-align: left;">2021-04-20 19:25:00</td>
 <td style="text-align: left;">Apr</td>
 <td style="text-align: right;">19</td>
-<td style="text-align: right;">389</td>
 <td style="text-align: left;">2021-04-20 19:00:00</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2021-04-20</td>
 <td style="text-align: left;">1942</td>
 <td style="text-align: right;">177</td>
-<td style="text-align: right;">77</td>
+<td style="text-align: right;">402</td>
 <td style="text-align: right;">378</td>
-<td style="text-align: right;">214</td>
+<td style="text-align: right;">539</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0.9968680</td>
 <td style="text-align: right;">820</td>
@@ -768,7 +763,6 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <td style="text-align: left;">2021-04-20 19:42:00</td>
 <td style="text-align: left;">Apr</td>
 <td style="text-align: right;">19</td>
-<td style="text-align: right;">402</td>
 <td style="text-align: left;">2021-04-20 19:00:00</td>
 </tr>
 </tbody>
@@ -950,22 +944,22 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <tr class="odd">
 <td style="text-align: left;">Annas</td>
 <td style="text-align: left;">Female</td>
-<td style="text-align: right;">2955</td>
+<td style="text-align: right;">2949</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Annas</td>
 <td style="text-align: left;">Male</td>
-<td style="text-align: right;">838</td>
+<td style="text-align: right;">843</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Rufous</td>
 <td style="text-align: left;">Female</td>
-<td style="text-align: right;">9756</td>
+<td style="text-align: right;">9745</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Rufous</td>
 <td style="text-align: left;">Male</td>
-<td style="text-align: right;">639</td>
+<td style="text-align: right;">650</td>
 </tr>
 </tbody>
 </table>
