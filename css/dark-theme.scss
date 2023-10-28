@@ -20,3 +20,10 @@ h1, .h1{
   width: 210px;
 }
 
+div.callout-note.callout {
+  border-left-color: #A0CFC4;
+}
+
+div.callout-note.callout-style-default > .callout-header {
+  background-color: #376D61;
+}
