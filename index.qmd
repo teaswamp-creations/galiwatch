@@ -1,13 +1,15 @@
+
 ---
 css: css/style.css
 ---
+
 
 <center>
 # Operation Galiwatch
 
 Monitoring pollinator populations on Galiano Island, Canada. 
 
-We're developing low-cost data collection and analysis systems for long-term pollinator surveillance and hyperlocal weather and climate monitoring.
+We're developing low-cost data collection and analysis systems for long-term pollinator and bird surveillance and hyperlocal weather and climate monitoring.
 </center>
 
 
@@ -54,9 +56,5 @@ We're developing low-cost data collection and analysis systems for long-term pol
 </div>
 
 </div>
-
-
-## New things!
-
 
 
