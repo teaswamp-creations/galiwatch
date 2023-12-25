@@ -55,6 +55,43 @@ We're developing low-cost data collection and analysis systems for long-term pol
 </div>
 </div>
 
+<div class="galcolumn">
+<div class="imgbox">
+<a target="_top" href="project.html#hummingbirds">
+  <img src="images/one_of_each.png" alt="hummer" class="image"style="width: 100%;">   
+  <div class="overlay"> 
+  <div class="imgtext">Hummingbird Detection</div>
+  <div class="learntext">Learn more  <i class="fas fa-arrow-right"></i></div>
+  </div>
+</a>
 </div>
+</div>
+
+<div class="galcolumn">
+<div class="imgbox">
+<a target="_top" href="project.html#birdsong">
+  <img src="images/sound.png" alt="birdsong" class="image"style="width: 100%;">   
+  <div class="overlay"> 
+  <div class="imgtext">Bird Song</div>
+  <div class="learntext">Learn more  <i class="fas fa-arrow-right"></i></div>
+  </div>
+</a>
+</div>
+</div>
+
+
+<div class="galcolumn">
+<div class="imgbox">
+<a target="_top" href="project.html#Misc">
+  <img src="images/mushroom.jpg" alt="mushroom" class="image"style="width: 100%;">   
+  <div class="overlay"> 
+  <div class="imgtext">Gallery</div>
+  <div class="learntext">Learn more  <i class="fas fa-arrow-right"></i></div>
+  </div>
+</a>
+</div>
+</div>
+
+
 
 
