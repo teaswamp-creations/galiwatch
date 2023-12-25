@@ -1,5 +1,6 @@
-# Gallery
-
+---
+title: Gallery
+---
 
 Here are a bunch of images of mushrooms from Galiano we like. Click for a larger view.
 
@@ -19,7 +20,7 @@ paths <- c("images/gallery/20211222_141128.jpg",
           )
            
 
-pixgallery(paths, gap = '20px')
+pixgallery(paths, gap = '10px')
 
 ```
 
