@@ -1,7 +1,6 @@
 ---
-title: Rufous V Rufous 
+title: Which birds where? 
 draft: true
-engine: knitr
 date: 2023-05-11
 author: Cait Harrigan
 image: thumbnail.jpng
@@ -15,12 +14,12 @@ format:
   html:
       code-fold: true
 editor_options: 
-  chunk_output_type: console
+  chunk_output_type: inline
 ---
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
-::: callout-note
+::: {.callout-note icon=false}
 This is the second post in this deep-dive series. See here for [part i](https://galiwatch.ca/posts/hummer-behaviour-170323/)
 :::
 
@@ -34,17 +33,8 @@ library(lubridate)
 library(patchwork)
 library(ggpubr)
 
-weather <- readr::read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/hummer-behaviour-170323/WS_hours.csv') %>%
-  # retain only non-duplicates
-  distinct() %>%
-  # Clean up timestamps, convert to celsius
-  mutate(Date = ymd(Date), 
-         MergeTime = ymd_hms(paste(Date, Time)),
-         `Temp C` = (`Outdoor Temperature F`-32) * (5/9)
-         )
-
 # classifier labels
-classes = c('Rufous_Male', 'Annas_Male', 'Person', 'Annas_Female', 'Rufous_Female')
+classes = c('Rufous_Male', 'Annas_Male', 'Person_', 'Annas_Female', 'Rufous_Female')
 
 # read in bird detection data, and do some basic data cleaning
 bird <- read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/hummer-behaviour-170323/2021_reprocessed_hummers_combo_2023.csv') %>% 
@@ -64,42 +54,33 @@ bird <- read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch
          Hour=hour(Timestamp),
          Species = ordered(Species),
          Sex = factor(Sex),
-         ymin2 = ymin,
-         ymin = (y_size - ymax),
-         ymax = (y_size - ymin2),
-         MergeTime = floor_date(Timestamp, 'hour')
-  ) %>%
-  # correct for variable image size
-  mutate(
-    ymin = ifelse(y_size == 420, ymin * (616/420), ymin),
-    ymax = ifelse(y_size == 420, ymax * (616/420), ymax),
-    xmin = ifelse(y_size == 420, xmin * (616/420), xmin),
-    xmax = ifelse(y_size == 420, xmax * (616/420), xmax), 
-    xmid = (xmax+xmin)/2,
-    ymid = (ymax+ymin)/2
+         MergeTime = floor_date(Timestamp, 'hour'),
+         xmid = (xmax+xmin)/2, 
+         ymid = (ymax+ymin)/2
   ) 
+
 ```
 
 ## Distribution of sitting spots
 
-We can plot the location of where each bird sits, with the proxy that a birds' feet will be at the center bottom of its bounding box. The birds appear to mostly sit in a circle, around the rim of the feeder. This makes sense, as it gives the best access to the sugar water.
+We can plot the location of where each bird sits, with the proxy that a birds will be located at the center of its bounding box. The birds appear to mostly sit in a circle, around the rim of the feeder. This makes sense, as it gives the best access to the sugar water.
 
 ```{r}
 bird %>% 
-  ggscatter(x='xmid', y = 'ymid', alpha=0.4)
+  ggscatter(x='xmid', y='ymid', alpha=0.4, color ='y_size')
 ```
 
-However, it looks like there are 2 distinct positions that the feeder was in over the summer. We'll try to do batch correction for this, by assigning a batch number to each position, and subtract the average from the x and y direction. I think we can reasonably split the changes in position (the batches) simply by the date. This is easy to see in the ymid variable - the feeder moves twice around May 8th, and back down half way through the day on June 13th.
+However, it looks like there are at least 2 distinct positions that the feeder was in over the summer. We'll try to do batch correction for this, by assigning a batch number to each position, and subtract the average from the x and y direction. I think we can reasonably split the changes in position (the batches) simply by the date. This is easy to see in the ymid variable - the feeder moves twice in May, and once in June.
 
 ```{r}
 bird %>% 
-  mutate(ymid = (ymax+ymin)/2, Month = month(Date, label=T)) %>%
+  mutate(Month = month(Date, label=T)) %>%
   filter(Date>'2021-05-01' & Date<'2021-06-15') %>%
   ggplot(aes(x=Timestamp, y = ymid))+ 
   geom_jitter(alpha = 0.5) + 
   facet_wrap("~Month", scales = 'free_x') + 
   theme_pubr() + 
-  labs(title = 'Feeder Moves Up and Down in May')
+  labs(title = 'Feeder Moves Up and Down in May and June')
 ```
 
 Lets split these into batches for correction.
@@ -108,6 +89,7 @@ Lets split these into batches for correction.
 bird$batch <- 1
 bird$batch <- ifelse(bird$Timestamp > ymd_hms('2021-05-08 00:00:00'),2,bird$batch)
 bird$batch <- ifelse(bird$Timestamp > ymd_hms('2021-05-11 00:00:00'),3,bird$batch)
+bird$batch <- ifelse(bird$Timestamp > ymd_hms('2021-06-13 12:20:00'),4,bird$batch)
 bird$batch <- factor(bird$batch)
 ```
 
@@ -126,112 +108,59 @@ bird %>%
        colour = 'Batch')
 ```
 
-Now we're ready to correct! We'll transform all the x- and y- values by subtracting the average of each batch. This will yield a new positioning relative to the middle of the feeder; we can no longer interpret this as the pixel index in the image.
+Now we're ready to correct! We'll transform all the x- and y- values by centering and scaling each batch. This will yield a new positioning relative to the middle of the feeder; we can no longer interpret this as the pixel index in the image.
 
 ```{r}
-bird_c <- bird %>% 
+bird_scaled <- bird %>% 
   mutate(Month = month(Date, label=T)) %>%
   group_by(batch) %>%
-  mutate(across(c(xmin, xmax, ymin, ymax), ~ .x-mean(.x)) ) %>%
+  mutate(ymin1 = ymax, ymax1=ymin) %>%
+  mutate(across(c(xmin, xmax, ymin, ymax), ~ scale(.x)) ) %>%
   mutate(xmid = (xmax+xmin)/2, ymid = (ymax+ymin)/2)
 
 
-bird_c %>% 
+bird_scaled %>% 
   filter(Date>'2021-05-01' & Date<'2021-06-15') %>%
   ggplot(aes(x=Timestamp, y = ymid, color=batch))+ 
   geom_point(alpha = 0.5) + 
   facet_wrap("~Month", scales = 'free_x') + 
   theme_pubr() + 
-  labs(title = 'Batch corrected for average position',
+  labs(title = 'Batch corrected for feeder position',
        colour = 'Batch')
 ```
 
-We can see that the correction didn't completely fix things - our points are still offset by batch!
+We can see that the correction didn't perfectly fix things - but it looks pretty good!
 
 ```{r}
-bird_c %>%
-  ggscatter(x='xmid', y = 'ymid', alpha=0.1, color = 'batch') + 
-  labs(title = 'Batches don\'t perfectly overlap', fill = 'Batch') 
-
-```
-
-It's a little hard to see in the scatter plot, but when we plot the density of points, it becomes apparent that we should be correcting for the perspective 'stretch' that happens when the feeder is in a different postion in the image.
-
-```{r}
-bird_c %>%
+p1 <- bird %>%
   ggplot(aes(x=xmid, y=ymid) ) +
   stat_density_2d(aes(fill=batch), geom = "polygon", alpha=0.2) + 
   theme_pubr() + 
-  labs(title = 'Density doesn\'t match after position correction',
-       subtitle = 'We still need to correct for perspective scaling', fill = 'Batch')
+  labs(title = 'Bird density before batch correction', fill = 'Batch')
 
-
-```
-
-The position correction didn't work perfectly, because there is some perspective distortion in the images.
-
-To fix this, I've centered and scaled the bounding boxes.
-
-```{r}
-bird_m <- bird %>% 
-  group_by(batch) %>% 
-  summarize(xmin = scale(xmin), ymin = scale(ymin), 
-            xmax = scale(xmax), ymax = scale(ymax),
-            .groups = 'keep') %>%
-  mutate(xmid = (xmax+xmin)/2, ymid = (ymax+ymin)/2) %>%
-  bind_cols(select(bird, Timestamp, Species, Sex, confidence))
-
-p1 <- bird %>% 
-  mutate(xmid = (xmax+xmin)/2, ymid = (ymax+ymin)/2) %>%
-  ggplot(aes(x=Timestamp, y = xmid, color=batch))+ 
-  geom_jitter(alpha = 0.5, show.legend = F) + 
+p2 <- bird_scaled %>%
+  ggplot(aes(x=xmid, y=ymid) ) +
+  stat_density_2d(aes(fill=batch), geom = "polygon", alpha=0.2) + 
   theme_pubr() + 
-  labs(title = 'No Scaling Correction')
+  labs(title = 'Bird density before batch correction',fill = 'Batch')
 
-p2 <- bird_m %>% 
-  ggplot(aes(x=Timestamp, y = xmid, color=batch))+ 
-  geom_jitter(alpha = 0.5, show.legend = F) + 
-  theme_pubr() + 
-  labs(title = 'With Scaling Correction')
-
-# y direction
-p3 <- bird %>%
-  mutate(xmid = (xmax+xmin)/2, ymid = (ymax+ymin)/2) %>%
-  ggplot(aes(x=Timestamp, y = ymid, color=batch))+ 
-  geom_jitter(alpha = 0.5, show.legend = F) + 
-  theme_pubr() 
-
-
-p4 <- bird_m %>%
-  ggplot(aes(x=Timestamp, y = ymid, color=batch))+ 
-  geom_jitter(alpha = 0.5, show.legend = F) + 
-  theme_pubr()
-
-
-(p1 | p2) / (p3 | p4)
-```
-
-The batch lineup looks a lot better overall!
-
-```{r, eval=T}
-
-bird_m %>%ggplot(aes(x=xmid, y=ymid, fill=batch)) + 
-  stat_density_2d(geom = "polygon", alpha=0.2) + 
-  labs(title = 'Batch corrected bird location') + 
-  theme_pubr()
+p1 | p2
 
 ```
 
-The gap in the middle comes from the water column - we can't detect birds sitting behind it! Of course, we have to be somewhat careful when converting back to the coordinates of the image. (I did this by eyeballing)
 
-```{r, eval=T}
+
+
+The gap in the middle comes from the water column - we can't detect birds sitting behind it! Of course, we have to be somewhat careful when converting back to the coordinates of the image. I negate the y coordinates, because they count from the top of the image. 
+
+```{r, eval=T, warning=F}
 img <- jpeg::readJPEG('feeder.jpg')
 
-bird_m %>%
-  ggplot(aes(x=xmid, y = ymid)) + 
-  ylim(-1.7,10) + 
+bird_scaled %>%
+  ggplot(aes(x=xmid, y = -ymid)) + 
+  ylim(-1.8,8) + xlim(-1.8, 1.8) +
   background_image(img) + 
-  geom_point() 
+  geom_point(shape = 'x') 
 
 ```
 
@@ -239,44 +168,53 @@ bird_m %>%
 
 Now that we have our corrected bounding boxes, we can have a look at bird sizes!
 
-Going back to the same height/width plot we saw before, the "holes" are nearly gone, .
+Going back to the same height/width plot we saw last time, the "holes" are nearly gone, but the mid-sized birds are the hardest to classify with high certainty.
 
-```{r}
-bird_m <- bird_m %>%
+```{r, warning=F}
+bird_scaled <- bird_scaled %>%
   mutate(
     Height = ymax-ymin, 
     Width = xmax-xmin, 
-    Area = abs(Height * Width)
-  )
+    Area = abs(Height * Width)) %>%
+  mutate(confidence_lvl = cut(confidence, c(0, 0.7, 0.8, 0.9, 1), ordered_result=T)) 
 
-bird_m %>%
-  mutate(confidence_lvl = cut(confidence, c(0.6, 0.7, 0.8, 0.9, 1), ordered_result=T)) %>%
-  ggscatter(x = "Width", y = "Height", add = "reg.line", alpha = 0.4, color= 'confidence_lvl',
+bird_scaled %>%
+  ggscatter(x = "Width", y = "Height", add = "reg.line", alpha = 0.2, color= 'confidence_lvl',
             add.params = list(color = "black", fill = "lightgray", linetype='dashed')) +
-  stat_cor(label.x = .25, label.y = 5.75) +
-  stat_regline_equation(label.x = .25, label.y = 5) + 
+  #stat_cor(label.x = .25, label.y = 450) +
+  #stat_regline_equation(label.x = .25, label.y = 400) + 
   labs(title = 'Mid-sized birds are hard-to call?',
        colour = 'Confidence Level') 
+
+
+bird %>%
+  mutate(
+    Height = ymax-ymin, 
+    Width = xmax-xmin, 
+    Area = abs(Height * Width)) %>%
+  mutate(confidence_lvl = cut(confidence, c(0, 0.7, 0.8, 0.9, 1), ordered_result=T))%>%
+  ggscatter(y = "Area", x = "confidence", add = "reg.line", alpha = 0.2,
+            add.params = list(color = "black", fill = "lightgray", linetype='dashed'))
 ```
 
-Our low-confidence bird calls seem to be concentrated to a mid-sized bounding box.
+
+Our low-confidence bird calls seem to be concentrated to a mid-sized bounding box, and towards the back of the feeder. 
 
 ```{r}
-bird_m %>% 
+p1 <- bird_scaled %>% 
   mutate(area_lvl = cut(Area, c(0, 0.05, 0.1, 0.2, 0.5, 1), ordered_result=T, include.lowest = T)) %>%
-  #pull(area_lvl) %>% table()
-  mutate(confidence_lvl = cut(confidence, c(0.6, 0.7, 0.8, 0.9, 1), ordered_result=T)) %>%
   ggplot(aes(x=xmid, y = ymid, color=area_lvl)) + 
   geom_point(alpha = 0.2) + 
-  theme_pubr()
+  theme_pubr() + theme(legend.position = 'none')
 
-bird_m %>% 
-  mutate(area_lvl = cut(Area, c(0, 0.05, 0.1, 0.2, 0.5, 1), ordered_result=T, include.lowest = T)) %>%
-  #mutate(confidence_lvl = cut(confidence, c(0.6, 0.7, 0.8, 0.9, 1), ordered_result=T)) %>%
-  ggplot(aes(x=xmid, y=ymid, fill=area_lvl)) + 
-  stat_density_2d(geom = "polygon", alpha=0.2) + 
-  labs(title = 'Batch corrected bird location') + 
-  theme_pubr()
+p2 <- bird_scaled %>% 
+  mutate(confidence_lvl = cut(confidence, c(0.6, 0.7, 0.8, 0.9, 1), ordered_result=T)) %>%
+  ggplot(aes(x=xmid, y = ymid, color=confidence_lvl)) + 
+  geom_point(alpha = 0.2) + 
+  theme_pubr() + theme(legend.position = 'none')
+
+
+p1 | p2
 ```
 
 ```{r, eval=F}
@@ -300,7 +238,6 @@ Although Annas are generally larger than Rufous humming birds, we have to keep i
 
 ```{r, eval=T}
 
-# 
 # how to make circle plot: pick center of box, plot x/y
 # most interested in feet: on the left - feet are on the left. 
 # if you're on the right, your feet are on the right. Could probably pick the center
@@ -335,153 +272,4 @@ bird_m %>%
   facet_wrap(~Species) +
   labs(title = 'Birds mostly sit on the feeder', subtitle = "Annas are sometimes ID\'d in flight")
 
-```
-
-# Continuation of hummer-watch data analysis!
-
-```{r, message=F, warning=F}
-bird$batch <- 1
-bird$batch <- ifelse(bird$Timestamp > ymd_hms('2021-05-08 00:00:00'),2,bird$batch)
-bird$batch <- ifelse(bird$Timestamp > ymd_hms('2021-05-11 00:00:00'),3,bird$batch)
-bird$batch <- ifelse(bird$Timestamp > ymd_hms('2021-06-13 12:21:00'),4,bird$batch)                  
-bird$batch <- factor(bird$batch)
-
-bird_c <- bird %>% 
-  mutate(Month = month(Date, label=T)) %>%
-  group_by(batch) %>%
-  mutate(across(c(xmin, xmax, ymin, ymax), ~ .x-mean(.x)) ) %>%
-  mutate(xmid = (xmax+xmin)/2, ymid = (ymax+ymin)/2)
-```
-
-# Number of birds in an image for each class
-
-Rufous males can be very territorial. We'd like to know whether we can see evidence of the "chasing away" behaviour.
-
-If this is the case, then the disappearance of the male rufous should lead to an increase in the *absolute number* of Annas who come (but might not affect the number of female rufous. And the later disappearance of the female rufous should also lead to an increase in the number of Annas.
-
-Because it's hard to see this on a minute-to-minute basis, we'll summarize the number of Anna visits by day.
-
-```{r, eval=FALSE}
-
-# number of birds per day 
-
-bird_c %>% 
-  group_by(Date, Species, Sex) %>%
-  summarise(n=n(), `Temp C` = max(`Temp C`), .groups='keep') %>%
-  ggplot() + 
-  aes(x = Date, y = n, fill = Sex) + 
-  geom_bar(stat = 'identity') +
-  facet_wrap(~Species) + 
-  labs(y = 'Number of bird visits', title = 'Most Rufous visit in Summer, Female Annas visit in Fall,\nMale Annas are year-round')
-
-# Not really what happened
-
-bird_c %>% 
-  group_by(Date, Species, Sex) %>%
-  summarise(n=n(), `Temp C` = max(`Temp C`), .groups='keep') %>%
-  ggplot() + 
-  aes(x = n, y = `Temp C`, colour = Sex) + 
-  geom_point() + 
-  geom_smooth(method = 'lm', formula = 'y~x', se = F, linetype='dashed') +
-  facet_wrap(~Species, scales = 'free_x') + 
-  labs(x = 'Number of bird visits', title = 'Everyone except Female Annas prefers lower temperatures')
-
-```
-
-```{r, eval=T}
-
-# total number of birds per day
-bird %>%
-  filter(Species=='Annas') %>%
-  mutate('Rufous Males present' = Date < ymd('2021-07-31')) %>%
-  group_by(Date,`Rufous Males present`, Sex, .groups='keep') %>%
-  summarize(n=n()) %>%
-  ggplot(aes(x=`Rufous Males present`, y = n)) +
-  geom_rect(aes(fill = Sex),xmin = -Inf,xmax = Inf, ymin = -Inf,ymax = Inf, show.legend = F) + 
-  geom_boxplot() + 
-  facet_wrap("~Sex") + 
-  stat_compare_means(method = "t.test", label.y = 180, label.x = 1.3) + 
-  geom_bracket(xmin = 1, xmax = 2, label = '', y.position = c(170)) +
-  theme_pubr() + 
-  labs(title='Rufous Males are better at scaring off Female Annas than Male Annas') + 
-  scale_fill_manual(values = c('chartreuse1', 'chartreuse4'))
-
-# average number of birds per image per day
-bird %>%
-  filter(Species=='Annas') %>%
-  mutate('Rufous Males present' = Date < ymd('2021-07-31')) %>%
-  
-  group_by(Date,`Rufous Males present`, Timestamp, Sex, .groups='keep') %>%
-  summarize(n=n()) %>%
-  group_by(Date, `Rufous Males present`, Sex) %>%
-  summarize(n=mean(n), .groups = 'keep') %>%
-  
-  ggplot(aes(x=`Rufous Males present`, y = n)) +
-  geom_rect(aes(fill = Sex),xmin = -Inf,xmax = Inf, ymin = -Inf,ymax = Inf, show.legend = F) + 
-  geom_boxplot() + 
-  facet_wrap("~Sex") + 
-  stat_compare_means(method = "t.test", label.y = 1.41, label.x = 1.3) + 
-  geom_bracket(xmin = 1, xmax = 2, label = '', y.position = 1.4) +
-  theme_pubr() + 
-  labs(title='Rufous Males are better at scaring off Female Annas than Male Annas') + 
-  scale_fill_manual(values = c('chartreuse1', 'chartreuse4'))
-
-
-bird %>%
-  group_by(Date, Timestamp, Species, .groups='keep') %>%
-  summarize(n=n()) %>%
-  #group_by(Date, Species) %>%
-  #summarize(n=mean(n), .groups = 'keep') %>%
-  ggplot(aes(x=factor(Date), y = n, colour=Species)) + 
-  geom_point()+
-  geom_smooth(aes(colour =Species), method='lm', formula='y~poly(x,4)')
-
-bird %>%
-  #filter(Species=='Annas') %>%
-  mutate('Rufous Males present' = Date < ymd('2021-07-31')) %>%
-  group_by(Date, `Rufous Males present`, Species, Sex) %>%
-  summarize(n=n()) %>%
-  ggplot(aes(x=`Rufous Males present`, y = n)) +
-  geom_boxplot() +
-  facet_grid(rows =vars(Species), cols = vars(Sex), scales='free')
-
-
-
-```
-
-```{r, eval=T}
-bird  %>%group_by(Timestamp, Species, Sex) %>% summarize(n=n()) %>% ggplot() +aes(x = Timestamp, y=n, color = Species, fill=Species) + geom_bar(stat='identity') + facet_wrap('~Sex') +scale_color_manual(values=c('chartreuse2', 'chocolate3'))+scale_fill_manual(values=c('chartreuse2', 'chocolate3'))
-```
-
-```{r eval=T}
-bird %>%
-  group_by(Date, Month = factor(month(Timestamp, label=T)), Hour= hour(Timestamp), Species, Sex) %>%
-  summarise(n=n(), .groups='keep') %>%
-  group_by(Month, Hour, Species, Sex,.groups='keep') %>%
-  summarize(mean_n = mean(n)) %>%
-  ggplot(aes(x=Hour, y = mean_n, colour = Month)) + 
-  geom_point() + geom_line() + 
-  facet_grid(rows = vars(Species), cols = vars(Sex), scales = 'free')+ 
-  labs(y='average number of IDs per day')
-
-```
-
-```{r eval=T}
-bird %>%
-  mutate(Hour = hour(Timestamp), Month = factor(month(Timestamp, label=T))) %>%
-  group_by(Month, Hour, Species, Sex) %>%
-  summarise(n=n()) %>%
-  ggplot(aes(x = Hour, y = Month, fill=Month, color =Month)) +
-  ggridges::geom_density_ridges(alpha= 0.2) + 
-  facet_grid(rows = vars(Species), cols = vars(Sex))
-
-
-bird %>%
-  mutate(Hour = hour(Timestamp), Month = factor(month(Timestamp, label=T))) %>%
-  ggplot() +
-  aes(x=Hour, fill=Month) +
-  geom_bar() + 
-  theme_pubr() + theme(legend.position = 'right') +
-  facet_wrap('~Species', scale='free') +
-  labs(x = 'Hour of Day', y = 'Count', title = 'Daylight changes over the months!')
 ```
