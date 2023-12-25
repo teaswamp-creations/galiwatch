@@ -82,7 +82,7 @@ We're developing low-cost data collection and analysis systems for long-term pol
 
 <div class="galcolumn">
 <div class="imgbox">
-<a target="_top" href="project.html#Misc">
+<a target="_top" href="project.html#Gallery">
   <img src="images/mushroom.jpg" alt="mushroom" class="image"style="width: 100%;">   
   <div class="overlay"> 
   <div class="imgtext">Gallery</div>
