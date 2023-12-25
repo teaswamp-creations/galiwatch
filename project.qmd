@@ -5,17 +5,35 @@ toc-location: left
 freeze: true
 ---
 
-```{r message=FALSE, warning=FALSE, echo = FALSE}
-library(dplyr)
-library(DT)
-library(kableExtra)
-library(googlesheets4)
-gs4_auth('galiwatch.info@gmail.com')
-```
+Our [research blog](https://galiwatch.ca/blog.html) has detailed updates and new results! 
+
+See the [Pacific Maritime Big Book of Bees](https://teaswamp-creations.github.io/bee-book) for the reference material we've curated. 
+
+
+# Overview
+
+Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month study period. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a convolutional neural network. We are currently testing a Movidius Neural Compute Stick for this task.
+
+With systems up and running we hope to collect data from late March to early September including:
+
+-   Images of [Salal](https://bcinvasives.ca/play-your-part/plantwise/grow-me-instead/salal/) and [Dull Oregon grape](https://bcinvasives.ca/play-your-part/plantwise/grow-me-instead/oregon-grape/) from bud burst to fruit maturation.\
+-   Images of pollinators showing when and how often they come to visit, and enabling identification of different species.
+-   Day-to-day weather data, including high and low temperatures, pressure, humidity (Raspberry pi and Acurite), wind speed and direction, total rainfall, UV and light intensity (Acurite only). This will enable comparison of the two systems, and establish reproducibility of the instruments.
+-   Climate data including average, maximum and minimum temperatures; light intensity; pressure; wind speed, and total rainfall accumulation.
+-   Estimates of reducing and oxidising gases, and ammonia representing trends of increasing or decreasing air quality, and estimates of particulates, such as dust, pollen, mould spores, smoke etc.
+
+In addition to piloting the technology, the images and weather data will provide baseline information about our test site including:
+
+1.  Date of bud burst and duration of flowering of salal and dull Oregon grape.
+2.  Pollinator community composition visiting these plants during the flowering season (bees, hoverflies, butterflies, moths, wasps, other flies, beetles, hummingbirds).
+3.  Time of first appearance and seasonal dynamics of different pollinators.
+4.  How much of a role, if any, non-bee visitors play in the pollination of these two native plants.
+5.  How hyperlocal weather and variations in air quality influence pollinator activity.
+
+The images and weather data will add to what is already known about pollinators in coastal Douglas-fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom.
+
 
 # Study Site
-
-------------------------------------------------------------------------
 
 Galiano is a long narrow island of the Southern Gulf Island chain situated on the western edge of the Salish Sea. Located within the coastal Douglas-fir [biogeoclimatic zone](https://en.wikipedia.org/wiki/Biogeoclimatic_zones_of_British_Columbia), it has a semi-arid ecosystem characterized by a mild climate with cool wet winters and warm dry summers, and with annual drought conditions typically from mid-June to early October. Image adapted from [Galiano Story](https://galianostory.com/FLORAFAUNA.HTM).
 
@@ -49,9 +67,7 @@ The study site is situated mid island surrounded by the Mid Galiano Protected Ar
 
 Proximate habitat within about a 1/2 km radius includes bare bedrock, light well-draining sandy soil interspersed with clay deposits, and soil with high organic content from fallen trees and branches. Urbanisation includes several other nearby properties, some seasonal, others occupied year-round, which are serviced by paved roads, as well as about an acre of productive farmland (flowering crops include sunflowers, peas, beans, potatoes, basil, and artichokes, etc). There are two man-made ponds as well as areas of wetland and rough pasture.
 
-# Weather Monitoring
-
-------------------------------------------------------------------------
+# Weather monitoring
 
 Researchers have discovered that honey bees are able to detect changes in weather and alter their behaviour accordingly. Honey bees for example can be seen to respond minute-to-minute to the local weather conditions outside their hive, with the temperature and amount of sunlight being the most important factors signalling them to fly.[^1] In other studies, honey bees were seen to increase their foraging activity the day before a rainy day, but continued on a steady course when the weather was set fair.[^2]
 
@@ -63,16 +79,25 @@ Like honey bees, bumble bees feed on nectar and pollen and bring these resources
 
 [^3]: Peat J, Goulson D. Effects of experience and weather on foraging rate and pollen versus nectar collection in the bumblebee, Bombus terrestris. Behavioral Ecology and Sociobiology. 2005;58(2):152-6. https://doi.org/10.1007/s00265-005-0916-8
 
-Interestingly, different bee species have adapted different levels of resilience to weather conditions and will forage at different temperatures and light intensities, with some species continuing to forage even in strong winds or light rain.[^4]
+
+Interestingly, different bee species have adapted different levels of resilience to weather conditions and will forage at different temperatures and light intensities, with some species continuing to forage even in strong winds or light rain.[^4] 
+
+::: {.callout-note icon=false collapse="true" appearance="simple"}
+
+##	Equipment
+
+*	Raspberry Pi [Enviro + Air Quality](https://shop.pimoroni.com/products/enviro?variant=31155658457171) 
+*	[Acurite Atlas](https://www.acurite.com/) weather station
+* [Purple Air Sensors](https://www2.purpleair.com/products/list)
+
+:::
 
 [^4]: Vicens N, Bosch J. Weather-dependent pollinator activity in an apple orchard, with special reference to Osmia cornuta and Apis mellifera (Hymenoptera: Megachilidae and Apidae). Environmental Entomology. 2000;29(3):413-20. https://doi.org/10.1603/0046-225X-29.3.413
 
-## Equipment
-
--   Raspberry Pi [Enviro + Air Quality](https://shop.pimoroni.com/products/enviro?variant=31155658457171)
--   [Acurite Atlas](https://www.acurite.com/) weather station
 
 We will be investigating the connection between hyperlocal weather conditions and pollinator activity at our test site. The weather sensors and weather station are equipped to measure temperature, humidity, wind speed and direction, total rainfall, pressure, UV, and light intensity. Readings are dumped every 30s to an SD card.
+
+::: {.callout-note icon=false collapse="true" appearance="simple"}
 
 ## Air quality monitoring
 
@@ -84,65 +109,86 @@ The air quality monitoring sensors will give us an idea of how air quality chang
 
 </center>
 
-# Pollinator detection
+:::
 
-------------------------------------------------------------------------
+
+<center>
+
+<a href="https://galiwatch.ca/blog.html#category=climate"><button type="button" class="btn btn-secondary">Keep reading <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+
+</center>
+
+
+# Pollinator detection
 
 It's well known that bees are important wildflower pollinators; however, many non-bee pollinators including wasps, hover flies, other flies, beetles, butterflies, moths, and hummingbirds also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently.[^5] Local surveys of bee species that pollinate salal and dull Oregon grape found bumble bees to be the primary pollinators, with other bee species visiting less frequently (Wray & Elle, [SFU Pollination Ecology Lab](https://www.sfu.ca/people/eelle/bee_info.html)).
 
+
 [^5]: Rader R, Bartomeus I, Garibaldi LA, et al. Non-bee insects are important contributors to global crop pollination. Proceedings of the National Academy of Sciences. 2016;113(1):146-51. https://doi.org/10.1073/pnas.1517092112
+
+::: {.callout-note icon=false collapse="true" appearance="simple"}
 
 ## Equipment
 
--   Raspberry Pi for remote sensing
--   Raspberry Pi's high quality cameras for time-lapse photography
--   Pre-trained convolutional neural network via [Movidius NCS2](https://www.intel.com/content/www/us/en/developer/tools/neural-compute-stick/overview.html) for insect detection and image screening
+* Raspberry Pi for remote sensing
+* Raspberry Pi's high quality cameras for time-lapse photography
+* Pre-trained convolutional neural network via [Movidius NCS2](https://www.intel.com/content/www/us/en/developer/tools/neural-compute-stick/overview.html) for insect detection and image screening
 
-We have mounted two surveillance cameras comprising of a Raspberry Pi (powered over ethernet) fitted with a Pi camera and a 1 terabyte soild state drive, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every minute and the images are stored on the SSD.
+:::
 
-# Data Analysis
+We have mounted multiple surveillance cameras comprising of a Raspberry Pi (powered over ethernet) fitted with a Pi camera and a 1 terabyte solid state drive, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every 15 seconds to minute and the images are stored on the SSD.  
 
-------------------------------------------------------------------------
+<center>
+<a href="https://galiwatch.ca/blog.html#category=bees"><button type="button" class="btn btn-secondary">Keep reading <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+</center>
 
-Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month study period. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a convolutional neural network. We are currently testing a Movidius Neural Compute Stick for this task.
 
-## Bees and other pollinators of Galiano Island
 
-Although our two test plants salal and dull Oregon grape are particularly attractive to bumble bees, many other species of pollinators have been sighted on Galiano and we are interested to see if any of these are captured in our images. Our reference resource for insect identification is the [Biodiversity Galiano](https://biogaliano.org/) project, a community-based initiative to document the flora and fauna of Galiano Island, initiated in January 2016. So far, over 2,500 species have been reported of which more than 1,000 are [arthropods](https://en.wikipedia.org/wiki/Arthropod). Among these are 82 species of bees and wasps including honey bees (*Apis mellifera*), bumblebees (*Bombus* spp.) mining bees (*Andrena* spp.), long-horned bees (*Eucera* spp.), mason bees (*Osmia* spp.), cuckoo bees (*Nomada* spp.), sweat bees (*Halictus* and *Lasioglossum* spp.), blood bees (*Sphecodes* spp.), and various wasps.
+# Hummingbirds
 
-We will use this database to help ID any pollinators we see in our time-lapse images.
+There are two species of hummingbirds found near Galiano: the green [Anna's Hummingbird](https://en.wikipedia.org/wiki/Anna%27s_hummingbird) and the orange [Rufous Hummingbird](https://en.wikipedia.org/wiki/Rufous_hummingbird). ID images from [allaboutbirds.org](https://www.allaboutbirds.org/).
 
-<br>
+::: {layout-ncol="2"}
+![](images/anna_id.png)
 
-```{r, echo = F, message=F}
+![](images/rufous_id.png)
+:::
 
-'1viGZGvirMYKkMWLM2i1ubdrbHsg9A_302Ohhg8nP_nI' %>%
-read_sheet(col_types = "c") %>%
-  mutate(Group = factor(Group)) %>%
-  mutate(Species = stringr::str_to_title(Species)) %>%
-  datatable(filter = 'top', options = list(pageLength = 10, autoWidth = TRUE))
+We put a camera up and have taken a picture every minute since 2021, and are looking for the arrival and departure of the migrating Rufous hummingbird. The first and last picture of a male and female Rufous each year is [posted to iNaturalist](https://www.inaturalist.org/observations?place_id=any&taxon_id=6363&user_id=prharrigan&verifiable=any)
+
+![We've taken about a million pictures of our birdfeeder, including a very special one: it has an male and female Rufous, and a male and female Anna humming bird on the same feeder at the same time. ](images/one_of_each.png){width=300px}
+
+<center>
+<a href="https://galiwatch.ca/blog.html#category=hummingbirds"><button type="button" class="btn btn-secondary">Keep reading <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+</center>
+
+
+# Birdsong
+
+We have several "Audio moth" microphones, controlled by a Raspberry pi, which can be powered by and connected to a our computers via ethernet. This little device is now set to collect bird song at our site 24/7.
+
+The sound files are processed locally on the pi when a sound is detected using BirdNET-Pi which automatically extracts songs and chirps from the recordings, creates spectrograms of each recorded bird sound, stores the data in a database and enables data analysis and visualization.
+
+We brought these to the [Galiano Bioblitz 2023](https://biogaliano.org/), and now have over 100,000 recordings from three different areas. Analysis of this is ongoing. 
+
+![American Robin. Photo: Simon A licensed under CC BY-NC 4.0](images/American_robin.jpg)
+
+<center>
+
+```{r, echo=F}
+embedr::embed_audio("images/American_Robin.mp3")
+
 ```
 
-<br>
-
-With systems up and running we hope to collect data from late March to early September including:
-
--   Images of [Salal](https://bcinvasives.ca/play-your-part/plantwise/grow-me-instead/salal/) and [Dull Oregon grape](https://bcinvasives.ca/play-your-part/plantwise/grow-me-instead/oregon-grape/) from bud burst to fruit maturation.\
--   Images of pollinators showing when and how often they come to visit, and enabling identification of different species.
--   Day-to-day weather data, including high and low temperatures, pressure, humidity (Raspberry pi and Acurite), wind speed and direction, total rainfall, UV and light intensity (Acurite only). This will enable comparison of the two systems, and establish reproducibility of the instruments.
--   Climate data including average, maximum and minimum temperatures; light intensity; pressure; wind speed, and total rainfall accumulation.
--   Estimates of reducing and oxidising gases, and ammonia representing trends of increasing or decreasing air quality, and estimates of particulates, such as dust, pollen, mould spores, smoke etc.
-
-In addition to piloting the technology, the images and weather data will provide baseline information about our test site including:
-
-1.  Date of bud burst and duration of flowering of salal and dull Oregon grape.
-2.  Pollinator community composition visiting these plants during the flowering season (bees, hoverflies, butterflies, moths, wasps, other flies, beetles, hummingbirds).
-3.  Time of first appearance and seasonal dynamics of different pollinators.
-4.  How much of a role, if any, non-bee visitors play in the pollination of these two native plants.
-5.  How hyperlocal weather and variations in air quality influence pollinator activity.
-
-The images and weather data will add to what is already known about pollinators in coastal Douglas-fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom.
+</center>
 
 <br>
+
+Future endeavors may expand to bats, and... fish!? 
+
+<center>
+<a href="https://galiwatch.ca/blog.html#category=audio%20moth"><button type="button" class="btn btn-secondary">Keep reading <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+</center>
+
 
 # References
