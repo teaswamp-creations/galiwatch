@@ -1,10 +1,185 @@
 [
   {
+    "objectID": "project.html",
+    "href": "project.html",
+    "title": "Project Details",
+    "section": "",
+    "text": "Our research blog has detailed updates and new results!\nSee the Pacific Maritime Big Book of Bees for the reference material we’ve curated."
+  },
+  {
+    "objectID": "project.html#footnotes",
+    "href": "project.html#footnotes",
+    "title": "Project Details",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nClarke D, Robert D. Predictive modelling of honey bee foraging activity using local weather conditions. Apidologie. 2018;49(3):386-96. https://doi.org/10.1007/s13592-018-0565-3↩︎\nHe XJ, Tian LQ, Wu XB, Zeng ZJ. RFID monitoring indicates honeybees work harder before a rainy day. Insect science. 2016;23(1):157-9. https://doi.org/10.1111/1744-7917.12298↩︎\nPeat J, Goulson D. Effects of experience and weather on foraging rate and pollen versus nectar collection in the bumblebee, Bombus terrestris. Behavioral Ecology and Sociobiology. 2005;58(2):152-6. https://doi.org/10.1007/s00265-005-0916-8↩︎\nVicens N, Bosch J. Weather-dependent pollinator activity in an apple orchard, with special reference to Osmia cornuta and Apis mellifera (Hymenoptera: Megachilidae and Apidae). Environmental Entomology. 2000;29(3):413-20. https://doi.org/10.1603/0046-225X-29.3.413↩︎\nRader R, Bartomeus I, Garibaldi LA, et al. Non-bee insects are important contributors to global crop pollination. Proceedings of the National Academy of Sciences. 2016;113(1):146-51. https://doi.org/10.1073/pnas.1517092112↩︎"
+  },
+  {
+    "objectID": "posts/recap-010522/index.html",
+    "href": "posts/recap-010522/index.html",
+    "title": "2021 recap",
+    "section": "",
+    "text": "Reading time: &lt;1 minute\nWe got a lot done this year! Lets take a look at the milestones we achieved.\n\n\n\n\n\nJAN 2021\n\n\n\n\nHello World\n\n\nInspired by Toke Høye’s PollinatorWatch, Operation GaliWatch is born. We order weather monitoring hardware and start putting together the Raspberry Pi setup.\n\n\n\n\n\nMAR 2021\n\n\n\n\nFirst Steps\n\n\nThe setup is ready cameras positioned, air quality and weather sensors fine-tuned and working well, and we collect our first datapoints!\nFirst bee of the year spotted on Mar 8th - a Sitka bumble bee.\n\n\n\n\n\nAPR 2021\n\n\n\n\nMaking Friends\n\n\nWe get in touch with Biodiversity Galiano, and connect with IMERSS\n\n\n\n\n\nMAY 2021\n\n\n\n\nPilot Project\n\n\nWe measure pollinator activity and environmental data at our pilot site.\n\n\n\n\n\nAUG 2021\n\n\n\n\nFirst Data Stories\n\n\nWe share our pilot data and preliminary results\n\n\n\n\n\nNOV 2021\n\n\n\n\nLive monitoring\n\n\nWe join PurpleAir and our sensor goes live!\n\n\n\n\n\nDEC 2022\n\n\n\n\nWhat’s next?\n\n\nWe captured more pollinators on our environmental cams than we anticipated: hummingbirds and bats! We’ll see where Galiwatch takes us next!"
+  },
+  {
+    "objectID": "posts/oregon-grape-seasons-130323/index.html",
+    "href": "posts/oregon-grape-seasons-130323/index.html",
+    "title": "Oregon grape - seasonal variations",
+    "section": "",
+    "text": "Reading time: &lt;1 minute"
+  },
+  {
+    "objectID": "posts/oregon-grape-seasons-130323/index.html#seasonal-variations-2021-versus-2022",
+    "href": "posts/oregon-grape-seasons-130323/index.html#seasonal-variations-2021-versus-2022",
+    "title": "Oregon grape - seasonal variations",
+    "section": "Seasonal Variations: 2021 versus 2022",
+    "text": "Seasonal Variations: 2021 versus 2022\nPhenology is the study of how the timing of events in a plant’s life cycle, such as bud burst, flowering, and fruiting, is affected by seasonal and environmental changes. It is an important field of study for understanding how plants respond to changes in their environment, and can provide insights into how ecosystems may be affected by climate change. 1\nIn this post, we summarize some of the key weather differences in summer 2021 versus 2022, and how this impacted the phenology of the Oregon Grape plans at our study site.\n\nData collection\n Weather data collected continuously with Acurite Atlas weather station\n Time lapse photography\n\n2021: pictures taken every minute from sunrise to sunset\n\nCamera 1 - April 20th to October 16th\n\n2022: pictures taken every 15s from sunrise to sunset\n\nCamera 1 - April 3rd to May 4th\nCamera 2 - April 12th to April 26th\n\n\n Video\n\n2021 only: video capture of 4 minutes out of every 5 from peak blooming to end of flowering"
+  },
+  {
+    "objectID": "posts/oregon-grape-seasons-130323/index.html#phenology",
+    "href": "posts/oregon-grape-seasons-130323/index.html#phenology",
+    "title": "Oregon grape - seasonal variations",
+    "section": "Phenology",
+    "text": "Phenology"
+  },
+  {
+    "objectID": "posts/oregon-grape-seasons-130323/index.html#temperature-trends",
+    "href": "posts/oregon-grape-seasons-130323/index.html#temperature-trends",
+    "title": "Oregon grape - seasonal variations",
+    "section": "Temperature trends",
+    "text": "Temperature trends"
+  },
+  {
+    "objectID": "posts/oregon-grape-seasons-130323/index.html#rainfall",
+    "href": "posts/oregon-grape-seasons-130323/index.html#rainfall",
+    "title": "Oregon grape - seasonal variations",
+    "section": "Rainfall",
+    "text": "Rainfall"
+  },
+  {
+    "objectID": "posts/oregon-grape-seasons-130323/index.html#bee-counts",
+    "href": "posts/oregon-grape-seasons-130323/index.html#bee-counts",
+    "title": "Oregon grape - seasonal variations",
+    "section": "Bee counts",
+    "text": "Bee counts\nBest estimates of bee visits to the Oregon grape patch were derived from the time-lapse and video data. Overall similar numbers of bees came to feed both years despite quite varying weather patterns."
+  },
+  {
+    "objectID": "posts/oregon-grape-seasons-130323/index.html#summary",
+    "href": "posts/oregon-grape-seasons-130323/index.html#summary",
+    "title": "Oregon grape - seasonal variations",
+    "section": "Summary",
+    "text": "Summary"
+  },
+  {
+    "objectID": "posts/oregon-grape-seasons-130323/index.html#footnotes",
+    "href": "posts/oregon-grape-seasons-130323/index.html#footnotes",
+    "title": "Oregon grape - seasonal variations",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis introduction was generated using ChatGPT↩︎"
+  },
+  {
+    "objectID": "posts/operations-update-130323/index.html",
+    "href": "posts/operations-update-130323/index.html",
+    "title": "Operations Update 2023",
+    "section": "",
+    "text": "Reading time: 2 minutes\nThe Galiwatch project was initiated in February 2021 to monitor pollinators and weather patterns at a mid-Island site on Galiano Island.\nThe initial goal was to monitor pollinator activity on Oregon grape (Mahonia nervosa) and salal (Gaultheria shallon), two native flowering plants that grow abundantly in the forest understory.\nOur approach was to collect timelapse pictures and video, and to collect weather and air quality data using raspberry-pi technology and an Accurite weather station system, as described on the website.\nA neural network that identified bees in our images was investigated to analyse the data."
+  },
+  {
+    "objectID": "posts/operations-update-130323/index.html#year-1-2021",
+    "href": "posts/operations-update-130323/index.html#year-1-2021",
+    "title": "Operations Update 2023",
+    "section": "Year 1: 2021",
+    "text": "Year 1: 2021\n\nData collection\n\nOregon grape - we successfully collected pictures at 1 min intervals throughout the Oregon grape blooming period (mid April to early May), as well as video footage (4 of 5 mins) during the peak blooming period.\nSalal - data collection for salal was less successful due to a camera failure.\nWeather - data collection with enviro-pi and Accurite weather station was successful.\n\n\n\nLessons learned\nThe volume of data generated in monitoring two different plant systems is unmanageable at this point.\n\nDecision taken to focus on Oregon grape as the single focus for long-term monitoring of pollinator activity at the study site.\n\nVideo footage showed most bees spend between 10s and 35s on a flower before moving on.1 min time-lapse photographs captured approximately 20-25% of bees seen in the videos. One minute time-lapse photography is insufficient to capture changes in pollinator numbers due to the low number of positive hits. Videoing continually on the other hand is unmanageable in terms of data handling capacity.\n\nDecision taken to take 15s time-lapse pictures for 2022 season with two cameras.\n\nOccasional gaps in weather and air quality data collection with the enviro-pi occurred during weather-related internet drops.\n\nDecision taken to continue as is"
+  },
+  {
+    "objectID": "posts/operations-update-130323/index.html#year-2-2022",
+    "href": "posts/operations-update-130323/index.html#year-2-2022",
+    "title": "Operations Update 2023",
+    "section": "Year 2: 2022",
+    "text": "Year 2: 2022\n\nData collection\n\nWe successfully collected data at 15 sec intervals throughout the Oregon grape blooming period with two cameras in operation, each focused on a cluster of flower spikes.\nThe enviro-pi weather data collection system was not reliable and started failing in late spring with only patchy PM2.5 data collection attainable. This was replaced by a Purple Air monitor in August 2022. We filled the data gap by accessing data from a neighbouring system on Salt Spring Island approximately 3 km away.\n\n\n\nLessons learned\n15s time-lapse photography produces a manageable data set, but we need some video coverage to determine proportion of bee visits captured by 15s time-lapse pics and inform estimates of total visits.\n\nDecision taken to proceed with 15s time-lapse (two cameras) and video 4 of 5 mins for 5 days mid-way through blooming in 2023.\n\nThe weather station and Purple Air system for monitoring air quality are very reliable.\n\nWeather data collection to continue as is.\n\nTraining of a neural network for identifying bees is challenging!\n\nA new strategy for training the neural work to identify bees in time-lapse pics is underway"
+  },
+  {
+    "objectID": "posts/indoor-air-replacement-121022/index.html",
+    "href": "posts/indoor-air-replacement-121022/index.html",
+    "title": "Indoor air replacement",
+    "section": "",
+    "text": "Reading time: 3 minutes\n\nSmokey air exchange\nThe air INSIDE our building changes more slowly than the air OUTSIDE. Last night there was a lot of smoke in the air until the afternoon, when it became very windy and the smoke was replaced with clean air from the north, such that the PM2.5s outside went from above 20 down to 1-2 in about 10 minutes. Let’s call this “almost instantly” (see Figure 1, blue line).\n\n\n\n\n\nFigure 1: Indoor/outdoor air exchange\n\n\n\n\nThe PM2.5s inside the building then dropped in a nicely exponential fashion (gold line in Figure 1 above, or the blue line plotted on a log scale to the right), allowing us to estimate the half-time for replacement of the indoor air (Figure 2). The slope is -.0012, so the half-time for the replacement of the air inside the building was 577 minutes, or around 9.5 hours.\n\n\n\nFigure 2: Indoor air replacement half-life estimation\n\n\nThis seemed surprisingly FAST(!) since all the doors and windows were closed and there was no one at the building and no ventilation. However, the EPA standards for building ventilation recommend 0.35 air changes per hour for residential buildings, or turnover every three hours. However, that is for places with active air exchange, rather than just leaky doors, windows and walls. This air turnover rate of ~9.5 hours is for when it is VERY WINDY, and probably the actual turnover on normal days is quite a bit less.\nAssuming air exchange with a half-life around 10 hours also lets us create a model (red line in figure Figure 4) of both the actual indoor PM2.5 and the temperatures as a function of the outdoor values. Actual indoor values are shown in orange and outdoor in blue. Over a larger timeframe of three days (4500 minutes), the fit of the PM2.5 is not great (see Figure 4, middle panel), suggesting that the wind-assisted value we calculated might have been a bit too fast for when it is not windy (which started around at the 3000 minute mark).\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Models of air exchange with different half-lifes. Note: Blue lines are actual outdoor PM2.5, orange lines are actual indoor PM2.5\n\n\nHowever, this is much better than an indoor PM2.5 model assuming exchange of 1 hour (the indoors would look like the outdoors) or 100 hours (indoor would be almost independent of outdoor), so we are in the right order of magnitude.\n\n\nTemperature\nAs another “reality check” we can also make the same simple exponential model of indoor temperature as function of outdoor temperature. Once again, assuming a half-life of around 10 hours gives us a reasonable reflection of the outdoor value, whereas the 1 hour and 100 hour half-lives are plainly unreasonable.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Models of temperature change with different half-lifes. Note: Blue lines are actual outdoor temperature, orange lines are actual indoor temperature.\n\n\n\n\nConclusions\nUsing an estimated air exchange of 10 hours gives reasonable approximations of indoor PM2.5 and temperature, suggesting that air exchange is driving both, which makes sense. Probably we have discovered the value of insulation."
+  },
+  {
+    "objectID": "posts/hummer-watch-200323/index.html",
+    "href": "posts/hummer-watch-200323/index.html",
+    "title": "Where’s rufous?",
+    "section": "",
+    "text": "Reading time: &lt;1 minute\n\nOur humming bird camera is up and running, catching lots of great pics of male and female Anna’s humming birds, but we are still waiting for the return of the rufous. The males are usually first to arrive followed by females a few days or weeks later.\nLast year we first caught a male and a female on camera on the same day - March 13th the first day our camera was on.\n\nWe were probably a little late getting going as according to iNaturalist one was spotted on March 9th, 2022 in Ladysmith…\nThis year, they had made it to Vashon Island, between Tacoma and Seattle, Washington on March 13th, and yesterday (March 19th) one was seen at a feeder in Richmond Nature Park, BC.\nFingers crossed they will be here soon!"
+  },
+  {
+    "objectID": "posts/frog-watch-221022/index.html",
+    "href": "posts/frog-watch-221022/index.html",
+    "title": "Galiano frogs",
+    "section": "",
+    "text": "Reading time: &lt;1 minute"
+  },
+  {
+    "objectID": "posts/frog-watch-221022/index.html#northern-pacific-tree-frogs-pseudacris-regilla",
+    "href": "posts/frog-watch-221022/index.html#northern-pacific-tree-frogs-pseudacris-regilla",
+    "title": "Galiano frogs",
+    "section": "Northern Pacific tree frogs (Pseudacris regilla)",
+    "text": "Northern Pacific tree frogs (Pseudacris regilla)\nThese frogs are often bright green, but also come in grey, tan, and brown. They can change colour during the season to better match their environment. The colour change is triggered in response to brightness.\n\n\n\n\n\n\nLike most frogs, tree frogs are most active at night, typically resting up in shady, damp spots during the day. At our study site we often find them in or near the plant pots that we water through the dry summer months.\nOur infra red time lapse camera caught this one hopping through the salal bushes in the middle of the night.\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp \n\n\n\nTree frogs are also known as Pacific chorus frogs. If you have ever been to Galiano in the spring or early summer - mating season - you will likely know why!!"
+  },
+  {
+    "objectID": "posts/frog-watch-221022/index.html#northern-red-legged-frogs-rana-aurora",
+    "href": "posts/frog-watch-221022/index.html#northern-red-legged-frogs-rana-aurora",
+    "title": "Galiano frogs",
+    "section": "Northern red-legged frogs (Rana aurora)",
+    "text": "Northern red-legged frogs (Rana aurora)\nLike tree frogs, the Northern red-legged frogs come in a variety of colours, with their colour depending on age, time of year, and location. These frogs are shyer than the chirpy tree frog, and much less common. They are considered a threatened species on the Provincial blue-list."
+  },
+  {
+    "objectID": "posts/bombus-vosnesenskii-151023/index.html",
+    "href": "posts/bombus-vosnesenskii-151023/index.html",
+    "title": "Feature bee - Bombus vosnesenskii",
+    "section": "",
+    "text": "Reading time: 4 minutes\nThis article was prepared for The Native Bee Society of BC’s (NBSBC) Quarterly Buzz Oct, 2023 and edited for the Galiwatch site.\nBombus vosnesenski (B. vos) was first seen on Galiano in 2017 1, and is one of the six bumble bees currently known to call Galiano home.\nWith its distinctive bright yellow face, and indiscriminate taste for nectar and pollen sources, you will almost certainly see this black bumble buzzing around all sorts of different plants in the Gulf Islands, Vancouver Island, and the Lower Mainland, as in recent years it has become one of the most common bumblebees in the region.\nThis has not always been the case though - not that long ago B. vos was a rarity in British Columbia. It first appears in the records in the 1950s when a few specimens were found in the interior of BC, and there was talk of it being assigned threatened or endangered status. By 2000 however, it had expanded through the Okanagan and Similkameen valleys, as well as having become firmly established in the Pacific Maritime region 2."
+  },
+  {
+    "objectID": "posts/bombus-vosnesenskii-151023/index.html#footnotes",
+    "href": "posts/bombus-vosnesenskii-151023/index.html#footnotes",
+    "title": "Feature bee - Bombus vosnesenskii",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAndrew Simon. 2017. Available at https://inaturalist.ca/observations/6412054. Accessed 27/09/2023↩︎\nFraser DF, Copley CR, Elle E, Cannings RA. Changes in the Status and Distribution of the Yellow-faced Bumble Bee. Journal of the Entomological Society of British Columbia. 2012;109:31-7.↩︎\niNaturalist. (n.d.). Map of world research grade observations of B. vosnesenskii from Jan1, 2014, to 15 Sept 2023. Available from: https://inaturalist.ca/observations?place_id=any&subview=map&taxon_id=57689 Accessed Sept 16th, 2023.↩︎\niNaturalist. (n.d.). Map of British Columbia research grade observations of B. vosnesenskii. Jan 1, 2014, to Sep 15, 2023. Available from: https://inaturalist.ca/observations?place_id=7085&subview=map&taxon_id=57689 Accessed Sept 16th, 2023.↩︎\nData source: https://inaturalist.ca/observations?place_id=any&subview=table&taxon_id=57689↩︎"
+  },
+  {
+    "objectID": "posts/bee-loss-190722/index.html",
+    "href": "posts/bee-loss-190722/index.html",
+    "title": "Bee loss in North America",
+    "section": "",
+    "text": "Reading time: 3 minutes\nWild pollinators are an integral part of native plant communities and are highly effective at pollinating flowers in natural ecosystems. Plant pollination is essential for plant reproduction, which in turn provides fruits and seeds for wildlife. Abundance and diversity of pollinators ensure a stable, highly productive ecosystem.\nChanging environmental conditions caused by weather, climate change, or human interventions, may disrupt pollinator activity for some species but enhance it for others. Within natural ecosystems, biodiversity and abundance of wild bee populations and other non-bee pollinators provides redundancy that ensures ongoing pollination and plant productivity despite a changing environment.\nManaged pollinators, most commonly honey bees, are super-generalist pollinators that are essential for, or enhance, the pollination and production of many agricultural crops. We rely heavily on honey bees for certain types of food production - for example they are considered essential to sustaining the global supply of almonds - and support billions of dollars worth of food production worldwide. So, it is very worrying that beekeepers report honeybee populations are dwindling, and that their colonies are becoming increasingly vulnerable to environmental stressors.\nAlongside honey bees, wild pollinators including bumble bees (genus Bombus), other types of bees, wasps, and other non-bee species also make important contributions to crop production. Interestingly, on organic farms near natural habitat, wild bees can provide full pollinator services and, as long as diversity is maintained, there is sustained success.1\nIt seems possible then that by making adjustments that favour abundance and diversity of wild pollinators we could build capacity and resilience within natural and agricultural ecosystems that offset shortfalls in managed pollinator services resulting from the ongoing, perplexing losses of managed colonies."
+  },
+  {
+    "objectID": "posts/bee-loss-190722/index.html#footnotes",
+    "href": "posts/bee-loss-190722/index.html#footnotes",
+    "title": "Bee loss in North America",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nKremen C, Williams NM, Thorp RW. Crop pollination from native bees at risk from agricultural intensification. Proceedings of the National Academy of Sciences. 2002;99(26):16812-6. https://doi.org/10.1073/pnas.262413599↩︎\nSoroye P, Newbold T, Kerr J. Climate change contributes to widespread declines among bumble bees across continents. Science. 2020;367(6478):685-8. http://doi.org/10.1126/science.aax8591↩︎\nWray J & Elle E. Simon Fraser University. Wild and managed pollinators: current status and strategies to increase diversity. https://www.sfu.ca/content/dam/sfu/people/eelle/elle_bee_info/Metro_Vancouver_report.pdf Accessed 28 March, 2021.↩︎\nFRASER, David Frank et al. Changes in the Status and Distribution of the Yellow-faced Bumble Bee. Journal of the Entomological Society of British Columbia, [S.l.], v. 109, p. 31-37, may 2013. ISSN 1929-7890. Available at: https://journal.entsocbc.ca/index.php/journal/article/view/261. Accessed 13 Apr 2021.↩︎\nSimon A. Water into nectar: The effects of seasonal drought on bumble bee and flowering plant communities. MSc Thesis, University of Victoria, 2020. Available at https://dspace.library.uvic.ca/handle/1828/11837↩︎"
+  },
+  {
     "objectID": "gallery.html",
     "href": "gallery.html",
     "title": "Gallery",
     "section": "",
     "text": "Here are a bunch of images of mushrooms from Galiano we like. Click for a larger view."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Get in touch!",
+    "section": "",
+    "text": "Get in touch!"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About\nTea Swamp is a group of citizen scientists located in British Columbia, Canada.\nWe’re a community research project with IMERSS, and friends with Biodiversity Galiano!\n\n\nProject Origins\nInspired by Toke Høye’s PollinatorWatch hosted on Zooniverse, we are setting up time-lapse cameras to gather thousands of images of pollinators visiting two common native flowering plants, salal and dull Oregon grape, at a mid-island location on Galiano Island, in the Pacific Northwest. We are also monitoring the local hummingbirds and bird sounds.\nWe plan to automate the analysis of the images to document the number and type of pollinator visitors we get over the flowering season.\nWe have also set up a weather station, weather sensors and a particulate matter sensor to gather hyperlocal weather and air quality data in the immediate vicinity of our cameras. In addition to monitoring trends in air quality, the particulate matter sensor should give us an estimate of pollen count and detect smoke from wildfire drift.\nAs well as piloting the technology, these observations will be a window to the day-to-day ins and outs of Galiano pollinators that will help us better understand how wildflowers and pollinators are affected by local weather events."
   },
   {
     "objectID": "blog.html",
@@ -14,53 +189,130 @@
     "text": "Feature bee - Bombus vosnesenskii\n\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\nbees\n\n\n\n\n\n\n\n\n\n\n\nOct 15, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\nMeet the bees of Galiano\n\n\n\n\n\n\n\nbees\n\n\n\n\n\n\n\n\n\n\n\nAug 13, 2023\n\n\nCait Harrigan\n\n\n\n\n\n\n  \n\n\n\n\nBird Song\n\n\n\n\n\n\n\nnews\n\n\naudio moth\n\n\nanalysis\n\n\nbird song\n\n\n\n\n\n\n\n\n\n\n\nApr 22, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\nThey’re here!!\n\n\n\n\n\n\n\nnews\n\n\nchit chat\n\n\nhummingbirds\n\n\n\n\n\n\n\n\n\n\n\nMar 30, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\nWhere’s rufous?\n\n\n\n\n\n\n\nnews\n\n\nchit chat\n\n\nhummingbirds\n\n\n\n\n\n\n\n\n\n\n\nMar 20, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\nTracking hummingbirds at the feeder\n\n\n\n\n\n\n\nhummingbirds\n\n\ncode\n\n\ndata analysis\n\n\ndeep-dive\n\n\n\n\n\n\n\n\n\n\n\nMar 17, 2023\n\n\nCait Harrigan\n\n\n\n\n\n\n  \n\n\n\n\nWhere we’re at March 2022\n\n\n\n\n\n\n\nnews\n\n\nchit chat\n\n\n\n\n\n\n\n\n\n\n\nMar 17, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\nOperations Update 2023\n\n\n\n\n\n\n\nnews\n\n\nhardware\n\n\n\n\n\n\n\n\n\n\n\nMar 13, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\nOregon grape - seasonal variations\n\n\n\n\n\n\n\nbees\n\n\nclimate\n\n\nphenology\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nMar 13, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\nFires in summer 2021\n\n\n\n\n\n\n\nclimate\n\n\ncode\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nFeb 22, 2023\n\n\nCait Harrigan, Richard Harrigan\n\n\n\n\n\n\n  \n\n\n\n\nGaliano frogs\n\n\n\n\n\n\n\nnews\n\n\nfrogs\n\n\n\n\n\n\n\n\n\n\n\nOct 22, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\nIndoor air replacement\n\n\n\n\n\n\n\nclimate\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2022\n\n\nRichard Harrigan\n\n\n\n\n\n\n  \n\n\n\n\n2021 Bee count\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\ndata analysis\n\n\nbees\n\n\n\n\n\n\n\n\n\n\n\nAug 4, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\nBee loss in North America\n\n\n\n\n\n\n\nbees\n\n\nconservation\n\n\ndeep-dive\n\n\n\n\n\n\n\n\n\n\n\nJul 19, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\n2021 recap\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMay 1, 2022\n\n\nCait Harrigan\n\n\n\n\n\n\n  \n\n\n\n\nPurple Air sensor\n\n\n\n\n\n\n\nnews\n\n\nclimate\n\n\n\n\n\n\n\n\n\n\n\nDec 19, 2021\n\n\nCait Harrigan\n\n\n\n\n\n\n  \n\n\n\n\nAir quality measurement\n\n\n\n\n\n\n\nclimate\n\n\npilot project\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nJun 16, 2021\n\n\nKath Quayle\n\n\n\n\n\n\n  \n\n\n\n\nOregon grape\n\n\n\n\n\n\n\nconservation\n\n\npilot project\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\n\n\nMay 31, 2021\n\n\nKath Quayle\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/weather-story-160621/index.html",
-    "href": "posts/weather-story-160621/index.html",
-    "title": "Air quality measurement",
+    "objectID": "fitcounts.html",
+    "href": "fitcounts.html",
+    "title": "How many bees do you see?",
     "section": "",
-    "text": "Reading time: 5 minutes\n\nAir quality management in British Columbia\n\n\n\n\n\n\n\nBC actively monitors air quality and is part of the national Air Quality Management System (AQMS). The AQMS divides provinces into air zones that exhibit similar air quality characteristics - BC has seven air zones. Galiano is in the Georgia Straight Air Zone, which includes Victoria, Nanaimo, Comox, Campbell River, Whistler, Squamish, and Powell River.\n\n\nWeather Data & Air Pollution\n\n\n\n\n\n\nAir quality changes with the weather. Wind, rain, humidity and other weather parameters can all influence how air pollutants move around.\nNitrous oxides, carbon monoxide, ammonia, sulphur dioxide, methane, and carbon dioxide are polluting gases that may be emitted into the atmosphere in harmful amounts. Our enviro air quality sensors detect oxidising (e.g., NO2) and reducing gases (e.g., CO and ammonia) rather than individual gases, and can reveal trends of increasing or decreasing air quality.\nIn our setting, we are most likely to detect gaseous pollutants as a result of smoke from wood burning stoves (common in our setting) or wildfires (drifting smoke), as well as from vehicle exhaust due to proximity to roads.\n\n\nAir pollution – particulate matter (PM)\n\n\n\n\n\n\nPM 2.5 refers to fine airborne particles with a diameter of 2.5 microns or less. They are produced by many human activities and natural sources including vehicle exhausts, forestry operations, wood stoves, wildfires, and wind. Fine particulate matter may be harmful to health.\nPM 10 refers to all solid and liquid airborne particles with a diameter of 10 microns or less. These particles come from lots of different sources and are highly variable as a result. Many are formed by chemical or physical processes in the atmosphere. Inhaling PM 10s may also be bad for your health.\nBC’s air quality objectives reflect the maximum acceptable level of pollutants according to national air quality targets. The 24 hour average air quality objectives for PM 2.5 (24hr) and PM 10 (24hr) are 25 µg/m3 and 50 µg/m3, respectively.\n\n\nNO2\n\n\n\n\n\n\nBC’s air quality objective for NO2 (primary oxidising gas detected by our sensors) is 100 parts per billion (ppb) averaged over a 1-hour period. For the two-week period from Apr 4–17, NO2 (1hr) levels measured in Victoria (Colwood City Hall) ranged from approximately 3-12 ppb, while our resistance readings ranged from approximately 10-1550 ohms. If we assume the air quality variation across the Georgia Straight air zone is representative for our site, a change in resistance of 170 ohms is equivalent to a change in NO2 of around 1 ppb.\n\n\nCO and NH3\n\n\n\n\n\n\nCarbon monoxide (CO) and ammonia are reducing gases. Our enviro sensors provide a qualitative estimate of their concentration in the atmosphere with decreasing resistance measurements corresponding to decreasing air quality. Resistance readings for reducing gases and ammonia through April ranged from 90-260 Ω (around a 3-fold change), and from 90-1500 Ω (around a 16-fold change), respectively. At this time of year, wood stoves and local traffic are likely major contributors to fluctuations in air quality."
+    "text": "We’re launching a Flower-Insect Timed (FIT) counts survey for British Columbia!\n\nFIT counts1 are a way to monitor pollinator populations using a quadrat (50 x 50cm square frame) and a simple survey (FIT survey).\nIt takes about 15 minutes of your time (a 10-minute count) and can be done wherever insects are visiting flowers when the weather is warm and dry, ideally above 13°C.\nThe more data we collect, the better we can track changes in pollinator populations over time.\n\n\n\nTake our printable worksheet with you to a nice flower patch\nRecord the date, location, habitat, and weather conditions on the FIT survey form\nPosition your quadrat and record the flower patch details\nFIT count: record the count start time and start your timer (set for 10 minutes). Count every insect that sits or lands on a flower, but please don’t count the same insect twice.\nIf you can, please take pictures of the flowers and pollinators you see in the quadrat.\nFill out the FIT counts form to report your counts and upload photos\n\n\n\n\nYou can make a 50cm x 50 cm quadrat from stiff cardboard or light wire, paper clips or hair pins, and masking tape. 1. Cut four strips of cardboard 2 x 50cm and 2 x 54cm and 2cm wide 2. Assemble into a square and pin the corners with paper clips or hair pins 3. Secure corners with masking tape 4. Cover all four sides with masking tape for added strength\n\nIf you have light weight wire on hand, you can simply cut a 203cm length, bend it into a square and affix the corner by twisting the two ends together. You can cover the wire with masking tape for better visibility.\nThe quadrat works as a simple guide when performing FIT counts.\n\n\n\n\nNative: camas, sea blush, spring gold, ocean spray, blackberry, Nootka rose, Oregon grape, salal, gum weed, any native willow, Douglas’ aster, thistle\nIntroduced: dandelion, buttercup, clover, blackberry, lavender, heather, thistle\n\n\n\nThere are lots of interesting non-bee pollinators to discover. To help us identify insects you come across, please upload photos of all pollinators you see in the quadrat during the FIT count, not just bees!\n\n\n\nFIT counters are eligible to receive the galiwatch “every bee counts” sticker"
   },
   {
-    "objectID": "posts/recap-170323/index.html",
-    "href": "posts/recap-170323/index.html",
-    "title": "Where we’re at March 2022",
+    "objectID": "fitcounts.html#heres-how-to-participate",
+    "href": "fitcounts.html#heres-how-to-participate",
+    "title": "How many bees do you see?",
     "section": "",
-    "text": "Reading time: &lt;1 minute\nHappy St Patrick’s Day - and here’s the craic!!\nSo the weather is finally warming up here on Galiano after a chilly and stormy winter, with lots of power cuts. There was another short one this morning!!\nRichard is playing with the humming bird images and has some great pics. Here’s one of a male and female Anna’s and a male and female rufous all at the feeder at the same time - the pictures are taken at one minute intervals, so quite the shot as they usually don’t like to share!\n\n\n\nFrom left to right: rufous male; Anna’s female; rufous female; Anna’s male.\n\n\nWhile messing around in the sunshine this afternoon a big queen bumble bee flew by. First to be spotted this year! She collected nectar from the periwinkle, which seems to be invading our space but is also one of the few floral resources available right now.\nAnd here she is\n\n\n\n\n\nOther highlights this past month included peering down the microscope at a sample of a jelly fungus that appeared on the trail to Laughlin Lake, and a giant bird spotted near Pebble beach. Too far away to get a good shot, but I think maybe a Golden Eagle??\n\nJust a few more weeks before the Galiwatch pollinator monitoring starts, and lots to do before that, as I signed up for a Master melittologist program offered by Oregon State University in collaboration with the Native Bee Society of BC!! Should keep me busy as there’s a big text book that goes with it…\nBye for now\nKath :)"
+    "text": "Take our printable worksheet with you to a nice flower patch\nRecord the date, location, habitat, and weather conditions on the FIT survey form\nPosition your quadrat and record the flower patch details\nFIT count: record the count start time and start your timer (set for 10 minutes). Count every insect that sits or lands on a flower, but please don’t count the same insect twice.\nIf you can, please take pictures of the flowers and pollinators you see in the quadrat.\nFill out the FIT counts form to report your counts and upload photos"
   },
   {
-    "objectID": "posts/purple-air-191221/index.html",
-    "href": "posts/purple-air-191221/index.html",
-    "title": "Purple Air sensor",
+    "objectID": "fitcounts.html#how-to-make-your-quadrat",
+    "href": "fitcounts.html#how-to-make-your-quadrat",
+    "title": "How many bees do you see?",
+    "section": "",
+    "text": "You can make a 50cm x 50 cm quadrat from stiff cardboard or light wire, paper clips or hair pins, and masking tape. 1. Cut four strips of cardboard 2 x 50cm and 2 x 54cm and 2cm wide 2. Assemble into a square and pin the corners with paper clips or hair pins 3. Secure corners with masking tape 4. Cover all four sides with masking tape for added strength\n\nIf you have light weight wire on hand, you can simply cut a 203cm length, bend it into a square and affix the corner by twisting the two ends together. You can cover the wire with masking tape for better visibility.\nThe quadrat works as a simple guide when performing FIT counts."
+  },
+  {
+    "objectID": "fitcounts.html#suggested-target-flowers",
+    "href": "fitcounts.html#suggested-target-flowers",
+    "title": "How many bees do you see?",
+    "section": "",
+    "text": "Native: camas, sea blush, spring gold, ocean spray, blackberry, Nootka rose, Oregon grape, salal, gum weed, any native willow, Douglas’ aster, thistle\nIntroduced: dandelion, buttercup, clover, blackberry, lavender, heather, thistle"
+  },
+  {
+    "objectID": "fitcounts.html#not-just-bees",
+    "href": "fitcounts.html#not-just-bees",
+    "title": "How many bees do you see?",
+    "section": "",
+    "text": "There are lots of interesting non-bee pollinators to discover. To help us identify insects you come across, please upload photos of all pollinators you see in the quadrat during the FIT count, not just bees!"
+  },
+  {
+    "objectID": "fitcounts.html#thank-you-for-being-part-of-our-pollinatorwatch",
+    "href": "fitcounts.html#thank-you-for-being-part-of-our-pollinatorwatch",
+    "title": "How many bees do you see?",
+    "section": "",
+    "text": "FIT counters are eligible to receive the galiwatch “every bee counts” sticker"
+  },
+  {
+    "objectID": "fitcounts.html#footnotes",
+    "href": "fitcounts.html#footnotes",
+    "title": "How many bees do you see?",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAs described by the UK Pollinator Monitoring Scheme↩︎"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Operation Galiwatch",
+    "section": "",
+    "text": "Operation Galiwatch\nMonitoring pollinator populations on Galiano Island, Canada.\nWe’re developing low-cost data collection and analysis systems for long-term pollinator and bird surveillance and hyperlocal weather and climate monitoring.\n\n\n\n\n\n\n\n \n\n\n\nThe Site\n\n\nLearn more \n\n\n\n\n\n\n\n \n\n\n\nWeather Monitoring\n\n\nLearn more \n\n\n\n\n\n\n\n \n\n\n\nPollinator Detection\n\n\nLearn more \n\n\n\n\n\n\n\n \n\n\n\nHummingbird Detection\n\n\nLearn more \n\n\n\n\n\n\n\n \n\n\n\nBirdsong\n\n\nLearn more \n\n\n\n\n\n\n\n \n\n\n\nGallery\n\n\nLearn more"
+  },
+  {
+    "objectID": "posts/bee-watch-040822/index.html",
+    "href": "posts/bee-watch-040822/index.html",
+    "title": "2021 Bee count",
     "section": "",
     "text": "Reading time: &lt;1 minute"
   },
   {
-    "objectID": "posts/purple-air-191221/index.html#footnotes",
-    "href": "posts/purple-air-191221/index.html#footnotes",
-    "title": "Purple Air sensor",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nSimilar projects also exist in Europe, such as [sensor.community](https://sensor.community/en/)↩︎"
+    "objectID": "posts/bee-watch-040822/index.html#time-lapse-photography",
+    "href": "posts/bee-watch-040822/index.html#time-lapse-photography",
+    "title": "2021 Bee count",
+    "section": "Time lapse photography",
+    "text": "Time lapse photography\n\nWe used time lapse photography to capture one pic per minute from dawn to dusk from the start to the end of the flowering season (March 12th to May 3rd) The first bee caught on camera flew by before any flowers had opened on the evening of Apr 13th, and we saw open flowers at sunrise on Apr 14th. The first pollinator was a bumble bee caught on camera that afternoon. We collected approximately 850 pics per day (16,000+ pics collected during the observation period) and found only 123 pics with bees in them. That’s less than 1%!!\n\nIn addition to bumble bees we observed a few butterflies and bee flies, as well as other small flies."
   },
   {
-    "objectID": "posts/oregon-grape-phenology-310521/index.html",
-    "href": "posts/oregon-grape-phenology-310521/index.html",
-    "title": "Oregon grape",
-    "section": "",
-    "text": "Reading time: 5 minutes\n\nLife Cycle\n\nBerberis nervosa, and its cousin, Mahonia nervosa are species of Oregon Grape. They grow slowly to about two feet in the Douglas-fir forests of the Pacific Northwest.\nPollinators love its yellow flowers, which typically emerge in late March/early April, flowering through April and May depending on the amount of shade.\nThe resulting berries are a dusty-blue, and are what earn this plant the name “grape”. Don’t be fooled! These berries are edible, but quite tart - making them better suited for jams than wine.\n\n\nPhenology – biological events that depend on climate\n\nWe collected data from March to May 2021: spanning growth of inflorescence (a cluster of flowers), emergence of racemes (flower stalks), blossoming, and fruit sets.\nThis data is multimodal, and comprised of:\n\nWeather conditions\nFIT counts (flower-insect timed counts)\nVideo footage\nTime lapse images\nPollinator counts\nPollinator ID\n\n\n\nWeather\n\n\n\n\n\n\nThe growth of the Oregon Grape is influenced by environmental variables: shade, rain, air quality, etc. We’re using video footage and environment measures to learn about how these factors interact, and what this means for the plants and visiting pollinators!\n\n\nAir Quality\n\n\n\n\n\n\nYou can read more on different ways that we measure the air in our Air Quality Story\n\n\nFlower-insect timed (FIT) counts\n\n\n\n\n\n\n  \n    \n      FIT Counts for April 20th-21st 2021\n    \n    \n    \n      \n      Bumble bees\n      Honey bees\n      Other bees\n      Hover flies\n      Bee flies\n      Other\n      Total\n    \n  \n  \n    \n      April 20 2021\n    \n    09:00\n1\n0\n0\n0\n0\n0\n1\n    11:00\n4\n0\n0\n0\n0\n0\n4\n    13:00\n5\n0\n0\n0\n1\n0\n6\n    15:40\n4\n0\n0\n1\n1\n0\n6\n    \n      April 21 2021\n    \n    09:00\n1\n0\n0\n0\n0\n0\n1\n    11:00\n2\n0\n0\n0\n0\n0\n2\n    13:00\n3\n0\n2\n0\n0\n3\n8\n    15:40\n5\n0\n2\n0\n0\n0\n7\n  \n  \n  \n\n\n\n\nFIT counts provide an estimate of the proportion of pollinators seen in time lapse pictures\nDetails\n\n10 min counts of pollinators visiting at four time points during the day\nObservation area includes 48 inflorescences\n\nWeather conditions\n\nfull sun, light wind\nAM 12-13C ; PM 16-18C\n\nTotal number of pollinators over 40min of observation\n\nApr 20th n=17\nAPR 21st n=18\n\nMore pollinators in afternoon than morning\n\nApr 20th AM N=5; PM N=12\nAPR 21st AM N=3; pm n=15\n\n\n\nPollenator counts from video footage\n\n\n\n\n\n\n  \n    \n      Counts from Video Footage April 22nd 2021\n    \n    \n    \n      Time\n      Number of Pollinators\n    \n  \n  \n    10:05 - 12:00\n4\n    12:00 - 16:00\n12\n    16:00 - 20:20\n18\n    Total\n34\n  \n  \n  \n\n\n\n\nVideo footage was collected from April 21st - May 4th. Our cameras were set to collect 4 min of footage every 5 min. Video counts provide an estimate of the proportion of pollinators seen in time lapse pictures.\nDetails\n\nApril 22nd 10.05am – 8.20pm\n10 hrs of data collection giving 8hrs of footage\nObservation area includes 7 inflorescences\nPollinator ID – mostly bumblebees, with occasional mason bees, and bee flies\n\nWeather conditions\n\nFull sun, light wind\nAM 13-15C ; PM 15-16C\n\nTotal number of pollinators over 8 hrs of observation\n\nn=24\n\nMore pollinators in afternoon than morning\n\nAM N=4; PM N=20\n\n\n\nPollinator visits during peak blooming\n\n\n\n\n\n\n  \n    \n      FIT Counts and Video Footage counts give similar results\n    \n    \n    \n      \n      Flower-Insect Timed Counts\n      Video Footage Counts\n    \n  \n  \n    Dates\nApril 20th-21st\nApril 22nd\n    Number of hours observed\n14\n10\n    Number of inflorescences observed\n48\n7\n    Average number of pollinator visits per hour\n26\n4.25\n    Number of pollinators per hour per inflorence\n0.54\n0.61\n  \n  \n  \n\n\n\n\nHaving good estimates is important for when we want to make use of time-lapse images. Collection of these time-lapse images started in March, and is ongoing.\nWith these images, we’re collecting training data for a neural network that in the future we can use to automatically determine number of pollinators visiting the Oregon Grape.\nThanks to the Young Entomologists at Biodiversity Galiano, who are helping us identify pollinator species, we will be able to train the neural network to detect and count the visitation habits of different pollinator species to the Oregon Grape during bloooming"
+    "objectID": "posts/bee-watch-040822/index.html#video-footage",
+    "href": "posts/bee-watch-040822/index.html#video-footage",
+    "title": "2021 Bee count",
+    "section": "Video footage",
+    "text": "Video footage\n\nWe collected 4 mins of footage every 5 mins from dawn to dusk from April 21st to May 4th (full bloom to berry set).\nThis gave us approx. 175 videos per day for a total of 2,450+ videos collected during the observation period. Around 250 videos (around 10%) had bees in them.\nMost bees observed in any one day was 32 on April 22nd.\n\nBumble bee ID\nWe were able to identify two bumble bee species - Vancouver bumble bees (Bombus vancouverensis) and yellow-fronted bumble bees (Bombus flavifrons).\nWe also observed carpenter bees, hover flies (including American thintail), various common-looking flies, small white butterflies (echo azure), slugs, pill bugs, and beetles."
   },
   {
-    "objectID": "posts/meet-the-bees-130823/index.html",
-    "href": "posts/meet-the-bees-130823/index.html",
-    "title": "Meet the bees of Galiano",
+    "objectID": "posts/bird-song-220423/index.html",
+    "href": "posts/bird-song-220423/index.html",
+    "title": "Bird Song",
     "section": "",
-    "text": "Reading time: &lt;1 minute\n\n\n\n\nCan you guess their names? Click to reveal…\n\n\n\n\n\n\n\n\nPhotos by Simon A licensed under CC BY-NC 4.0"
+    "text": "Reading time: &lt;1 minute"
   },
   {
-    "objectID": "posts/hummer-watch-300323/index.html",
-    "href": "posts/hummer-watch-300323/index.html",
-    "title": "They’re here!!",
+    "objectID": "posts/bird-song-220423/index.html#coopers-hawk",
+    "href": "posts/bird-song-220423/index.html#coopers-hawk",
+    "title": "Bird Song",
+    "section": "Cooper’s hawk",
+    "text": "Cooper’s hawk\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
+  },
+  {
+    "objectID": "posts/bird-song-220423/index.html#american-robin",
+    "href": "posts/bird-song-220423/index.html#american-robin",
+    "title": "Bird Song",
+    "section": "American robin",
+    "text": "American robin\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
+  },
+  {
+    "objectID": "posts/bird-song-220423/index.html#red-breasted-nuthatch",
+    "href": "posts/bird-song-220423/index.html#red-breasted-nuthatch",
+    "title": "Bird Song",
+    "section": "Red-breasted nuthatch",
+    "text": "Red-breasted nuthatch\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
+  },
+  {
+    "objectID": "posts/bird-song-220423/index.html#northern-flicker",
+    "href": "posts/bird-song-220423/index.html#northern-flicker",
+    "title": "Bird Song",
+    "section": "Northern Flicker",
+    "text": "Northern Flicker\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
+  },
+  {
+    "objectID": "posts/bird-song-220423/index.html#bewicks-wren",
+    "href": "posts/bird-song-220423/index.html#bewicks-wren",
+    "title": "Bird Song",
+    "section": "Bewick’s wren",
+    "text": "Bewick’s wren\n\n\n\nPhoto: lornasdr licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
+  },
+  {
+    "objectID": "posts/fires-220223/index.html",
+    "href": "posts/fires-220223/index.html",
+    "title": "Fires in summer 2021",
     "section": "",
-    "text": "Reading time: &lt;1 minute\nOur surveillance camera is up and running collecting a pic a minute from dawn to dusk. The first rufous hummingbird caught on camera at our feeder in 2023 was a male on Mar 22nd at 7:23pm. The first female was seen 6 days later on Mar 28th at 2:42pm.\nThis is a few days later than last year when a male and a female were first detected on the same day, the 18th of March, at 1:13pm and 6:20pm respectively.\n\nDetected by the neural network with 100% confidence!!"
+    "text": "Reading time: 2 minutes\nSummer 2021 was a hot one for BC: record temperatures from the Western Heatdome, and record forest fires. We picked up evidence of the fires from our monitoring site - here’s a brief summary of what we saw.\nWe’ll read in our data: air quality measures from our Purple Air sensor\n\n\nCode\nlibrary(tidyverse)\nlibrary(lubridate)\nlibrary(patchwork)\nlibrary(ggpubr)\n\n# read in air quality data, and prepare variable names\nair &lt;- read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/fires-220223/2021_temp_and_PM.csv') %&gt;%\n  mutate(`Row Labels` = as_date(ymd_hms(`Row Labels`))) %&gt;%\n  rename(Date = `Row Labels`,\n         PM1.0 = `Average of PM1.0_CF1_ug/m3`,\n         PM2.5 = `Average of PM2.5_CF1_ug/m3`,\n         PM10.0 = `Average of PM10.0_CF1_ug/m3`,\n        `Temp C` = `Average of Temperature_F`)\n\n\nLooking at the air quality data, we notice a few things. Firstly, all the PM values have peaks in the same places, and they don’t seem too well-correlated with the outdoor temperature.\n\n\nCode\nair %&gt;%\n  pivot_longer(c(PM1.0, PM2.5, PM10.0, `Temp C`)) %&gt;%\n  mutate(name = ordered(name, levels = c('PM1.0', 'PM2.5', 'PM10.0', 'Temp C'))) %&gt;%\n  group_by(name) %&gt;%\n  mutate(rollmean = zoo::rollmean(value, 10, align = 'right', fill=NA)) %&gt;%\n  ggline(x = 'Date', y = 'rollmean', color='name', plot_type='l', size=1, alpha = 0.8) + \n  labs(title = 'Air Quality Measures in Summer 2021',\n       subtitle = 'Rolling 10-day average', \n       y='Value', color = 'Measure') + \n  scale_colour_manual(values = c('lightblue', 'orange', 'salmon', 'grey')) + \n  theme(legend.position = 'right')\n\n\n\n\n\nThis isn’t all that surprising, and we can see the correlation is very close to 1 for the different PM sizes.\n\n\n\n\n\nPicking just PM2.5, we can remake the first plot, this time showing the daily average, without the 10-day smoothing we used before. This gives us a more granular view of air quality events.\n\n\nCode\nair %&gt;%\n  pivot_longer(c(PM2.5, `Temp C`)) %&gt;%\n  group_by(name) %&gt;%\n  ggline(x = 'Date', y = 'value', color='name', plot_type='l', size=1, alpha = 0.8) + \n  labs(title = 'Forest Fires cause Temperature and PM2.5 to spike',\n       y='Value', color = 'Measure') + \n  scale_colour_manual(values = c('orange', 'grey')) + \n  theme(legend.position = 'right') + \n  scale_x_date(date_labels = \"%b\", date_breaks = \"1 month\") + \n  \n  geom_label(aes(x = ymd('2021-05-15'), y = 30, label = \"June heatdome\"), \n               hjust = 0.5, vjust = 0.5, label.size = NA, size=3.5, family='xkcd') +\n  geom_curve(aes(x = ymd('2021-05-15'), y = 32, xend = ymd('2021-06-20'), yend = 40), \n             colour = \"#555555\", curvature = -0.3, size=0.8)+  \n  geom_label(aes(x = ymd('2021-06-15'), y = 55, label = \"Air quality advisory\\nissued for metro Vancouver\"), \n             hjust = 0.5, vjust = 0.5, label.size = NA, size=3.5, family='xkcd')+ \n  geom_curve(aes(x = ymd('2021-06-15'), y = 51, xend = ymd('2021-08-10'), yend = 45), \n             colour = \"#555555\", curvature = 0.25, size=0.8)+ \n  geom_label(aes(x = ymd('2021-11-05'), y = 45, label = \"Likely woodsmoke from\\nlocal fireplaces\"), \n             hjust = 0.5, vjust = 0.5, label.size = NA, size=3.5, family='xkcd')+\n  geom_bracket(xmin = ymd('2021-09-15'), xmax = ymd('2021-12-30'), y.position = 40, label='', size=0.8, tip.length = 0.02)\n\n\n\n\n\nWe can clearly see the peak in temperature when BC got hit by the heatdome. We hypothesize that winter spikes in PM2.5 happen when nearby houses burn wood in their fireplace for heating, as they seem to be associated with relative dips in temperature."
   },
   {
     "objectID": "posts/hummer-behaviour-170323/index.html",
@@ -175,283 +427,52 @@
     "text": "Number of birds in an image for each class\nRufous males can be very territorial. We’d like to know whether we can see evidence of the “chasing away” behaviour.\nIf this is the case, then the disappearance of the male rufous should lead to an increase in the absolute number of Annas who come (but might not affect the number of female rufous. And the later disappearance of the female rufous should also lead to an increase in the number of Annas.\nBecause it’s hard to see this on a minute-to-minute basis, we’ll summarize the number of Anna visits by day.\n\n\nCode\nbird_c &lt;- merge(bird_scaled, weather, all.x=T)\n# number of birds per day \n\nbird_c %&gt;% \n  group_by(Date, Species, Sex) %&gt;%\n  summarise(n=n(), `Temp C` = max(`Temp C`), .groups='keep') %&gt;%\n  ggplot() + \n  aes(x = Date, y = n, fill = Sex) + \n  geom_bar(stat = 'identity') +\n  facet_wrap(~Species) + \n  labs(y = 'Number of bird visits', title = 'Most Rufous visit in Summer, Female Annas visit in Fall,\\nMale Annas are year-round')\n\n# Not really what happened\n\nbird_c %&gt;% \n  group_by(Date, Species, Sex) %&gt;%\n  summarise(n=n(), `Temp C` = max(`Temp C`), .groups='keep') %&gt;%\n  ggplot() + \n  aes(x = n, y = `Temp C`, colour = Sex) + \n  geom_point() + \n  geom_smooth(method = 'lm', formula = 'y~x', se = F, linetype='dashed') +\n  facet_wrap(~Species, scales = 'free_x') + \n  labs(x = 'Number of bird visits', title = 'Everyone except Female Annas prefers lower temperatures')\n\n\nBird co-occurance: how many share an image with another? For each month, does the 2+ mixture match the single bird mixture\nRufouses probably chase off annas, and maybe the females more so. Seen in the seasonal trend, but this might be migration. But also seen in the difference between the ratio of membership in the single vs. multi occupancy images. See the every month the rufouses are around. Never see more than 3 annas in one image.\nThis is also apparent on an hourly level!\n\n\nCode\nbird_scaled %&gt;%\n  mutate(rufous_migrated = (Date &gt;= ymd('2021-07-31'))) %&gt;%\n  group_by(Date, hhmm, Species, Sex, rufous_migrated) %&gt;%\n  summarise(n=n()) %&gt;%\n  ggplot(aes(x=factor(n), fill=Species)) + \n  geom_bar() +\n  #facet_wrap(~month(Date, label = T))\n  facet_wrap(~rufous_migrated) + \n  theme_pubr()\n\n\n`summarise()` has grouped output by 'Date', 'hhmm', 'Species', 'Sex'. You can\noverride using the `.groups` argument.\n\n\n\n\n\nCode\nbird_scaled %&gt;%\n  mutate(rufous_migrated = (Date &gt;= ymd('2021-07-31'))) %&gt;%\n  filter(Species=='Annas') %&gt;%\n  group_by(Date, Hour, rufous_migrated, Sex) %&gt;%\n  summarise(n=n()) %&gt;%\n  ggplot(aes(x=factor(n), fill=Sex)) + \n  geom_bar() +\n  #facet_wrap(~month(Date, label = T))\n  facet_wrap(Sex~rufous_migrated) + \n  theme_pubr()\n\n\n`summarise()` has grouped output by 'Date', 'Hour', 'rufous_migrated'. You can\noverride using the `.groups` argument.\n\n\n\n\n\nCode\nbird_scaled %&gt;%\n  group_by(Date, Hour, Species, Sex) %&gt;%\n  summarise(n=n()) %&gt;%\n  ggplot(aes(x=factor(n), fill=Species)) + \n  geom_bar(position='fill') +\n  #facet_wrap(~month(Date, label = T))\n  facet_wrap(~Sex) + \n  theme_pubr()\n\n\n`summarise()` has grouped output by 'Date', 'Hour', 'Species'. You can override\nusing the `.groups` argument.\n\n\n\n\n\nfit a poisson model to each and evaluate if rate paranmeter is different!\n\n\nCode\n# total number of birds per day\nbird %&gt;%\n  filter(Species=='Annas') %&gt;%\n  mutate('Rufous Males present' = Date &lt; ymd('2021-07-31')) %&gt;%\n  group_by(Date,`Rufous Males present`, Sex, .groups='keep') %&gt;%\n  summarize(n=n()) %&gt;%\n  ggplot(aes(x=`Rufous Males present`, y = n)) +\n  geom_rect(aes(fill = Sex),xmin = -Inf,xmax = Inf, ymin = -Inf,ymax = Inf, show.legend = F) + \n  geom_boxplot() + \n  facet_wrap(\"~Sex\") + \n  stat_compare_means(method = \"t.test\", label.y = 180, label.x = 1.3) + \n  geom_bracket(xmin = 1, xmax = 2, label = '', y.position = c(170)) +\n  theme_pubr() + \n  labs(title='Rufous Males are better at scaring off Female Annas than Male Annas') + \n  scale_fill_manual(values = c('chartreuse1', 'chartreuse4'))\n\n\n`summarise()` has grouped output by 'Date', 'Rufous Males present', 'Sex'. You\ncan override using the `.groups` argument.\n\n\n\n\n\nCode\n# average number of birds per image per day\nbird %&gt;%\n  filter(Species=='Annas') %&gt;%\n  mutate('Rufous Males present' = Date &lt; ymd('2021-07-31')) %&gt;%\n  \n  group_by(Date,`Rufous Males present`, Timestamp, Sex, .groups='keep') %&gt;%\n  summarize(n=n()) %&gt;%\n  group_by(Date, `Rufous Males present`, Sex) %&gt;%\n  summarize(n=mean(n), .groups = 'keep') %&gt;%\n  \n  ggplot(aes(x=`Rufous Males present`, y = n)) +\n  geom_rect(aes(fill = Sex),xmin = -Inf,xmax = Inf, ymin = -Inf,ymax = Inf, show.legend = F) + \n  geom_boxplot() + \n  facet_wrap(\"~Sex\") + \n  stat_compare_means(method = \"t.test\", label.y = 1.41, label.x = 1.3) + \n  geom_bracket(xmin = 1, xmax = 2, label = '', y.position = 1.4) +\n  theme_pubr() + \n  labs(title='Rufous Males are better at scaring off Female Annas than Male Annas') + \n  scale_fill_manual(values = c('chartreuse1', 'chartreuse4'))\n\n\n`summarise()` has grouped output by 'Date', 'Rufous Males present',\n'Timestamp', 'Sex'. You can override using the `.groups` argument.\n\n\n\n\n\nCode\nbird %&gt;%\n  group_by(Date, Timestamp, Species, .groups='keep') %&gt;%\n  summarize(n=n()) %&gt;%\n  #group_by(Date, Species) %&gt;%\n  #summarize(n=mean(n), .groups = 'keep') %&gt;%\n  ggplot(aes(x=factor(Date), y = n, colour=Species)) + \n  geom_point()+\n  geom_smooth(aes(colour =Species), method='lm', formula='y~poly(x,4)')\n\n\n`summarise()` has grouped output by 'Date', 'Timestamp', 'Species'. You can\noverride using the `.groups` argument.\n\n\n\n\n\nCode\nbird %&gt;%\n  #filter(Species=='Annas') %&gt;%\n  mutate('Rufous Males present' = Date &lt; ymd('2021-07-31')) %&gt;%\n  group_by(Date, `Rufous Males present`, Species, Sex) %&gt;%\n  summarize(n=n()) %&gt;%\n  ggplot(aes(x=`Rufous Males present`, y = n)) +\n  geom_boxplot() +\n  facet_grid(rows =vars(Species), cols = vars(Sex), scales='free')\n\n\n`summarise()` has grouped output by 'Date', 'Rufous Males present', 'Species'.\nYou can override using the `.groups` argument.\n\n\n\n\n\n\n\nCode\nbird  %&gt;%group_by(Timestamp, Species, Sex) %&gt;% summarize(n=n()) %&gt;% ggplot() +aes(x = Timestamp, y=n, color = Species, fill=Species) + geom_bar(stat='identity') + facet_wrap('~Sex') +scale_color_manual(values=c('chartreuse2', 'chocolate3'))+scale_fill_manual(values=c('chartreuse2', 'chocolate3'))\n\n\n`summarise()` has grouped output by 'Timestamp', 'Species'. You can override\nusing the `.groups` argument.\n\n\n\n\n\n\n\nCode\nbird %&gt;%\n  group_by(Date, Month = factor(month(Timestamp, label=T)), Hour= hour(Timestamp), Species, Sex) %&gt;%\n  summarise(n=n(), .groups='keep') %&gt;%\n  group_by(Month, Hour, Species, Sex,.groups='keep') %&gt;%\n  summarize(mean_n = mean(n)) %&gt;%\n  ggplot(aes(x=Hour, y = mean_n, colour = Month)) + \n  geom_point() + geom_line() + \n  facet_grid(rows = vars(Species), cols = vars(Sex), scales = 'free')+ \n  labs(y='average number of IDs per day')\n\n\n`summarise()` has grouped output by 'Month', 'Hour', 'Species', 'Sex'. You can\noverride using the `.groups` argument.\n\n\n\n\n\n\n\nCode\nbird %&gt;%\n  mutate(Hour = hour(Timestamp), Month = factor(month(Timestamp, label=T))) %&gt;%\n  group_by(Month, Hour, Species, Sex) %&gt;%\n  summarise(n=n()) %&gt;%\n  ggplot(aes(x = Hour, y = Month, fill=Month, color =Month)) +\n  ggridges::geom_density_ridges(alpha= 0.2) + \n  facet_grid(rows = vars(Species), cols = vars(Sex))\n\n\n`summarise()` has grouped output by 'Month', 'Hour', 'Species'. You can\noverride using the `.groups` argument.\nPicking joint bandwidth of 2.43\nPicking joint bandwidth of 2.45\nPicking joint bandwidth of 2.41\nPicking joint bandwidth of 1.93\n\n\n\n\n\nCode\nbird %&gt;%\n  mutate(Hour = hour(Timestamp), Month = factor(month(Timestamp, label=T))) %&gt;%\n  ggplot() +\n  aes(x=Hour, fill=Month) +\n  geom_bar() + \n  theme_pubr() + theme(legend.position = 'right') +\n  facet_wrap('~Species', scale='free') +\n  labs(x = 'Hour of Day', y = 'Count', title = 'Daylight changes over the months!')"
   },
   {
-    "objectID": "posts/fires-220223/index.html",
-    "href": "posts/fires-220223/index.html",
-    "title": "Fires in summer 2021",
+    "objectID": "posts/hummer-watch-300323/index.html",
+    "href": "posts/hummer-watch-300323/index.html",
+    "title": "They’re here!!",
     "section": "",
-    "text": "Reading time: 2 minutes\nSummer 2021 was a hot one for BC: record temperatures from the Western Heatdome, and record forest fires. We picked up evidence of the fires from our monitoring site - here’s a brief summary of what we saw.\nWe’ll read in our data: air quality measures from our Purple Air sensor\n\n\nCode\nlibrary(tidyverse)\nlibrary(lubridate)\nlibrary(patchwork)\nlibrary(ggpubr)\n\n# read in air quality data, and prepare variable names\nair &lt;- read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/fires-220223/2021_temp_and_PM.csv') %&gt;%\n  mutate(`Row Labels` = as_date(ymd_hms(`Row Labels`))) %&gt;%\n  rename(Date = `Row Labels`,\n         PM1.0 = `Average of PM1.0_CF1_ug/m3`,\n         PM2.5 = `Average of PM2.5_CF1_ug/m3`,\n         PM10.0 = `Average of PM10.0_CF1_ug/m3`,\n        `Temp C` = `Average of Temperature_F`)\n\n\nLooking at the air quality data, we notice a few things. Firstly, all the PM values have peaks in the same places, and they don’t seem too well-correlated with the outdoor temperature.\n\n\nCode\nair %&gt;%\n  pivot_longer(c(PM1.0, PM2.5, PM10.0, `Temp C`)) %&gt;%\n  mutate(name = ordered(name, levels = c('PM1.0', 'PM2.5', 'PM10.0', 'Temp C'))) %&gt;%\n  group_by(name) %&gt;%\n  mutate(rollmean = zoo::rollmean(value, 10, align = 'right', fill=NA)) %&gt;%\n  ggline(x = 'Date', y = 'rollmean', color='name', plot_type='l', size=1, alpha = 0.8) + \n  labs(title = 'Air Quality Measures in Summer 2021',\n       subtitle = 'Rolling 10-day average', \n       y='Value', color = 'Measure') + \n  scale_colour_manual(values = c('lightblue', 'orange', 'salmon', 'grey')) + \n  theme(legend.position = 'right')\n\n\n\n\n\nThis isn’t all that surprising, and we can see the correlation is very close to 1 for the different PM sizes.\n\n\n\n\n\nPicking just PM2.5, we can remake the first plot, this time showing the daily average, without the 10-day smoothing we used before. This gives us a more granular view of air quality events.\n\n\nCode\nair %&gt;%\n  pivot_longer(c(PM2.5, `Temp C`)) %&gt;%\n  group_by(name) %&gt;%\n  ggline(x = 'Date', y = 'value', color='name', plot_type='l', size=1, alpha = 0.8) + \n  labs(title = 'Forest Fires cause Temperature and PM2.5 to spike',\n       y='Value', color = 'Measure') + \n  scale_colour_manual(values = c('orange', 'grey')) + \n  theme(legend.position = 'right') + \n  scale_x_date(date_labels = \"%b\", date_breaks = \"1 month\") + \n  \n  geom_label(aes(x = ymd('2021-05-15'), y = 30, label = \"June heatdome\"), \n               hjust = 0.5, vjust = 0.5, label.size = NA, size=3.5, family='xkcd') +\n  geom_curve(aes(x = ymd('2021-05-15'), y = 32, xend = ymd('2021-06-20'), yend = 40), \n             colour = \"#555555\", curvature = -0.3, size=0.8)+  \n  geom_label(aes(x = ymd('2021-06-15'), y = 55, label = \"Air quality advisory\\nissued for metro Vancouver\"), \n             hjust = 0.5, vjust = 0.5, label.size = NA, size=3.5, family='xkcd')+ \n  geom_curve(aes(x = ymd('2021-06-15'), y = 51, xend = ymd('2021-08-10'), yend = 45), \n             colour = \"#555555\", curvature = 0.25, size=0.8)+ \n  geom_label(aes(x = ymd('2021-11-05'), y = 45, label = \"Likely woodsmoke from\\nlocal fireplaces\"), \n             hjust = 0.5, vjust = 0.5, label.size = NA, size=3.5, family='xkcd')+\n  geom_bracket(xmin = ymd('2021-09-15'), xmax = ymd('2021-12-30'), y.position = 40, label='', size=0.8, tip.length = 0.02)\n\n\n\n\n\nWe can clearly see the peak in temperature when BC got hit by the heatdome. We hypothesize that winter spikes in PM2.5 happen when nearby houses burn wood in their fireplace for heating, as they seem to be associated with relative dips in temperature."
+    "text": "Reading time: &lt;1 minute\nOur surveillance camera is up and running collecting a pic a minute from dawn to dusk. The first rufous hummingbird caught on camera at our feeder in 2023 was a male on Mar 22nd at 7:23pm. The first female was seen 6 days later on Mar 28th at 2:42pm.\nThis is a few days later than last year when a male and a female were first detected on the same day, the 18th of March, at 1:13pm and 6:20pm respectively.\n\nDetected by the neural network with 100% confidence!!"
   },
   {
-    "objectID": "posts/bird-song-220423/index.html",
-    "href": "posts/bird-song-220423/index.html",
-    "title": "Bird Song",
+    "objectID": "posts/meet-the-bees-130823/index.html",
+    "href": "posts/meet-the-bees-130823/index.html",
+    "title": "Meet the bees of Galiano",
     "section": "",
-    "text": "Reading time: &lt;1 minute"
+    "text": "Reading time: &lt;1 minute\n\n\n\n\nCan you guess their names? Click to reveal…\n\n\n\n\n\n\n\n\nPhotos by Simon A licensed under CC BY-NC 4.0"
   },
   {
-    "objectID": "posts/bird-song-220423/index.html#coopers-hawk",
-    "href": "posts/bird-song-220423/index.html#coopers-hawk",
-    "title": "Bird Song",
-    "section": "Cooper’s hawk",
-    "text": "Cooper’s hawk\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
+    "objectID": "posts/oregon-grape-phenology-310521/index.html",
+    "href": "posts/oregon-grape-phenology-310521/index.html",
+    "title": "Oregon grape",
+    "section": "",
+    "text": "Reading time: 5 minutes\n\nLife Cycle\n\nBerberis nervosa, and its cousin, Mahonia nervosa are species of Oregon Grape. They grow slowly to about two feet in the Douglas-fir forests of the Pacific Northwest.\nPollinators love its yellow flowers, which typically emerge in late March/early April, flowering through April and May depending on the amount of shade.\nThe resulting berries are a dusty-blue, and are what earn this plant the name “grape”. Don’t be fooled! These berries are edible, but quite tart - making them better suited for jams than wine.\n\n\nPhenology – biological events that depend on climate\n\nWe collected data from March to May 2021: spanning growth of inflorescence (a cluster of flowers), emergence of racemes (flower stalks), blossoming, and fruit sets.\nThis data is multimodal, and comprised of:\n\nWeather conditions\nFIT counts (flower-insect timed counts)\nVideo footage\nTime lapse images\nPollinator counts\nPollinator ID\n\n\n\nWeather\n\n\n\n\n\n\nThe growth of the Oregon Grape is influenced by environmental variables: shade, rain, air quality, etc. We’re using video footage and environment measures to learn about how these factors interact, and what this means for the plants and visiting pollinators!\n\n\nAir Quality\n\n\n\n\n\n\nYou can read more on different ways that we measure the air in our Air Quality Story\n\n\nFlower-insect timed (FIT) counts\n\n\n\n\n\n\n  \n    \n      FIT Counts for April 20th-21st 2021\n    \n    \n    \n      \n      Bumble bees\n      Honey bees\n      Other bees\n      Hover flies\n      Bee flies\n      Other\n      Total\n    \n  \n  \n    \n      April 20 2021\n    \n    09:00\n1\n0\n0\n0\n0\n0\n1\n    11:00\n4\n0\n0\n0\n0\n0\n4\n    13:00\n5\n0\n0\n0\n1\n0\n6\n    15:40\n4\n0\n0\n1\n1\n0\n6\n    \n      April 21 2021\n    \n    09:00\n1\n0\n0\n0\n0\n0\n1\n    11:00\n2\n0\n0\n0\n0\n0\n2\n    13:00\n3\n0\n2\n0\n0\n3\n8\n    15:40\n5\n0\n2\n0\n0\n0\n7\n  \n  \n  \n\n\n\n\nFIT counts provide an estimate of the proportion of pollinators seen in time lapse pictures\nDetails\n\n10 min counts of pollinators visiting at four time points during the day\nObservation area includes 48 inflorescences\n\nWeather conditions\n\nfull sun, light wind\nAM 12-13C ; PM 16-18C\n\nTotal number of pollinators over 40min of observation\n\nApr 20th n=17\nAPR 21st n=18\n\nMore pollinators in afternoon than morning\n\nApr 20th AM N=5; PM N=12\nAPR 21st AM N=3; pm n=15\n\n\n\nPollenator counts from video footage\n\n\n\n\n\n\n  \n    \n      Counts from Video Footage April 22nd 2021\n    \n    \n    \n      Time\n      Number of Pollinators\n    \n  \n  \n    10:05 - 12:00\n4\n    12:00 - 16:00\n12\n    16:00 - 20:20\n18\n    Total\n34\n  \n  \n  \n\n\n\n\nVideo footage was collected from April 21st - May 4th. Our cameras were set to collect 4 min of footage every 5 min. Video counts provide an estimate of the proportion of pollinators seen in time lapse pictures.\nDetails\n\nApril 22nd 10.05am – 8.20pm\n10 hrs of data collection giving 8hrs of footage\nObservation area includes 7 inflorescences\nPollinator ID – mostly bumblebees, with occasional mason bees, and bee flies\n\nWeather conditions\n\nFull sun, light wind\nAM 13-15C ; PM 15-16C\n\nTotal number of pollinators over 8 hrs of observation\n\nn=24\n\nMore pollinators in afternoon than morning\n\nAM N=4; PM N=20\n\n\n\nPollinator visits during peak blooming\n\n\n\n\n\n\n  \n    \n      FIT Counts and Video Footage counts give similar results\n    \n    \n    \n      \n      Flower-Insect Timed Counts\n      Video Footage Counts\n    \n  \n  \n    Dates\nApril 20th-21st\nApril 22nd\n    Number of hours observed\n14\n10\n    Number of inflorescences observed\n48\n7\n    Average number of pollinator visits per hour\n26\n4.25\n    Number of pollinators per hour per inflorence\n0.54\n0.61\n  \n  \n  \n\n\n\n\nHaving good estimates is important for when we want to make use of time-lapse images. Collection of these time-lapse images started in March, and is ongoing.\nWith these images, we’re collecting training data for a neural network that in the future we can use to automatically determine number of pollinators visiting the Oregon Grape.\nThanks to the Young Entomologists at Biodiversity Galiano, who are helping us identify pollinator species, we will be able to train the neural network to detect and count the visitation habits of different pollinator species to the Oregon Grape during bloooming"
   },
   {
-    "objectID": "posts/bird-song-220423/index.html#american-robin",
-    "href": "posts/bird-song-220423/index.html#american-robin",
-    "title": "Bird Song",
-    "section": "American robin",
-    "text": "American robin\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
-  },
-  {
-    "objectID": "posts/bird-song-220423/index.html#red-breasted-nuthatch",
-    "href": "posts/bird-song-220423/index.html#red-breasted-nuthatch",
-    "title": "Bird Song",
-    "section": "Red-breasted nuthatch",
-    "text": "Red-breasted nuthatch\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
-  },
-  {
-    "objectID": "posts/bird-song-220423/index.html#northern-flicker",
-    "href": "posts/bird-song-220423/index.html#northern-flicker",
-    "title": "Bird Song",
-    "section": "Northern Flicker",
-    "text": "Northern Flicker\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
-  },
-  {
-    "objectID": "posts/bird-song-220423/index.html#bewicks-wren",
-    "href": "posts/bird-song-220423/index.html#bewicks-wren",
-    "title": "Bird Song",
-    "section": "Bewick’s wren",
-    "text": "Bewick’s wren\n\n\n\nPhoto: lornasdr licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
-  },
-  {
-    "objectID": "posts/bee-watch-040822/index.html",
-    "href": "posts/bee-watch-040822/index.html",
-    "title": "2021 Bee count",
+    "objectID": "posts/purple-air-191221/index.html",
+    "href": "posts/purple-air-191221/index.html",
+    "title": "Purple Air sensor",
     "section": "",
     "text": "Reading time: &lt;1 minute"
   },
   {
-    "objectID": "posts/bee-watch-040822/index.html#time-lapse-photography",
-    "href": "posts/bee-watch-040822/index.html#time-lapse-photography",
-    "title": "2021 Bee count",
-    "section": "Time lapse photography",
-    "text": "Time lapse photography\n\nWe used time lapse photography to capture one pic per minute from dawn to dusk from the start to the end of the flowering season (March 12th to May 3rd) The first bee caught on camera flew by before any flowers had opened on the evening of Apr 13th, and we saw open flowers at sunrise on Apr 14th. The first pollinator was a bumble bee caught on camera that afternoon. We collected approximately 850 pics per day (16,000+ pics collected during the observation period) and found only 123 pics with bees in them. That’s less than 1%!!\n\nIn addition to bumble bees we observed a few butterflies and bee flies, as well as other small flies."
-  },
-  {
-    "objectID": "posts/bee-watch-040822/index.html#video-footage",
-    "href": "posts/bee-watch-040822/index.html#video-footage",
-    "title": "2021 Bee count",
-    "section": "Video footage",
-    "text": "Video footage\n\nWe collected 4 mins of footage every 5 mins from dawn to dusk from April 21st to May 4th (full bloom to berry set).\nThis gave us approx. 175 videos per day for a total of 2,450+ videos collected during the observation period. Around 250 videos (around 10%) had bees in them.\nMost bees observed in any one day was 32 on April 22nd.\n\nBumble bee ID\nWe were able to identify two bumble bee species - Vancouver bumble bees (Bombus vancouverensis) and yellow-fronted bumble bees (Bombus flavifrons).\nWe also observed carpenter bees, hover flies (including American thintail), various common-looking flies, small white butterflies (echo azure), slugs, pill bugs, and beetles."
-  },
-  {
-    "objectID": "fitcounts.html",
-    "href": "fitcounts.html",
-    "title": "How many bees do you see?",
-    "section": "",
-    "text": "We’re launching a Flower-Insect Timed (FIT) counts survey for British Columbia!\n\nFIT counts1 are a way to monitor pollinator populations using a quadrat (50 x 50cm square frame) and a simple survey (FIT survey).\nIt takes about 15 minutes of your time (a 10-minute count) and can be done wherever insects are visiting flowers when the weather is warm and dry, ideally above 13°C.\nThe more data we collect, the better we can track changes in pollinator populations over time.\n\n\n\nTake our printable worksheet with you to a nice flower patch\nRecord the date, location, habitat, and weather conditions on the FIT survey form\nPosition your quadrat and record the flower patch details\nFIT count: record the count start time and start your timer (set for 10 minutes). Count every insect that sits or lands on a flower, but please don’t count the same insect twice.\nIf you can, please take pictures of the flowers and pollinators you see in the quadrat.\nFill out the FIT counts form to report your counts and upload photos\n\n\n\n\nYou can make a 50cm x 50 cm quadrat from stiff cardboard or light wire, paper clips or hair pins, and masking tape. 1. Cut four strips of cardboard 2 x 50cm and 2 x 54cm and 2cm wide 2. Assemble into a square and pin the corners with paper clips or hair pins 3. Secure corners with masking tape 4. Cover all four sides with masking tape for added strength\n\nIf you have light weight wire on hand, you can simply cut a 203cm length, bend it into a square and affix the corner by twisting the two ends together. You can cover the wire with masking tape for better visibility.\nThe quadrat works as a simple guide when performing FIT counts.\n\n\n\n\nNative: camas, sea blush, spring gold, ocean spray, blackberry, Nootka rose, Oregon grape, salal, gum weed, any native willow, Douglas’ aster, thistle\nIntroduced: dandelion, buttercup, clover, blackberry, lavender, heather, thistle\n\n\n\nThere are lots of interesting non-bee pollinators to discover. To help us identify insects you come across, please upload photos of all pollinators you see in the quadrat during the FIT count, not just bees!\n\n\n\nFIT counters are eligible to receive the galiwatch “every bee counts” sticker"
-  },
-  {
-    "objectID": "fitcounts.html#heres-how-to-participate",
-    "href": "fitcounts.html#heres-how-to-participate",
-    "title": "How many bees do you see?",
-    "section": "",
-    "text": "Take our printable worksheet with you to a nice flower patch\nRecord the date, location, habitat, and weather conditions on the FIT survey form\nPosition your quadrat and record the flower patch details\nFIT count: record the count start time and start your timer (set for 10 minutes). Count every insect that sits or lands on a flower, but please don’t count the same insect twice.\nIf you can, please take pictures of the flowers and pollinators you see in the quadrat.\nFill out the FIT counts form to report your counts and upload photos"
-  },
-  {
-    "objectID": "fitcounts.html#how-to-make-your-quadrat",
-    "href": "fitcounts.html#how-to-make-your-quadrat",
-    "title": "How many bees do you see?",
-    "section": "",
-    "text": "You can make a 50cm x 50 cm quadrat from stiff cardboard or light wire, paper clips or hair pins, and masking tape. 1. Cut four strips of cardboard 2 x 50cm and 2 x 54cm and 2cm wide 2. Assemble into a square and pin the corners with paper clips or hair pins 3. Secure corners with masking tape 4. Cover all four sides with masking tape for added strength\n\nIf you have light weight wire on hand, you can simply cut a 203cm length, bend it into a square and affix the corner by twisting the two ends together. You can cover the wire with masking tape for better visibility.\nThe quadrat works as a simple guide when performing FIT counts."
-  },
-  {
-    "objectID": "fitcounts.html#suggested-target-flowers",
-    "href": "fitcounts.html#suggested-target-flowers",
-    "title": "How many bees do you see?",
-    "section": "",
-    "text": "Native: camas, sea blush, spring gold, ocean spray, blackberry, Nootka rose, Oregon grape, salal, gum weed, any native willow, Douglas’ aster, thistle\nIntroduced: dandelion, buttercup, clover, blackberry, lavender, heather, thistle"
-  },
-  {
-    "objectID": "fitcounts.html#not-just-bees",
-    "href": "fitcounts.html#not-just-bees",
-    "title": "How many bees do you see?",
-    "section": "",
-    "text": "There are lots of interesting non-bee pollinators to discover. To help us identify insects you come across, please upload photos of all pollinators you see in the quadrat during the FIT count, not just bees!"
-  },
-  {
-    "objectID": "fitcounts.html#thank-you-for-being-part-of-our-pollinatorwatch",
-    "href": "fitcounts.html#thank-you-for-being-part-of-our-pollinatorwatch",
-    "title": "How many bees do you see?",
-    "section": "",
-    "text": "FIT counters are eligible to receive the galiwatch “every bee counts” sticker"
-  },
-  {
-    "objectID": "fitcounts.html#footnotes",
-    "href": "fitcounts.html#footnotes",
-    "title": "How many bees do you see?",
+    "objectID": "posts/purple-air-191221/index.html#footnotes",
+    "href": "posts/purple-air-191221/index.html#footnotes",
+    "title": "Purple Air sensor",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nAs described by the UK Pollinator Monitoring Scheme↩︎"
+    "text": "Footnotes\n\n\nSimilar projects also exist in Europe, such as [sensor.community](https://sensor.community/en/)↩︎"
   },
   {
-    "objectID": "posts/bee-loss-190722/index.html",
-    "href": "posts/bee-loss-190722/index.html",
-    "title": "Bee loss in North America",
+    "objectID": "posts/recap-170323/index.html",
+    "href": "posts/recap-170323/index.html",
+    "title": "Where we’re at March 2022",
     "section": "",
-    "text": "Reading time: 3 minutes\nWild pollinators are an integral part of native plant communities and are highly effective at pollinating flowers in natural ecosystems. Plant pollination is essential for plant reproduction, which in turn provides fruits and seeds for wildlife. Abundance and diversity of pollinators ensure a stable, highly productive ecosystem.\nChanging environmental conditions caused by weather, climate change, or human interventions, may disrupt pollinator activity for some species but enhance it for others. Within natural ecosystems, biodiversity and abundance of wild bee populations and other non-bee pollinators provides redundancy that ensures ongoing pollination and plant productivity despite a changing environment.\nManaged pollinators, most commonly honey bees, are super-generalist pollinators that are essential for, or enhance, the pollination and production of many agricultural crops. We rely heavily on honey bees for certain types of food production - for example they are considered essential to sustaining the global supply of almonds - and support billions of dollars worth of food production worldwide. So, it is very worrying that beekeepers report honeybee populations are dwindling, and that their colonies are becoming increasingly vulnerable to environmental stressors.\nAlongside honey bees, wild pollinators including bumble bees (genus Bombus), other types of bees, wasps, and other non-bee species also make important contributions to crop production. Interestingly, on organic farms near natural habitat, wild bees can provide full pollinator services and, as long as diversity is maintained, there is sustained success.1\nIt seems possible then that by making adjustments that favour abundance and diversity of wild pollinators we could build capacity and resilience within natural and agricultural ecosystems that offset shortfalls in managed pollinator services resulting from the ongoing, perplexing losses of managed colonies."
+    "text": "Reading time: &lt;1 minute\nHappy St Patrick’s Day - and here’s the craic!!\nSo the weather is finally warming up here on Galiano after a chilly and stormy winter, with lots of power cuts. There was another short one this morning!!\nRichard is playing with the humming bird images and has some great pics. Here’s one of a male and female Anna’s and a male and female rufous all at the feeder at the same time - the pictures are taken at one minute intervals, so quite the shot as they usually don’t like to share!\n\n\n\nFrom left to right: rufous male; Anna’s female; rufous female; Anna’s male.\n\n\nWhile messing around in the sunshine this afternoon a big queen bumble bee flew by. First to be spotted this year! She collected nectar from the periwinkle, which seems to be invading our space but is also one of the few floral resources available right now.\nAnd here she is\n\n\n\n\n\nOther highlights this past month included peering down the microscope at a sample of a jelly fungus that appeared on the trail to Laughlin Lake, and a giant bird spotted near Pebble beach. Too far away to get a good shot, but I think maybe a Golden Eagle??\n\nJust a few more weeks before the Galiwatch pollinator monitoring starts, and lots to do before that, as I signed up for a Master melittologist program offered by Oregon State University in collaboration with the Native Bee Society of BC!! Should keep me busy as there’s a big text book that goes with it…\nBye for now\nKath :)"
   },
   {
-    "objectID": "posts/bee-loss-190722/index.html#footnotes",
-    "href": "posts/bee-loss-190722/index.html#footnotes",
-    "title": "Bee loss in North America",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nKremen C, Williams NM, Thorp RW. Crop pollination from native bees at risk from agricultural intensification. Proceedings of the National Academy of Sciences. 2002;99(26):16812-6. https://doi.org/10.1073/pnas.262413599↩︎\nSoroye P, Newbold T, Kerr J. Climate change contributes to widespread declines among bumble bees across continents. Science. 2020;367(6478):685-8. http://doi.org/10.1126/science.aax8591↩︎\nWray J & Elle E. Simon Fraser University. Wild and managed pollinators: current status and strategies to increase diversity. https://www.sfu.ca/content/dam/sfu/people/eelle/elle_bee_info/Metro_Vancouver_report.pdf Accessed 28 March, 2021.↩︎\nFRASER, David Frank et al. Changes in the Status and Distribution of the Yellow-faced Bumble Bee. Journal of the Entomological Society of British Columbia, [S.l.], v. 109, p. 31-37, may 2013. ISSN 1929-7890. Available at: https://journal.entsocbc.ca/index.php/journal/article/view/261. Accessed 13 Apr 2021.↩︎\nSimon A. Water into nectar: The effects of seasonal drought on bumble bee and flowering plant communities. MSc Thesis, University of Victoria, 2020. Available at https://dspace.library.uvic.ca/handle/1828/11837↩︎"
-  },
-  {
-    "objectID": "posts/bombus-vosnesenskii-151023/index.html",
-    "href": "posts/bombus-vosnesenskii-151023/index.html",
-    "title": "Feature bee - Bombus vosnesenskii",
+    "objectID": "posts/weather-story-160621/index.html",
+    "href": "posts/weather-story-160621/index.html",
+    "title": "Air quality measurement",
     "section": "",
-    "text": "Reading time: 4 minutes\nThis article was prepared for The Native Bee Society of BC’s (NBSBC) Quarterly Buzz Oct, 2023 and edited for the Galiwatch site.\nBombus vosnesenski (B. vos) was first seen on Galiano in 2017 1, and is one of the six bumble bees currently known to call Galiano home.\nWith its distinctive bright yellow face, and indiscriminate taste for nectar and pollen sources, you will almost certainly see this black bumble buzzing around all sorts of different plants in the Gulf Islands, Vancouver Island, and the Lower Mainland, as in recent years it has become one of the most common bumblebees in the region.\nThis has not always been the case though - not that long ago B. vos was a rarity in British Columbia. It first appears in the records in the 1950s when a few specimens were found in the interior of BC, and there was talk of it being assigned threatened or endangered status. By 2000 however, it had expanded through the Okanagan and Similkameen valleys, as well as having become firmly established in the Pacific Maritime region 2."
-  },
-  {
-    "objectID": "posts/bombus-vosnesenskii-151023/index.html#footnotes",
-    "href": "posts/bombus-vosnesenskii-151023/index.html#footnotes",
-    "title": "Feature bee - Bombus vosnesenskii",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nAndrew Simon. 2017. Available at https://inaturalist.ca/observations/6412054. Accessed 27/09/2023↩︎\nFraser DF, Copley CR, Elle E, Cannings RA. Changes in the Status and Distribution of the Yellow-faced Bumble Bee. Journal of the Entomological Society of British Columbia. 2012;109:31-7.↩︎\niNaturalist. (n.d.). Map of world research grade observations of B. vosnesenskii from Jan1, 2014, to 15 Sept 2023. Available from: https://inaturalist.ca/observations?place_id=any&subview=map&taxon_id=57689 Accessed Sept 16th, 2023.↩︎\niNaturalist. (n.d.). Map of British Columbia research grade observations of B. vosnesenskii. Jan 1, 2014, to Sep 15, 2023. Available from: https://inaturalist.ca/observations?place_id=7085&subview=map&taxon_id=57689 Accessed Sept 16th, 2023.↩︎\nData source: https://inaturalist.ca/observations?place_id=any&subview=table&taxon_id=57689↩︎"
-  },
-  {
-    "objectID": "posts/frog-watch-221022/index.html",
-    "href": "posts/frog-watch-221022/index.html",
-    "title": "Galiano frogs",
-    "section": "",
-    "text": "Reading time: &lt;1 minute"
-  },
-  {
-    "objectID": "posts/frog-watch-221022/index.html#northern-pacific-tree-frogs-pseudacris-regilla",
-    "href": "posts/frog-watch-221022/index.html#northern-pacific-tree-frogs-pseudacris-regilla",
-    "title": "Galiano frogs",
-    "section": "Northern Pacific tree frogs (Pseudacris regilla)",
-    "text": "Northern Pacific tree frogs (Pseudacris regilla)\nThese frogs are often bright green, but also come in grey, tan, and brown. They can change colour during the season to better match their environment. The colour change is triggered in response to brightness.\n\n\n\n\n\n\nLike most frogs, tree frogs are most active at night, typically resting up in shady, damp spots during the day. At our study site we often find them in or near the plant pots that we water through the dry summer months.\nOur infra red time lapse camera caught this one hopping through the salal bushes in the middle of the night.\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp \n\n\n\nTree frogs are also known as Pacific chorus frogs. If you have ever been to Galiano in the spring or early summer - mating season - you will likely know why!!"
-  },
-  {
-    "objectID": "posts/frog-watch-221022/index.html#northern-red-legged-frogs-rana-aurora",
-    "href": "posts/frog-watch-221022/index.html#northern-red-legged-frogs-rana-aurora",
-    "title": "Galiano frogs",
-    "section": "Northern red-legged frogs (Rana aurora)",
-    "text": "Northern red-legged frogs (Rana aurora)\nLike tree frogs, the Northern red-legged frogs come in a variety of colours, with their colour depending on age, time of year, and location. These frogs are shyer than the chirpy tree frog, and much less common. They are considered a threatened species on the Provincial blue-list."
-  },
-  {
-    "objectID": "posts/hummer-watch-200323/index.html",
-    "href": "posts/hummer-watch-200323/index.html",
-    "title": "Where’s rufous?",
-    "section": "",
-    "text": "Reading time: &lt;1 minute\n\nOur humming bird camera is up and running, catching lots of great pics of male and female Anna’s humming birds, but we are still waiting for the return of the rufous. The males are usually first to arrive followed by females a few days or weeks later.\nLast year we first caught a male and a female on camera on the same day - March 13th the first day our camera was on.\n\nWe were probably a little late getting going as according to iNaturalist one was spotted on March 9th, 2022 in Ladysmith…\nThis year, they had made it to Vashon Island, between Tacoma and Seattle, Washington on March 13th, and yesterday (March 19th) one was seen at a feeder in Richmond Nature Park, BC.\nFingers crossed they will be here soon!"
-  },
-  {
-    "objectID": "posts/indoor-air-replacement-121022/index.html",
-    "href": "posts/indoor-air-replacement-121022/index.html",
-    "title": "Indoor air replacement",
-    "section": "",
-    "text": "Reading time: 3 minutes\n\nSmokey air exchange\nThe air INSIDE our building changes more slowly than the air OUTSIDE. Last night there was a lot of smoke in the air until the afternoon, when it became very windy and the smoke was replaced with clean air from the north, such that the PM2.5s outside went from above 20 down to 1-2 in about 10 minutes. Let’s call this “almost instantly” (see Figure 1, blue line).\n\n\n\n\n\nFigure 1: Indoor/outdoor air exchange\n\n\n\n\nThe PM2.5s inside the building then dropped in a nicely exponential fashion (gold line in Figure 1 above, or the blue line plotted on a log scale to the right), allowing us to estimate the half-time for replacement of the indoor air (Figure 2). The slope is -.0012, so the half-time for the replacement of the air inside the building was 577 minutes, or around 9.5 hours.\n\n\n\nFigure 2: Indoor air replacement half-life estimation\n\n\nThis seemed surprisingly FAST(!) since all the doors and windows were closed and there was no one at the building and no ventilation. However, the EPA standards for building ventilation recommend 0.35 air changes per hour for residential buildings, or turnover every three hours. However, that is for places with active air exchange, rather than just leaky doors, windows and walls. This air turnover rate of ~9.5 hours is for when it is VERY WINDY, and probably the actual turnover on normal days is quite a bit less.\nAssuming air exchange with a half-life around 10 hours also lets us create a model (red line in figure Figure 4) of both the actual indoor PM2.5 and the temperatures as a function of the outdoor values. Actual indoor values are shown in orange and outdoor in blue. Over a larger timeframe of three days (4500 minutes), the fit of the PM2.5 is not great (see Figure 4, middle panel), suggesting that the wind-assisted value we calculated might have been a bit too fast for when it is not windy (which started around at the 3000 minute mark).\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Models of air exchange with different half-lifes. Note: Blue lines are actual outdoor PM2.5, orange lines are actual indoor PM2.5\n\n\nHowever, this is much better than an indoor PM2.5 model assuming exchange of 1 hour (the indoors would look like the outdoors) or 100 hours (indoor would be almost independent of outdoor), so we are in the right order of magnitude.\n\n\nTemperature\nAs another “reality check” we can also make the same simple exponential model of indoor temperature as function of outdoor temperature. Once again, assuming a half-life of around 10 hours gives us a reasonable reflection of the outdoor value, whereas the 1 hour and 100 hour half-lives are plainly unreasonable.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Models of temperature change with different half-lifes. Note: Blue lines are actual outdoor temperature, orange lines are actual indoor temperature.\n\n\n\n\nConclusions\nUsing an estimated air exchange of 10 hours gives reasonable approximations of indoor PM2.5 and temperature, suggesting that air exchange is driving both, which makes sense. Probably we have discovered the value of insulation."
-  },
-  {
-    "objectID": "posts/operations-update-130323/index.html",
-    "href": "posts/operations-update-130323/index.html",
-    "title": "Operations Update 2023",
-    "section": "",
-    "text": "Reading time: 2 minutes\nThe Galiwatch project was initiated in February 2021 to monitor pollinators and weather patterns at a mid-Island site on Galiano Island.\nThe initial goal was to monitor pollinator activity on Oregon grape (Mahonia nervosa) and salal (Gaultheria shallon), two native flowering plants that grow abundantly in the forest understory.\nOur approach was to collect timelapse pictures and video, and to collect weather and air quality data using raspberry-pi technology and an Accurite weather station system, as described on the website.\nA neural network that identified bees in our images was investigated to analyse the data."
-  },
-  {
-    "objectID": "posts/operations-update-130323/index.html#year-1-2021",
-    "href": "posts/operations-update-130323/index.html#year-1-2021",
-    "title": "Operations Update 2023",
-    "section": "Year 1: 2021",
-    "text": "Year 1: 2021\n\nData collection\n\nOregon grape - we successfully collected pictures at 1 min intervals throughout the Oregon grape blooming period (mid April to early May), as well as video footage (4 of 5 mins) during the peak blooming period.\nSalal - data collection for salal was less successful due to a camera failure.\nWeather - data collection with enviro-pi and Accurite weather station was successful.\n\n\n\nLessons learned\nThe volume of data generated in monitoring two different plant systems is unmanageable at this point.\n\nDecision taken to focus on Oregon grape as the single focus for long-term monitoring of pollinator activity at the study site.\n\nVideo footage showed most bees spend between 10s and 35s on a flower before moving on.1 min time-lapse photographs captured approximately 20-25% of bees seen in the videos. One minute time-lapse photography is insufficient to capture changes in pollinator numbers due to the low number of positive hits. Videoing continually on the other hand is unmanageable in terms of data handling capacity.\n\nDecision taken to take 15s time-lapse pictures for 2022 season with two cameras.\n\nOccasional gaps in weather and air quality data collection with the enviro-pi occurred during weather-related internet drops.\n\nDecision taken to continue as is"
-  },
-  {
-    "objectID": "posts/operations-update-130323/index.html#year-2-2022",
-    "href": "posts/operations-update-130323/index.html#year-2-2022",
-    "title": "Operations Update 2023",
-    "section": "Year 2: 2022",
-    "text": "Year 2: 2022\n\nData collection\n\nWe successfully collected data at 15 sec intervals throughout the Oregon grape blooming period with two cameras in operation, each focused on a cluster of flower spikes.\nThe enviro-pi weather data collection system was not reliable and started failing in late spring with only patchy PM2.5 data collection attainable. This was replaced by a Purple Air monitor in August 2022. We filled the data gap by accessing data from a neighbouring system on Salt Spring Island approximately 3 km away.\n\n\n\nLessons learned\n15s time-lapse photography produces a manageable data set, but we need some video coverage to determine proportion of bee visits captured by 15s time-lapse pics and inform estimates of total visits.\n\nDecision taken to proceed with 15s time-lapse (two cameras) and video 4 of 5 mins for 5 days mid-way through blooming in 2023.\n\nThe weather station and Purple Air system for monitoring air quality are very reliable.\n\nWeather data collection to continue as is.\n\nTraining of a neural network for identifying bees is challenging!\n\nA new strategy for training the neural work to identify bees in time-lapse pics is underway"
-  },
-  {
-    "objectID": "posts/oregon-grape-seasons-130323/index.html",
-    "href": "posts/oregon-grape-seasons-130323/index.html",
-    "title": "Oregon grape - seasonal variations",
-    "section": "",
-    "text": "Reading time: &lt;1 minute"
-  },
-  {
-    "objectID": "posts/oregon-grape-seasons-130323/index.html#seasonal-variations-2021-versus-2022",
-    "href": "posts/oregon-grape-seasons-130323/index.html#seasonal-variations-2021-versus-2022",
-    "title": "Oregon grape - seasonal variations",
-    "section": "Seasonal Variations: 2021 versus 2022",
-    "text": "Seasonal Variations: 2021 versus 2022\nPhenology is the study of how the timing of events in a plant’s life cycle, such as bud burst, flowering, and fruiting, is affected by seasonal and environmental changes. It is an important field of study for understanding how plants respond to changes in their environment, and can provide insights into how ecosystems may be affected by climate change. 1\nIn this post, we summarize some of the key weather differences in summer 2021 versus 2022, and how this impacted the phenology of the Oregon Grape plans at our study site.\n\nData collection\n Weather data collected continuously with Acurite Atlas weather station\n Time lapse photography\n\n2021: pictures taken every minute from sunrise to sunset\n\nCamera 1 - April 20th to October 16th\n\n2022: pictures taken every 15s from sunrise to sunset\n\nCamera 1 - April 3rd to May 4th\nCamera 2 - April 12th to April 26th\n\n\n Video\n\n2021 only: video capture of 4 minutes out of every 5 from peak blooming to end of flowering"
-  },
-  {
-    "objectID": "posts/oregon-grape-seasons-130323/index.html#phenology",
-    "href": "posts/oregon-grape-seasons-130323/index.html#phenology",
-    "title": "Oregon grape - seasonal variations",
-    "section": "Phenology",
-    "text": "Phenology"
-  },
-  {
-    "objectID": "posts/oregon-grape-seasons-130323/index.html#temperature-trends",
-    "href": "posts/oregon-grape-seasons-130323/index.html#temperature-trends",
-    "title": "Oregon grape - seasonal variations",
-    "section": "Temperature trends",
-    "text": "Temperature trends"
-  },
-  {
-    "objectID": "posts/oregon-grape-seasons-130323/index.html#rainfall",
-    "href": "posts/oregon-grape-seasons-130323/index.html#rainfall",
-    "title": "Oregon grape - seasonal variations",
-    "section": "Rainfall",
-    "text": "Rainfall"
-  },
-  {
-    "objectID": "posts/oregon-grape-seasons-130323/index.html#bee-counts",
-    "href": "posts/oregon-grape-seasons-130323/index.html#bee-counts",
-    "title": "Oregon grape - seasonal variations",
-    "section": "Bee counts",
-    "text": "Bee counts\nBest estimates of bee visits to the Oregon grape patch were derived from the time-lapse and video data. Overall similar numbers of bees came to feed both years despite quite varying weather patterns."
-  },
-  {
-    "objectID": "posts/oregon-grape-seasons-130323/index.html#summary",
-    "href": "posts/oregon-grape-seasons-130323/index.html#summary",
-    "title": "Oregon grape - seasonal variations",
-    "section": "Summary",
-    "text": "Summary"
-  },
-  {
-    "objectID": "posts/oregon-grape-seasons-130323/index.html#footnotes",
-    "href": "posts/oregon-grape-seasons-130323/index.html#footnotes",
-    "title": "Oregon grape - seasonal variations",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nThis introduction was generated using ChatGPT↩︎"
-  },
-  {
-    "objectID": "posts/recap-010522/index.html",
-    "href": "posts/recap-010522/index.html",
-    "title": "2021 recap",
-    "section": "",
-    "text": "Reading time: &lt;1 minute\nWe got a lot done this year! Lets take a look at the milestones we achieved.\n\n\n\n\n\nJAN 2021\n\n\n\n\nHello World\n\n\nInspired by Toke Høye’s PollinatorWatch, Operation GaliWatch is born. We order weather monitoring hardware and start putting together the Raspberry Pi setup.\n\n\n\n\n\nMAR 2021\n\n\n\n\nFirst Steps\n\n\nThe setup is ready cameras positioned, air quality and weather sensors fine-tuned and working well, and we collect our first datapoints!\nFirst bee of the year spotted on Mar 8th - a Sitka bumble bee.\n\n\n\n\n\nAPR 2021\n\n\n\n\nMaking Friends\n\n\nWe get in touch with Biodiversity Galiano, and connect with IMERSS\n\n\n\n\n\nMAY 2021\n\n\n\n\nPilot Project\n\n\nWe measure pollinator activity and environmental data at our pilot site.\n\n\n\n\n\nAUG 2021\n\n\n\n\nFirst Data Stories\n\n\nWe share our pilot data and preliminary results\n\n\n\n\n\nNOV 2021\n\n\n\n\nLive monitoring\n\n\nWe join PurpleAir and our sensor goes live!\n\n\n\n\n\nDEC 2022\n\n\n\n\nWhat’s next?\n\n\nWe captured more pollinators on our environmental cams than we anticipated: hummingbirds and bats! We’ll see where Galiwatch takes us next!"
-  },
-  {
-    "objectID": "project.html",
-    "href": "project.html",
-    "title": "Project Details",
-    "section": "",
-    "text": "Our research blog has detailed updates and new results!\nSee the Pacific Maritime Big Book of Bees for the reference material we’ve curated."
-  },
-  {
-    "objectID": "project.html#footnotes",
-    "href": "project.html#footnotes",
-    "title": "Project Details",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nClarke D, Robert D. Predictive modelling of honey bee foraging activity using local weather conditions. Apidologie. 2018;49(3):386-96. https://doi.org/10.1007/s13592-018-0565-3↩︎\nHe XJ, Tian LQ, Wu XB, Zeng ZJ. RFID monitoring indicates honeybees work harder before a rainy day. Insect science. 2016;23(1):157-9. https://doi.org/10.1111/1744-7917.12298↩︎\nPeat J, Goulson D. Effects of experience and weather on foraging rate and pollen versus nectar collection in the bumblebee, Bombus terrestris. Behavioral Ecology and Sociobiology. 2005;58(2):152-6. https://doi.org/10.1007/s00265-005-0916-8↩︎\nVicens N, Bosch J. Weather-dependent pollinator activity in an apple orchard, with special reference to Osmia cornuta and Apis mellifera (Hymenoptera: Megachilidae and Apidae). Environmental Entomology. 2000;29(3):413-20. https://doi.org/10.1603/0046-225X-29.3.413↩︎\nRader R, Bartomeus I, Garibaldi LA, et al. Non-bee insects are important contributors to global crop pollination. Proceedings of the National Academy of Sciences. 2016;113(1):146-51. https://doi.org/10.1073/pnas.1517092112↩︎"
+    "text": "Reading time: 5 minutes\n\nAir quality management in British Columbia\n\n\n\n\n\n\n\nBC actively monitors air quality and is part of the national Air Quality Management System (AQMS). The AQMS divides provinces into air zones that exhibit similar air quality characteristics - BC has seven air zones. Galiano is in the Georgia Straight Air Zone, which includes Victoria, Nanaimo, Comox, Campbell River, Whistler, Squamish, and Powell River.\n\n\nWeather Data & Air Pollution\n\n\n\n\n\n\nAir quality changes with the weather. Wind, rain, humidity and other weather parameters can all influence how air pollutants move around.\nNitrous oxides, carbon monoxide, ammonia, sulphur dioxide, methane, and carbon dioxide are polluting gases that may be emitted into the atmosphere in harmful amounts. Our enviro air quality sensors detect oxidising (e.g., NO2) and reducing gases (e.g., CO and ammonia) rather than individual gases, and can reveal trends of increasing or decreasing air quality.\nIn our setting, we are most likely to detect gaseous pollutants as a result of smoke from wood burning stoves (common in our setting) or wildfires (drifting smoke), as well as from vehicle exhaust due to proximity to roads.\n\n\nAir pollution – particulate matter (PM)\n\n\n\n\n\n\nPM 2.5 refers to fine airborne particles with a diameter of 2.5 microns or less. They are produced by many human activities and natural sources including vehicle exhausts, forestry operations, wood stoves, wildfires, and wind. Fine particulate matter may be harmful to health.\nPM 10 refers to all solid and liquid airborne particles with a diameter of 10 microns or less. These particles come from lots of different sources and are highly variable as a result. Many are formed by chemical or physical processes in the atmosphere. Inhaling PM 10s may also be bad for your health.\nBC’s air quality objectives reflect the maximum acceptable level of pollutants according to national air quality targets. The 24 hour average air quality objectives for PM 2.5 (24hr) and PM 10 (24hr) are 25 µg/m3 and 50 µg/m3, respectively.\n\n\nNO2\n\n\n\n\n\n\nBC’s air quality objective for NO2 (primary oxidising gas detected by our sensors) is 100 parts per billion (ppb) averaged over a 1-hour period. For the two-week period from Apr 4–17, NO2 (1hr) levels measured in Victoria (Colwood City Hall) ranged from approximately 3-12 ppb, while our resistance readings ranged from approximately 10-1550 ohms. If we assume the air quality variation across the Georgia Straight air zone is representative for our site, a change in resistance of 170 ohms is equivalent to a change in NO2 of around 1 ppb.\n\n\nCO and NH3\n\n\n\n\n\n\nCarbon monoxide (CO) and ammonia are reducing gases. Our enviro sensors provide a qualitative estimate of their concentration in the atmosphere with decreasing resistance measurements corresponding to decreasing air quality. Resistance readings for reducing gases and ammonia through April ranged from 90-260 Ω (around a 3-fold change), and from 90-1500 Ω (around a 16-fold change), respectively. At this time of year, wood stoves and local traffic are likely major contributors to fluctuations in air quality."
   }
 ]
