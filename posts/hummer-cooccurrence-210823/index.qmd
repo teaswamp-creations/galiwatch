@@ -1,8 +1,8 @@
 ---
-title: Bird sizes 
+title: Territorial Rufous!
 draft: true
 engine: knitr
-date: 2023-05-11
+date: 2023-08-21
 author: Cait Harrigan
 image: thumbnail.jpng
 toc: true
@@ -14,11 +14,22 @@ categories:
 format:
   html:
       code-fold: true
-editor_options: 
-  chunk_output_type: console
+execute:
+  warning: false
+  message: false
 ---
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
+
+::: {.callout-note icon=false}
+# Series Part 4
+
+This is the second post in this deep-dive series.  
+You can start from the beginning with [Part 1](https://galiwatch.ca/posts/hummer-data-cleaning-170323).
+:::
+
+
+# bird
 
 ::: callout-note
 This is the second post in this deep-dive series. See here for [part ii](https://galiwatch.ca/posts/hummer-behaviour-170323/)
@@ -28,31 +39,10 @@ This is the second post in this deep-dive series. See here for [part ii](https:/
 
 As previously covered in part i, we're looking at the hummingbird detection data from 2021. We did some preliminary data exploration, and saw some interesting patterns in the visit times of different birds.
 
-```{r, message=F, warning=F}
-library(tidyverse)
-library(lubridate)
-library(patchwork)
-library(ggpubr)
 
-```
+## Continuation of hummer-watch data analysis!
 
-# Continuation of hummer-watch data analysis!
-
-```{r, message=F, warning=F}
-bird$batch <- 1
-bird$batch <- ifelse(bird$Timestamp > ymd_hms('2021-05-08 00:00:00'),2,bird$batch)
-bird$batch <- ifelse(bird$Timestamp > ymd_hms('2021-05-11 00:00:00'),3,bird$batch)
-bird$batch <- ifelse(bird$Timestamp > ymd_hms('2021-06-13 12:21:00'),4,bird$batch)                  
-bird$batch <- factor(bird$batch)
-
-bird_c <- bird %>% 
-  mutate(Month = month(Date, label=T)) %>%
-  group_by(batch) %>%
-  mutate(across(c(xmin, xmax, ymin, ymax), ~ .x-mean(.x)) ) %>%
-  mutate(xmid = (xmax+xmin)/2, ymid = (ymax+ymin)/2)
-```
-
-# Number of birds in an image for each class
+## Number of birds in an image for each class
 
 Rufous males can be very territorial. We'd like to know whether we can see evidence of the "chasing away" behaviour.
 
@@ -61,7 +51,7 @@ If this is the case, then the disappearance of the male rufous should lead to an
 Because it's hard to see this on a minute-to-minute basis, we'll summarize the number of Anna visits by day.
 
 ```{r, eval=FALSE}
-
+bird_c <- merge(bird_scaled, weather, all.x=T)
 # number of birds per day 
 
 bird_c %>% 
@@ -86,6 +76,49 @@ bird_c %>%
   labs(x = 'Number of bird visits', title = 'Everyone except Female Annas prefers lower temperatures')
 
 ```
+Bird co-occurance: how many share an image with another?
+For each month, does the 2+ mixture match the single bird mixture
+
+Rufouses probably chase off annas, and maybe the females more so. Seen in the seasonal trend, but this might be migration. But also seen in the difference between the ratio of membership in the single vs. multi occupancy images. 
+See the every month the rufouses are around. Never see more than 3 annas in one image. 
+
+This is also apparent on an hourly level!
+
+```{r}
+bird_scaled %>%
+  mutate(rufous_migrated = (Date >= ymd('2021-07-31'))) %>%
+  group_by(Date, hhmm, Species, Sex, rufous_migrated) %>%
+  summarise(n=n()) %>%
+  ggplot(aes(x=factor(n), fill=Species)) + 
+  geom_bar() +
+  #facet_wrap(~month(Date, label = T))
+  facet_wrap(~rufous_migrated) + 
+  theme_pubr()
+
+
+bird_scaled %>%
+  mutate(rufous_migrated = (Date >= ymd('2021-07-31'))) %>%
+  filter(Species=='Annas') %>%
+  group_by(Date, Hour, rufous_migrated, Sex) %>%
+  summarise(n=n()) %>%
+  ggplot(aes(x=factor(n), fill=Sex)) + 
+  geom_bar() +
+  #facet_wrap(~month(Date, label = T))
+  facet_wrap(Sex~rufous_migrated) + 
+  theme_pubr()
+
+bird_scaled %>%
+  group_by(Date, Hour, Species, Sex) %>%
+  summarise(n=n()) %>%
+  ggplot(aes(x=factor(n), fill=Species)) + 
+  geom_bar(position='fill') +
+  #facet_wrap(~month(Date, label = T))
+  facet_wrap(month(Date, label = T)~Sex) + 
+  theme_pubr()
+  
+```
+
+fit a poisson model to each and evaluate if rate paranmeter is different!
 
 ```{r, eval=T}
 
@@ -184,3 +217,6 @@ bird %>%
   facet_wrap('~Species', scale='free') +
   labs(x = 'Hour of Day', y = 'Count', title = 'Daylight changes over the months!')
 ```
+
+
+
