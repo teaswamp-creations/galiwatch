@@ -72,20 +72,6 @@ gtag('js', new Date());
 gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 </script>
 
-<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
-<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
-<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
-<script src="site_libs/datatables-binding-0.18/datatables.js"></script>
-<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
-<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet">
-<script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-<link href="site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
-<script src="site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
-<link href="site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
-<script src="site_libs/selectize-0.12.0/selectize.min.js"></script>
-<link href="site_libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet">
-<script src="site_libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
-
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
 </head>
@@ -112,8 +98,13 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
  <span class="menu-text">Project Details</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./fitcounts.html" rel="" target="">
- <span class="menu-text">FIT counts</span></a>
+    <a class="nav-link" href="https://teaswamp-creations.github.io/bee-book" rel="" target=""><i class="bi bi-box-arrow-up-right" role="img">
+</i> 
+ <span class="menu-text">Bee Book</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./gallery.html" rel="" target="">
+ <span class="menu-text">Gallery</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -150,20 +141,12 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#study-site" id="toc-study-site" class="nav-link active" data-scroll-target="#study-site">Study Site</a></li>
-  <li><a href="#weather-monitoring" id="toc-weather-monitoring" class="nav-link" data-scroll-target="#weather-monitoring">Weather Monitoring</a>
-  <ul class="collapse">
-  <li><a href="#equipment" id="toc-equipment" class="nav-link" data-scroll-target="#equipment">Equipment</a></li>
-  <li><a href="#air-quality-monitoring" id="toc-air-quality-monitoring" class="nav-link" data-scroll-target="#air-quality-monitoring">Air quality monitoring</a></li>
-  </ul></li>
-  <li><a href="#pollinator-detection" id="toc-pollinator-detection" class="nav-link" data-scroll-target="#pollinator-detection">Pollinator detection</a>
-  <ul class="collapse">
-  <li><a href="#equipment-1" id="toc-equipment-1" class="nav-link" data-scroll-target="#equipment-1">Equipment</a></li>
-  </ul></li>
-  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data Analysis</a>
-  <ul class="collapse">
-  <li><a href="#bees-and-other-pollinators-of-galiano-island" id="toc-bees-and-other-pollinators-of-galiano-island" class="nav-link" data-scroll-target="#bees-and-other-pollinators-of-galiano-island">Bees and other pollinators of Galiano Island</a></li>
-  </ul></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#study-site" id="toc-study-site" class="nav-link" data-scroll-target="#study-site">Study Site</a></li>
+  <li><a href="#weather-monitoring" id="toc-weather-monitoring" class="nav-link" data-scroll-target="#weather-monitoring">Weather monitoring</a></li>
+  <li><a href="#pollinator-detection" id="toc-pollinator-detection" class="nav-link" data-scroll-target="#pollinator-detection">Pollinator detection</a></li>
+  <li><a href="#hummingbirds" id="toc-hummingbirds" class="nav-link" data-scroll-target="#hummingbirds">Hummingbirds</a></li>
+  <li><a href="#birdsong" id="toc-birdsong" class="nav-link" data-scroll-target="#birdsong">Birdsong</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -192,9 +175,32 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 
 </header>
 
+<p>Our <a href="https://galiwatch.ca/blog.html">research blog</a> has detailed updates and new results!</p>
+<p>See the <a href="https://teaswamp-creations.github.io/bee-book">Pacific Maritime Big Book of Bees</a> for the reference material we’ve curated.</p>
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p>Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month study period. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a convolutional neural network. We are currently testing a Movidius Neural Compute Stick for this task.</p>
+<p>With systems up and running we hope to collect data from late March to early September including:</p>
+<ul>
+<li>Images of <a href="https://bcinvasives.ca/play-your-part/plantwise/grow-me-instead/salal/">Salal</a> and <a href="https://bcinvasives.ca/play-your-part/plantwise/grow-me-instead/oregon-grape/">Dull Oregon grape</a> from bud burst to fruit maturation.<br>
+</li>
+<li>Images of pollinators showing when and how often they come to visit, and enabling identification of different species.</li>
+<li>Day-to-day weather data, including high and low temperatures, pressure, humidity (Raspberry pi and Acurite), wind speed and direction, total rainfall, UV and light intensity (Acurite only). This will enable comparison of the two systems, and establish reproducibility of the instruments.</li>
+<li>Climate data including average, maximum and minimum temperatures; light intensity; pressure; wind speed, and total rainfall accumulation.</li>
+<li>Estimates of reducing and oxidising gases, and ammonia representing trends of increasing or decreasing air quality, and estimates of particulates, such as dust, pollen, mould spores, smoke etc.</li>
+</ul>
+<p>In addition to piloting the technology, the images and weather data will provide baseline information about our test site including:</p>
+<ol type="1">
+<li>Date of bud burst and duration of flowering of salal and dull Oregon grape.</li>
+<li>Pollinator community composition visiting these plants during the flowering season (bees, hoverflies, butterflies, moths, wasps, other flies, beetles, hummingbirds).</li>
+<li>Time of first appearance and seasonal dynamics of different pollinators.</li>
+<li>How much of a role, if any, non-bee visitors play in the pollination of these two native plants.</li>
+<li>How hyperlocal weather and variations in air quality influence pollinator activity.</li>
+</ol>
+<p>The images and weather data will add to what is already known about pollinators in coastal Douglas-fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom.</p>
+</section>
 <section id="study-site" class="level1">
 <h1>Study Site</h1>
-<hr>
 <p>Galiano is a long narrow island of the Southern Gulf Island chain situated on the western edge of the Salish Sea. Located within the coastal Douglas-fir <a href="https://en.wikipedia.org/wiki/Biogeoclimatic_zones_of_British_Columbia">biogeoclimatic zone</a>, it has a semi-arid ecosystem characterized by a mild climate with cool wet winters and warm dry summers, and with annual drought conditions typically from mid-June to early October. Image adapted from <a href="https://galianostory.com/FLORAFAUNA.HTM">Galiano Story</a>.</p>
 <p>Native tree species include coast Douglas-fir, western red cedar, arbutus, western hemlock, grand fir, Garry oak, red alder, and big leaf maple. Native plants commonly found in the understory include salal, Oregon grape, sword fern, vanilla leaf, and a variety of grasses, wildflowers, mosses, and lichens. This rural island remains relatively intact ecologically.</p>
 <center>
@@ -283,23 +289,44 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <p>Proximate habitat within about a 1/2 km radius includes bare bedrock, light well-draining sandy soil interspersed with clay deposits, and soil with high organic content from fallen trees and branches. Urbanisation includes several other nearby properties, some seasonal, others occupied year-round, which are serviced by paved roads, as well as about an acre of productive farmland (flowering crops include sunflowers, peas, beans, potatoes, basil, and artichokes, etc). There are two man-made ponds as well as areas of wetland and rough pasture.</p>
 </section>
 <section id="weather-monitoring" class="level1">
-<h1>Weather Monitoring</h1>
-<hr>
+<h1>Weather monitoring</h1>
 <p>Researchers have discovered that honey bees are able to detect changes in weather and alter their behaviour accordingly. Honey bees for example can be seen to respond minute-to-minute to the local weather conditions outside their hive, with the temperature and amount of sunlight being the most important factors signalling them to fly.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> In other studies, honey bees were seen to increase their foraging activity the day before a rainy day, but continued on a steady course when the weather was set fair.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <p>Like honey bees, bumble bees feed on nectar and pollen and bring these resources back to the nest to feed their young. Perhaps not surprisingly, local weather conditions are found to influence their foraging activity too, but in this case it seems to be humidity that is most important - the more humid it gets the more foraging there is, and bumble bees will forage whatever the temperature, wind speed, or cloud cover.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> The researchers found that weather also influenced whether bumble bees collected nectar or pollen, with more pollen being collected when it was warm, windy, and low humidity, than on damper days; perhaps because in these conditions the pollen is easier for the bees to handle.</p>
 <p>Interestingly, different bee species have adapted different levels of resilience to weather conditions and will forage at different temperatures and light intensities, with some species continuing to forage even in strong winds or light rain.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
-<section id="equipment" class="level2">
-<h2 class="anchored" data-anchor-id="equipment">Equipment</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Equipment
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ul>
 <li>Raspberry Pi <a href="https://shop.pimoroni.com/products/enviro?variant=31155658457171">Enviro + Air Quality</a></li>
 <li><a href="https://www.acurite.com/">Acurite Atlas</a> weather station</li>
+<li><a href="https://www2.purpleair.com/products/list">Purple Air Sensors</a></li>
 </ul>
+</div>
+</div>
+</div>
 <p>We will be investigating the connection between hyperlocal weather conditions and pollinator activity at our test site. The weather sensors and weather station are equipped to measure temperature, humidity, wind speed and direction, total rainfall, pressure, UV, and light intensity. Readings are dumped every 30s to an SD card.</p>
-</section>
-<section id="air-quality-monitoring" class="level2">
-<h2 class="anchored" data-anchor-id="air-quality-monitoring">Air quality monitoring</h2>
-<p>The air quality monitoring sensors will give us an idea of how air quality changes over time. They measure changes in concentrations of reducing (e.g., carbon monoxide) and oxidising (e.g., nitrogen dioxide) gases, and ammonia. The sensors measure electrical resistance according to the concentration of gases in the air. The resistance readings for reducing gases and ammonia drop with increasing concentrations of these gases, and increase when oxidising gases increase.</p>
-<p>The particulate matter sensor detects concentrations of particles of different sizes (PM1, PM2.5 and PM10) as well as the number of particles of different sizes (&gt;0.3, &gt;0.5, &gt;1.0, &gt;2.5, &gt;5, and &gt;10 microns). Wildfire smoke particles typically range from 0.4–0.7 microns, dust is around 2.5 microns, while pollen is generally 15 microns or more.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Air quality monitoring
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The air quality monitoring sensors will give us an idea of how air quality changes over time. The particulate matter sensor detects concentrations of particles of different sizes (PM1, PM2.5 and PM10) as well as the number of particles of different sizes (&gt;0.3, &gt;0.5, &gt;1.0, &gt;2.5, &gt;5, and &gt;10 microns). Wildfire smoke particles typically range from 0.4–0.7 microns, dust is around 2.5 microns, while pollen is generally 15 microns or more.</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -308,59 +335,88 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 </figure>
 </div>
 </center>
-</section>
+</div>
+</div>
+</div>
+<center>
+<p><a href="https://galiwatch.ca/blog.html#category=climate"><button type="button" class="btn btn-secondary">Keep reading <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a></p>
+</center>
 </section>
 <section id="pollinator-detection" class="level1">
 <h1>Pollinator detection</h1>
-<hr>
 <p>It’s well known that bees are important wildflower pollinators; however, many non-bee pollinators including wasps, hover flies, other flies, beetles, butterflies, moths, and hummingbirds also visit flowering plants and are often overlooked in pollinator monitoring studies. Although these non-bee visitors deposit a lot less pollen per visit, they can make up for it by visiting much more frequently.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> Local surveys of bee species that pollinate salal and dull Oregon grape found bumble bees to be the primary pollinators, with other bee species visiting less frequently (Wray &amp; Elle, <a href="https://www.sfu.ca/people/eelle/bee_info.html">SFU Pollination Ecology Lab</a>).</p>
-<section id="equipment-1" class="level2">
-<h2 class="anchored" data-anchor-id="equipment-1">Equipment</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Equipment
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ul>
 <li>Raspberry Pi for remote sensing</li>
 <li>Raspberry Pi’s high quality cameras for time-lapse photography</li>
 <li>Pre-trained convolutional neural network via <a href="https://www.intel.com/content/www/us/en/developer/tools/neural-compute-stick/overview.html">Movidius NCS2</a> for insect detection and image screening</li>
 </ul>
-<p>We have mounted two surveillance cameras comprising of a Raspberry Pi (powered over ethernet) fitted with a Pi camera and a 1 terabyte soild state drive, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every minute and the images are stored on the SSD.</p>
+</div>
+</div>
+</div>
+<p>We have mounted multiple surveillance cameras comprising of a Raspberry Pi (powered over ethernet) fitted with a Pi camera and a 1 terabyte solid state drive, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every 15 seconds to minute and the images are stored on the SSD.</p>
+<center>
+<a href="https://galiwatch.ca/blog.html#category=bees"><button type="button" class="btn btn-secondary">Keep reading <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+</center>
 </section>
+<section id="hummingbirds" class="level1">
+<h1>Hummingbirds</h1>
+<p>There are two species of hummingbirds found near Galiano: the green <a href="https://en.wikipedia.org/wiki/Anna%27s_hummingbird">Anna’s Hummingbird</a> and the orange <a href="https://en.wikipedia.org/wiki/Rufous_hummingbird">Rufous Hummingbird</a>. ID images from <a href="https://www.allaboutbirds.org/">allaboutbirds.org</a>.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/anna_id.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/rufous_id.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>We put a camera up and have taken a picture every minute since 2021, and are looking for the arrival and departure of the migrating Rufous hummingbird. The first and last picture of a male and female Rufous each year is <a href="https://www.inaturalist.org/observations?place_id=any&amp;taxon_id=6363&amp;user_id=prharrigan&amp;verifiable=any">posted to iNaturalist</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/one_of_each.png" class="img-fluid figure-img" width="300"></p>
+<figcaption class="figure-caption">We’ve taken about a million pictures of our birdfeeder, including a very special one: it has an male and female Rufous, and a male and female Anna humming bird on the same feeder at the same time.</figcaption>
+</figure>
+</div>
+<center>
+<a href="https://galiwatch.ca/blog.html#category=hummingbirds"><button type="button" class="btn btn-secondary">Keep reading <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+</center>
 </section>
-<section id="data-analysis" class="level1">
-<h1>Data Analysis</h1>
-<hr>
-<p>Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month study period. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a convolutional neural network. We are currently testing a Movidius Neural Compute Stick for this task.</p>
-<section id="bees-and-other-pollinators-of-galiano-island" class="level2">
-<h2 class="anchored" data-anchor-id="bees-and-other-pollinators-of-galiano-island">Bees and other pollinators of Galiano Island</h2>
-<p>Although our two test plants salal and dull Oregon grape are particularly attractive to bumble bees, many other species of pollinators have been sighted on Galiano and we are interested to see if any of these are captured in our images. Our reference resource for insect identification is the <a href="https://biogaliano.org/">Biodiversity Galiano</a> project, a community-based initiative to document the flora and fauna of Galiano Island, initiated in January 2016. So far, over 2,500 species have been reported of which more than 1,000 are <a href="https://en.wikipedia.org/wiki/Arthropod">arthropods</a>. Among these are 82 species of bees and wasps including honey bees (<em>Apis mellifera</em>), bumblebees (<em>Bombus</em> spp.) mining bees (<em>Andrena</em> spp.), long-horned bees (<em>Eucera</em> spp.), mason bees (<em>Osmia</em> spp.), cuckoo bees (<em>Nomada</em> spp.), sweat bees (<em>Halictus</em> and <em>Lasioglossum</em> spp.), blood bees (<em>Sphecodes</em> spp.), and various wasps.</p>
-<p>We will use this database to help ID any pollinators we see in our time-lapse images.</p>
-<p><br></p>
+<section id="birdsong" class="level1">
+<h1>Birdsong</h1>
+<p>We have several “Audio moth” microphones, controlled by a Raspberry pi, which can be powered by and connected to a our computers via ethernet. This little device is now set to collect bird song at our site 24/7.</p>
+<p>The sound files are processed locally on the pi when a sound is detected using BirdNET-Pi which automatically extracts songs and chirps from the recordings, creates spectrograms of each recorded bird sound, stores the data in a database and enables data analysis and visualization.</p>
+<p>We brought these to the <a href="https://biogaliano.org/">Galiano Bioblitz 2023</a>, and now have over 100,000 recordings from three different areas. Analysis of this is ongoing.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/American_robin.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">American Robin. Photo: Simon A licensed under CC BY-NC 4.0</figcaption>
+</figure>
+</div>
+<center>
 <div class="cell">
 <div class="cell-output-display">
-
-<div id="htmlwidget-762196e42e48284e84ed" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-762196e42e48284e84ed">{"x":{"filter":"top","filterHTML":"<tr>\n  <td><\/td>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;Beetles&quot;,&quot;Bumble bees (Bombus)&quot;,&quot;Butterflies (Papilionoidea)&quot;,&quot;Honeybees&quot;,&quot;Hover flies (Syrphidae)&quot;,&quot;Other bees&quot;,&quot;Other flies&quot;,&quot;Wasps (Apoidea and Vespoidea)&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92"],["Honeybees","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Bumble bees (Bombus)","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Other bees","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Hover flies (Syrphidae)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Butterflies (Papilionoidea)","Wasps (Apoidea and Vespoidea)","Wasps (Apoidea and Vespoidea)","Wasps (Apoidea and Vespoidea)","Other flies","Other flies","Other flies","Other flies","Other flies","Beetles","Beetles","Beetles"],["Apis Mellifera (Western Honeybee)","Vancouver Bumble Bee (B. Vancouverensis)","Yellow-Fronted Bumble Bee (B. Flavirons)","Orange-Rumped Bumble Bee (B. Melanopygus)","Sitka Bumble Bee (B. Sitkenskii)","Yellow-Faced Bumble Bee (B. Vosnesenskii)","Fuzzyhorned Bumble Bee (B. Mixtus)","Hunt’s Bumble Bee (B. Huntii)","Western Leafcutter","Nomad Bees","Blue Orchard Bees","Metallic Sweat Bees","Confusing Furrow Bee","European Wool Carder","Texas-Striped Sweat Bee","Tripartite Sweat Bee","Synhalonia","Prunus Miner","Black-And-Grey Leaf Cutter Bee","Ursine Digger Bee","Dianthidicum Pudicum","Spined Little Carpenter Bee","Small Long-Horned Bee","Blood Bees","Trypoxylon","Orange-Legged Furrow Bee","Perplexed Miner Bee","Frigid Mining Bee","Black-Banded Mining Bee","Tansy-Mustard Sweat Bee","Rival Long-Horned Bee","Meridional Mason Bee","Horn-Faced Leafcutter Bee","Tiny Small Carpenter Bee","Pacific Sweat Bee","Ashy Digger Bee","Prionyx Canadensis","Red-Footed Sharptail","Stigmus Americanus","Complex Dasysyrphus Intrudens","Western Pond Fly","Variable Duskyface Fly","Orange-Spotted Drone Fly","Bumble-Bee Catkin Fly","Yellow-Faced Swiftwing","Common Drone Fly","Western Calligrapher","Western Aphideater","Dusky Drone Fly","Common Hover Fly","Thick-Legged Hover Fly","Narrow Headed Marsh Fly","Sedgesitters","Margined Calligrapher","Large-Tailed Aphid Eater","American Thintail Fly","Patton’s Yellowjacket Fly","Coquillett’s Bumble Fly","Yellow-Legged Wood Fly","American Dainty","White-Bowed Smoothwing","Pale Swallowtail","Woodland Skipper","Juniper Hairstreak","Propertius Duskywing","Echo Azure","Western Tiger Swallowtail","Painted Lady","Julia Orangetip","Cabbage White","Red Admiral","Satyr Comma","Mylitta Crescent","Lorquin’s Admiral","Brown Elfin","Grey Hairstreak","California Tortoiseshell","Anise Swallowtail","Mourning Cloak","Common Roadside Skipper","Pine White","Yellow-Legged Mud-Dauber","Thread-Waisted Sand Wasp","Digger Wasp","Greater Bee Fly (Bombylius Major)","Gymnosoma","Machimus","Myopa Rubida","Leaf Miner Fly","Soldier Beetles","Leaf Beetles","Lady Bugs"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Group<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"autoWidth":true,"order":[],"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+<audio controls=""> <source src="images/American_Robin.mp3" type="audio/mpeg"> Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp </audio>
 </div>
 </div>
+</center>
 <p><br></p>
-<p>With systems up and running we hope to collect data from late March to early September including:</p>
-<ul>
-<li>Images of <a href="https://bcinvasives.ca/play-your-part/plantwise/grow-me-instead/salal/">Salal</a> and <a href="https://bcinvasives.ca/play-your-part/plantwise/grow-me-instead/oregon-grape/">Dull Oregon grape</a> from bud burst to fruit maturation.<br>
-</li>
-<li>Images of pollinators showing when and how often they come to visit, and enabling identification of different species.</li>
-<li>Day-to-day weather data, including high and low temperatures, pressure, humidity (Raspberry pi and Acurite), wind speed and direction, total rainfall, UV and light intensity (Acurite only). This will enable comparison of the two systems, and establish reproducibility of the instruments.</li>
-<li>Climate data including average, maximum and minimum temperatures; light intensity; pressure; wind speed, and total rainfall accumulation.</li>
-<li>Estimates of reducing and oxidising gases, and ammonia representing trends of increasing or decreasing air quality, and estimates of particulates, such as dust, pollen, mould spores, smoke etc.</li>
-</ul>
-<p>In addition to piloting the technology, the images and weather data will provide baseline information about our test site including:</p>
-<ol type="1">
-<li>Date of bud burst and duration of flowering of salal and dull Oregon grape.</li>
-<li>Pollinator community composition visiting these plants during the flowering season (bees, hoverflies, butterflies, moths, wasps, other flies, beetles, hummingbirds).</li>
-<li>Time of first appearance and seasonal dynamics of different pollinators.</li>
-<li>How much of a role, if any, non-bee visitors play in the pollination of these two native plants.</li>
-<li>How hyperlocal weather and variations in air quality influence pollinator activity.</li>
-</ol>
-<p>The images and weather data will add to what is already known about pollinators in coastal Douglas-fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom.</p>
-<p><br></p>
-</section>
+<p>Future endeavors may expand to bats, and… fish!?</p>
+<center>
+<a href="https://galiwatch.ca/blog.html#category=audio%20moth"><button type="button" class="btn btn-secondary">Keep reading <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+</center>
 </section>
 <section id="references" class="level1">
 <h1>References</h1>
