@@ -10,7 +10,6 @@ categories:
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
-
 ```{css, echo=FALSE}
 .pixgallery-image-grid {
   border-radius: 50%;
@@ -47,12 +46,6 @@ pixgallery(paths, caption = captions, gap = '20px')
 
 ```
 
-
 <br>
 
-<center>
-*Photos by [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)*
-</center>
-
-
-
+<center>*Photos by [Simon A](https://inaturalist.ca/people/37277) licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)*</center>

@@ -30,7 +30,7 @@ Native tree species include coast Douglas-fir, western red cedar, arbutus, weste
 <br>
 
 
-The study site is situated mid island surrounded by the Mid Galiano Protected Areas Network, and within the Greig creek watershed. Cameras will be positioned to survey insect visitations to patches of salal and dull Oregon grape in proximity to a seasonally occupied log cabin. Weather data (temperature, barometric pressure, and humidity), as well as air quality and particulate matter data will be collected at the location using Raspberry Pi Enviro sensors, as well as by an independent weather station positioned close by. There are a wide variety of native and introduced flowering plants in the immediate vicinity.  
+The study site is situated mid island surrounded by the Mid Galiano Protected Areas Network, and within the Greig creek watershed. Cameras will be positioned to survey insect visitations to patches of salal and dull Oregon grape in proximity to a seasonally occupied log cabin. Weather data (temperature, barometric pressure, and humidity), as well as air quality and particulate matter data will be collected at the location using various sensors, as well as by an independent weather station positioned close by. There are a wide variety of native and introduced flowering plants in the immediate vicinity.  
   
   Native               |Introduced
   ---------------------| ----------
@@ -68,16 +68,14 @@ Interestingly, different bee species have adapted different levels of resilience
  
 ##	Equipment
 *	Raspberry Pi [Enviro + Air Quality](https://shop.pimoroni.com/products/enviro?variant=31155658457171) 
-*	[Acurite Atlas](https://www.acurite.com/) weather station   
+*	[Acurite Atlas](https://www.acurite.com/) weather station
+* Purple Air Sensors[Purple Air](https://www2.purpleair.com/products/list)
 
 
-We will be investigating the connection between hyperlocal weather conditions and pollinator activity at our test site. The weather sensors and weather station are equipped to measure temperature, humidity, wind speed and direction, total rainfall, pressure, UV, and light intensity. Readings are dumped every 30s to an SD card.       
+We will be investigating the connection between hyperlocal weather conditions and pollinator activity at our test site. The weather sensors and weather station are equipped to measure temperature, humidity, wind speed and direction, total rainfall, pressure, UV, light intensity, and airborne particulates. Readings are dumped every 10 to 30s to an SD card.       
 
 
 ## Air quality monitoring
-
-The air quality monitoring sensors will give us an idea of how air quality changes over time. They measure changes in concentrations of reducing (e.g., carbon monoxide) and oxidising (e.g., nitrogen dioxide) gases, and ammonia. The sensors measure electrical resistance according to the concentration of gases in the air. The resistance readings for reducing gases and ammonia drop with increasing concentrations of these gases, and increase when oxidising gases increase.   
-
 
 The particulate matter sensor detects concentrations of particles of different sizes (PM1, PM2.5 and PM10) as well as the number of particles of different sizes (>0.3, >0.5, >1.0, >2.5, >5, and >10 microns). Wildfire smoke particles typically range from 0.4–0.7 microns, dust is around 2.5 microns, while pollen is generally 15 microns or more. 
 
@@ -97,16 +95,16 @@ It’s well known that bees are important wildflower pollinators; however, many 
 ##	Equipment
 +	Raspberry Pi for remote sensing 
 +	Raspberry Pi's high quality cameras for time-lapse photography 
-+	Pre-trained convolutional neural network via [Movidius NCS2](https://www.intel.com/content/www/us/en/developer/tools/neural-compute-stick/overview.html) for insect detection and image screening  
++	Trained convolutional neural network via [Yolo](https://pytorch.org/hub/ultralytics_yolov5/) for insect detection and image screening  
 
 
-We have mounted two surveillance cameras comprising of a Raspberry Pi (powered over ethernet) fitted with a Pi camera and a 1 terabyte soild state drive, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every minute and the images are stored on the SSD.  
+We have mounted multiple surveillance cameras comprising of a Raspberry Pi (powered over ethernet) fitted with a Pi camera and a 1 terabyte solid state drive, inside a waterproof box. The cameras have been situated so that they point down towards the patches of salal and dull Oregon grape. By positioning the cameras about a meter from the tops of the plants, we can film an area of about half a square meter with high resolution. The cameras are set to take a picture every 15 seconds to minute and the images are stored on the SSD.  
 
 
 # Data Analysis
 ***
 
-Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month study period. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a convolutional neural network. We are currently testing a Movidius Neural Compute Stick for this task.
+Our cameras should capture approximately 0.5 million images (2 terabytes of data!) over the six-month study period. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a convolutional neural network. We are currently testing various iterations of YOLO for this task.
 
 
 ## Bees and other pollinators of Galiano Island
@@ -154,6 +152,75 @@ In addition to piloting the technology, the images and weather data will provide
 The images and weather data will add to what is already known about pollinators in coastal Douglas-fir ecosystems on the west coast of British Columbia and provide additional information about pollinator behaviour both throughout the day and day-to-day while plants are in bloom.     
 
 <br>
+
+
+# Hummingbirds
+***
+
+There are two species of hummingbirds found near Galiano: the green [Anna's Hummingbird](https://en.wikipedia.org/wiki/Anna%27s_hummingbird) and the orange [Rufous Hummingbird](https://en.wikipedia.org/wiki/Rufous_hummingbird). ID images from [allaboutbirds.org](https://www.allaboutbirds.org/).
+
+::: {layout-ncol="2"}
+![](images/anna_id.png)
+
+![](images/rufous_id.png)
+:::
+
+We set up a camera to capture these feathery fellows visiting our hummingbird feeder.
+
+![A Female Anna's (left) and Male Rufus (right) at our feeder](images/ar_2.jpg)
+
+We trained a classifier to detect who's who....
+
+::: {layout-ncol="3"}
+![](images/2021-06-10_1201_hbird.jpg)
+
+![](images/2021-09-06_1243_hbird.jpg)
+
+![](images/2021-09-06_1930_hbird.jpg)
+:::
+
+And we're even able to keep track of when the feeder needs a refill!
+
+<center>![](images/water_level.gif){width="400"}</center>
+
+<br>
+
+
+
+
+# Birdsong
+***
+
+![](images/Birdsong-01.png){width="36"} We have initiated a new wildlife monitoring system - audio moths collecting bird song!!
+
+An "Audio moth" microphone is controlled by a Raspberry pi, which can be powered by and connected to a our computers via ethernet. This little device is now set to collect bird song at our site 24/7.
+
+The sound files are processed locally on the pi when a sound is detected using BirdNET-Pi which automatically extracts songs and chirps from the recordings, creates spectrograms of each recorded bird sound, stores the data in a database and enables data analysis and visualization.
+
+Here's a summary of the bird songs captured on Apr 21st, 2023
+![](images/Apr21summary.png)
+
+<br>
+
+
+And an example of the birds and their calls
+
+
+American robin
+![](images/American_robin.jpg)
+
+Photo: Simon A licensed under CC BY-NC 4.0
+
+<center>
+
+```{r, echo=F}
+embedr::embed_audio("images/American_Robin.mp3")
+
+```
+
+</center>
+
+
 
 # References
 

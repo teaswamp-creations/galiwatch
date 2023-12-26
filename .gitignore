@@ -4,3 +4,5 @@ docs/
 .Rproj.user/
 posts/template/
 /.quarto/
+.Rhistory
+_freeze/
