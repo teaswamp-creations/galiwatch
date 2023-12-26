@@ -47,9 +47,8 @@ And we're even able to keep track of when the feeder needs a refill!
 
 <br>
 
-But we'll save the details for a future blog post `r emo::ji('smile')`
+But we'll save the details for later `r emo::ji('smile')`
 
-For now, lets dive in to some of the data we've collected!
 
 ## Setup
 
