@@ -6,7 +6,7 @@ We're a community research project with [IMERSS](https://imerss.org/community-re
 
 # Project Origins
 
-Inspired by [Toke Høye’s PollinatorWatch](https://www.zooniverse.org/projects/tokehoye/pollinatorwatch) hosted on Zooniverse, we are setting up time-lapse cameras to gather thousands of images of pollinators visiting two common native flowering plants, salal and dull Oregon grape, at a mid-island location on Galiano Island, in the Pacific Northwest. We are also monitoring the local hummingbirds and bird sounds.
+Inspired by [Toke Høye’s PollinatorWatch](https://www.zooniverse.org/projects/tokehoye/pollinatorwatch) hosted on Zooniverse, we are setting up time-lapse cameras to gather thousands of images of pollinators visiting two common native flowering plants, salal and dull Oregon grape, at a mid-island location on Galiano Island, in the Pacific Northwest. We are also monitoring the local hummingbirds with cameras, and tracking bird and frog sounds.
 
 We plan to automate the analysis of the images to document the number and type of pollinator visitors we get over the flowering season.
 
