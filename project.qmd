@@ -143,7 +143,7 @@ We put a camera up and have taken a picture every minute since 2021 during the d
 
 We have several "Audio moth" microphones, controlled by a Raspberry pi, which can be powered by and connected to a our computers via ethernet. This little device is now set to collect bird song at our site 24/7.
 
-The sound files are processed locally on the pi when a sound is detected using BirdNET-Pi which automatically extracts songs and chirps from the recordings, creates spectrograms of each recorded bird sound, stores the data in a database and enables data analysis and visualization. It works tirelessly 24 hours per day and seems to work very well, except in torrential downpours, when all it can "hear" is the sound of raindrops.
+The sound files are processed locally on the pi when a sound is detected using a [BirdNET-Pi](https://github.com/mcguirepr89/BirdNET-Pi)  system which automatically extracts songs and chirps from the recordings, creates spectrograms of each recorded bird sound, stores the result in a database and enables data analysis and visualization. It works tirelessly 24 hours per day and seems to work very well, except in torrential downpours, when all it can "hear" is the sound of raindrops.
 
 We brought three of these to the [Galiano Bioblitz 2023](https://biogaliano.org/), and now have over 100,000 recordings from three different areas. Analysis of this is ongoing.
 
@@ -160,7 +160,7 @@ embedr::embed_audio("images/American_Robin.mp3")
 
 <br>
 
-Future endeavors may expand to bats, and... fish!?
+Future endeavors may expand to frogs, bats, and... fish!?
 
 <center><a href="https://galiwatch.ca/blog.html#category=audio%20moth"><button type="button" class="btn btn-secondary">Keep reading <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a></center>
 
