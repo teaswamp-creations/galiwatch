@@ -11,8 +11,7 @@ categories:
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
-<img src="thumbnail.jpg" alt="hbird" class="image" style="width: 40%; float:right; margin-top:0.2em; margin-left:6px;">  
-
+<img src="thumbnail.jpg" alt="hbird" class="image" style="width: 40%; float:right; margin-top:0.2em; margin-left:6px;">
 
 It's the start of a new year, and so time to check the hummingbird data collected over the past several years.  Our cameras have captured over 700,000 images of the feeder since we installed it in the spring of 2021, with the latest data capture ending in November of 2023.   We have been improving our neural network which detects hummingbird species and gender over this time.   It seems to work quite well, but is still not quite perfect.  One issue is that it cannot distinguish between immature males and female birds, and it can also get confused if it is shown ONLY the back of a female. It is also more challenging to identify birds when they arrive in near darkness, around dawn or dusk. (It now recognizes people walking by as well, but we don't use that data except to prevent it from calling someone's hat a hummingbird!). Currently our YOLO neural network to identify birds is a couple years out of date, so will will consider all data collected so far to be preliminary.
 
@@ -23,6 +22,7 @@ Well, out of the ~67,500 images identifying hummingbirds to date, a total of 46,
 There have been roughly 15-20,000 "high confidence" bird identifications per year, which has been relatively stable when correcting for the differing number of months of monitoring in the early years.  The next step will be a manual review of late summer Rufous identifications to confirm the exact dates of arrival and departure of the Rufous in 2023, and to correlate this with the birdsong recordings and the rate of feeding.
 
 A quick summary of the visits is shown in the image below. Note that the small number of apparent calls of Rufous visits from August to March (showed in a light grey background) almost certainly represent "miscalls" which need to be manually removed.   Some of these are bound to occur when one examines hundreds of thousands of images, but there is probably room to improve our neural network in 2024.
+
 <img src="Screenshot.png" alt="hbird" class="image" style="width: 100%; float:right; margin-top:0.2em; margin-left:6px;">  
 
 

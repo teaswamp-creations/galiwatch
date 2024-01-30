@@ -5,6 +5,10 @@ toc-location: left
 freeze: true
 ---
 
+Galiwatch is a citizen science project to monitor pollinator populations on Galiano Island, Canada. 
+
+We're developing low-cost data collection and analysis systems for long-term pollinator and bird surveillance and hyperlocal weather and climate monitoring.
+
 Our [research blog](https://galiwatch.ca/blog.html) has detailed updates and new results!
 
 See the [Pacific Maritime Big Book of Bees](https://teaswamp-creations.github.io/bee-book) for the reference material we've curated.

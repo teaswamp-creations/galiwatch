@@ -19,14 +19,15 @@ website:
       - text: Bee Book
         icon: box-arrow-up-right
         href: https://teaswamp-creations.github.io/bee-book
+
+    right:
+      
+      - text: Blog
+        href: blog.qmd
       - text: Gallery
         href: gallery.qmd
-    right:
-      - text: Research blog
-        href: blog.qmd
-      - about.qmd
-      - text: Contact
-        href: contact.qmd
+      - text: About
+        href: about.qmd
       - icon: github
         href: https://github.com/teaswamp-creations
   search: 
@@ -38,8 +39,6 @@ format:
     theme: 
       light: [yeti, css/light-theme.scss]
       dark: [yeti, css/dark-theme.scss]
-    include-in_header: favicon.html
-    include-after_body: footer.html
     css: ["https://use.fontawesome.com/releases/v6.0.0/css/all.css"]
 
 
