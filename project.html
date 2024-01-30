@@ -102,23 +102,19 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 </i> 
  <span class="menu-text">Bee Book</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./gallery.html" rel="" target="">
- <span class="menu-text">Gallery</span></a>
-  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./blog.html" rel="" target="">
- <span class="menu-text">Research blog</span></a>
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./gallery.html" rel="" target="">
+ <span class="menu-text">Gallery</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./contact.html" rel="" target="">
- <span class="menu-text">Contact</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/teaswamp-creations" rel="" target=""><i class="bi bi-github" role="img">
@@ -175,11 +171,13 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 
 </header>
 
+<p>Galiwatch is a citizen science project to monitor pollinator populations on Galiano Island, Canada.</p>
+<p>We’re developing low-cost data collection and analysis systems for long-term pollinator and bird surveillance and hyperlocal weather and climate monitoring.</p>
 <p>Our <a href="https://galiwatch.ca/blog.html">research blog</a> has detailed updates and new results!</p>
 <p>See the <a href="https://teaswamp-creations.github.io/bee-book">Pacific Maritime Big Book of Bees</a> for the reference material we’ve curated.</p>
 <section id="overview" class="level1">
 <h1>Overview</h1>
-<p>Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month study period. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a convolutional neural network. We are currently testing a Movidius Neural Compute Stick for this task.</p>
+<p>Our cameras should capture approximately 0.5 million images (2 terrabytes of data!) over the six-month study period. We hope there will be hundreds or even thousands of images of visiting pollinators. As it would take an overwhelming amount of time to manually look for images containing insects, we are recruiting computers to do it for us, which requires training and running a convolutional neural network. We are currently testing a YOLO (“You Only Look Once”) network for this task.</p>
 <p>With systems up and running we hope to collect data from late March to early September including:</p>
 <ul>
 <li>Images of <a href="https://bcinvasives.ca/play-your-part/plantwise/grow-me-instead/salal/">Salal</a> and <a href="https://bcinvasives.ca/play-your-part/plantwise/grow-me-instead/oregon-grape/">Dull Oregon grape</a> from bud burst to fruit maturation.<br>
@@ -207,7 +205,7 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <img src="images/map.png" class="img-fluid" style="width:90.0%">
 </center>
 <p><br></p>
-<p>The study site is situated mid island surrounded by the Mid Galiano Protected Areas Network, and within the Greig creek watershed. Cameras will be positioned to survey insect visitations to patches of salal and dull Oregon grape in proximity to a seasonally occupied log cabin. Weather data (temperature, barometric pressure, and humidity), as well as air quality and particulate matter data will be collected at the location using Raspberry Pi Enviro sensors, as well as by an independent weather station positioned close by. There are a wide variety of native and introduced flowering plants in the immediate vicinity.</p>
+<p>The study site is situated mid island surrounded by the Mid Galiano Protected Areas Network, and within the Greig creek watershed. Cameras will be positioned to survey insect visitations to patches of salal and dull Oregon grape in proximity to a seasonally occupied log cabin. Weather data (temperature, barometric pressure, and humidity), as well as air quality and particulate matter data will be collected at the location using Purple Air and other sensors, as well as by an independent weather station positioned close by. There are a wide variety of native and introduced flowering plants in the immediate vicinity.</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -339,7 +337,7 @@ Air quality monitoring
 </div>
 </div>
 <center>
-<p><a href="https://galiwatch.ca/blog.html#category=climate"><button type="button" class="btn btn-secondary">Keep reading <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a></p>
+<a href="https://galiwatch.ca/blog.html#category=climate"><button type="button" class="btn btn-secondary">Keep reading <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
 </center>
 </section>
 <section id="pollinator-detection" class="level1">
@@ -360,7 +358,7 @@ Equipment
 <ul>
 <li>Raspberry Pi for remote sensing</li>
 <li>Raspberry Pi’s high quality cameras for time-lapse photography</li>
-<li>Pre-trained convolutional neural network via <a href="https://www.intel.com/content/www/us/en/developer/tools/neural-compute-stick/overview.html">Movidius NCS2</a> for insect detection and image screening</li>
+<li>Trained convolutional neural network via <a href="https://github.com/ultralytics/ultralytics">YOLO</a> models for bird and insect detection and image screening</li>
 </ul>
 </div>
 </div>
@@ -383,11 +381,11 @@ Equipment
 </div>
 </div>
 </div>
-<p>We put a camera up and have taken a picture every minute since 2021, and are looking for the arrival and departure of the migrating Rufous hummingbird. The first and last picture of a male and female Rufous each year is <a href="https://www.inaturalist.org/observations?place_id=any&amp;taxon_id=6363&amp;user_id=prharrigan&amp;verifiable=any">posted to iNaturalist</a></p>
+<p>We put a camera up and have taken a picture every minute since 2021 during the daylight hours. (In 2021, this was only in the summer, but since 2022, we have changed to year-round monitoring). One thing we are looking is for the arrival and departure of the migrating Rufous hummingbird. The first and last picture of a male and female Rufous each year is <a href="https://www.inaturalist.org/observations?place_id=any&amp;taxon_id=6363&amp;user_id=prharrigan&amp;verifiable=any">posted to iNaturalist</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/one_of_each.png" class="img-fluid figure-img" width="300"></p>
-<figcaption class="figure-caption">We’ve taken about a million pictures of our birdfeeder, including a very special one: it has an male and female Rufous, and a male and female Anna humming bird on the same feeder at the same time.</figcaption>
+<p><img src="images/one_of_each.png" class="img-fluid figure-img" width="450"></p>
+<figcaption class="figure-caption">We’ve taken about 700,000 pictures of our birdfeeder (!). As of December 2023, there are 67,500 images of hummingbirds, as detected by our YOLO neural network, which has been trained to report the species and gender of the birds, as well as the location of the feeder and amount of water in it. These pictures including a very special one: it has one male and one female Rufous, and one male and one female Anna’s hummingbird on the same feeder at the same time.</figcaption>
 </figure>
 </div>
 <center>
@@ -397,8 +395,8 @@ Equipment
 <section id="birdsong" class="level1">
 <h1>Birdsong</h1>
 <p>We have several “Audio moth” microphones, controlled by a Raspberry pi, which can be powered by and connected to a our computers via ethernet. This little device is now set to collect bird song at our site 24/7.</p>
-<p>The sound files are processed locally on the pi when a sound is detected using BirdNET-Pi which automatically extracts songs and chirps from the recordings, creates spectrograms of each recorded bird sound, stores the data in a database and enables data analysis and visualization.</p>
-<p>We brought these to the <a href="https://biogaliano.org/">Galiano Bioblitz 2023</a>, and now have over 100,000 recordings from three different areas. Analysis of this is ongoing.</p>
+<p>The sound files are processed locally on the pi when a sound is detected using a <a href="https://github.com/mcguirepr89/BirdNET-Pi">BirdNET-Pi</a> system which automatically extracts songs and chirps from the recordings, creates spectrograms of each recorded bird sound, stores the result in a database and enables data analysis and visualization. It works tirelessly 24 hours per day and seems to work very well, except in torrential downpours, when all it can “hear” is the sound of raindrops.</p>
+<p>We brought three of these to the <a href="https://biogaliano.org/">Galiano Bioblitz 2023</a>, and now have over 100,000 recordings from three different areas. Analysis of this is ongoing.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/American_robin.jpg" class="img-fluid figure-img"></p>
@@ -413,7 +411,7 @@ Equipment
 </div>
 </center>
 <p><br></p>
-<p>Future endeavors may expand to bats, and… fish!?</p>
+<p>Future endeavors may expand to frogs, bats, and… fish!?</p>
 <center>
 <a href="https://galiwatch.ca/blog.html#category=audio%20moth"><button type="button" class="btn btn-secondary">Keep reading <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
 </center>
