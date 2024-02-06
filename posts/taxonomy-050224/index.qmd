@@ -1,0 +1,121 @@
+---
+title: Taxonomy
+date: 2024-02-05
+author: Richard Harrigan
+engine: knitr
+image: thumbnail.jpg
+categories:
+  - bees
+  - conservation
+draft: true
+---
+
+Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
+
+## Pure HTML version
+
+<details>
+<summary>First List Item</summary>
+<blockquote>
+<details>
+<summary>Nested Item 1</summary>
+<blockquote>
+Content of Nested Item 1.
+</blockquote>
+</details>
+
+<details>
+<summary>Nested Item 2</summary>
+<blockquote>
+Content of Nested Item 2.
+</blockquote>
+</details>
+</blockquote>
+</details>
+
+<details>
+<summary>Second List Item</summary>
+<blockquote>
+<details>
+<summary>Nested Item 1</summary>
+<blockquote>
+Content of Nested Item 1.
+</blockquote>
+</details>
+
+<details>
+<summary>Nested Item 2</summary>
+<blockquote>
+Content of Nested Item 2, with more <details><summary>deeply nested toggles</summary><blockquote>Deep content!</blockquote></details>.
+</blockquote>
+</details>
+</blockquote>
+</details>
+
+
+## Function in R to generate this HTML from a dataframe
+
+(may need to format CSV data slightly to make this work `r emo::ji("smile")`)
+
+```{r echo = F}
+library(dplyr)
+
+generate_html_list <- function(df) {
+  # Ensure unique identifiers for each detail section
+  uid <- 0
+  get_uid <- function() {
+    uid <<- uid + 1
+    return(uid)
+  }
+  
+  # Create a nested list from the dataframe
+  nested_list <- df %>%
+    group_by(Family, Genus) %>%
+    summarise(Species = list(Species), .groups = 'drop') %>%
+    group_by(Family) %>%
+    summarise(Genus = list(Genus), Species = list(Species), .groups = 'drop') %>%
+    arrange(Family)
+  
+  # Initialize an empty string to store the HTML
+  html_output <- ""
+  
+  # Iterate over the families
+  for (i in 1:nrow(nested_list)) {
+    family_id <- get_uid()
+    html_output <- paste0(html_output, "<details>\n<summary>", nested_list$Family[i], "</summary>\n<blockquote>\n")
+    
+    # Iterate over the genera in each family
+    for (j in 1:length(nested_list$Genus[[i]])) {
+      genus_id <- get_uid()
+      html_output <- paste0(html_output, "<details>\n<summary>", nested_list$Genus[[i]][j], "</summary>\n<blockquote>\n")
+      
+      # Iterate over the species in each genus
+      for (species in nested_list$Species[[i]][[j]]) {
+        species_id <- get_uid()
+        html_output <- paste0(html_output, "<details>\n<summary>", species, "</summary>\n<blockquote>\nContent for ", species, "</blockquote>\n</details>\n")
+      }
+      
+      html_output <- paste0(html_output, "</blockquote>\n</details>\n")
+    }
+    
+    html_output <- paste0(html_output, "</blockquote>\n</details>\n")
+  }
+  
+  return(html_output)
+}
+```
+
+```{r}
+
+# Example dataframe
+df <- data.frame(
+  Family = c("Felidae", "Felidae", "Canidae", "Canidae"),
+  Genus = c("Panthera", "Felis", "Canis", "Vulpes"),
+  Species = c("Panthera leo", "Felis catus", "Canis lupus", "Vulpes vulpes")
+)
+
+# Generate HTML list
+list <- generate_html_list(df)
+
+htmltools::HTML(list)
+```

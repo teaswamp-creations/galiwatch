@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sheffield and Heron Tree</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .Family, .Subfamily { color: blue; }
+        .Tribe, .Subtribe { color: green; }
+        .Genus, .Subgenus { color: black; }
+        .Species { color: red; }
+
+        .arrow {
+            cursor: pointer;
+            user-select: none;
+            display: inline-block;
+            margin-right: 6px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid red; /* Triangle pointing right */
+            width: 0;
+            height: 0;
+        }
+
+        .expanded .arrow {
+            border-top: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid red; /* Triangle pointing down */
+        }
+
+        .nested.hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>Click the red triangles to expand or contract the taxonomy of Sheffield and Heron (The Bees of British Columbia,  Journal of the Entomological Society of British Columbia, Vol. 115 (2019).  The number of species under each level is indicated, as well as the number of observations from BC of that species in iNaturalist as of January, 2024.  The number of observations probably reflects not only the prevalence of the bees, but also their proximity to major population centres as well as bees size and popularity.  Honeybees and bumblebees from the Vancouver and Victoria areas dominate iNaturalist observations.
+   
+    <ul id="tree">
+        <!-- The tree structure will be dynamically generated here -->
+    </ul>
+
+ 
+
+<script>
+
+
+async function loadCSV(filePath) {
+    const response = await fetch(filePath);
+    const data = await response.text();
+    const lines = data.split('\n');
+    const headers = lines[0].split(',').map(field => field.trim().replace(/^"|"$/g, ''));
+    return {
+        headers,
+        rows: lines.slice(1).map(row =>
+            row.split(',').map(field => field.trim().replace(/^"|"$/g, ''))
+        )
+    };
+}
+
+function countSpecies(obj) {
+    // Recursive function to count species in the hierarchy
+    return Object.values(obj).reduce((count, value) => {
+        if (value.__header === 'Species') {
+            return count + 1;
+        } else if (typeof value === 'object') {
+            return count + countSpecies(value);
+        } else {
+            return count;
+        }
+    }, 0);
+}
+
+
+
+function generateTree(data, parentElement = document.getElementById('tree')) {
+    const headers = data.headers;
+    let hierarchy = {};
+
+    data.rows.forEach(row => {
+        let currentHierarchyLevel = hierarchy;
+        let iNatObsSum = parseInt(row[1], 10) || 0;
+        for (let i = 2; i < row.length; i++) {
+            const value = row[i];
+            if (!currentHierarchyLevel[value]) {
+                currentHierarchyLevel[value] = {
+                    __header: headers[i],
+                    __iNatObsSum: 0,
+                    __subspeciesCount: 0,
+                    __isSpecies: headers[i] === "Species"
+                };
+            }
+            currentHierarchyLevel[value].__iNatObsSum += iNatObsSum;
+            if (currentHierarchyLevel[value].__isSpecies && row[0].trim() !== "") {
+                currentHierarchyLevel[value].__subspeciesCount += 1;
+            }
+            currentHierarchyLevel = currentHierarchyLevel[value];
+        }
+    });
+
+    function appendChildren(parent, obj, level = 0) {
+        Object.keys(obj).forEach((key, index, array) => {
+            if (key.startsWith('__')) return;
+            const li = document.createElement('li');
+            const span = document.createElement('span');
+            let additionalInfo;
+
+            if (obj[key].__isSpecies) {
+                additionalInfo = `${obj[key].__subspeciesCount} Subspecies, ${obj[key].__iNatObsSum} Observations`;
+            } else {
+                const speciesCount = countSpecies(obj[key]);
+                additionalInfo = `${speciesCount} Species, ${obj[key].__iNatObsSum} Observations`;
+            }
+            
+            span.textContent = `${obj[key].__header}: ${key} - ${additionalInfo}`;
+            span.classList.add(obj[key].__header.replace(/\s+/g, ''));
+
+            const ul = document.createElement('ul');
+            ul.className = 'nested' + (level === 0 ? '' : ' hide');
+
+            if (Object.keys(obj[key]).length > 3) {
+                const arrow = document.createElement('div');
+                arrow.className = 'arrow' + (level === 0 ? ' expanded' : '');
+                arrow.onclick = function() {
+                    this.parentElement.querySelector('.nested').classList.toggle('hide');
+                    this.parentElement.classList.toggle('expanded');
+                };
+                li.appendChild(arrow);
+            }
+            li.appendChild(span);
+            li.appendChild(ul);
+            parent.appendChild(li);
+
+            appendChildren(ul, obj[key], level + 1);
+
+            // Insert a separator after each "Family" item
+            if (level === 0 && obj[key].__header === "Family") {
+                const separator = document.createElement('div');
+                separator.style.height = '10px'; // Adjust the height for more or less space
+                parent.appendChild(separator);
+            }
+        });
+    }
+
+    appendChildren(parentElement, hierarchy);
+}
+
+// Load the CSV data and generate the tree
+loadCSV('data.csv').then(data => {
+    generateTree(data);
+});
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+
