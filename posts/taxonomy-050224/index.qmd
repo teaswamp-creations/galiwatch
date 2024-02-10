@@ -1,5 +1,5 @@
 ---
-title: Taxonomy_1
+title: A less painful way to look at BC Bee taxonomy
 date: 2024-02-09
 author: Richard Harrigan
 engine: knitr
@@ -8,10 +8,14 @@ categories:
   - bees
   - conservation
   - taxonomy
-draft: false
+freeze: true
 ---
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
+
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
 
 ```{r echo=FALSE}
 
@@ -19,11 +23,10 @@ library(kableExtra)
 library(dplyr)
 ```
 
-# A less painful way to look at BC Bee taxonomy
 
 The standard reference for the Bees of British Columbia is a paper by Sheffield and Heron from 2019, which summarised the history and distribution of native bees in BC (Sheffield, Cory S., and Jennifer M. Heron. "The bees of British Columbia (Hymenoptera: Apoidea, Apiformes)." *Journal of the Entomological Society of British Columbia* 115 (2018): 44-85). They reported a total of 483 bee species (including a few subspecies). Unfortunately, the static nature of a paper publication makes it rapidly obsolete, as well as very difficult to understand how things fit together in the big picture. In addition, a reader new to the field gets no feel for whether a bee is very rare and last observed in, say, 1914, or whether there are lots of recent and ongoing sightings.
 
-The tree below lets us explore the different levels of bee taxonomy. From this we can to see how many species and observations of bees there are in iNaturalist in BC at each taxonomic level. Each species link leads to images in our "bee book" for those found in the Pacific Maritime, "research grade" iNaturalist observations for BC sightings, or to a Wikipedia page for further information if there are no BC iNat observations. Note that a Wikipedia page may not actually exist for all bees, and we are just hoping for the best. Also note that out of the more than 400 different bee species reported in the manuscript, only about 100 bee species currently have research-grade observations in iNat. This is increasing every year, but there are still a lot of species with 0 observations.
+The tree below lets us explore the different levels of bee taxonomy. From this we can to see how many species and observations of bees there are in iNaturalist in BC at each taxonomic level. Each species link leads to images in our "[bee book](https://teaswamp-creations.github.io/bee-book)" for those found in the Pacific Maritime, "research grade" iNaturalist observations for BC sightings, or to a Wikipedia page for further information if there are no BC iNat observations. Note that a Wikipedia page may not actually exist for all bees, and we are just hoping for the best. Also note that out of the more than 400 different bee species reported in the manuscript, only about 100 bee species currently have research-grade observations in iNat. This is increasing every year, but there are still a lot of species with 0 observations.
 
 The lack of iNat observations could be due to any of several factors. First, the bees could simply be very rare. In addition, the biases in iNat observations likely include an under-representation of species located away from population centres like Greater Vancouver or Victoria. As well, there are biases associated with the size and popularity of the bees - for example honeybees and bumblebees are hugely popular subjects in iNaturalist.
 
@@ -148,7 +151,7 @@ dt %>%
 
 # So what taxonomy should we use?
 
-It probably makes the most sense to use a system the Integrated Taxonomic Information System (ITIS) taxonomy (<https://www.usgs.gov/tools/integrated-taxonomic-information-system-itis>) when using iNaturalist, because this seems to be very similar what iNat uses.  (Note: what they actually use is here: https://www.inaturalist.org/taxa/inaturalist-taxonomy.dwca.zip ). A comparison of the ITIS and Sheffield and Heron taxonomies is shown below. The ITIS taxonomy was downloaded in October, 2023. Here, we have limited the taxonomy to those species with "research grade" iNat observations as of the end of January, 2024.
+It probably makes the most sense to use a system the [Integrated Taxonomic Information System (ITIS) taxonomy] (https://www.usgs.gov/tools/integrated-taxonomic-information-system-itis) when using iNaturalist, because this seems to be very similar what iNat uses.  (Note: what they actually use is here: [https://www.inaturalist.org/taxa/inaturalist-taxonomy.dwca.zip](https://www.inaturalist.org/taxa/inaturalist-taxonomy.dwca.zip)). A comparison of the ITIS and Sheffield and Heron taxonomies is shown below. The ITIS taxonomy was downloaded in October, 2023. Here, we have limited the taxonomy to those species with "research grade" iNat observations as of the end of January, 2024.
 
 The total numbers of species as well as that the placement of species in the taxonomies differ, particularly at the subgenus level; for example, Andrena astragali is not classified as being in a subgenus in S&H, but is in the Euandrena subgenus in the ITIS/iNaturalist system.
 

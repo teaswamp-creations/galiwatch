@@ -1,15 +1,15 @@
 ---
-draft: false
 title: A quick look at the 2023 Hummingbird data
 date: 2024-01-02
 author: Richard Harrigan
 engine: knitr
 image: thumbnail.jpg
+freeze: true
 categories:
   - hummingbirds
 ---
 
-Reading time: `r ifelse(file.size("index.qmd")/2000 <= 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
+Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
 <img src="thumbnail.jpg" alt="hbird" class="image" style="width: 40%; float:right; margin-top:0.2em; margin-left:6px;"/>
 
@@ -20,6 +20,9 @@ When the system identifies a hummingbird, it draws a "bounding box" around the b
 Well, out of the \~67,500 images identifying hummingbirds to date, a total of 46,800 met the criterion of being high confidence calls (p\>0.7). There were 5293 male Rufous identified (11.5%); 21,127 female (including immature males) Rufous identified (45.8%); 6473 male Anna's (14%) and 13,201 female Anna's (including immature males) (28%). This is quite a showing by the Rufous, since they are only in the area from for about four or five months of the year. The Annas are present year-round, but probably a bit scared off in the peak Rufous summer months (highlighted in red).
 
 ------------------------------------------------------------------------
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
 
 ```{r echo=FALSE}
 library(kableExtra)
