@@ -1,121 +1,256 @@
 ---
-title: Taxonomy
-date: 2024-02-05
+title: Taxonomy_1
+date: 2024-02-09
 author: Richard Harrigan
 engine: knitr
 image: thumbnail.jpg
 categories:
   - bees
   - conservation
-draft: true
+  - taxonomy
+draft: false
 ---
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
 
-## Pure HTML version
+```{r echo=FALSE}
 
-<details>
-<summary>First List Item</summary>
-<blockquote>
-<details>
-<summary>Nested Item 1</summary>
-<blockquote>
-Content of Nested Item 1.
-</blockquote>
-</details>
-
-<details>
-<summary>Nested Item 2</summary>
-<blockquote>
-Content of Nested Item 2.
-</blockquote>
-</details>
-</blockquote>
-</details>
-
-<details>
-<summary>Second List Item</summary>
-<blockquote>
-<details>
-<summary>Nested Item 1</summary>
-<blockquote>
-Content of Nested Item 1.
-</blockquote>
-</details>
-
-<details>
-<summary>Nested Item 2</summary>
-<blockquote>
-Content of Nested Item 2, with more <details><summary>deeply nested toggles</summary><blockquote>Deep content!</blockquote></details>.
-</blockquote>
-</details>
-</blockquote>
-</details>
-
-
-## Function in R to generate this HTML from a dataframe
-
-(may need to format CSV data slightly to make this work `r emo::ji("smile")`)
-
-```{r echo = F}
+library(kableExtra)
 library(dplyr)
+```
 
-generate_html_list <- function(df) {
-  # Ensure unique identifiers for each detail section
-  uid <- 0
-  get_uid <- function() {
-    uid <<- uid + 1
-    return(uid)
+# A less painful way to look at BC Bee taxonomy
+
+The standard reference for the Bees of British Columbia is a paper by Sheffield and Heron from 2019, which summarised the history and distribution of native bees in BC (Sheffield, Cory S., and Jennifer M. Heron. "The bees of British Columbia (Hymenoptera: Apoidea, Apiformes)." *Journal of the Entomological Society of British Columbia* 115 (2018): 44-85). They reported a total of 483 bee species (including a few subspecies). Unfortunately, the static nature of a paper publication makes it rapidly obsolete, as well as very difficult to understand how things fit together in the big picture. In addition, a reader new to the field gets no feel for whether a bee is very rare and last observed in, say, 1914, or whether there are lots of recent and ongoing sightings.
+
+The tree below lets us explore the different levels of bee taxonomy. From this we can to see how many species and observations of bees there are in iNaturalist in BC at each taxonomic level. Each species link leads to images in our "bee book" for those found in the Pacific Maritime, "research grade" iNaturalist observations for BC sightings, or to a Wikipedia page for further information if there are no BC iNat observations. Note that a Wikipedia page may not actually exist for all bees, and we are just hoping for the best. Also note that out of the more than 400 different bee species reported in the manuscript, only about 100 bee species currently have research-grade observations in iNat. This is increasing every year, but there are still a lot of species with 0 observations.
+
+The lack of iNat observations could be due to any of several factors. First, the bees could simply be very rare. In addition, the biases in iNat observations likely include an under-representation of species located away from population centres like Greater Vancouver or Victoria. As well, there are biases associated with the size and popularity of the bees - for example honeybees and bumblebees are hugely popular subjects in iNaturalist.
+
+**The taxonomic tree inferred from Sheffield and Heron (2019), along with the number of observations reported in iNaturalist as of the end of January, 2024. Click the triangles to expand or contract the tree, and the link at the end to (hopefully) get some more information.**
+
+<hr>
+
+```{r echo=FALSE}
+
+
+# Assuming df is your preprocessed dataframe
+df <- read.csv("data.csv")
+
+# Function to preprocess data and handle special characters like "*"
+preprocess_data <- function(df) {
+  df %>% mutate(across(everything(), ~ifelse(. == "*", "Unknown", .)))
+}
+
+# Updated function to generate HTML with taxonomy level names, species counts, and iNat_Obs sums
+generate_html_list_with_counts_and_obs <- function(df, levels) {
+  if (length(levels) == 0) {
+    return("")
   }
   
-  # Create a nested list from the dataframe
-  nested_list <- df %>%
-    group_by(Family, Genus) %>%
-    summarise(Species = list(Species), .groups = 'drop') %>%
-    group_by(Family) %>%
-    summarise(Genus = list(Genus), Species = list(Species), .groups = 'drop') %>%
-    arrange(Family)
+  current_level <- levels[1]
+  next_levels <- levels[-1]
   
-  # Initialize an empty string to store the HTML
+  # Summarize data to get species counts and iNat_Obs sums at each level
+  df_summarized <- df %>%
+    group_by_at(vars(c(current_level, next_levels))) %>%
+    summarise(Species_Count = n_distinct(Species),
+              iNat_Obs_Sum = sum(iNat_Obs, na.rm = TRUE), .groups = 'drop') %>%
+    ungroup() %>%
+    arrange(get(current_level))
+  
   html_output <- ""
   
-  # Iterate over the families
-  for (i in 1:nrow(nested_list)) {
-    family_id <- get_uid()
-    html_output <- paste0(html_output, "<details>\n<summary>", nested_list$Family[i], "</summary>\n<blockquote>\n")
+  # Iterate through each unique category at the current level
+  unique_cats <- unique(df[[current_level]])
+  
+  for (cat in unique_cats) {
+    if (cat == "Unknown" || is.na(cat)) next # Skip unknown or NA categories
     
-    # Iterate over the genera in each family
-    for (j in 1:length(nested_list$Genus[[i]])) {
-      genus_id <- get_uid()
-      html_output <- paste0(html_output, "<details>\n<summary>", nested_list$Genus[[i]][j], "</summary>\n<blockquote>\n")
-      
-      # Iterate over the species in each genus
-      for (species in nested_list$Species[[i]][[j]]) {
-        species_id <- get_uid()
-        html_output <- paste0(html_output, "<details>\n<summary>", species, "</summary>\n<blockquote>\nContent for ", species, "</blockquote>\n</details>\n")
-      }
-      
-      html_output <- paste0(html_output, "</blockquote>\n</details>\n")
+    species_count <- df_summarized %>% filter(get(current_level) == cat) %>% pull(Species_Count) %>% sum(na.rm = TRUE)
+    iNat_Obs_Sum <- df_summarized %>% filter(get(current_level) == cat) %>% pull(iNat_Obs_Sum) %>% sum(na.rm = TRUE)
+    
+    # Conditional styling for different taxonomy levels
+    summary_style <- switch(current_level,
+                            "Genus" = " style='color: green; line-height: 0.6; text-indent: 40px;'",
+                            "Subgenus" = " style='color: green; line-height: 0.6; text-indent: 40px;'",
+                            "Family" = " style='color: blue; line-height: 0.7;'",
+                            "Subfamily" = " style='color: blue; line-height: 0.7;'",
+                            "Tribe" = " style='color: black; line-height: 0.6; text-indent: 20px;'",
+                            "Subtribe" = " style='color: black; line-height: 0.6; text-indent: 20px;'",
+                            "Species" = " style='color: red; line-height: 0.5; font-style: italic;'",
+                            "")
+    
+    # Prepend the column heading level to the category name
+    summary_text <- paste0("<summary", summary_style, ">", current_level, ": ", cat, " - ", species_count, " species, ", iNat_Obs_Sum, " iNat observations</summary>\n")
+    
+    # Extract and format links if current level is 'Species'
+    if (current_level == "Species") {
+      species_links <- df %>% filter(Species == cat) %>% pull(Subspecies)  # Assuming the Subspecies field contains URLs
+      species_links_html <- lapply(species_links, function(link) {
+        paste0("<a href='", link, "'>", link, "</a>")
+      })
+      summary_text <- paste0(summary_text, "<br>", paste(species_links_html, collapse = "<br>"))
     }
     
-    html_output <- paste0(html_output, "</blockquote>\n</details>\n")
+    children_html <- if (length(next_levels) > 0) generate_html_list_with_counts_and_obs(filter(df, get(current_level) == cat), next_levels) else ""
+    
+    html_output <- paste0(html_output, "<details>\n", summary_text, "<blockquote>\n", children_html, "</blockquote>\n</details>\n")
   }
   
   return(html_output)
 }
+
+# Preprocess data to handle special characters
+df_processed <- preprocess_data(df)
+
+# Specify taxonomy levels, excluding 'Subspecies'
+taxonomy_levels <- c("Family", "Subfamily", "Tribe", "Subtribe", "Genus", "Subgenus", "Species")
+
+# Initialize UID outside the function for unique section IDs
+uid <- 0
+
+list_with_counts_and_obs <- generate_html_list_with_counts_and_obs(df_processed, taxonomy_levels)
+
+# Using htmltools to create HTML content from the list
+html_output <- htmltools::HTML(list_with_counts_and_obs)
+
+# Print or view the HTML output
+html_output
+ 
 ```
 
-```{r}
+<hr>
 
-# Example dataframe
-df <- data.frame(
-  Family = c("Felidae", "Felidae", "Canidae", "Canidae"),
-  Genus = c("Panthera", "Felis", "Canis", "Vulpes"),
-  Species = c("Panthera leo", "Felis catus", "Canis lupus", "Vulpes vulpes")
-)
+### What is missing from Sheffield and Heron?
 
-# Generate HTML list
-list <- generate_html_list(df)
+The \~100 bees species observed in iNaturalist are not merely a subset of the \>400 species of the Sheffield and Heron manuscript. There are 18 species - about 20% of the total iNat bees from BC - where the iNat species name doesn't exist in Sheffield and Heron. Some of these are new bees being observed, and some are due to changes in the scientific names since the publication of the paper. One can rely less and less on any manuscript as time goes by.
 
-htmltools::HTML(list)
+*Bombus vancouverensis* had with the greatest number of observations for a species which but does not exist in Sheffield and Heron. This is due to it being the newer name for most *Bombus bifarius*. Similarly *Bombus californicus* has split from *Bombus fervidus* in the iNaturalist scheme. Other bees may be genuinely new observations.
+
+<hr>
+
+**Table of the "research-grade" iNaturalist observations as of the end of January, 2024 where the species is missing from Sheffield and Heron.**
+
+```{r echo=FALSE}
+
+dt <- read.csv("Missing_SH.csv")
+
+# Corrected code
+dt %>%
+  kbl(align = "c") %>% 
+  kable_classic_2(full_width = FALSE) %>%
+  column_spec(2, width = "6em", color = "blue")
+  
+```
+
+<hr>
+
+# So what taxonomy should we use?
+
+It probably makes the most sense to use the Integrated Taxonomic Information System (ITIS) taxonomy (<https://www.usgs.gov/tools/integrated-taxonomic-information-system-itis>) when using iNaturalist, because this seems to be what iNat uses. A comparison of the ITIS and Sheffield and Heron taxonomies is shown below. The ITIS taxonomy was downloaded in October, 2023. Here, we have limited the taxonomy to those species with "research grade" iNat observations as of the end of January, 2024.
+
+The total numbers of species as well as that the placement of species in the taxonomies differ, particularly at the subgenus level; for example, Andrena astragali is not classified as being in a subgenus in S&H, but is in the Euandrena subgenus in the ITIS/iNaturalist system.
+
+There are LOTS of differences. Happy exploring :)
+
+------------------------------------------------------------------------
+
+**Comparing ITIC and Sheffield and Heron taxonomies, restricting to ONLY BC bee species with at least one "research grade" observation in iNaturalist. Click the triangles to expand.**
+
+```{r echo=FALSE}
+
+
+
+# Assuming df2 is your preprocessed dataframe
+df2 <- read.csv("data2.csv")
+
+# Function to preprocess data and handle special characters like "*"
+preprocess_data <- function(df2) {
+  df2 %>% mutate(across(everything(), ~ifelse(. == "*", "Unknown", .)))
+}
+
+# Updated function to generate HTML with taxonomy level names, species counts, and iNat_Obs sums
+generate_html_list_with_counts_and_obs <- function(df2, levels) {
+  if (length(levels) == 0) {
+    return("")
+  }
+  
+  current_level <- levels[1]
+  next_levels <- levels[-1]
+  
+  # Summarize data to get species counts and iNat_Obs sums at each level
+  df2_summarized <- df2 %>%
+    group_by_at(vars(c(current_level, next_levels))) %>%
+    summarise(Species_Count = n_distinct(Species),
+              iNat_Obs_Sum = sum(iNat_Obs, na.rm = TRUE), .groups = 'drop') %>%
+    ungroup() %>%
+    arrange(get(current_level))
+  
+  html_output <- ""
+  
+  # Iterate through each unique category at the current level
+  unique_cats <- unique(df2[[current_level]])
+  
+  for (cat in unique_cats) {
+    if (cat == "Unknown" || is.na(cat)) next # Skip unknown or NA categories
+    
+    species_count <- df2_summarized %>% filter(get(current_level) == cat) %>% pull(Species_Count) %>% sum(na.rm = TRUE)
+    iNat_Obs_Sum <- df2_summarized %>% filter(get(current_level) == cat) %>% pull(iNat_Obs_Sum) %>% sum(na.rm = TRUE)
+    
+    # Conditional styling for different taxonomy levels
+    summary_style <- switch(current_level,
+                            "Genus" = " style='color: green; line-height: 0.6;'",
+                            "Source" = " style='color: red; line-height: 0.8;  font-size: 18px; font-weight: bold; text-indent:  0px;'",
+                            "Subgenus" = " style='color: green; line-height: 0.6;'",
+                            "Family" = " style='color: blue; line-height: 0.7;'",
+                            "Subfamily" = " style='color: blue; line-height: 0.7;'",
+                            "Tribe" = " style='color: black; line-height: 0.6;'",
+                            "Subtribe" = " style='color: black; line-height: 0.6;'",
+                            "Species" = " style='color: red; line-height: 0.6; font-style: italic; text-indent: -35px'",
+                            "")
+    
+    # Prepend the column heading level to the category name
+    summary_text <- paste0("<summary", summary_style, ">", current_level, ": ", cat, " - ", species_count, " species, ", iNat_Obs_Sum, " iNat observations</summary>\n")
+    
+    # Extract and format links if current level is 'Species'
+    if (current_level == "Species") {
+      species_links <- df2 %>% filter(Species == cat) %>% pull(Subspecies)  # Assuming the Subspecies field contains URLs
+      species_links_html <- lapply(species_links, function(link) {
+        paste0("<a href='", link, "'>", link, "</a>")
+      })
+      summary_text <- paste0(summary_text, "<br>", paste(species_links_html, collapse = "<br>"))
+    }
+    
+    children_html <- if (length(next_levels) > 0) generate_html_list_with_counts_and_obs(filter(df2, get(current_level) == cat), next_levels) else ""
+    
+    html_output <- paste0(html_output, "<details>\n", summary_text, "<blockquote>\n", children_html, "</blockquote>\n</details>\n")
+  }
+  
+  return(html_output)
+}
+
+# Preprocess data to handle special characters
+df2_processed <- preprocess_data(df2)
+
+# Specify taxonomy levels, excluding 'Subspecies'
+taxonomy_levels <- c("Source","Family", "Subfamily", "Tribe", "Subtribe", "Genus", "Subgenus", "Species")
+
+# Initialize UID outside the function for unique section IDs
+uid <- 0
+
+list_with_counts_and_obs <- generate_html_list_with_counts_and_obs(df2_processed, taxonomy_levels)
+
+# Using htmltools to create HTML content from the list
+html_output <- htmltools::HTML(list_with_counts_and_obs)
+
+# Print or view the HTML output
+html_output
+
+```
+
+------------------------------------------------------------------------
+
+```         
+
 ```
