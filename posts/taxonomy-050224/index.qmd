@@ -148,7 +148,7 @@ dt %>%
 
 # So what taxonomy should we use?
 
-It probably makes the most sense to use the Integrated Taxonomic Information System (ITIS) taxonomy (<https://www.usgs.gov/tools/integrated-taxonomic-information-system-itis>) when using iNaturalist, because this seems to be what iNat uses. A comparison of the ITIS and Sheffield and Heron taxonomies is shown below. The ITIS taxonomy was downloaded in October, 2023. Here, we have limited the taxonomy to those species with "research grade" iNat observations as of the end of January, 2024.
+It probably makes the most sense to use a system the Integrated Taxonomic Information System (ITIS) taxonomy (<https://www.usgs.gov/tools/integrated-taxonomic-information-system-itis>) when using iNaturalist, because this seems to be very similar what iNat uses.  (Note: what they actually use is here: https://www.inaturalist.org/taxa/inaturalist-taxonomy.dwca.zip ). A comparison of the ITIS and Sheffield and Heron taxonomies is shown below. The ITIS taxonomy was downloaded in October, 2023. Here, we have limited the taxonomy to those species with "research grade" iNat observations as of the end of January, 2024.
 
 The total numbers of species as well as that the placement of species in the taxonomies differ, particularly at the subgenus level; for example, Andrena astragali is not classified as being in a subgenus in S&H, but is in the Euandrena subgenus in the ITIS/iNaturalist system.
 
