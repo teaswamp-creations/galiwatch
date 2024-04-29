@@ -129,7 +129,7 @@ html_output
 
 The \~100 bees species observed in iNaturalist are not merely a subset of the \>400 species of the Sheffield and Heron manuscript. There are 18 species - about 20% of the total iNat bees from BC - where the iNat species name doesn't exist in Sheffield and Heron. Some of these are new bees being observed, and some are due to changes in the scientific names since the publication of the paper. One can rely less and less on any manuscript as time goes by.
 
-*Bombus vancouverensis* had with the greatest number of observations for a species which but does not exist in Sheffield and Heron. This is due to it being the newer name for most *Bombus bifarius*. Similarly *Bombus californicus* has split from *Bombus fervidus* in the iNaturalist scheme. Other bees may be genuinely new observations.
+*Bombus vancouverensis* had the greatest number of observations for a species which but does not exist in Sheffield and Heron. This is due to it being the newer name for most *Bombus bifarius*. Similarly *Bombus californicus* has split from *Bombus fervidus* in the iNaturalist scheme. Other bees may be genuinely new observations.
 
 <hr>
 
@@ -153,7 +153,7 @@ dt %>%
 
 It probably makes the most sense to use a system the [Integrated Taxonomic Information System (ITIS) taxonomy] (https://www.usgs.gov/tools/integrated-taxonomic-information-system-itis) when using iNaturalist, because this seems to be very similar what iNat uses.  (Note: what they actually use is here: [https://www.inaturalist.org/taxa/inaturalist-taxonomy.dwca.zip](https://www.inaturalist.org/taxa/inaturalist-taxonomy.dwca.zip)). A comparison of the ITIS and Sheffield and Heron taxonomies is shown below. The ITIS taxonomy was downloaded in October, 2023. Here, we have limited the taxonomy to those species with "research grade" iNat observations as of the end of January, 2024.
 
-The total numbers of species as well as that the placement of species in the taxonomies differ, particularly at the subgenus level; for example, Andrena astragali is not classified as being in a subgenus in S&H, but is in the Euandrena subgenus in the ITIS/iNaturalist system.
+The total numbers of species as well as the placement of species in the taxonomies differ, particularly at the subgenus level; for example, Andrena astragali is not classified as being in a subgenus in S&H, but is in the Euandrena subgenus in the ITIS/iNaturalist system.
 
 There are LOTS of differences. Happy exploring :)
 
