@@ -15,7 +15,7 @@ format:
 execute:
   warning: false
   message: false
-draft: true
+
 ---
 
 Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(round(file.size("index.qmd")/2000), ' minutes'))`
@@ -26,9 +26,9 @@ Reading time: `r ifelse(file.size("index.qmd")/2000 < 1, '<1 minute', paste0(rou
 This is the first post in our deep-dive series on the data from our hummingbird detection. We'll cover a few different things:
 
 1. Data cleaning (this post)
-1. [Bird sizes]()
-1. [Migration behaviour and weather effects]()
-1. [Territorial birds!]()  
+1. [Bird sizes](/posts/hummer-sizes-110523/)
+1. [Migration behaviour and weather effects](/posts/hummer-seasons-140823)
+1. [Territorial birds!](/posts/hummer-cooccurrence-210823)
 :::
 
 All the data analyzed here was collected in 2021. In the future, we may be able to learn more by comparing across different years. We have images from the hummingbird feeder, and micro-climate data collected from the weather station. 
@@ -82,7 +82,7 @@ library(ggpubr)
 classes = c('Rufous_Male', 'Annas_Male', 'Person', 'Annas_Female', 'Rufous_Female')
 
 # read in bird detection data, and do some basic data cleaning
-bird <- read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/hummer-data-cleaning-170323/2021_reprocessed_hummers_combo_2023.csv') %>% 
+bird <- read_csv('2021_reprocessed_hummers_combo_2023.csv') %>% 
   # lookup labels
   mutate(class = classes[label + 1]) %>%
   # put columns into tidy format
@@ -130,7 +130,7 @@ n_table %>%
 
 ## `r emo::ji('brain')` Observation
 
-There are more Rufouses than Annas, and many more females than males captured in our images.
+There are more Rufouses than Annas, and many more females + immature males than mature males captured in our images.
 
 :::
 
@@ -158,13 +158,21 @@ To help make sure we're only considering high-quality calls, we'll pick a confid
 
 ## `r emo::ji('brain')` Observation
 
-For both species, Male birds are slightly harder to identify with high confidence than Female. This may be because there are fewer of them. 
+For both species, mature male birds are slightly harder to identify with high confidence than female + immature male. This may be because there are fewer of them. 
 
 :::
 
 ## Filtering for high-confidence IDs
 
-We manually looked at the images, and found that that almost all the Rufouses after September 1st are false positives, so we'll remove these observations. Also, since we have very few IDs in October, we will drop this month from our data. Then, we'll filter to only retain the high-confidence (\> 0.7 prediction probability) bird IDs
+We manually looked at the images, and found that that almost all the Rufouses after September 1st are false positives, so we'll remove these observations. Also, since we have few IDs in October compared to other months, we will drop this month from our data. Then, we'll filter to only retain the high-confidence (\> 0.7 prediction probability) bird IDs
+
+```{r}
+table(bird$Month) %>%
+  t() %>%
+  kableExtra::kbl() %>%
+  kableExtra::kable_styling(full_width = F)
+```
+
 
 ```{r}
 bird <- bird %>%
@@ -200,7 +208,7 @@ Lets see if looking at the bird position with respect to the feeder helps sort t
 
 ## Batch correction and normalization
 
-We can plot the location of where each bird sits, with the proxy that a birds will be located at the center of its bounding box. The birds appear to mostly sit in a circle, around the rim of the feeder. This gives the best access to the sugar water.
+We can plot the location of where each bird sits, with the proxy that a birds will be located at the center of its bounding box (indicated by xmid and ymid). The birds appear to mostly sit in a circle, around the rim of the feeder. This gives the best access to the sugar water.
 
 ```{r}
 bird %>% ggplot(aes(x = xmid, y = -ymid, colour=y_size * x_size)) +
@@ -228,11 +236,11 @@ bird %>%
 Lets split these into batches for correction.
 
 ```{r batching}
-bird$batch <- 1
-bird$batch <- ifelse(bird$Timestamp > ymd_hms('2021-05-08 00:00:00'),2,bird$batch)
-bird$batch <- ifelse(bird$Timestamp > ymd_hms('2021-05-11 00:00:00'),3,bird$batch)
-bird$batch <- ifelse(bird$Timestamp > ymd_hms('2021-06-13 12:20:00'),4,bird$batch)
-bird$batch <- factor(bird$batch)
+bird$Batch <- 1
+bird$Batch <- ifelse(bird$Timestamp > ymd_hms('2021-05-08 00:00:00'),2,bird$Batch)
+bird$Batch <- ifelse(bird$Timestamp > ymd_hms('2021-05-11 00:00:00'),3,bird$Batch)
+bird$Batch <- ifelse(bird$Timestamp > ymd_hms('2021-06-13 12:20:00'),4,bird$Batch)
+bird$Batch <- factor(bird$Batch)
 ```
 
 We can check it went as expected by recolouring the previous plot by batch
@@ -242,7 +250,7 @@ bird %>%
   mutate(Month = month(Date, label=T)) %>%
   mutate(xmid = (xmax+xmin)/2, ymid = (ymax+ymin)/2) %>% 
   filter(Date>'2021-05-01' & Date<'2021-06-15') %>%
-  ggplot(aes(x=Timestamp, y = ymid, color=batch))+ 
+  ggplot(aes(x=Timestamp, y = ymid, color=Batch))+ 
   geom_point(alpha = 0.5) + 
   facet_wrap("~Month", scales = 'free_x') + 
   theme_pubr() + 
@@ -256,7 +264,7 @@ Now we're ready to correct! We'll transform all the x- and y- values by centerin
 bird_scaled <- bird %>% 
   mutate(Month = month(Date, label=T)) %>%
   mutate(Height = ymax-ymin, Width = xmax-xmin) %>%
-  group_by(batch) %>%
+  group_by(Batch) %>%
   mutate(across(c(Height, Width, xmid, ymid), ~scale(.x))) %>%
   mutate(xmin = xmid - Width/2, xmax = xmid + Width/2, 
          ymin = ymid - Height/2, ymax = ymid + Height/2)
@@ -266,7 +274,7 @@ bird_scaled <- bird %>%
 ```{r}
 bird_scaled %>% 
   filter(Date>'2021-05-01' & Date<'2021-06-15') %>%
-  ggplot(aes(x=Timestamp, y = ymid, color=batch))+ 
+  ggplot(aes(x=Timestamp, y = ymid, color=Batch))+ 
   geom_point(alpha = 0.5) + 
   facet_wrap("~Month", scales = 'free_x') + 
   theme_pubr() + 
@@ -277,19 +285,20 @@ bird_scaled %>%
 We can see that the correction didn't perfectly fix things - but it looks pretty good! From now on, we'll use the `bird_scaled` dataframe. 
 
 ```{r}
-p1 <- bird %>%
-  ggplot(aes(x=xmid, y=ymid) ) +
-  stat_density_2d(aes(fill=batch), geom = "polygon", alpha=0.2) + 
+#| layout-ncol: 2
+
+bird %>%
+  ggplot(aes(x=xmid, y=-ymid) ) +
+  stat_density_2d(aes(fill=Batch), geom = "polygon", alpha=0.2) + 
   theme_pubr() + 
   labs(title = 'Bird density before batch correction', fill = 'Batch')
 
-p2 <- bird_scaled %>%
-  ggplot(aes(x=xmid, y=ymid) ) +
-  stat_density_2d(aes(fill=batch), geom = "polygon", alpha=0.2) + 
+bird_scaled %>%
+  ggplot(aes(x=xmid, y=-ymid) ) +
+  stat_density_2d(aes(fill=Batch), geom = "polygon", alpha=0.2) + 
   theme_pubr() + 
   labs(title = 'Bird density after batch correction',fill = 'Batch')
 
-p1 | p2
 
 ```
 
@@ -314,8 +323,8 @@ Now we have our corrected bounding boxes! However, since we z-score normalized h
 bird_scaled <- bird %>% 
   mutate(Month = month(Date, label=T)) %>%
   mutate(Height = ymax-ymin, Width = xmax-xmin, 
-         original_aspect_ratio = Height/Width) %>%
-  group_by(batch) %>%
+         original_aspect_ratio = (Width/Height)) %>%
+  group_by(Batch) %>%
   mutate(across(c(Height, Width, xmid, ymid), ~scale(.x))) %>%
   filter(abs(Height)<=2) %>%
   filter(abs(Width)<=2) %>%
@@ -329,26 +338,28 @@ Since we normalized height and width independently, We should check that aspect 
 
 ```{r}
 bird_scaled %>%
-  mutate(scaled_aspect_ratio = Height/Width) %>%
-  ggscatter(x='scaled_aspect_ratio', y='original_aspect_ratio', alpha = 0.3,
-            color='batch', add='reg.line', add.params = list(color='black', linetype='dashed')) + 
-  stat_cor(label.y=3.4) +
-  stat_regline_equation()
+  mutate(scaled_aspect_ratio = (Width/Height)) %>%
+  ggplot(aes(x= scaled_aspect_ratio, y = original_aspect_ratio, colour = Batch)) +    geom_point() + 
+  facet_wrap(~Batch, labeller = label_both) + 
+  theme_pubr() + 
+  coord_equal() + 
+  geom_abline(intercept=0, slope = 1, linetype = 'dashed', linewidth = 1) + 
+  labs(x = 'Scaled aspect ratio', y = 'Original aspect ratio', colour = 'Batch')
 ```
 
-Pretty well correlated! There are some boxes that may have got warped through the normalization, especially in batch 2, but for the most part looks good. 
+There are some boxes that may have got warped through the normalization, especially in batches 1 and 3, but for the most part it's not terribly far off. 
 
 ```{r}
 bird_scaled %>% 
-  gghistogram(x="log2(Height / Width)", bins = 100) + 
+  gghistogram(x="log2(Width/Height)", bins = 100) + 
   labs(title = 'Bounding box aspect ratios after batch correction',
        subtile = 'Relative rarity of values at 18,000 and 38,000',
        y = 'Count') +
   annotate("segment", x = -0.2, xend = -2, y = 430, yend = 430, size = 1.2,
-           colour = "red", arrow = arrow(type='closed', length=unit(0.04, 'npc'))) + annotate('text', label = 'wide and short', colour = 'red', x = -1, y = 450) +
+           colour = "red", arrow = arrow(type='closed', length=unit(0.04, 'npc'))) + annotate('text', label = 'Tall & thin', colour = 'red', x = -1, y = 450) +
   annotate("segment", x = 0.2, xend = 2, y = 430, yend = 430, size = 1.2,
-           colour = "red", arrow = arrow(type='closed', length=unit(0.04, 'npc'))) + annotate('text', label = 'tall and thin', colour = 'red', x = 1, y = 450)  + 
-  annotate('text', label='square', x = 0, y = 450, colour = 'red')
+           colour = "red", arrow = arrow(type='closed', length=unit(0.04, 'npc'))) + annotate('text', label = 'Short & wide', colour = 'red', x = 1, y = 450)  + 
+  annotate('text', label='Square', x = 0, y = 450, colour = 'red')
   
 ```
 
@@ -357,7 +368,7 @@ bird_scaled %>%
 
 ## `r emo::ji('brain')` Observation
 
-There are more wide and short bounding boxes than tall and thin ones. 
+There are more short and wide bounding boxes than tall and thin ones. 
 
 :::
 
@@ -379,9 +390,18 @@ n_table %>%
   kableExtra::kable_styling(full_width = F)
 ```
 
+:::{.callout-note icon=false}
+
+## `r emo::ji('brain')` Observation
+
+There are more Rufouses than Annas, and many more females than males captured in our images.
+
+:::
+
+
 ## Summary
 
-We've filtered out low-confidence ID's and suspicious aspect-ratio bounding boxes. Each row in our dataframe corresponds to a picture of a bird, not necessarily an individual. Female and immature males are not possible to distinguish, they are both classified as females. There are more birds labeled as female than male for both Anna and Rufous. There are more Rufous than Anna. Bounding boxes tend to be wide and short more often than tall and thin. 
+We've filtered out low-confidence ID's and suspicious aspect-ratio bounding boxes. Each row in our dataframe corresponds to a picture of a bird, not necessarily an individual. Female and immature males are not possible to distinguish, they are both classified as females. There are more birds labeled as female than male for both Anna and Rufous. There are more Rufous than Anna. Bounding boxes tend to be short and wide more often than tall and thin. 
 
 We'll save the prepared `bird_scaled` dataframe for future use.
 
