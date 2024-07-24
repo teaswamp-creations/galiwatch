@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -50,7 +50,12 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -59,6 +64,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -106,6 +112,33 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
 </head>
 
@@ -113,9 +146,9 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Operation Galiwatch</span>
     </a>
@@ -127,38 +160,38 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./project.html" rel="" target="">
- <span class="menu-text">Project Details</span></a>
+    <a class="nav-link" href="./project.html"> 
+<span class="menu-text">Project Details</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://teaswamp-creations.github.io/bee-book" rel="" target=""><i class="bi bi-box-arrow-up-right" role="img">
+    <a class="nav-link" href="https://teaswamp-creations.github.io/bee-book"> <i class="bi bi-box-arrow-up-right" role="img">
 </i> 
- <span class="menu-text">Bee Book</span></a>
+<span class="menu-text">Bee Book</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" rel="" target="" aria-current="page">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./gallery.html" rel="" target="">
- <span class="menu-text">Gallery</span></a>
+    <a class="nav-link" href="./gallery.html"> 
+<span class="menu-text">Gallery</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/teaswamp-creations" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/teaswamp-creations"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -168,7 +201,7 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(20)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(3)</span></div><div class="category" data-category="audio moth">audio moth <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bee count">bee count <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bees">bees <span class="quarto-category-count">(6)</span></div><div class="category" data-category="bird song">bird song <span class="quarto-category-count">(1)</span></div><div class="category" data-category="chit chat">chit chat <span class="quarto-category-count">(3)</span></div><div class="category" data-category="climate">climate <span class="quarto-category-count">(5)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(2)</span></div><div class="category" data-category="conservation">conservation <span class="quarto-category-count">(3)</span></div><div class="category" data-category="data analysis">data analysis <span class="quarto-category-count">(6)</span></div><div class="category" data-category="deep-dive">deep-dive <span class="quarto-category-count">(1)</span></div><div class="category" data-category="frogs">frogs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="hardware">hardware <span class="quarto-category-count">(1)</span></div><div class="category" data-category="hummingbirds">hummingbirds <span class="quarto-category-count">(3)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(11)</span></div><div class="category" data-category="phenology">phenology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="pilot project">pilot project <span class="quarto-category-count">(2)</span></div><div class="category" data-category="surveillance">surveillance <span class="quarto-category-count">(1)</span></div><div class="category" data-category="taxonomy">taxonomy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="weather">weather <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(22)</span></div><div class="category" data-category="BeeNuker3000">BeeNuker3000 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(3)</span></div><div class="category" data-category="audio moth">audio moth <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bee count">bee count <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bees">bees <span class="quarto-category-count">(8)</span></div><div class="category" data-category="bird song">bird song <span class="quarto-category-count">(1)</span></div><div class="category" data-category="chit chat">chit chat <span class="quarto-category-count">(3)</span></div><div class="category" data-category="climate">climate <span class="quarto-category-count">(5)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(2)</span></div><div class="category" data-category="conservation">conservation <span class="quarto-category-count">(4)</span></div><div class="category" data-category="data analysis">data analysis <span class="quarto-category-count">(6)</span></div><div class="category" data-category="database">database <span class="quarto-category-count">(2)</span></div><div class="category" data-category="deep-dive">deep-dive <span class="quarto-category-count">(1)</span></div><div class="category" data-category="frogs">frogs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="hardware">hardware <span class="quarto-category-count">(1)</span></div><div class="category" data-category="hummingbirds">hummingbirds <span class="quarto-category-count">(3)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(13)</span></div><div class="category" data-category="phenology">phenology <span class="quarto-category-count">(3)</span></div><div class="category" data-category="pilot project">pilot project <span class="quarto-category-count">(2)</span></div><div class="category" data-category="surveillance">surveillance <span class="quarto-category-count">(2)</span></div><div class="category" data-category="taxonomy">taxonomy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="weather">weather <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -179,7 +212,7 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -187,7 +220,9 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
   </div>
   
 
+
 </header>
+
 
 
 
@@ -195,19 +230,67 @@ gtag('config', 'G-YZBNVRR4EQ', { 'anonymize_ip': true});
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bees,conservation,taxonomy" data-listing-date-sort="1707454800000" data-listing-file-modified-sort="1707781846161" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12">
+<div class="quarto-post image-right" data-index="0" data-categories="news,BeeNuker3000,bees,database,phenology,surveillance" data-listing-date-sort="1721620800000" data-listing-file-modified-sort="1721871421187" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1316">
 <div class="thumbnail">
-<p><a href="./posts/taxonomy-050224/index.html"> <img src="./posts/taxonomy-050224/thumbnail.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/bee-plant-database-250624/index.html" class="no-external"></a></p><a href="./posts/bee-plant-database-250624/index.html" class="no-external">
+<p><img src="./posts/bee-plant-database-250624/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/bee-plant-database-250624/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/taxonomy-050224/index.html">
 <h3 class="no-anchor listing-title">
-A less painful way to look at BC Bee taxonomy
+<a href="./posts/bee-plant-database-250624/index.html" class="no-external">BC Bee-Plant Database</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/bee-plant-database-250624/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
+news
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('BeeNuker3000'); return false;">
+BeeNuker3000
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('bees'); return false;">
+bees
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('database'); return false;">
+database
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('phenology'); return false;">
+phenology
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('surveillance'); return false;">
+surveillance
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/bee-plant-database-250624/index.html" class="no-external">Reading time: 5 minutes</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/bee-plant-database-250624/index.html" class="no-external">
+<div class="listing-date">
+Jul 22, 2024
+</div>
+<div class="listing-author">
+Kath Quayle
 </div>
 </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="bees,conservation,taxonomy" data-listing-date-sort="1707454800000" data-listing-file-modified-sort="1714383157647" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2274">
+<div class="thumbnail">
+<p><a href="./posts/taxonomy-050224/index.html" class="no-external"></a></p><a href="./posts/taxonomy-050224/index.html" class="no-external">
+<p><img src="./posts/taxonomy-050224/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/taxonomy-050224/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/taxonomy-050224/index.html" class="no-external">A less painful way to look at BC Bee taxonomy</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/taxonomy-050224/index.html" class="no-external"></a>
+</div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bees'); return false;">
 bees
@@ -219,14 +302,12 @@ conservation
 taxonomy
 </div>
 </div>
-<a href="./posts/taxonomy-050224/index.html">
 <div class="listing-description">
-Reading time: 7 minutes
+<a href="./posts/taxonomy-050224/index.html" class="no-external">Reading time: 7 minutes</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/taxonomy-050224/index.html">
+<a href="./posts/taxonomy-050224/index.html" class="no-external">
 <div class="listing-date">
 Feb 9, 2024
 </div>
@@ -236,19 +317,19 @@ Richard Harrigan
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="news,analysis,weather,bee count,phenology,surveillance" data-listing-date-sort="1706677200000" data-listing-file-modified-sort="1707782658027" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13">
+<div class="quarto-post image-right" data-index="2" data-categories="news,analysis,weather,bee count,phenology,surveillance" data-listing-date-sort="1706677200000" data-listing-file-modified-sort="1707782658027" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2447">
 <div class="thumbnail">
-<p><a href="./posts/oregon-grape-beecount-2023-310124/index.html"> <img src="./posts/oregon-grape-beecount-2023-310124/thumbnail.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/oregon-grape-beecount-2023-310124/index.html" class="no-external"></a></p><a href="./posts/oregon-grape-beecount-2023-310124/index.html" class="no-external">
+<p><img src="./posts/oregon-grape-beecount-2023-310124/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/oregon-grape-beecount-2023-310124/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/oregon-grape-beecount-2023-310124/index.html">
 <h3 class="no-anchor listing-title">
-Oregon grape bee count - 2023
+<a href="./posts/oregon-grape-beecount-2023-310124/index.html" class="no-external">Oregon grape bee count - 2023</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/oregon-grape-beecount-2023-310124/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
@@ -269,14 +350,12 @@ phenology
 surveillance
 </div>
 </div>
-<a href="./posts/oregon-grape-beecount-2023-310124/index.html">
 <div class="listing-description">
-Reading time: 6 minutes
+<a href="./posts/oregon-grape-beecount-2023-310124/index.html" class="no-external">Reading time: 6 minutes</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/oregon-grape-beecount-2023-310124/index.html">
+<a href="./posts/oregon-grape-beecount-2023-310124/index.html" class="no-external">
 <div class="listing-date">
 Jan 31, 2024
 </div>
@@ -286,32 +365,30 @@ Kath Quayle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="hummingbirds" data-listing-date-sort="1704171600000" data-listing-file-modified-sort="1707782413891" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="3" data-categories="hummingbirds" data-listing-date-sort="1704171600000" data-listing-file-modified-sort="1707782413891" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="891">
 <div class="thumbnail">
-<p><a href="./posts/hummer-watch-020124/index.html"> <img src="./posts/hummer-watch-020124/thumbnail.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/hummer-watch-020124/index.html" class="no-external"></a></p><a href="./posts/hummer-watch-020124/index.html" class="no-external">
+<p><img src="./posts/hummer-watch-020124/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/hummer-watch-020124/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/hummer-watch-020124/index.html">
 <h3 class="no-anchor listing-title">
-A quick look at the 2023 Hummingbird data
+<a href="./posts/hummer-watch-020124/index.html" class="no-external">A quick look at the 2023 Hummingbird data</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/hummer-watch-020124/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('hummingbirds'); return false;">
 hummingbirds
 </div>
 </div>
-<a href="./posts/hummer-watch-020124/index.html">
 <div class="listing-description">
-Reading time: 3 minutes
+<a href="./posts/hummer-watch-020124/index.html" class="no-external">Reading time: 3 minutes</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/hummer-watch-020124/index.html">
+<a href="./posts/hummer-watch-020124/index.html" class="no-external">
 <div class="listing-date">
 Jan 2, 2024
 </div>
@@ -321,19 +398,61 @@ Richard Harrigan
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="news,analysis,bees" data-listing-date-sort="1697342400000" data-listing-file-modified-sort="1698529072079" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="4" data-categories="news,database,bees,conservation" data-listing-date-sort="1703307600000" data-listing-file-modified-sort="1721876272496" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="247">
 <div class="thumbnail">
-<p><a href="./posts/bombus-vosnesenskii-151023/index.html"> <img src="./posts/bombus-vosnesenskii-151023/thumbnail.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/bee-book-231223/index.html" class="no-external"></a></p><a href="./posts/bee-book-231223/index.html" class="no-external">
+<p><img src="./posts/bee-book-231223/thumbnail.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/bee-book-231223/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/bombus-vosnesenskii-151023/index.html">
 <h3 class="no-anchor listing-title">
-Feature bee - Bombus vosnesenskii
+<a href="./posts/bee-book-231223/index.html" class="no-external">Big book of bees!</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/bee-book-231223/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
+news
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('database'); return false;">
+database
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('bees'); return false;">
+bees
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('conservation'); return false;">
+conservation
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/bee-book-231223/index.html" class="no-external">Reading time: &lt;1 minute</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/bee-book-231223/index.html" class="no-external">
+<div class="listing-date">
+Dec 23, 2023
+</div>
+<div class="listing-author">
+claude.ai (reviewed &amp; edited by Cait Harrigan)
 </div>
 </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="news,analysis,bees" data-listing-date-sort="1697342400000" data-listing-file-modified-sort="1698529072079" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="990">
+<div class="thumbnail">
+<p><a href="./posts/bombus-vosnesenskii-151023/index.html" class="no-external"></a></p><a href="./posts/bombus-vosnesenskii-151023/index.html" class="no-external">
+<p><img src="./posts/bombus-vosnesenskii-151023/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/bombus-vosnesenskii-151023/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/bombus-vosnesenskii-151023/index.html" class="no-external">Feature bee - Bombus vosnesenskii</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/bombus-vosnesenskii-151023/index.html" class="no-external"></a>
+</div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
@@ -345,14 +464,12 @@ analysis
 bees
 </div>
 </div>
-<a href="./posts/bombus-vosnesenskii-151023/index.html">
 <div class="listing-description">
-Reading time: 4 minutes
+<a href="./posts/bombus-vosnesenskii-151023/index.html" class="no-external">Reading time: 4 minutes</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/bombus-vosnesenskii-151023/index.html">
+<a href="./posts/bombus-vosnesenskii-151023/index.html" class="no-external">
 <div class="listing-date">
 Oct 15, 2023
 </div>
@@ -362,32 +479,30 @@ Kath Quayle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="bees" data-listing-date-sort="1691899200000" data-listing-file-modified-sort="1703549930221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="6" data-categories="bees" data-listing-date-sort="1691899200000" data-listing-file-modified-sort="1703549930221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="246">
 <div class="thumbnail">
-<p><a href="./posts/meet-the-bees-130823/index.html"> <img src="./posts/meet-the-bees-130823/thumbnail.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/meet-the-bees-130823/index.html" class="no-external"></a></p><a href="./posts/meet-the-bees-130823/index.html" class="no-external">
+<p><img src="./posts/meet-the-bees-130823/thumbnail.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/meet-the-bees-130823/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/meet-the-bees-130823/index.html">
 <h3 class="no-anchor listing-title">
-Meet the bees of Galiano
+<a href="./posts/meet-the-bees-130823/index.html" class="no-external">Meet the bees of Galiano</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/meet-the-bees-130823/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bees'); return false;">
 bees
 </div>
 </div>
-<a href="./posts/meet-the-bees-130823/index.html">
 <div class="listing-description">
-Reading time: &lt;1 minute
+<a href="./posts/meet-the-bees-130823/index.html" class="no-external">Reading time: &lt;1 minute</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/meet-the-bees-130823/index.html">
+<a href="./posts/meet-the-bees-130823/index.html" class="no-external">
 <div class="listing-date">
 Aug 13, 2023
 </div>
@@ -397,19 +512,19 @@ Cait Harrigan
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="news,audio moth,analysis,bird song" data-listing-date-sort="1682136000000" data-listing-file-modified-sort="1691918467259" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="7" data-categories="news,audio moth,analysis,bird song" data-listing-date-sort="1682136000000" data-listing-file-modified-sort="1691918467259" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="170">
 <div class="thumbnail">
-<p><a href="./posts/bird-song-220423/index.html"> <img src="./posts/bird-song-220423/thumbnail.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/bird-song-220423/index.html" class="no-external"></a></p><a href="./posts/bird-song-220423/index.html" class="no-external">
+<p><img src="./posts/bird-song-220423/thumbnail.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/bird-song-220423/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/bird-song-220423/index.html">
 <h3 class="no-anchor listing-title">
-Bird Song
+<a href="./posts/bird-song-220423/index.html" class="no-external">Bird Song</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/bird-song-220423/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
@@ -424,14 +539,12 @@ analysis
 bird song
 </div>
 </div>
-<a href="./posts/bird-song-220423/index.html">
 <div class="listing-description">
-Reading time: &lt;1 minute
+<a href="./posts/bird-song-220423/index.html" class="no-external">Reading time: &lt;1 minute</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/bird-song-220423/index.html">
+<a href="./posts/bird-song-220423/index.html" class="no-external">
 <div class="listing-date">
 Apr 22, 2023
 </div>
@@ -441,19 +554,19 @@ Kath Quayle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="news,chit chat,hummingbirds" data-listing-date-sort="1680148800000" data-listing-file-modified-sort="1691918191846" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="8" data-categories="news,chit chat,hummingbirds" data-listing-date-sort="1680148800000" data-listing-file-modified-sort="1691918191846" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="96">
 <div class="thumbnail">
-<p><a href="./posts/hummer-watch-300323/index.html"> <img src="./posts/hummer-watch-300323/thumbnail.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/hummer-watch-300323/index.html" class="no-external"></a></p><a href="./posts/hummer-watch-300323/index.html" class="no-external">
+<p><img src="./posts/hummer-watch-300323/thumbnail.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/hummer-watch-300323/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/hummer-watch-300323/index.html">
 <h3 class="no-anchor listing-title">
-They’re here!!
+<a href="./posts/hummer-watch-300323/index.html" class="no-external">They’re here!!</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/hummer-watch-300323/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
@@ -465,14 +578,12 @@ chit chat
 hummingbirds
 </div>
 </div>
-<a href="./posts/hummer-watch-300323/index.html">
 <div class="listing-description">
-Reading time: &lt;1 minute
+<a href="./posts/hummer-watch-300323/index.html" class="no-external">Reading time: &lt;1 minute</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/hummer-watch-300323/index.html">
+<a href="./posts/hummer-watch-300323/index.html" class="no-external">
 <div class="listing-date">
 Mar 30, 2023
 </div>
@@ -482,19 +593,19 @@ Kath Quayle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="news,chit chat,hummingbirds" data-listing-date-sort="1679284800000" data-listing-file-modified-sort="1691918197687" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="9" data-categories="news,chit chat,hummingbirds" data-listing-date-sort="1679284800000" data-listing-file-modified-sort="1691918197687" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
 <div class="thumbnail">
-<p><a href="./posts/hummer-watch-200323/index.html"> <img src="./posts/hummer-watch-200323/thumbnail.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/hummer-watch-200323/index.html" class="no-external"></a></p><a href="./posts/hummer-watch-200323/index.html" class="no-external">
+<p><img src="./posts/hummer-watch-200323/thumbnail.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/hummer-watch-200323/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/hummer-watch-200323/index.html">
 <h3 class="no-anchor listing-title">
-Where’s rufous?
+<a href="./posts/hummer-watch-200323/index.html" class="no-external">Where’s rufous?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/hummer-watch-200323/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
@@ -506,14 +617,12 @@ chit chat
 hummingbirds
 </div>
 </div>
-<a href="./posts/hummer-watch-200323/index.html">
 <div class="listing-description">
-Reading time: &lt;1 minute
+<a href="./posts/hummer-watch-200323/index.html" class="no-external">Reading time: &lt;1 minute</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/hummer-watch-200323/index.html">
+<a href="./posts/hummer-watch-200323/index.html" class="no-external">
 <div class="listing-date">
 Mar 20, 2023
 </div>
@@ -523,19 +632,19 @@ Kath Quayle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="news,chit chat" data-listing-date-sort="1679025600000" data-listing-file-modified-sort="1691917902161" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="10" data-categories="news,chit chat" data-listing-date-sort="1679025600000" data-listing-file-modified-sort="1691917902161" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="264">
 <div class="thumbnail">
-<p><a href="./posts/recap-170323/index.html"> <img src="./posts/recap-170323/thumbnail.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/recap-170323/index.html" class="no-external"></a></p><a href="./posts/recap-170323/index.html" class="no-external">
+<p><img src="./posts/recap-170323/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/recap-170323/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/recap-170323/index.html">
 <h3 class="no-anchor listing-title">
-Where we’re at March 2022
+<a href="./posts/recap-170323/index.html" class="no-external">Where we’re at March 2022</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/recap-170323/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
@@ -544,14 +653,12 @@ news
 chit chat
 </div>
 </div>
-<a href="./posts/recap-170323/index.html">
 <div class="listing-description">
-Reading time: &lt;1 minute
+<a href="./posts/recap-170323/index.html" class="no-external">Reading time: &lt;1 minute</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/recap-170323/index.html">
+<a href="./posts/recap-170323/index.html" class="no-external">
 <div class="listing-date">
 Mar 17, 2023
 </div>
@@ -561,19 +668,19 @@ Kath Quayle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="news,hardware" data-listing-date-sort="1678680000000" data-listing-file-modified-sort="1691918506534" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="11" data-categories="news,hardware" data-listing-date-sort="1678680000000" data-listing-file-modified-sort="1691918506534" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="507">
 <div class="thumbnail">
-<p><a href="./posts/operations-update-130323/index.html"> <img src="./posts/operations-update-130323/thumbnail.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/operations-update-130323/index.html" class="no-external"></a></p><a href="./posts/operations-update-130323/index.html" class="no-external">
+<p><img src="./posts/operations-update-130323/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/operations-update-130323/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/operations-update-130323/index.html">
 <h3 class="no-anchor listing-title">
-Operations Update 2023
+<a href="./posts/operations-update-130323/index.html" class="no-external">Operations Update 2023</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/operations-update-130323/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
@@ -582,14 +689,12 @@ news
 hardware
 </div>
 </div>
-<a href="./posts/operations-update-130323/index.html">
 <div class="listing-description">
-Reading time: 2 minutes
+<a href="./posts/operations-update-130323/index.html" class="no-external">Reading time: 2 minutes</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/operations-update-130323/index.html">
+<a href="./posts/operations-update-130323/index.html" class="no-external">
 <div class="listing-date">
 Mar 13, 2023
 </div>
@@ -599,19 +704,19 @@ Kath Quayle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="bees,climate,phenology,data analysis" data-listing-date-sort="1678680000000" data-listing-file-modified-sort="1707782503321" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="12" data-categories="bees,climate,phenology,data analysis" data-listing-date-sort="1678680000000" data-listing-file-modified-sort="1707782503321" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="250">
 <div class="thumbnail">
-<p><a href="./posts/oregon-grape-seasons-130323/index.html"> <img src="./posts/oregon-grape-seasons-130323/thumbnail.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/oregon-grape-seasons-130323/index.html" class="no-external"></a></p><a href="./posts/oregon-grape-seasons-130323/index.html" class="no-external">
+<p><img src="./posts/oregon-grape-seasons-130323/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/oregon-grape-seasons-130323/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/oregon-grape-seasons-130323/index.html">
 <h3 class="no-anchor listing-title">
-Oregon grape - seasonal variations
+<a href="./posts/oregon-grape-seasons-130323/index.html" class="no-external">Oregon grape - seasonal variations</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/oregon-grape-seasons-130323/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bees'); return false;">
 bees
@@ -626,14 +731,12 @@ phenology
 data analysis
 </div>
 </div>
-<a href="./posts/oregon-grape-seasons-130323/index.html">
 <div class="listing-description">
-Reading time: &lt;1 minute
+<a href="./posts/oregon-grape-seasons-130323/index.html" class="no-external">Reading time: &lt;1 minute</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/oregon-grape-seasons-130323/index.html">
+<a href="./posts/oregon-grape-seasons-130323/index.html" class="no-external">
 <div class="listing-date">
 Mar 13, 2023
 </div>
@@ -643,19 +746,19 @@ Kath Quayle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="climate,code,data analysis" data-listing-date-sort="1677042000000" data-listing-file-modified-sort="1691918473337" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="13" data-categories="climate,code,data analysis" data-listing-date-sort="1677042000000" data-listing-file-modified-sort="1691918473337" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="711">
 <div class="thumbnail">
-<p><a href="./posts/fires-220223/index.html"> <img src="./posts/fires-220223/thumbnail.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/fires-220223/index.html" class="no-external"></a></p><a href="./posts/fires-220223/index.html" class="no-external">
+<p><img src="./posts/fires-220223/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/fires-220223/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/fires-220223/index.html">
 <h3 class="no-anchor listing-title">
-Fires in summer 2021
+<a href="./posts/fires-220223/index.html" class="no-external">Fires in summer 2021</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/fires-220223/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('climate'); return false;">
 climate
@@ -667,14 +770,12 @@ code
 data analysis
 </div>
 </div>
-<a href="./posts/fires-220223/index.html">
 <div class="listing-description">
-Reading time: 2 minutes
+<a href="./posts/fires-220223/index.html" class="no-external">Reading time: 2 minutes</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/fires-220223/index.html">
+<a href="./posts/fires-220223/index.html" class="no-external">
 <div class="listing-date">
 Feb 22, 2023
 </div>
@@ -684,19 +785,19 @@ Cait Harrigan, Richard Harrigan
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="news,frogs" data-listing-date-sort="1666411200000" data-listing-file-modified-sort="1691918479789" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="14" data-categories="news,frogs" data-listing-date-sort="1666411200000" data-listing-file-modified-sort="1691918479789" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="196">
 <div class="thumbnail">
-<p><a href="./posts/frog-watch-221022/index.html"> <img src="./posts/frog-watch-221022/thumbnail.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/frog-watch-221022/index.html" class="no-external"></a></p><a href="./posts/frog-watch-221022/index.html" class="no-external">
+<p><img src="./posts/frog-watch-221022/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/frog-watch-221022/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/frog-watch-221022/index.html">
 <h3 class="no-anchor listing-title">
-Galiano frogs
+<a href="./posts/frog-watch-221022/index.html" class="no-external">Galiano frogs</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/frog-watch-221022/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
@@ -705,14 +806,12 @@ news
 frogs
 </div>
 </div>
-<a href="./posts/frog-watch-221022/index.html">
 <div class="listing-description">
-Reading time: &lt;1 minute
+<a href="./posts/frog-watch-221022/index.html" class="no-external">Reading time: &lt;1 minute</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/frog-watch-221022/index.html">
+<a href="./posts/frog-watch-221022/index.html" class="no-external">
 <div class="listing-date">
 Oct 22, 2022
 </div>
@@ -722,19 +821,19 @@ Kath Quayle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="climate,data analysis" data-listing-date-sort="1665547200000" data-listing-file-modified-sort="1691918494668" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="15" data-categories="climate,data analysis" data-listing-date-sort="1665547200000" data-listing-file-modified-sort="1691918494668" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="662">
 <div class="thumbnail">
-<p><a href="./posts/indoor-air-replacement-121022/index.html"> <img src="./posts/indoor-air-replacement-121022/Picture3.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/indoor-air-replacement-121022/index.html" class="no-external"></a></p><a href="./posts/indoor-air-replacement-121022/index.html" class="no-external">
+<p><img src="./posts/indoor-air-replacement-121022/Picture3.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/indoor-air-replacement-121022/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/indoor-air-replacement-121022/index.html">
 <h3 class="no-anchor listing-title">
-Indoor air replacement
+<a href="./posts/indoor-air-replacement-121022/index.html" class="no-external">Indoor air replacement</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/indoor-air-replacement-121022/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('climate'); return false;">
 climate
@@ -743,14 +842,12 @@ climate
 data analysis
 </div>
 </div>
-<a href="./posts/indoor-air-replacement-121022/index.html">
 <div class="listing-description">
-Reading time: 3 minutes
+<a href="./posts/indoor-air-replacement-121022/index.html" class="no-external">Reading time: 3 minutes</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/indoor-air-replacement-121022/index.html">
+<a href="./posts/indoor-air-replacement-121022/index.html" class="no-external">
 <div class="listing-date">
 Oct 12, 2022
 </div>
@@ -760,19 +857,19 @@ Richard Harrigan
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="news,code,data analysis,bees" data-listing-date-sort="1659585600000" data-listing-file-modified-sort="1691918453700" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="16" data-categories="news,code,data analysis,bees" data-listing-date-sort="1659585600000" data-listing-file-modified-sort="1691918453700" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="260">
 <div class="thumbnail">
-<p><a href="./posts/bee-watch-040822/index.html"> <img src="./posts/bee-watch-040822/images/Raspberrypi camera 2.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/bee-watch-040822/index.html" class="no-external"></a></p><a href="./posts/bee-watch-040822/index.html" class="no-external">
+<p><img src="./posts/bee-watch-040822/images/Raspberrypi camera 2.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/bee-watch-040822/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/bee-watch-040822/index.html">
 <h3 class="no-anchor listing-title">
-2021 Bee count
+<a href="./posts/bee-watch-040822/index.html" class="no-external">2021 Bee count</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/bee-watch-040822/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
@@ -787,14 +884,12 @@ data analysis
 bees
 </div>
 </div>
-<a href="./posts/bee-watch-040822/index.html">
 <div class="listing-description">
-Reading time: &lt;1 minute
+<a href="./posts/bee-watch-040822/index.html" class="no-external">Reading time: &lt;1 minute</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/bee-watch-040822/index.html">
+<a href="./posts/bee-watch-040822/index.html" class="no-external">
 <div class="listing-date">
 Aug 4, 2022
 </div>
@@ -804,19 +899,19 @@ Kath Quayle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="bees,conservation,deep-dive" data-listing-date-sort="1658203200000" data-listing-file-modified-sort="1691918444633" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="17" data-categories="bees,conservation,deep-dive" data-listing-date-sort="1658203200000" data-listing-file-modified-sort="1691918444633" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="772">
 <div class="thumbnail">
-<p><a href="./posts/bee-loss-190722/index.html"> <img src="./posts/bee-loss-190722/thumbnail.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/bee-loss-190722/index.html" class="no-external"></a></p><a href="./posts/bee-loss-190722/index.html" class="no-external">
+<p><img src="./posts/bee-loss-190722/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/bee-loss-190722/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/bee-loss-190722/index.html">
 <h3 class="no-anchor listing-title">
-Bee loss in North America
+<a href="./posts/bee-loss-190722/index.html" class="no-external">Bee loss in North America</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/bee-loss-190722/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bees'); return false;">
 bees
@@ -828,14 +923,12 @@ conservation
 deep-dive
 </div>
 </div>
-<a href="./posts/bee-loss-190722/index.html">
 <div class="listing-description">
-Reading time: 3 minutes
+<a href="./posts/bee-loss-190722/index.html" class="no-external">Reading time: 3 minutes</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/bee-loss-190722/index.html">
+<a href="./posts/bee-loss-190722/index.html" class="no-external">
 <div class="listing-date">
 Jul 19, 2022
 </div>
@@ -845,32 +938,30 @@ Kath Quayle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="news" data-listing-date-sort="1651377600000" data-listing-file-modified-sort="1691918514725" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="18" data-categories="news" data-listing-date-sort="1651377600000" data-listing-file-modified-sort="1691918514725" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="295">
 <div class="thumbnail">
-<p><a href="./posts/recap-010522/index.html"> <img src="./posts/recap-010522/thumbnail.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/recap-010522/index.html" class="no-external"></a></p><a href="./posts/recap-010522/index.html" class="no-external">
+<p><img src="./posts/recap-010522/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/recap-010522/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/recap-010522/index.html">
 <h3 class="no-anchor listing-title">
-2021 recap
+<a href="./posts/recap-010522/index.html" class="no-external">2021 recap</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/recap-010522/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./posts/recap-010522/index.html">
 <div class="listing-description">
-Reading time: &lt;1 minute
+<a href="./posts/recap-010522/index.html" class="no-external">Reading time: &lt;1 minute</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/recap-010522/index.html">
+<a href="./posts/recap-010522/index.html" class="no-external">
 <div class="listing-date">
 May 1, 2022
 </div>
@@ -880,19 +971,19 @@ Cait Harrigan
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="news,climate" data-listing-date-sort="1639890000000" data-listing-file-modified-sort="1691918510721" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="19" data-categories="news,climate" data-listing-date-sort="1639890000000" data-listing-file-modified-sort="1691918510721" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="98">
 <div class="thumbnail">
-<p><a href="./posts/purple-air-191221/index.html"> <img src="./posts/purple-air-191221/thumbnail.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/purple-air-191221/index.html" class="no-external"></a></p><a href="./posts/purple-air-191221/index.html" class="no-external">
+<p><img src="./posts/purple-air-191221/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/purple-air-191221/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/purple-air-191221/index.html">
 <h3 class="no-anchor listing-title">
-Purple Air sensor
+<a href="./posts/purple-air-191221/index.html" class="no-external">Purple Air sensor</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/purple-air-191221/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
@@ -901,14 +992,12 @@ news
 climate
 </div>
 </div>
-<a href="./posts/purple-air-191221/index.html">
 <div class="listing-description">
-Reading time: &lt;1 minute
+<a href="./posts/purple-air-191221/index.html" class="no-external">Reading time: &lt;1 minute</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/purple-air-191221/index.html">
+<a href="./posts/purple-air-191221/index.html" class="no-external">
 <div class="listing-date">
 Dec 19, 2021
 </div>
@@ -918,19 +1007,19 @@ Cait Harrigan
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="climate,pilot project,data analysis" data-listing-date-sort="1623816000000" data-listing-file-modified-sort="1691918536028" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12">
+<div class="quarto-post image-right" data-index="20" data-categories="climate,pilot project,data analysis" data-listing-date-sort="1623816000000" data-listing-file-modified-sort="1691918536028" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2217">
 <div class="thumbnail">
-<p><a href="./posts/weather-story-160621/index.html"> <img src="./posts/weather-story-160621/thumbnail.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/weather-story-160621/index.html" class="no-external"></a></p><a href="./posts/weather-story-160621/index.html" class="no-external">
+<p><img src="./posts/weather-story-160621/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/weather-story-160621/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/weather-story-160621/index.html">
 <h3 class="no-anchor listing-title">
-Air quality measurement
+<a href="./posts/weather-story-160621/index.html" class="no-external">Air quality measurement</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/weather-story-160621/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('climate'); return false;">
 climate
@@ -942,14 +1031,12 @@ pilot project
 data analysis
 </div>
 </div>
-<a href="./posts/weather-story-160621/index.html">
 <div class="listing-description">
-Reading time: 5 minutes
+<a href="./posts/weather-story-160621/index.html" class="no-external">Reading time: 5 minutes</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/weather-story-160621/index.html">
+<a href="./posts/weather-story-160621/index.html" class="no-external">
 <div class="listing-date">
 Jun 16, 2021
 </div>
@@ -959,19 +1046,19 @@ Kath Quayle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="conservation,pilot project,data analysis" data-listing-date-sort="1622433600000" data-listing-file-modified-sort="1691919746173" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<div class="quarto-post image-right" data-index="21" data-categories="conservation,pilot project,data analysis" data-listing-date-sort="1622433600000" data-listing-file-modified-sort="1691919746173" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2101">
 <div class="thumbnail">
-<p><a href="./posts/oregon-grape-phenology-310521/index.html"> <img src="./posts/oregon-grape-phenology-310521/thumbnail.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/oregon-grape-phenology-310521/index.html" class="no-external"></a></p><a href="./posts/oregon-grape-phenology-310521/index.html" class="no-external">
+<p><img src="./posts/oregon-grape-phenology-310521/thumbnail.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/oregon-grape-phenology-310521/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/oregon-grape-phenology-310521/index.html">
 <h3 class="no-anchor listing-title">
-Oregon grape
+<a href="./posts/oregon-grape-phenology-310521/index.html" class="no-external">Oregon grape</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/oregon-grape-phenology-310521/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conservation'); return false;">
 conservation
@@ -983,14 +1070,12 @@ pilot project
 data analysis
 </div>
 </div>
-<a href="./posts/oregon-grape-phenology-310521/index.html">
 <div class="listing-description">
-Reading time: 5 minutes
+<a href="./posts/oregon-grape-phenology-310521/index.html" class="no-external">Reading time: 5 minutes</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/oregon-grape-phenology-310521/index.html">
+<a href="./posts/oregon-grape-phenology-310521/index.html" class="no-external">
 <div class="listing-date">
 May 31, 2021
 </div>
@@ -1046,6 +1131,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1114,13 +1226,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1199,10 +1313,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1212,8 +1325,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1226,6 +1348,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1269,6 +1510,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1294,6 +1536,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1359,12 +1627,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center"><em>a Tea Swamp project</em> <br> <img src="https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/images/teaswamp_transparent.png" alt="logo" class="image" style="width: 2.5em;"></div>
+    <div class="nav-footer-center">
+<p><em>a Tea Swamp project</em> <br> <a href="https://github.com/teaswamp-creations"> <img src="https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/images/teaswamp_transparent.png" alt="teaswamp logo: frog in mug" class="image" style="width: 5em;"> </a></p>
+</div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
+
 
 
 
