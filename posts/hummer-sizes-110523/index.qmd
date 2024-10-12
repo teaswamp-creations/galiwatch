@@ -13,6 +13,7 @@ format:
     toc: true
     code-fold: true
 lightbox: true
+draft: true
 execute:
   warning: false
   message: false
@@ -39,6 +40,7 @@ library(tidyverse)
 library(lubridate)
 library(patchwork)
 library(ggpubr)
+knitr::opts_chunk$set(eval = FALSE) 
 
 # read in bird detection data, and do some basic data cleaning
 bird_scaled <- read_csv('../hummer-data-cleaning-170323/bird_scaled.csv') 

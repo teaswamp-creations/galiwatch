@@ -51,7 +51,7 @@ Bumblebees are by far the most commonly photographed bees in iNat, which makes f
 
 ![](images/Picture4-05.png){fig-align="center"}
 
-## Let's take a closer look 
+## Let's take a closer look
 
 We have almost 7,000 records of bumblebees and their plant hosts, which include data for 30 of BC's 33 bumblebee species currently documented in iNat (the missing bees are *B. sandersoni* and *B.natvigi*, both found in the far north of the province, and *B. vandykeii* in the southern Okanagan, for which we were unable to extract plant association info).
 
@@ -75,7 +75,7 @@ As a first step, we have looked at the 10 most common bumblebees in the Database
 
 We divided them into two groups, those with overlapping geographic range and those with more restricted ranges, and then looked at the top three types of plants preferred by each bumblebee species.
 
-####  Bumblebees with overlapping geographic ranges found throughout BC
+#### Bumblebees with overlapping geographic ranges found throughout BC
 
 ![Notes: *B. melanopygus*, *B. vancouverensis*, *B. falvifrons* - widespread throughout BC; *B. mixtus* - widespread in the Lower Mainland, Vancouver Island, and North to Smithers with a few sightings in the East of the province; *B. sitkensis* - common on Vancouver Island and the Lower Mainland with sightings up the coast to the Stikine region. Also seen in the east of the province in the lower Purcell range.](images/Picture5-04.png){fig-align="center"}
 
