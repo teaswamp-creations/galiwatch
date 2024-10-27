@@ -154,102 +154,53 @@
     "text": "Reading time: 2 minutes\nSummer 2021 was a hot one for BC: record temperatures from the Western Heatdome, and record forest fires. We picked up evidence of the fires from our monitoring site - here’s a brief summary of what we saw.\nWe’ll read in our data: air quality measures from our Purple Air sensor\n\n\nCode\nlibrary(tidyverse)\nlibrary(lubridate)\nlibrary(patchwork)\nlibrary(ggpubr)\n\n# read in air quality data, and prepare variable names\nair &lt;- read_csv('https://raw.githubusercontent.com/teaswamp-creations/galiwatch.ca/quarto-website/posts/fires-220223/2021_temp_and_PM.csv') %&gt;%\n  mutate(`Row Labels` = as_date(ymd_hms(`Row Labels`))) %&gt;%\n  rename(Date = `Row Labels`,\n         PM1.0 = `Average of PM1.0_CF1_ug/m3`,\n         PM2.5 = `Average of PM2.5_CF1_ug/m3`,\n         PM10.0 = `Average of PM10.0_CF1_ug/m3`,\n        `Temp C` = `Average of Temperature_F`)\n\n\nLooking at the air quality data, we notice a few things. Firstly, all the PM values have peaks in the same places, and they don’t seem too well-correlated with the outdoor temperature.\n\n\nCode\nair %&gt;%\n  pivot_longer(c(PM1.0, PM2.5, PM10.0, `Temp C`)) %&gt;%\n  mutate(name = ordered(name, levels = c('PM1.0', 'PM2.5', 'PM10.0', 'Temp C'))) %&gt;%\n  group_by(name) %&gt;%\n  mutate(rollmean = zoo::rollmean(value, 10, align = 'right', fill=NA)) %&gt;%\n  ggline(x = 'Date', y = 'rollmean', color='name', plot_type='l', size=1, alpha = 0.8) + \n  labs(title = 'Air Quality Measures in Summer 2021',\n       subtitle = 'Rolling 10-day average', \n       y='Value', color = 'Measure') + \n  scale_colour_manual(values = c('lightblue', 'orange', 'salmon', 'grey')) + \n  theme(legend.position = 'right')\n\n\n\n\n\n\n\n\n\nThis isn’t all that surprising, and we can see the correlation is very close to 1 for the different PM sizes.\n\n\n\n\n\n\n\n\n\nPicking just PM2.5, we can remake the first plot, this time showing the daily average, without the 10-day smoothing we used before. This gives us a more granular view of air quality events.\n\n\nCode\nair %&gt;%\n  pivot_longer(c(PM2.5, `Temp C`)) %&gt;%\n  group_by(name) %&gt;%\n  ggline(x = 'Date', y = 'value', color='name', plot_type='l', size=1, alpha = 0.8) + \n  labs(title = 'Forest Fires cause Temperature and PM2.5 to spike',\n       y='Value', color = 'Measure') + \n  scale_colour_manual(values = c('orange', 'grey')) + \n  theme(legend.position = 'right') + \n  scale_x_date(date_labels = \"%b\", date_breaks = \"1 month\") + \n  \n  geom_label(aes(x = ymd('2021-05-15'), y = 30, label = \"June heatdome\"), \n               hjust = 0.5, vjust = 0.5, label.size = NA, size=3.5, family='xkcd') +\n  geom_curve(aes(x = ymd('2021-05-15'), y = 32, xend = ymd('2021-06-20'), yend = 40), \n             colour = \"#555555\", curvature = -0.3, size=0.8)+  \n  geom_label(aes(x = ymd('2021-06-15'), y = 55, label = \"Air quality advisory\\nissued for metro Vancouver\"), \n             hjust = 0.5, vjust = 0.5, label.size = NA, size=3.5, family='xkcd')+ \n  geom_curve(aes(x = ymd('2021-06-15'), y = 51, xend = ymd('2021-08-10'), yend = 45), \n             colour = \"#555555\", curvature = 0.25, size=0.8)+ \n  geom_label(aes(x = ymd('2021-11-05'), y = 45, label = \"Likely woodsmoke from\\nlocal fireplaces\"), \n             hjust = 0.5, vjust = 0.5, label.size = NA, size=3.5, family='xkcd')+\n  geom_bracket(xmin = ymd('2021-09-15'), xmax = ymd('2021-12-30'), y.position = 40, label='', size=0.8, tip.length = 0.02)\n\n\n\n\n\n\n\n\n\nWe can clearly see the peak in temperature when BC got hit by the heatdome. We hypothesize that winter spikes in PM2.5 happen when nearby houses burn wood in their fireplace for heating, as they seem to be associated with relative dips in temperature."
   },
   {
-    "objectID": "posts/bird-song-220423/index.html",
-    "href": "posts/bird-song-220423/index.html",
-    "title": "Bird Song",
+    "objectID": "posts/bombus-vosnesenskii-151023/index.html",
+    "href": "posts/bombus-vosnesenskii-151023/index.html",
+    "title": "Feature bee - Bombus vosnesenskii",
+    "section": "",
+    "text": "Reading time: 4 minutes\nThis article was prepared for The Native Bee Society of BC’s (NBSBC) Quarterly Buzz Oct, 2023 and edited for the Galiwatch site.\nBombus vosnesenski (B. vos) was first seen on Galiano in 2017 1, and is one of the six bumble bees currently known to call Galiano home.\nWith its distinctive bright yellow face, and indiscriminate taste for nectar and pollen sources, you will almost certainly see this black bumble buzzing around all sorts of different plants in the Gulf Islands, Vancouver Island, and the Lower Mainland, as in recent years it has become one of the most common bumblebees in the region.\nThis has not always been the case though - not that long ago B. vos was a rarity in British Columbia. It first appears in the records in the 1950s when a few specimens were found in the interior of BC, and there was talk of it being assigned threatened or endangered status. By 2000 however, it had expanded through the Okanagan and Similkameen valleys, as well as having become firmly established in the Pacific Maritime region 2."
+  },
+  {
+    "objectID": "posts/bombus-vosnesenskii-151023/index.html#footnotes",
+    "href": "posts/bombus-vosnesenskii-151023/index.html#footnotes",
+    "title": "Feature bee - Bombus vosnesenskii",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAndrew Simon. 2017. Available at https://inaturalist.ca/observations/6412054. Accessed 27/09/2023↩︎\nFraser DF, Copley CR, Elle E, Cannings RA. Changes in the Status and Distribution of the Yellow-faced Bumble Bee. Journal of the Entomological Society of British Columbia. 2012;109:31-7.↩︎\niNaturalist. (n.d.). Map of world research grade observations of B. vosnesenskii from Jan1, 2014, to 15 Sept 2023. Available from: https://inaturalist.ca/observations?place_id=any&subview=map&taxon_id=57689 Accessed Sept 16th, 2023.↩︎\niNaturalist. (n.d.). Map of British Columbia research grade observations of B. vosnesenskii. Jan 1, 2014, to Sep 15, 2023. Available from: https://inaturalist.ca/observations?place_id=7085&subview=map&taxon_id=57689 Accessed Sept 16th, 2023.↩︎\nData source: https://inaturalist.ca/observations?place_id=any&subview=table&taxon_id=57689↩︎"
+  },
+  {
+    "objectID": "posts/bee-watch-040822/index.html",
+    "href": "posts/bee-watch-040822/index.html",
+    "title": "2021 Bee count",
     "section": "",
     "text": "Reading time: &lt;1 minute"
   },
   {
-    "objectID": "posts/bird-song-220423/index.html#coopers-hawk",
-    "href": "posts/bird-song-220423/index.html#coopers-hawk",
-    "title": "Bird Song",
-    "section": "Cooper’s hawk",
-    "text": "Cooper’s hawk\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
+    "objectID": "posts/bee-watch-040822/index.html#time-lapse-photography",
+    "href": "posts/bee-watch-040822/index.html#time-lapse-photography",
+    "title": "2021 Bee count",
+    "section": "Time lapse photography",
+    "text": "Time lapse photography\n\nWe used time lapse photography to capture one pic per minute from dawn to dusk from the start to the end of the flowering season (March 12th to May 3rd) The first bee caught on camera flew by before any flowers had opened on the evening of Apr 13th, and we saw open flowers at sunrise on Apr 14th. The first pollinator was a bumble bee caught on camera that afternoon. We collected approximately 850 pics per day (16,000+ pics collected during the observation period) and found only 123 pics with bees in them. That’s less than 1%!!\n\nIn addition to bumble bees we observed a few butterflies and bee flies, as well as other small flies."
   },
   {
-    "objectID": "posts/bird-song-220423/index.html#american-robin",
-    "href": "posts/bird-song-220423/index.html#american-robin",
-    "title": "Bird Song",
-    "section": "American robin",
-    "text": "American robin\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
+    "objectID": "posts/bee-watch-040822/index.html#video-footage",
+    "href": "posts/bee-watch-040822/index.html#video-footage",
+    "title": "2021 Bee count",
+    "section": "Video footage",
+    "text": "Video footage\n\nWe collected 4 mins of footage every 5 mins from dawn to dusk from April 21st to May 4th (full bloom to berry set).\nThis gave us approx. 175 videos per day for a total of 2,450+ videos collected during the observation period. Around 250 videos (around 10%) had bees in them.\nMost bees observed in any one day was 32 on April 22nd.\n\nBumble bee ID\nWe were able to identify two bumble bee species - Vancouver bumble bees (Bombus vancouverensis) and yellow-fronted bumble bees (Bombus flavifrons).\nWe also observed carpenter bees, hover flies (including American thintail), various common-looking flies, small white butterflies (echo azure), slugs, pill bugs, and beetles."
   },
   {
-    "objectID": "posts/bird-song-220423/index.html#red-breasted-nuthatch",
-    "href": "posts/bird-song-220423/index.html#red-breasted-nuthatch",
-    "title": "Bird Song",
-    "section": "Red-breasted nuthatch",
-    "text": "Red-breasted nuthatch\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
-  },
-  {
-    "objectID": "posts/bird-song-220423/index.html#northern-flicker",
-    "href": "posts/bird-song-220423/index.html#northern-flicker",
-    "title": "Bird Song",
-    "section": "Northern Flicker",
-    "text": "Northern Flicker\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
-  },
-  {
-    "objectID": "posts/bird-song-220423/index.html#bewicks-wren",
-    "href": "posts/bird-song-220423/index.html#bewicks-wren",
-    "title": "Bird Song",
-    "section": "Bewick’s wren",
-    "text": "Bewick’s wren\n\n\n\nPhoto: lornasdr licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
-  },
-  {
-    "objectID": "posts/bee-plant-database-250624/index.html",
-    "href": "posts/bee-plant-database-250624/index.html",
-    "title": "BC Bee-Plant Database",
+    "objectID": "posts/bee-loss-190722/index.html",
+    "href": "posts/bee-loss-190722/index.html",
+    "title": "Bee loss in North America",
     "section": "",
-    "text": "Reading time: 5 minutes"
+    "text": "Reading time: 3 minutes\nWild pollinators are an integral part of native plant communities and are highly effective at pollinating flowers in natural ecosystems. Plant pollination is essential for plant reproduction, which in turn provides fruits and seeds for wildlife. Abundance and diversity of pollinators ensure a stable, highly productive ecosystem.\nChanging environmental conditions caused by weather, climate change, or human interventions, may disrupt pollinator activity for some species but enhance it for others. Within natural ecosystems, biodiversity and abundance of wild bee populations and other non-bee pollinators provides redundancy that ensures ongoing pollination and plant productivity despite a changing environment.\nManaged pollinators, most commonly honey bees, are super-generalist pollinators that are essential for, or enhance, the pollination and production of many agricultural crops. We rely heavily on honey bees for certain types of food production - for example they are considered essential to sustaining the global supply of almonds - and support billions of dollars worth of food production worldwide. So, it is very worrying that beekeepers report honeybee populations are dwindling, and that their colonies are becoming increasingly vulnerable to environmental stressors.\nAlongside honey bees, wild pollinators including bumble bees (genus Bombus), other types of bees, wasps, and other non-bee species also make important contributions to crop production. Interestingly, on organic farms near natural habitat, wild bees can provide full pollinator services and, as long as diversity is maintained, there is sustained success.1\nIt seems possible then that by making adjustments that favour abundance and diversity of wild pollinators we could build capacity and resilience within natural and agricultural ecosystems that offset shortfalls in managed pollinator services resulting from the ongoing, perplexing losses of managed colonies."
   },
   {
-    "objectID": "posts/bee-plant-database-250624/index.html#inaturalist",
-    "href": "posts/bee-plant-database-250624/index.html#inaturalist",
-    "title": "BC Bee-Plant Database",
-    "section": "iNaturalist",
-    "text": "iNaturalist\nWe used iNat (www.inaturalist.com) to source ~ 25,000 “research grade” BC bee images, and collect plant association data where available."
-  },
-  {
-    "objectID": "posts/bee-plant-database-250624/index.html#teaswamps-beenuker3000-in-combination-with",
-    "href": "posts/bee-plant-database-250624/index.html#teaswamps-beenuker3000-in-combination-with",
-    "title": "BC Bee-Plant Database",
-    "section": "Teaswamp’s “BeeNuker3000” in combination with ",
-    "text": "Teaswamp’s “BeeNuker3000” in combination with \nWe used BeeNuker3000 to remove the bee from the pic enabling plant identification with PlantNet (https://my.plantnet.org)"
-  },
-  {
-    "objectID": "posts/bee-plant-database-250624/index.html#heres-what-we-found",
-    "href": "posts/bee-plant-database-250624/index.html#heres-what-we-found",
-    "title": "BC Bee-Plant Database",
-    "section": "Here’s what we found",
-    "text": "Here’s what we found\n\nWhere bees have been photographed and the range of plants they feed on\nThere are over 600 native bee species in BC, of which 132 have been identified to research grade in iNat. Our BeePlant Database currently has plant association data for 88 of BC’s native bees, and info on where and when these bees were spotted."
-  },
-  {
-    "objectID": "posts/bee-plant-database-250624/index.html#bee-families-in-the-database",
-    "href": "posts/bee-plant-database-250624/index.html#bee-families-in-the-database",
-    "title": "BC Bee-Plant Database",
-    "section": "Bee families in the Database",
-    "text": "Bee families in the Database\nSome bee species are easier to photograph and identify than others. Most of the bees in the BeePlant Database are in the Apidae family (bumblebees, honeybees, and stingless bees), with honey bees (Apis mellifera) and bumblebees (Bombus) accounting for around 8,800 records. This reflects the popularity of photographing larger bees, and the difficulty identifying smaller bees from photographs."
-  },
-  {
-    "objectID": "posts/bee-plant-database-250624/index.html#bumblebees-come-out-on-top",
-    "href": "posts/bee-plant-database-250624/index.html#bumblebees-come-out-on-top",
-    "title": "BC Bee-Plant Database",
-    "section": "Bumblebees come out on top",
-    "text": "Bumblebees come out on top\nBumblebees are by far the most commonly photographed bees in iNat, which makes for lots of bumblebee data!"
-  },
-  {
-    "objectID": "posts/bee-plant-database-250624/index.html#lets-take-a-closer-look",
-    "href": "posts/bee-plant-database-250624/index.html#lets-take-a-closer-look",
-    "title": "BC Bee-Plant Database",
-    "section": "Let’s take a closer look",
-    "text": "Let’s take a closer look\nWe have almost 7,000 records of bumblebees and their plant hosts, which include data for 30 of BC’s 33 bumblebee species currently documented in iNat (the missing bees are B. sandersoni and B.natvigi, both found in the far north of the province, and B. vandykeii in the southern Okanagan, for which we were unable to extract plant association info).\n\n\n\n\n\n\nBC Bumblebees’ favourite flowers\nBumblebees are generalist foragers meaning they feed on a wide range of plants - this is well demonstrated by our Database as we have records for over 700 plant species that bumblebees were photographed on! Overall, the most popular plants are brambles (13 species including salmonberries, thimbleberries, blackberries), clovers (16 species including white clover, red clover, zigzag clover), and roses (15 species including Wood’s rose, rugosa rose, nootka rose).\n\n\n\n\n\n\n\n\n\n\nSo, we can confidently say that if you want to see a bumblebee, your best bet is to check out a bramble patch, a clover field, a hedgerow with wild roses, or the chives in your herb garden. Although using this as a guide may lead you to bumblebees, you may not see that many different species, as our data is clearly skewed by the large numbers of records of the six most common bumblebees (see barchart above). And, even though bumblebees are generalists, and will collect nectar from a large and diverse range of plants, research has shown that different species prefer different floral hosts. Clearly we need to look deeper into the data to see which floral resources are most important for individual bumblebee species."
-  },
-  {
-    "objectID": "posts/bee-plant-database-250624/index.html#floral-preferences-of-bcs-most-common-bumblebees",
-    "href": "posts/bee-plant-database-250624/index.html#floral-preferences-of-bcs-most-common-bumblebees",
-    "title": "BC Bee-Plant Database",
-    "section": "Floral preferences of BC’s most common bumblebees",
-    "text": "Floral preferences of BC’s most common bumblebees\nAs a first step, we have looked at the 10 most common bumblebees in the Database.\n\n\n\n\n\nWe divided them into two groups, those with overlapping geographic range and those with more restricted ranges, and then looked at the top three types of plants preferred by each bumblebee species.\n\nBumblebees with overlapping geographic ranges found throughout BC\n\n\n\nNotes: B. melanopygus, B. vancouverensis, B. falvifrons - widespread throughout BC; B. mixtus - widespread in the Lower Mainland, Vancouver Island, and North to Smithers with a few sightings in the East of the province; B. sitkensis - common on Vancouver Island and the Lower Mainland with sightings up the coast to the Stikine region. Also seen in the east of the province in the lower Purcell range.\n\n\n\n\nBumblebees with more restricted ranges in BC\n\n\n\nNotes: B. vosnesenskii - common on Vancouver Island and the Lower Mainland up through the Fraser Valley with just a few sightings in BC’s interior; B. impatiens - largely restricted to Metro Vancouver with few sightings outside this area; B. vagans - widespread in the Okanagan and the east of the province with few sightings in the Pacific Maritime and none on the coast; B. occidentalis - widespread in the South of the province with northern range to Stewart; B. nevadensis - widespread in the southern interior of the province with northern range to Fort St John, and more recent sightings in Metro Vancouver.\n\n\nAlthough there is some overlap, distinct floral preferences were apparent even when considering just the top three types of plants regardless of whether the bumblebees were in proximity geographically or separated.\nFor example, B. melanopygus and B. vancouverensis are widespread throughout BC with an overlapping geographic range. B. melanopygus has most commonly been photographed feeding on thimbleberry and salmon berry, white clover, and red mountain heath, whereas B. vancouverensis prefers dandelions, red clover, and chives. It’s also worth noting though that although these plants are favourites, both of these species have been documented on over 200 different species of plants.\nSimilarly if we look at B. vagans, which is widespread in the Okanagan and to the east of the province but not seen at the coast, and B. impatiens whose range is restricted to Metro Vancouver, we find they also favour different plant hosts, with B. vagans choosing clovers, vetches and roses, while B. impatiens prefers American asters, tansies and sunflowers. This despite all of these floral resources being widespread throughout the province.\nResearch has shown that that many factors impact the selection of floral resources. For example, bumblebee species have different tongue lengths, and will target flowers to suit them. Some bumbles are known to prefer small clusters of flowers, while others choose those in abundance. Flower colour may also be a factor, and even the taste of the nectar may influence foraging behaviour. At the Galiwatch study site, now in it’s 4th year of monitoring, we have found B. sitkensis is consistently the first bumblebee species we see, and its emergence coincides with blooming of salmonberry and Oregon grape, both of which are among the earliest floral resources available in the spring, and are among B. sitkensis’ top three favourite plants according to our Database. This perhaps suggests that time of emergence from winter hibernation, adaptations to exploit floral resources, and plant physiology and phenology (the seasonality of plants) are all linked to bumblebee foraging behaviours.\n\n\nLimitations of our data\nAlthough we have hundreds of records for these top 10 bumblebee species, we need to bear in mind that the pics submitted to iNat are not a random sample, and most likely over represent what people see in their backyards, local parks and hedgerows, as well as the species that are easy to photograph. And, as these bees are generalists, the number of species of plants a bumblebee species may forage on can be huge (e.g., 240 for B. Melanopygus). So, it seems even if they prefer one flower over another, they are also very able to make do.\nRegardless of sampling bias, the Database has revealed interesting differences in the foraging preferences of BC’s most commonly sighted bumblebees, and this is just the tip of the iceberg. There’s lots more to learn about the foraging behaviour of bumblebees and other wild bees from this dataset, including the impact of plant distribution and phenology. Hopefully we can also learn more about the less common bees with more restricted floral resources at their disposal, as this could help inform conservation of these species by enabling us to provide the right floral resources in the right places at the right time. Stay tuned!"
+    "objectID": "posts/bee-loss-190722/index.html#footnotes",
+    "href": "posts/bee-loss-190722/index.html#footnotes",
+    "title": "Bee loss in North America",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nKremen C, Williams NM, Thorp RW. Crop pollination from native bees at risk from agricultural intensification. Proceedings of the National Academy of Sciences. 2002;99(26):16812-6. https://doi.org/10.1073/pnas.262413599↩︎\nSoroye P, Newbold T, Kerr J. Climate change contributes to widespread declines among bumble bees across continents. Science. 2020;367(6478):685-8. http://doi.org/10.1126/science.aax8591↩︎\nWray J & Elle E. Simon Fraser University. Wild and managed pollinators: current status and strategies to increase diversity. https://www.sfu.ca/content/dam/sfu/people/eelle/elle_bee_info/Metro_Vancouver_report.pdf Accessed 28 March, 2021.↩︎\nFRASER, David Frank et al. Changes in the Status and Distribution of the Yellow-faced Bumble Bee. Journal of the Entomological Society of British Columbia, [S.l.], v. 109, p. 31-37, may 2013. ISSN 1929-7890. Available at: https://journal.entsocbc.ca/index.php/journal/article/view/261. Accessed 13 Apr 2021.↩︎\nSimon A. Water into nectar: The effects of seasonal drought on bumble bee and flowering plant communities. MSc Thesis, University of Victoria, 2020. Available at https://dspace.library.uvic.ca/handle/1828/11837↩︎"
   },
   {
     "objectID": "posts/bee-book-231223/index.html",
@@ -277,7 +228,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "BC Bee-Plant Database\n\n\n\n\n\n\nnews\n\n\nBeeNuker3000\n\n\nbees\n\n\ndatabase\n\n\nphenology\n\n\nsurveillance\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nA less painful way to look at BC Bee taxonomy\n\n\n\n\n\n\nbees\n\n\nconservation\n\n\ntaxonomy\n\n\n\n\n\n\n\n\n\nFeb 9, 2024\n\n\nRichard Harrigan\n\n\n\n\n\n\n\n\n\n\n\n\nOregon grape bee count - 2023\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\nweather\n\n\nbee count\n\n\nphenology\n\n\nsurveillance\n\n\n\n\n\n\n\n\n\nJan 31, 2024\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nA quick look at the 2023 Hummingbird data\n\n\n\n\n\n\nhummingbirds\n\n\n\n\n\n\n\n\n\nJan 2, 2024\n\n\nRichard Harrigan\n\n\n\n\n\n\n\n\n\n\n\n\nBig book of bees!\n\n\n\n\n\n\nnews\n\n\ndatabase\n\n\nbees\n\n\nconservation\n\n\n\n\n\n\n\n\n\nDec 23, 2023\n\n\nclaude.ai (reviewed & edited by Cait Harrigan)\n\n\n\n\n\n\n\n\n\n\n\n\nFeature bee - Bombus vosnesenskii\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\nbees\n\n\n\n\n\n\n\n\n\nOct 15, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nMeet the bees of Galiano\n\n\n\n\n\n\nbees\n\n\n\n\n\n\n\n\n\nAug 13, 2023\n\n\nCait Harrigan\n\n\n\n\n\n\n\n\n\n\n\n\nBird Song\n\n\n\n\n\n\nnews\n\n\naudio moth\n\n\nanalysis\n\n\nbird song\n\n\n\n\n\n\n\n\n\nApr 22, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nThey’re here!!\n\n\n\n\n\n\nnews\n\n\nchit chat\n\n\nhummingbirds\n\n\n\n\n\n\n\n\n\nMar 30, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nWhere’s rufous?\n\n\n\n\n\n\nnews\n\n\nchit chat\n\n\nhummingbirds\n\n\n\n\n\n\n\n\n\nMar 20, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nWhere we’re at March 2022\n\n\n\n\n\n\nnews\n\n\nchit chat\n\n\n\n\n\n\n\n\n\nMar 17, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nOperations Update 2023\n\n\n\n\n\n\nnews\n\n\nhardware\n\n\n\n\n\n\n\n\n\nMar 13, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nOregon grape - seasonal variations\n\n\n\n\n\n\nbees\n\n\nclimate\n\n\nphenology\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\nMar 13, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nFires in summer 2021\n\n\n\n\n\n\nclimate\n\n\ncode\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\nFeb 22, 2023\n\n\nCait Harrigan, Richard Harrigan\n\n\n\n\n\n\n\n\n\n\n\n\nGaliano frogs\n\n\n\n\n\n\nnews\n\n\nfrogs\n\n\n\n\n\n\n\n\n\nOct 22, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nIndoor air replacement\n\n\n\n\n\n\nclimate\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\nOct 12, 2022\n\n\nRichard Harrigan\n\n\n\n\n\n\n\n\n\n\n\n\n2021 Bee count\n\n\n\n\n\n\nnews\n\n\ncode\n\n\ndata analysis\n\n\nbees\n\n\n\n\n\n\n\n\n\nAug 4, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nBee loss in North America\n\n\n\n\n\n\nbees\n\n\nconservation\n\n\ndeep-dive\n\n\n\n\n\n\n\n\n\nJul 19, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\n2021 recap\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMay 1, 2022\n\n\nCait Harrigan\n\n\n\n\n\n\n\n\n\n\n\n\nPurple Air sensor\n\n\n\n\n\n\nnews\n\n\nclimate\n\n\n\n\n\n\n\n\n\nDec 19, 2021\n\n\nCait Harrigan\n\n\n\n\n\n\n\n\n\n\n\n\nAir quality measurement\n\n\n\n\n\n\nclimate\n\n\npilot project\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\nJun 16, 2021\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nOregon grape\n\n\n\n\n\n\nconservation\n\n\npilot project\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\nMay 31, 2021\n\n\nKath Quayle\n\n\n\n\n\n\nNo matching items"
+    "text": "Feature Bee - Bombus flavidus\n\n\n\n\n\n\nfeature bee\n\n\nbumblebees\n\n\nplant associations\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 18, 2024\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nBig book of bees V2 release\n\n\n\n\n\n\nnews\n\n\ndatabase\n\n\nbees\n\n\nconservation\n\n\n\n\n\n\n\n\n\nSep 13, 2024\n\n\nchatGPT 4o (reviewed & edited by Cait Harrigan and Kath Quayle)\n\n\n\n\n\n\n\n\n\n\n\n\nBC Bee-Plant Database\n\n\n\n\n\n\nnews\n\n\nBeeNuker3000\n\n\nbees\n\n\ndatabase\n\n\nphenology\n\n\nsurveillance\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nA less painful way to look at BC Bee taxonomy\n\n\n\n\n\n\nbees\n\n\nconservation\n\n\ntaxonomy\n\n\n\n\n\n\n\n\n\nFeb 9, 2024\n\n\nRichard Harrigan\n\n\n\n\n\n\n\n\n\n\n\n\nOregon grape bee count - 2023\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\nweather\n\n\nbee count\n\n\nphenology\n\n\nsurveillance\n\n\n\n\n\n\n\n\n\nJan 31, 2024\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nA quick look at the 2023 Hummingbird data\n\n\n\n\n\n\nhummingbirds\n\n\n\n\n\n\n\n\n\nJan 2, 2024\n\n\nRichard Harrigan\n\n\n\n\n\n\n\n\n\n\n\n\nBig book of bees!\n\n\n\n\n\n\nnews\n\n\ndatabase\n\n\nbees\n\n\nconservation\n\n\n\n\n\n\n\n\n\nDec 23, 2023\n\n\nclaude.ai (reviewed & edited by Cait Harrigan)\n\n\n\n\n\n\n\n\n\n\n\n\nFeature bee - Bombus vosnesenskii\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\nbees\n\n\n\n\n\n\n\n\n\nOct 15, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nMeet the bees of Galiano\n\n\n\n\n\n\nbees\n\n\n\n\n\n\n\n\n\nAug 13, 2023\n\n\nCait Harrigan\n\n\n\n\n\n\n\n\n\n\n\n\nBird Song\n\n\n\n\n\n\nnews\n\n\naudio moth\n\n\nanalysis\n\n\nbird song\n\n\n\n\n\n\n\n\n\nApr 22, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nThey’re here!!\n\n\n\n\n\n\nnews\n\n\nchit chat\n\n\nhummingbirds\n\n\n\n\n\n\n\n\n\nMar 30, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nWhere’s rufous?\n\n\n\n\n\n\nnews\n\n\nchit chat\n\n\nhummingbirds\n\n\n\n\n\n\n\n\n\nMar 20, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nWhere we’re at March 2022\n\n\n\n\n\n\nnews\n\n\nchit chat\n\n\n\n\n\n\n\n\n\nMar 17, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nOperations Update 2023\n\n\n\n\n\n\nnews\n\n\nhardware\n\n\n\n\n\n\n\n\n\nMar 13, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nOregon grape - seasonal variations\n\n\n\n\n\n\nbees\n\n\nclimate\n\n\nphenology\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\nMar 13, 2023\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nFires in summer 2021\n\n\n\n\n\n\nclimate\n\n\ncode\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\nFeb 22, 2023\n\n\nCait Harrigan, Richard Harrigan\n\n\n\n\n\n\n\n\n\n\n\n\nGaliano frogs\n\n\n\n\n\n\nnews\n\n\nfrogs\n\n\n\n\n\n\n\n\n\nOct 22, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nIndoor air replacement\n\n\n\n\n\n\nclimate\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\nOct 12, 2022\n\n\nRichard Harrigan\n\n\n\n\n\n\n\n\n\n\n\n\n2021 Bee count\n\n\n\n\n\n\nnews\n\n\ncode\n\n\ndata analysis\n\n\nbees\n\n\n\n\n\n\n\n\n\nAug 4, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nBee loss in North America\n\n\n\n\n\n\nbees\n\n\nconservation\n\n\ndeep-dive\n\n\n\n\n\n\n\n\n\nJul 19, 2022\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\n2021 recap\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMay 1, 2022\n\n\nCait Harrigan\n\n\n\n\n\n\n\n\n\n\n\n\nPurple Air sensor\n\n\n\n\n\n\nnews\n\n\nclimate\n\n\n\n\n\n\n\n\n\nDec 19, 2021\n\n\nCait Harrigan\n\n\n\n\n\n\n\n\n\n\n\n\nAir quality measurement\n\n\n\n\n\n\nclimate\n\n\npilot project\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\nJun 16, 2021\n\n\nKath Quayle\n\n\n\n\n\n\n\n\n\n\n\n\nOregon grape\n\n\n\n\n\n\nconservation\n\n\npilot project\n\n\ndata analysis\n\n\n\n\n\n\n\n\n\nMay 31, 2021\n\n\nKath Quayle\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -343,53 +294,130 @@
     "text": "Operation Galiwatch\nMonitoring pollinator populations on Galiano Island, Canada.\nWe’re developing low-cost data collection and analysis systems for long-term pollinator and bird surveillance and hyperlocal weather and climate monitoring.\n\n\n\n\n\n\n\n \n\n\n\nThe Site\n\n\nLearn more \n\n\n\n\n\n\n\n \n\n\n\nWeather Monitoring\n\n\nLearn more \n\n\n\n\n\n\n\n \n\n\n\nPollinator Detection\n\n\nLearn more \n\n\n\n\n\n\n\n \n\n\n\nHummingbird Detection\n\n\nLearn more \n\n\n\n\n\n\n\n \n\n\n\nBirdsong\n\n\nLearn more \n\n\n\n\n\n\n\n \n\n\n\nGallery\n\n\nLearn more"
   },
   {
-    "objectID": "posts/bee-loss-190722/index.html",
-    "href": "posts/bee-loss-190722/index.html",
-    "title": "Bee loss in North America",
-    "section": "",
-    "text": "Reading time: 3 minutes\nWild pollinators are an integral part of native plant communities and are highly effective at pollinating flowers in natural ecosystems. Plant pollination is essential for plant reproduction, which in turn provides fruits and seeds for wildlife. Abundance and diversity of pollinators ensure a stable, highly productive ecosystem.\nChanging environmental conditions caused by weather, climate change, or human interventions, may disrupt pollinator activity for some species but enhance it for others. Within natural ecosystems, biodiversity and abundance of wild bee populations and other non-bee pollinators provides redundancy that ensures ongoing pollination and plant productivity despite a changing environment.\nManaged pollinators, most commonly honey bees, are super-generalist pollinators that are essential for, or enhance, the pollination and production of many agricultural crops. We rely heavily on honey bees for certain types of food production - for example they are considered essential to sustaining the global supply of almonds - and support billions of dollars worth of food production worldwide. So, it is very worrying that beekeepers report honeybee populations are dwindling, and that their colonies are becoming increasingly vulnerable to environmental stressors.\nAlongside honey bees, wild pollinators including bumble bees (genus Bombus), other types of bees, wasps, and other non-bee species also make important contributions to crop production. Interestingly, on organic farms near natural habitat, wild bees can provide full pollinator services and, as long as diversity is maintained, there is sustained success.1\nIt seems possible then that by making adjustments that favour abundance and diversity of wild pollinators we could build capacity and resilience within natural and agricultural ecosystems that offset shortfalls in managed pollinator services resulting from the ongoing, perplexing losses of managed colonies."
-  },
-  {
-    "objectID": "posts/bee-loss-190722/index.html#footnotes",
-    "href": "posts/bee-loss-190722/index.html#footnotes",
-    "title": "Bee loss in North America",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nKremen C, Williams NM, Thorp RW. Crop pollination from native bees at risk from agricultural intensification. Proceedings of the National Academy of Sciences. 2002;99(26):16812-6. https://doi.org/10.1073/pnas.262413599↩︎\nSoroye P, Newbold T, Kerr J. Climate change contributes to widespread declines among bumble bees across continents. Science. 2020;367(6478):685-8. http://doi.org/10.1126/science.aax8591↩︎\nWray J & Elle E. Simon Fraser University. Wild and managed pollinators: current status and strategies to increase diversity. https://www.sfu.ca/content/dam/sfu/people/eelle/elle_bee_info/Metro_Vancouver_report.pdf Accessed 28 March, 2021.↩︎\nFRASER, David Frank et al. Changes in the Status and Distribution of the Yellow-faced Bumble Bee. Journal of the Entomological Society of British Columbia, [S.l.], v. 109, p. 31-37, may 2013. ISSN 1929-7890. Available at: https://journal.entsocbc.ca/index.php/journal/article/view/261. Accessed 13 Apr 2021.↩︎\nSimon A. Water into nectar: The effects of seasonal drought on bumble bee and flowering plant communities. MSc Thesis, University of Victoria, 2020. Available at https://dspace.library.uvic.ca/handle/1828/11837↩︎"
-  },
-  {
-    "objectID": "posts/bee-watch-040822/index.html",
-    "href": "posts/bee-watch-040822/index.html",
-    "title": "2021 Bee count",
+    "objectID": "posts/bee-book-240913/index.html",
+    "href": "posts/bee-book-240913/index.html",
+    "title": "Big book of bees V2 release",
     "section": "",
     "text": "Reading time: &lt;1 minute"
   },
   {
-    "objectID": "posts/bee-watch-040822/index.html#time-lapse-photography",
-    "href": "posts/bee-watch-040822/index.html#time-lapse-photography",
-    "title": "2021 Bee count",
-    "section": "Time lapse photography",
-    "text": "Time lapse photography\n\nWe used time lapse photography to capture one pic per minute from dawn to dusk from the start to the end of the flowering season (March 12th to May 3rd) The first bee caught on camera flew by before any flowers had opened on the evening of Apr 13th, and we saw open flowers at sunrise on Apr 14th. The first pollinator was a bumble bee caught on camera that afternoon. We collected approximately 850 pics per day (16,000+ pics collected during the observation period) and found only 123 pics with bees in them. That’s less than 1%!!\n\nIn addition to bumble bees we observed a few butterflies and bee flies, as well as other small flies."
+    "objectID": "posts/bee-book-240913/index.html#galiwatch-bee-book-second-edition-now-available",
+    "href": "posts/bee-book-240913/index.html#galiwatch-bee-book-second-edition-now-available",
+    "title": "Big book of bees V2 release",
+    "section": "Galiwatch Bee Book: Second Edition Now Available!",
+    "text": "Galiwatch Bee Book: Second Edition Now Available!\nWe’re pleased to announce the release of the second edition of the Galiwatch Bee Book! Brought to you by your favourite Tea Swamp members, this update marks a significant expansion of our digital resource for bee enthusiasts in British Columbia’s Pacific Maritime ecozone.\nWhat’s new in this edition?\n\nExpanded Species Coverage: We’ve added 67 new bee species to our database, incorporating recent discoveries from newly published literature and field observations.\nCitizen Science Integration: a number of new records come directly from BC Native Bee Society Bee Atlas members, showcasing the power of community-driven research.\nEnhanced Data Quality: We’ve meticulously reviewed and refined our existing records. This process involved:\n\nRemoving misidentified specimens\nEliminating species unlikely to inhabit the Pacific Maritime region\nExcluding entries lacking solid literature support\nUpdating nomenclature to reflect the latest taxonomic revisions\n\nConservation Insights: With our expanded dataset, researchers and conservationists can gain deeper insights into local bees and their distributions.\n\nWe invite you to explore the new and improved Galiwatch Bee Book. Your feedback is crucial as we continue to refine and expand this valuable resource. Join us in celebrating the incredible diversity of bees in the Pacific Maritime ecozone!\n\nSee the project"
   },
   {
-    "objectID": "posts/bee-watch-040822/index.html#video-footage",
-    "href": "posts/bee-watch-040822/index.html#video-footage",
-    "title": "2021 Bee count",
-    "section": "Video footage",
-    "text": "Video footage\n\nWe collected 4 mins of footage every 5 mins from dawn to dusk from April 21st to May 4th (full bloom to berry set).\nThis gave us approx. 175 videos per day for a total of 2,450+ videos collected during the observation period. Around 250 videos (around 10%) had bees in them.\nMost bees observed in any one day was 32 on April 22nd.\n\nBumble bee ID\nWe were able to identify two bumble bee species - Vancouver bumble bees (Bombus vancouverensis) and yellow-fronted bumble bees (Bombus flavifrons).\nWe also observed carpenter bees, hover flies (including American thintail), various common-looking flies, small white butterflies (echo azure), slugs, pill bugs, and beetles."
-  },
-  {
-    "objectID": "posts/bombus-vosnesenskii-151023/index.html",
-    "href": "posts/bombus-vosnesenskii-151023/index.html",
-    "title": "Feature bee - Bombus vosnesenskii",
+    "objectID": "posts/bee-plant-database-250624/index.html",
+    "href": "posts/bee-plant-database-250624/index.html",
+    "title": "BC Bee-Plant Database",
     "section": "",
-    "text": "Reading time: 4 minutes\nThis article was prepared for The Native Bee Society of BC’s (NBSBC) Quarterly Buzz Oct, 2023 and edited for the Galiwatch site.\nBombus vosnesenski (B. vos) was first seen on Galiano in 2017 1, and is one of the six bumble bees currently known to call Galiano home.\nWith its distinctive bright yellow face, and indiscriminate taste for nectar and pollen sources, you will almost certainly see this black bumble buzzing around all sorts of different plants in the Gulf Islands, Vancouver Island, and the Lower Mainland, as in recent years it has become one of the most common bumblebees in the region.\nThis has not always been the case though - not that long ago B. vos was a rarity in British Columbia. It first appears in the records in the 1950s when a few specimens were found in the interior of BC, and there was talk of it being assigned threatened or endangered status. By 2000 however, it had expanded through the Okanagan and Similkameen valleys, as well as having become firmly established in the Pacific Maritime region 2."
+    "text": "Reading time: 5 minutes"
   },
   {
-    "objectID": "posts/bombus-vosnesenskii-151023/index.html#footnotes",
-    "href": "posts/bombus-vosnesenskii-151023/index.html#footnotes",
-    "title": "Feature bee - Bombus vosnesenskii",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nAndrew Simon. 2017. Available at https://inaturalist.ca/observations/6412054. Accessed 27/09/2023↩︎\nFraser DF, Copley CR, Elle E, Cannings RA. Changes in the Status and Distribution of the Yellow-faced Bumble Bee. Journal of the Entomological Society of British Columbia. 2012;109:31-7.↩︎\niNaturalist. (n.d.). Map of world research grade observations of B. vosnesenskii from Jan1, 2014, to 15 Sept 2023. Available from: https://inaturalist.ca/observations?place_id=any&subview=map&taxon_id=57689 Accessed Sept 16th, 2023.↩︎\niNaturalist. (n.d.). Map of British Columbia research grade observations of B. vosnesenskii. Jan 1, 2014, to Sep 15, 2023. Available from: https://inaturalist.ca/observations?place_id=7085&subview=map&taxon_id=57689 Accessed Sept 16th, 2023.↩︎\nData source: https://inaturalist.ca/observations?place_id=any&subview=table&taxon_id=57689↩︎"
+    "objectID": "posts/bee-plant-database-250624/index.html#inaturalist",
+    "href": "posts/bee-plant-database-250624/index.html#inaturalist",
+    "title": "BC Bee-Plant Database",
+    "section": "iNaturalist",
+    "text": "iNaturalist\nWe used iNat (www.inaturalist.com) to source ~ 25,000 “research grade” BC bee images, and collect plant association data where available."
+  },
+  {
+    "objectID": "posts/bee-plant-database-250624/index.html#teaswamps-beenuker3000-in-combination-with",
+    "href": "posts/bee-plant-database-250624/index.html#teaswamps-beenuker3000-in-combination-with",
+    "title": "BC Bee-Plant Database",
+    "section": "Teaswamp’s “BeeNuker3000” in combination with ",
+    "text": "Teaswamp’s “BeeNuker3000” in combination with \nWe used BeeNuker3000 to remove the bee from the pic enabling plant identification with PlantNet (https://my.plantnet.org)"
+  },
+  {
+    "objectID": "posts/bee-plant-database-250624/index.html#heres-what-we-found",
+    "href": "posts/bee-plant-database-250624/index.html#heres-what-we-found",
+    "title": "BC Bee-Plant Database",
+    "section": "Here’s what we found",
+    "text": "Here’s what we found\n\nWhere bees have been photographed and the range of plants they feed on\nThere are over 600 native bee species in BC, of which 132 have been identified to research grade in iNat. Our BeePlant Database currently has plant association data for 88 of BC’s native bees, and info on where and when these bees were spotted."
+  },
+  {
+    "objectID": "posts/bee-plant-database-250624/index.html#bee-families-in-the-database",
+    "href": "posts/bee-plant-database-250624/index.html#bee-families-in-the-database",
+    "title": "BC Bee-Plant Database",
+    "section": "Bee families in the Database",
+    "text": "Bee families in the Database\nSome bee species are easier to photograph and identify than others. Most of the bees in the BeePlant Database are in the Apidae family (bumblebees, honeybees, and stingless bees), with honey bees (Apis mellifera) and bumblebees (Bombus) accounting for around 8,800 records. This reflects the popularity of photographing larger bees, and the difficulty identifying smaller bees from photographs."
+  },
+  {
+    "objectID": "posts/bee-plant-database-250624/index.html#bumblebees-come-out-on-top",
+    "href": "posts/bee-plant-database-250624/index.html#bumblebees-come-out-on-top",
+    "title": "BC Bee-Plant Database",
+    "section": "Bumblebees come out on top",
+    "text": "Bumblebees come out on top\nBumblebees are by far the most commonly photographed bees in iNat, which makes for lots of bumblebee data!"
+  },
+  {
+    "objectID": "posts/bee-plant-database-250624/index.html#lets-take-a-closer-look",
+    "href": "posts/bee-plant-database-250624/index.html#lets-take-a-closer-look",
+    "title": "BC Bee-Plant Database",
+    "section": "Let’s take a closer look",
+    "text": "Let’s take a closer look\nWe have almost 7,000 records of bumblebees and their plant hosts, which include data for 30 of BC’s 33 bumblebee species currently documented in iNat (the missing bees are B. sandersoni and B.natvigi, both found in the far north of the province, and B. vandykeii in the southern Okanagan, for which we were unable to extract plant association info).\n\n\n\n\n\n\nBC Bumblebees’ favourite flowers\nBumblebees are generalist foragers meaning they feed on a wide range of plants - this is well demonstrated by our Database as we have records for over 700 plant species that bumblebees were photographed on! Overall, the most popular plants are brambles (13 species including salmonberries, thimbleberries, blackberries), clovers (16 species including white clover, red clover, zigzag clover), and roses (15 species including Wood’s rose, rugosa rose, nootka rose).\n\n\n\n\n\n\n\n\n\n\nSo, we can confidently say that if you want to see a bumblebee, your best bet is to check out a bramble patch, a clover field, a hedgerow with wild roses, or the chives in your herb garden. Although using this as a guide may lead you to bumblebees, you may not see that many different species, as our data is clearly skewed by the large numbers of records of the six most common bumblebees (see barchart above). And, even though bumblebees are generalists, and will collect nectar from a large and diverse range of plants, research has shown that different species prefer different floral hosts. Clearly we need to look deeper into the data to see which floral resources are most important for individual bumblebee species."
+  },
+  {
+    "objectID": "posts/bee-plant-database-250624/index.html#floral-preferences-of-bcs-most-common-bumblebees",
+    "href": "posts/bee-plant-database-250624/index.html#floral-preferences-of-bcs-most-common-bumblebees",
+    "title": "BC Bee-Plant Database",
+    "section": "Floral preferences of BC’s most common bumblebees",
+    "text": "Floral preferences of BC’s most common bumblebees\nAs a first step, we have looked at the 10 most common bumblebees in the Database.\n\n\n\n\n\nWe divided them into two groups, those with overlapping geographic range and those with more restricted ranges, and then looked at the top three types of plants preferred by each bumblebee species.\n\nBumblebees with overlapping geographic ranges found throughout BC\n\n\n\nNotes: B. melanopygus, B. vancouverensis, B. falvifrons - widespread throughout BC; B. mixtus - widespread in the Lower Mainland, Vancouver Island, and North to Smithers with a few sightings in the East of the province; B. sitkensis - common on Vancouver Island and the Lower Mainland with sightings up the coast to the Stikine region. Also seen in the east of the province in the lower Purcell range.\n\n\n\n\nBumblebees with more restricted ranges in BC\n\n\n\nNotes: B. vosnesenskii - common on Vancouver Island and the Lower Mainland up through the Fraser Valley with just a few sightings in BC’s interior; B. impatiens - largely restricted to Metro Vancouver with few sightings outside this area; B. vagans - widespread in the Okanagan and the east of the province with few sightings in the Pacific Maritime and none on the coast; B. occidentalis - widespread in the South of the province with northern range to Stewart; B. nevadensis - widespread in the southern interior of the province with northern range to Fort St John, and more recent sightings in Metro Vancouver.\n\n\nAlthough there is some overlap, distinct floral preferences were apparent even when considering just the top three types of plants regardless of whether the bumblebees were in proximity geographically or separated.\nFor example, B. melanopygus and B. vancouverensis are widespread throughout BC with an overlapping geographic range. B. melanopygus has most commonly been photographed feeding on thimbleberry and salmon berry, white clover, and red mountain heath, whereas B. vancouverensis prefers dandelions, red clover, and chives. It’s also worth noting though that although these plants are favourites, both of these species have been documented on over 200 different species of plants.\nSimilarly if we look at B. vagans, which is widespread in the Okanagan and to the east of the province but not seen at the coast, and B. impatiens whose range is restricted to Metro Vancouver, we find they also favour different plant hosts, with B. vagans choosing clovers, vetches and roses, while B. impatiens prefers American asters, tansies and sunflowers. This despite all of these floral resources being widespread throughout the province.\nResearch has shown that that many factors impact the selection of floral resources. For example, bumblebee species have different tongue lengths, and will target flowers to suit them. Some bumbles are known to prefer small clusters of flowers, while others choose those in abundance. Flower colour may also be a factor, and even the taste of the nectar may influence foraging behaviour. At the Galiwatch study site, now in it’s 4th year of monitoring, we have found B. sitkensis is consistently the first bumblebee species we see, and its emergence coincides with blooming of salmonberry and Oregon grape, both of which are among the earliest floral resources available in the spring, and are among B. sitkensis’ top three favourite plants according to our Database. This perhaps suggests that time of emergence from winter hibernation, adaptations to exploit floral resources, and plant physiology and phenology (the seasonality of plants) are all linked to bumblebee foraging behaviours.\n\n\nLimitations of our data\nAlthough we have hundreds of records for these top 10 bumblebee species, we need to bear in mind that the pics submitted to iNat are not a random sample, and most likely over represent what people see in their backyards, local parks and hedgerows, as well as the species that are easy to photograph. And, as these bees are generalists, the number of species of plants a bumblebee species may forage on can be huge (e.g., 240 for B. Melanopygus). So, it seems even if they prefer one flower over another, they are also very able to make do.\nRegardless of sampling bias, the Database has revealed interesting differences in the foraging preferences of BC’s most commonly sighted bumblebees, and this is just the tip of the iceberg. There’s lots more to learn about the foraging behaviour of bumblebees and other wild bees from this dataset, including the impact of plant distribution and phenology. Hopefully we can also learn more about the less common bees with more restricted floral resources at their disposal, as this could help inform conservation of these species by enabling us to provide the right floral resources in the right places at the right time. Stay tuned!"
+  },
+  {
+    "objectID": "posts/bird-song-220423/index.html",
+    "href": "posts/bird-song-220423/index.html",
+    "title": "Bird Song",
+    "section": "",
+    "text": "Reading time: &lt;1 minute"
+  },
+  {
+    "objectID": "posts/bird-song-220423/index.html#coopers-hawk",
+    "href": "posts/bird-song-220423/index.html#coopers-hawk",
+    "title": "Bird Song",
+    "section": "Cooper’s hawk",
+    "text": "Cooper’s hawk\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
+  },
+  {
+    "objectID": "posts/bird-song-220423/index.html#american-robin",
+    "href": "posts/bird-song-220423/index.html#american-robin",
+    "title": "Bird Song",
+    "section": "American robin",
+    "text": "American robin\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
+  },
+  {
+    "objectID": "posts/bird-song-220423/index.html#red-breasted-nuthatch",
+    "href": "posts/bird-song-220423/index.html#red-breasted-nuthatch",
+    "title": "Bird Song",
+    "section": "Red-breasted nuthatch",
+    "text": "Red-breasted nuthatch\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
+  },
+  {
+    "objectID": "posts/bird-song-220423/index.html#northern-flicker",
+    "href": "posts/bird-song-220423/index.html#northern-flicker",
+    "title": "Bird Song",
+    "section": "Northern Flicker",
+    "text": "Northern Flicker\n\n\n\nPhoto: Simon A licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
+  },
+  {
+    "objectID": "posts/bird-song-220423/index.html#bewicks-wren",
+    "href": "posts/bird-song-220423/index.html#bewicks-wren",
+    "title": "Bird Song",
+    "section": "Bewick’s wren",
+    "text": "Bewick’s wren\n\n\n\nPhoto: lornasdr licensed under CC BY-NC 4.0\n\n\n\n\n\n  Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp"
+  },
+  {
+    "objectID": "posts/feature-bee-bflavidus-180924/index.html",
+    "href": "posts/feature-bee-bflavidus-180924/index.html",
+    "title": "Feature Bee - Bombus flavidus",
+    "section": "",
+    "text": "Reading time: 4 minutes"
+  },
+  {
+    "objectID": "posts/feature-bee-bflavidus-180924/index.html#bombus-flavidus---after-a-long-absence-the-yellowish-cuckoo-bumblebee-is-back-on-galiano",
+    "href": "posts/feature-bee-bflavidus-180924/index.html#bombus-flavidus---after-a-long-absence-the-yellowish-cuckoo-bumblebee-is-back-on-galiano",
+    "title": "Feature Bee - Bombus flavidus",
+    "section": "Bombus flavidus - after a long absence the yellowish cuckoo bumblebee is back on Galiano!",
+    "text": "Bombus flavidus - after a long absence the yellowish cuckoo bumblebee is back on Galiano!\n\n\n\nBombus flavidus on a gumplant (genus Grindelia). © Kevin Toomer, some rights reserved (CC BY-NC)\n\n\n\nBackground\nB. flavidus (also known as B. fernaldae) the yellowish cuckoo bumblebee is the world’s most widespread bumblebee (1). Cuckoo bumblebees are social parasites; bees that have lost the ability to collect pollen and raise their young. Instead, they invade the nests of other bumblebee species, take over the colony by killing or subduing the queen, and make the worker bees raise their offspring for them. This species is thought to takeover nests of a wide range of bumblebees, including those in the subgenus Pyrobombus – the fiery tailed bees. Galiano’s six bumblebee species are all Pyrobombus: B. flavifrons (yellow-fronted bumblebee); B. melanopygus (black-tailed bumblebee); B. mixtus (fuzzy-horned bumblebee); B. sitkensis (Sitka bumblebee); B. vancouverensis (Vancouver bumblebee); and B. vosnesenskii (yellow-faced bumblebee).\n\n\nB. flavidus in the Pacific Maritime\nIf we take a look at the historical record, we find B. flavidus was first reported in the Pacific Maritime region in 1934, with specimens collected in Agassiz, Hope, and Mt Cheam in the Fraser Valley (2). The next documentation was in the 1950s, by which time, in addition to the previous specimens found in the Lower Mainland, B. flavidus was also found in Manning Park, the Greater Vancouver area, and on Vancouver Island (3). In 2005, specimens were again collected on Vancouver Island and subsequently, in 2013, in Abbotsford and Tsawassen (4).\nBeginning in 2017, iNaturalist (5) observations have significantly added to the knowledge base giving insight into more recent B. flavidus distribution in this region. As of September, 2024, a total of 286 research grade observations have been submitted to iNat, beginning with a singleton in 2013 followed by multiple sightings from 2017 onward. These observations are consistent with B. flavidus being wide ranging throughout BC (6).\n\n\n\niNaturalist, accessed Sept 2, 2024\n\n\nSince the first iNat observation in 2017, B. flavidus has been repeatedly spotted on the North Shore and up the Sunshine Coast, among other places. It made its iNat debut on Vancouver Island in 2023, with subsequent sightings in Victoria, Nanaimo and the Gulf Islands in 2024. The figures below show annual trends in B. flavidus observations from 2017 to2024.\n\n\n\nData source iNaturalist\n\n\n\n\n\nData source iNaturalist\n\n\n\n\nPlant associations\nBeing a cuckoo bee, B. flavidus chooses flowers for their nectar not their pollen. To better understand cuckoo bees habits, we looked in our BC BeePlant Database (generated from iNat observations and Plantnet ID to Nov, 2023) to check out which flowering plants B. flavidus has been photographed on most frequently. We have 51 observations for B. flavidus that include 25 genera of plants (Table). B. flavidus was most commonly seen on goldenrod, pearly everlasting, yarrow, fleabane, sow thistles, and American asters. Checking the recent Galiano observations, we saw the plant hosts were goldenrod, topped lavendar, oxeye daisy, and gumplants. Although it looks like B. flavidus may prefer nectaring on some flowers over others, it is clearly a generalist when it comes to snacking.\n\n\n\n\n\n\n\nSo what do we know about B. flavidus on Galiano?\nAndrew Simon has reported in depth on the historical changes in Galiano’s bumblebee community (7). The Biodiversity Galiano Lifelist includes 11 species that have at some point in time been found on Galiano. Of these, six are currently present (listed above), three are likely extirpated; i.e., locally extinct – B. insularis, B. occidentalis, and B. suckleyi – and two others B. fervidus and B. flavidus have only ever turned up once in the historical record (7).\nThat is until now!!\nAs reported in iNat, B. flavidus was spotted mid-Island in late May of this year, and then several more times at the South end of Galiano in early June.\nHappily, these little cuckoo bumblebees are back, and if they successfully stole bumblebee homes on Galiano this year, we may see even more of them next year. And, who knows, as Galiano’s iNat enthusiasts continue to upload new observations, perhaps in future we’ll see other “lost” bumblebee species reappearing, and new ones arriving to make Galiano their home."
   },
   {
     "objectID": "posts/frog-watch-221022/index.html",
