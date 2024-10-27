@@ -4,7 +4,7 @@ title: Feature Bee - Bombus flavidus
 date: 2024-09-18
 author: Kath Quayle
 engine: knitr
-image: thumbnail.jpg
+image: thumbnail.jpeg
 lightbox: true
 categories:
   - feature bee
